@@ -1,5 +1,8 @@
+remote_theme: pages-themes/cayman@v0.2.0   # or: slate, minimal, hacker, leap-day
+plugins:
+  - jekyll-remote-theme
+
 markdown: kramdown
 kramdown:
   input: GFM
   math_engine: mathjax
-  hard_wrap: false
