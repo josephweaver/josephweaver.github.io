@@ -20,3 +20,5 @@ A visual mnemonic:
 
 - **∧ = min** — looks like an **up-arrow** ↑ rising to the **lowest** point  
   *arrow rises from below → stops at the bottom → min*
+
+
