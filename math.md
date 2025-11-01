@@ -10,7 +10,7 @@ so they don't get rediscovered and lost again.*
 In analysis and probability:
 
 $$
-a \wedge b = \min(a,b), \qquad a \vee b = \max(a,b)
+a \wedge b = \min(a,b), \qquad \qquad a \vee b = \max(a,b)
 $$
 
 A visual mnemonic:
