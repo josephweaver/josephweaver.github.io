@@ -1,5 +1,54 @@
-<html>
-      <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+
+  {%- seo -%}
+
+  <link rel="stylesheet" href="{{ "/assets/css/styles.css" | relative_url }}" />
+
+  <!-- MathJax v3 config -->
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+        displayMath: [['$$','$$'], ['\\[','\\]']],
+        processEscapes: true,
+        tags: 'ams',                         // equation numbering like \tag, \label, \ref
+        packages: {'[+]': ['noerrors']}      // avoid throwing visible errors on the page
+      },
+      options: {
+        skipHtmlTags: ['script','noscript','style','textarea','pre','code'] // don’t typeset inside code blocks
+      }
+    };
+  </script>
+  <script id="MathJax-script" async
+          src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <style>
+    /* Optional: keep MathJax font size aligned with body text */
+    mjx-container[jax="CHTML"] { font-size: 100%; }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <h1 class="site-title"><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+    {% if site.description %}<p class="site-description">{{ site.description }}</p>{% endif %}
+  </header>
+
+  <main class="page-content" aria-label="Content">
+    <div class="wrapper">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <small>&copy; {{ site.time | date: "%Y" }} {{ site.author | default: site.title }}</small>
+  </footer>
+</body>
 </html>
