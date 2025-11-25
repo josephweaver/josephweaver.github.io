@@ -1,3 +1,198 @@
-<html>
-    <body>Hello World!</body>
-</html>
+---
+layout: default
+title: Joseph M. Weaver
+---
+
+<section class="hero">
+  <div class="hero__media">
+    <img src="{{ '/images/1618685561588.jfif' | relative_url }}" alt="Portrait of Joseph M. Weaver" class="hero__img" />
+  </div>
+  <div class="hero__text">
+    <p class="eyebrow">Biographical Sketch</p>
+    <h1>Joseph M. Weaver</h1>
+    <p class="lede">Ph.D. student in Statistics at Michigan State University focused on Bayesian crop-risk modeling, intrinsic dimension learning, and large-scale geospatial and HPC pipelines.</p>
+    <div class="hero__meta">
+      <span>weave151@msu.edu</span>
+      <a href="https://www.linkedin.com/in/joseph-weaver-ai-researcher">LinkedIn</a>
+    </div>
+    <div class="hero__actions">
+      <a class="btn" href="{{ '/private/Biosketch - WEAVER(2025).docx' | relative_url }}">Download biosketch</a>
+      <a class="btn ghost" href="{{ '/private/Joseph M. Weaver - Resume - 2024 General Purpose.docx' | relative_url }}">Resume</a>
+    </div>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>About</h2>
+  <p>Consultant with Land Core building Bayesian crop-yield risk models and geospatial data systems (5+ TB), and senior AI engineer background leading distributed data and ML platforms at Jackson National Life. I blend statistical theory, reproducible pipelines, and scalable infrastructure across MSU HPCC, Spark, PostGIS, DuckDB, and containerized workflows.</p>
+</section>
+
+<section class="panel panel--grid">
+  <div>
+    <h3>Highlights</h3>
+    <ul>
+      <li>Designed ETL and risk modeling pipelines for multi-terabyte geospatial datasets in PostGIS and DuckDB.</li>
+      <li>Built containerized Spark and HPC workflows with CI/CD, self-healing, and compliance-first design.</li>
+      <li>Instructor for STT 200; mentor bridging statistical learning, stochastic processes, and applied computing.</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Research & Interests</h3>
+    <ul>
+      <li>Bayesian hierarchical crop yield risk modeling and uncertainty quantification.</li>
+      <li>Intrinsic dimension estimation and manifold learning for high-dimensional data.</li>
+      <li>Reproducible research pipelines: YAML metadata, GitHub Actions, and automated documentation.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="panel panel--grid">
+  <div>
+    <h3>Current Roles</h3>
+    <ul>
+      <li>Ph.D. Student, Statistics & Probability, Michigan State University (in progress)</li>
+      <li>Consultant, Land Core - data pipelines and crop-risk modeling (2022-present)</li>
+      <li>Graduate Instructor (TA), STT 200: Introduction to Statistics</li>
+    </ul>
+  </div>
+  <div>
+    <h3>Selected Prior Experience</h3>
+    <ul>
+      <li>Senior AI Engineer, Jackson National Life (2018-2022): led AI/data engineering architecture and Spark pipelines.</li>
+      <li>Senior Capacity Planner, Jackson National Life (2011-2018): automated regression/cluster forecasting for infra.</li>
+      <li>Senior Software Developer, Jackson National Life (2005-2011): unified .NET automation for nationwide broker-dealer systems.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="panel">
+  <h2>Collaboration</h2>
+  <p>Collaborating with teams at Rice University and Land Core on Bayesian crop-risk modeling, geospatial ETL, and reproducible workflows that connect theory to decision systems. Open to research collaborations and data engineering engagements.</p>
+</section>
+
+<style>
+  :root {
+    --ink: #112240;
+    --muted: #5c6f82;
+    --accent: #159957;
+    --panel: #f6f8fb;
+    --border: #dfe3eb;
+  }
+  body {
+    color: var(--ink);
+  }
+  .hero {
+    display: grid;
+    grid-template-columns: minmax(220px, 260px) 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    background: linear-gradient(120deg, #f3f8ff 0%, #f7fbf7 60%, #ffffff 100%);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+  }
+  .hero__media {
+    display: flex;
+    justify-content: center;
+  }
+  .hero__img {
+    width: 100%;
+    max-width: 240px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  }
+  .hero__text h1 {
+    margin: 0.2rem 0 0.4rem;
+    font-size: 2rem;
+    line-height: 1.1;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    font-size: 0.8rem;
+    color: var(--muted);
+    margin: 0;
+  }
+  .lede {
+    font-size: 1.05rem;
+    color: var(--muted);
+    margin: 0.35rem 0 0.75rem;
+  }
+  .hero__meta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    color: var(--muted);
+    font-weight: 600;
+  }
+  .hero__meta a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+  }
+  .hero__meta a:hover,
+  .hero__meta a:focus-visible {
+    border-color: var(--accent);
+  }
+  .hero__actions {
+    margin-top: 0.8rem;
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+  .btn {
+    display: inline-block;
+    padding: 0.55rem 0.95rem;
+    border-radius: 8px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid var(--accent);
+  }
+  .btn.ghost {
+    background: transparent;
+    color: var(--accent);
+  }
+  .btn:hover,
+  .btn:focus-visible {
+    box-shadow: 0 8px 20px rgba(21,153,87,0.25);
+  }
+  .panel {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.2rem 1.4rem;
+    margin-top: 1.2rem;
+  }
+  .panel h2, .panel h3 {
+    margin-top: 0;
+  }
+  .panel p {
+    color: var(--muted);
+    margin: 0.4rem 0 0;
+  }
+  .panel ul {
+    color: var(--muted);
+    padding-left: 1.2rem;
+    margin: 0.4rem 0 0;
+  }
+  .panel--grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+  }
+  @media (max-width: 720px) {
+    .hero {
+      grid-template-columns: 1fr;
+      text-align: left;
+    }
+    .hero__media {
+      justify-content: flex-start;
+    }
+  }
+</style>
