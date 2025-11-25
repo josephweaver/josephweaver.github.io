@@ -37,8 +37,44 @@
 
 <body>
   <header class="site-header">
-    <h1 class="site-title"><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
-    {% if site.description %}<p class="site-description">{{ site.description }}</p>{% endif %}
+    <div class="site-header__top">
+      <h1 class="site-title"><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+      {% if site.description %}<p class="site-description">{{ site.description }}</p>{% endif %}
+    </div>
+    <nav class="site-nav">
+      <ul class="site-nav__links">
+        <li><a href="{{ "/" | relative_url }}">Home</a></li>
+        <li><a href="{{ "/STT882/lec1.html" | relative_url }}">STT882</a></li>
+      </ul>
+
+      {% if page.path contains "STT882/lec" %}
+        {% assign lecture_pages = site.pages | where_exp: "p", "p.path contains 'STT882/lec'" %}
+        {% assign lecture_pages = lecture_pages | sort: "path" %}
+        {% assign lecture_static = site.static_files | where_exp: "f", "f.path contains '/STT882/lec'" %}
+        {% assign lecture_static = lecture_static | sort: "path" %}
+        {% if lecture_pages == empty and lecture_static != empty %}
+          {% assign lectures = lecture_static %}
+        {% else %}
+          {% assign lectures = lecture_pages %}
+        {% endif %}
+
+        <div class="lecture-nav">
+          <span class="lecture-nav__title">STT882 Lectures</span>
+          <ul class="lecture-nav__list">
+            {% for lecture in lectures %}
+              {% assign label = lecture.title | default: lecture.data.title | default: lecture.name %}
+              {% assign label = label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " %}
+              <li>
+                <a class="{% if lecture.url == page.url %}active{% endif %}"
+                   href="{{ lecture.url | default: lecture.path | relative_url }}">
+                  {{ label }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+    </nav>
   </header>
 
   <main class="page-content" aria-label="Content">
@@ -50,5 +86,87 @@
   <footer class="site-footer">
     <small>&copy; {{ site.time | date: "%Y" }} {{ site.author | default: site.title }}</small>
   </footer>
+
+  <style>
+    .site-header {
+      border-bottom: 1px solid #dfe2e5;
+      margin-bottom: 1.5rem;
+    }
+    .site-header__top {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+      padding-bottom: 0.5rem;
+    }
+    .site-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .site-nav__links {
+      list-style: none;
+      display: flex;
+      gap: 1rem;
+      padding: 0;
+      margin: 0;
+      flex-wrap: wrap;
+    }
+    .site-nav__links a {
+      text-decoration: none;
+      color: inherit;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 0.2rem;
+    }
+    .site-nav__links a:hover,
+    .site-nav__links a:focus-visible {
+      border-color: #159957;
+    }
+    .lecture-nav {
+      background: #f7f7f7;
+      border: 1px solid #dfe2e5;
+      border-radius: 6px;
+      padding: 0.75rem;
+      overflow-x: auto;
+    }
+    .lecture-nav__title {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    .lecture-nav__list {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      gap: 0.5rem 0.75rem;
+      padding: 0;
+      margin: 0;
+    }
+    .lecture-nav__list a {
+      text-decoration: none;
+      color: inherit;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+    }
+    .lecture-nav__list a:hover,
+    .lecture-nav__list a:focus-visible {
+      background: #e6f3ec;
+      color: #0c6d3f;
+    }
+    .lecture-nav__list a.active {
+      background: #159957;
+      color: #fff;
+    }
+    @media (max-width: 640px) {
+      .site-header__top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .site-nav__links {
+        gap: 0.75rem;
+      }
+    }
+  </style>
 </body>
 </html>
