@@ -1,6 +1,5 @@
 # 39 — Embedding Random Variables into Brownian Motion (Skorokhod Embedding) and CLT via Brownian Motion
-STT 882  
-April 25, 2025
+
 
 ## 1. Thursday’s CB06 Theorem (Review)
 Suppose we have a discrete random variable

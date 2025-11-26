@@ -1,6 +1,5 @@
 # 35 — Strong Markov Property and Reflection Principle
-STT 882  
-April 16, 2025
+
 
 ## **1. Formal Setup**
 We work on a family of probability spaces

@@ -1,6 +1,5 @@
 # 34 — Strong Markov Property, Hitting Times, Stopping Times
-STT 882  
-April 14, 2025
+
 
 ## 1. Example (From Book)
 

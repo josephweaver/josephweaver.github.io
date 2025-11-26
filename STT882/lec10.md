@@ -1,6 +1,5 @@
 # 10 Regular Conditional Probability / Distribution
-STT 882  
-Feb 5, 2025
+
 
 (Durrett §5.1.3, p. 193)
 

@@ -1,6 +1,5 @@
 # 27 — Central Limit Theorem for Martingales
-STT 882  
-March 24, 2025
+
 
 ## Central Limit Theorem (for Martingales)
 

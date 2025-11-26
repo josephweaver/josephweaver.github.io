@@ -37,15 +37,25 @@
 </head>
 
 <body>
-  {% assign is_lecture = page.path contains "STT882/lec" %}
-  {% assign lecture_pages = site.pages | where_exp: "p", "p.path contains 'STT882/lec'" | sort_natural: "path" %}
-  {% assign lecture_static = site.static_files | where_exp: "f", "f.path contains '/STT882/lec'" | sort_natural: "path" %}
-  {% if lecture_pages == empty and lecture_static != empty %}
-    {% assign lectures = lecture_static %}
+  {% assign is_prob1 = page.path contains "STT881/lec" %}
+  {% assign is_prob2 = page.path contains "STT882/lec" %}
+  {% assign lecture_pages_881 = site.pages | where_exp: "p", "p.path contains 'STT881/lec'" | sort_natural: "path" %}
+  {% assign lecture_static_881 = site.static_files | where_exp: "f", "f.path contains '/STT881/lec'" | sort_natural: "path" %}
+  {% if lecture_pages_881 == empty and lecture_static_881 != empty %}
+    {% assign lectures_881 = lecture_static_881 %}
   {% else %}
-    {% assign lectures = lecture_pages %}
+    {% assign lectures_881 = lecture_pages_881 %}
   {% endif %}
-  {% assign lectures = lectures | sort_natural: "path" %}
+  {% assign lectures_881 = lectures_881 | sort_natural: "path" %}
+
+  {% assign lecture_pages_882 = site.pages | where_exp: "p", "p.path contains 'STT882/lec'" | sort_natural: "path" %}
+  {% assign lecture_static_882 = site.static_files | where_exp: "f", "f.path contains '/STT882/lec'" | sort_natural: "path" %}
+  {% if lecture_pages_882 == empty and lecture_static_882 != empty %}
+    {% assign lectures_882 = lecture_static_882 %}
+  {% else %}
+    {% assign lectures_882 = lecture_pages_882 %}
+  {% endif %}
+  {% assign lectures_882 = lectures_882 | sort_natural: "path" %}
 
   <div class="layout">
     <aside class="sidebar" id="lectureSidebar">
@@ -59,12 +69,29 @@
              href="{{ "/" | relative_url }}">Home</a>
         </li>
         <li>
-          <a class="{% if is_lecture %}active{% endif %}"
+          <a class="{% if is_prob1 %}active{% endif %}"
+             href="{{ "/STT881/lec01.html" | relative_url }}">Probability 1</a>
+        </li>
+        <li>
+          <a class="{% if is_prob2 %}active{% endif %}"
              href="{{ "/STT882/lec1.html" | relative_url }}">Probability 2</a>
         </li>
-        {% if is_lecture %}
+        {% if is_prob1 %}
+          <li class="lecture-nav__heading">Probability 1 Lectures</li>
+          {% for lecture in lectures_881 %}
+            {% assign label = lecture.title | default: lecture.data.title | default: lecture.name %}
+            {% assign label = label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " %}
+            <li>
+              <a class="{% if lecture.url == page.url %}active{% endif %}"
+                 href="{{ lecture.url | default: lecture.path | relative_url }}">
+                {{ label }}
+              </a>
+            </li>
+          {% endfor %}
+        {% endif %}
+        {% if is_prob2 %}
           <li class="lecture-nav__heading">Probability 2 Lectures</li>
-          {% for lecture in lectures %}
+          {% for lecture in lectures_882 %}
             {% assign label = lecture.title | default: lecture.data.title | default: lecture.name %}
             {% assign label = label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " %}
             <li>

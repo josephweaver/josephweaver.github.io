@@ -1,6 +1,4 @@
 # 20 — L² Martingales, BCII+, Polya Scheme, Extensions
-STT 882  
-March 8, 2025
 
 ## Setup: L² Martingales
 Let  

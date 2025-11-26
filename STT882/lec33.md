@@ -1,6 +1,5 @@
 # 33 – Brownian motion: Markov property, right–continuous filtration, time inversion, tail events
-STT 882  
-April 11, 2025
+
 
 We work with standard Brownian motion starting at 0.
 

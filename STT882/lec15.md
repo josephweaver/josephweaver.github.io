@@ -1,6 +1,5 @@
 # 15 — Extended Borel–Cantelli II, Polya’s Urn, Martingales
-STT 882  
-Feb 17, 2025
+
 
 ## Setup from last time
 We have a martingale

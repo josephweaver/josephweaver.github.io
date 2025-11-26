@@ -1,6 +1,5 @@
 # 17 — Optional Stopping, Doob Inequalities, Maximal Inequalities
-STT 882  
-Feb 22, 2025
+
 
 ## Setup
 We work on a probability space  

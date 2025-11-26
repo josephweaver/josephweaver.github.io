@@ -1,6 +1,5 @@
 # 13 — Upcrossing Lemma, Doob's Inequality, and MGCT
-STT 882  
-Feb 12, 2025
+
 
 ---
 

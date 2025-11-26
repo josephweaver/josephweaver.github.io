@@ -1,6 +1,5 @@
 # 26 — Optional Stopping for Random Walks, Expected Hitting Times
-STT 882  
-March 21, 2025
+
 
 We study a biased random walk and compute the expected hitting time of a level using martingales and OST (Optional Stopping Theorem).
 

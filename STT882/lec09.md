@@ -1,6 +1,6 @@
 # 9 — Conditional Expectation
-STT 882  
-Feb 3, 2025
+
+---
 
 We work on a probability space  
 $$(\Omega, \mathcal{F}_0, P), \qquad \mathcal{F} \subseteq \mathcal{F}_0.$$

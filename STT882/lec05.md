@@ -1,6 +1,5 @@
 # 5 — Filtrations
-STT 882  
-Jan 24, 2025
+
 
 
 Let $(\Omega, \mathcal F, P)$ be a probability space.

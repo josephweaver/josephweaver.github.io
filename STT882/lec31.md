@@ -1,6 +1,4 @@
 # 31 **Brownian Motion Construction Using Hilbert Spaces**
-STT 882  
-April 4, 2025
 
 ---
 

@@ -1,6 +1,4 @@
 # 8 **Hewitt–Savage 0–1 Law, Symmetric Difference Basics, Conditioning**
-STT 882  
-Feb 2, 2025
 
 ---
 

@@ -1,6 +1,5 @@
 # 23 — Conditioning, UI vs DCT, Reverse Martingales
-STT 882  
-March 14, 2025
+
 
 ## 1. Setup
 Let $\{Z_n\}$ be IID.  

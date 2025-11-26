@@ -1,6 +1,5 @@
 # 21 — Doob’s $L^p$ Inequality, BDG Inequality, and Uniform Integrability
-STT 882  
-March 10, 2025
+
 
 ## Doob’s $L^p$ Inequality ($p>1$)
 

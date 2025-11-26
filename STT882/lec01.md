@@ -1,7 +1,5 @@
 
 # 1 - Random Vectors, Multinomial, and Multivariate Normal
-STT 882  
-Jan 6, 2025
 
 ---
 

@@ -1,6 +1,4 @@
 # 25 — Optional Stopping (OST), Backwards Martingales, Simple Random Walk
-STT 882  
-March 19, 2025
 
 
 ## 1. Setup

@@ -1,6 +1,4 @@
 # 19 — L² Martingales, Doob Decomposition, L² Inequality, and Kronecker Lemma
-STT 882  
-Feb 28, 2025
 
 ## L² Martingales
 

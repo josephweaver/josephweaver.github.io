@@ -1,6 +1,4 @@
-# 6 — Wald’s Equations and Hitting Times (01-27)
-STT 882  
-Jan 27, 2025
+# 6 — Wald’s Equations and Hitting Times
 
 This lecture builds on stopping times from Lectures 4–5 and introduces the **first and second Wald equations**, with applications to **simple symmetric random walk hitting times**.
 
@@ -37,7 +35,7 @@ $$
 
 If
 
-- $E|X_1| < \infty$  
+- $E\vert X_1\vert < \infty$  
 - $E(T) < \infty$
 
 then
@@ -168,8 +166,8 @@ While $E(T_a)=\infty$ for a one-sided boundary, the **two-sided** hitting time $
 The argument (page **2**) uses:
 
 - Geometric trial structure  
-- Blocks of length $(a+|b|)$  
-- Success probability $2^{-(a+|b|)}$
+- Blocks of length $(a+\vert b\vert)$  
+- Success probability $2^{-(a+\vert b\vert)}$
 
 Thus
 
@@ -278,12 +276,4 @@ This corresponds to the final notes on page **4** of the PDF :contentReference[o
   - Two-sided hitting times have **finite expectation**: $E(T_{a,b})<\infty$  
 - Centering trick handles the general case $E(X_1)\ne 0$.
 
----
 
-If you want, I can now generate:
-
-✅ A downloadable `.md` file  
-✅ A version with diagrams recreated in TikZ  
-✅ A more compact “cheat-sheet” formatting
-
-Just tell me which you prefer.

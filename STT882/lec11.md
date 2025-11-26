@@ -1,6 +1,5 @@
 # 11 — Doob’s Upcrossing Lemma and Martingale Convergence
-STT 882  
-Feb 7, 2025
+
 
 
 ## 1. Setup

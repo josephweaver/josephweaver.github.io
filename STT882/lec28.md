@@ -1,6 +1,5 @@
 # 28 — Brownian Motion (March 28)
-STT 882  
-March 28, 2025
+
 
 ## Definition of Standard Brownian Motion (SBM)
 

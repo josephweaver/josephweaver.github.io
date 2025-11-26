@@ -1,7 +1,5 @@
 # 29 — Brownian Motion: Non-Differentiability, Kolmogorov Continuity, and Lévy Modulus
-(Notes reconstructed from 03-31.pdf)
-STT 882  
-March 31, 2025
+
 
 ---
 

@@ -1,6 +1,5 @@
 # 14 — Doob’s Decomposition and Uniqueness
-STT 882  
-Feb 14, 2025
+
 
 
 ## Doob’s Decomposition Theorem (Summary)

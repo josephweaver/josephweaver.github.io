@@ -1,9 +1,6 @@
 
 # 3 — Multivariate CLT in $\mathbb{R}^d$
-STT 882  
-Jan 20, 2025
 
-This chapter summarizes the content of Lecture 3 (STT 882, 2025‑01‑17), reconstructed from the handwritten notes. All math uses GitHub‑friendly `$...$` and `$$...$$` syntax.
 
 ---
 

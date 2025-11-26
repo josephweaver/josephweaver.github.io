@@ -1,6 +1,5 @@
 # 22 — Convergence of Conditional Expectations
-STT 882  
-March 12, 2025
+
 **Topic:** Conditional Expectation, Increasing Filtrations, UI Martingales, Kolmogorov 0–1, DCT for Conditional Expectations
 
 ---

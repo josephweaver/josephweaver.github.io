@@ -1,6 +1,5 @@
 # 18 — Doob's $L^p$ Inequality and Branching Processes
-STT 882  
-Feb 24, 2025
+
 
 
 ## Doob’s $L^p$ Inequality (for $p>1$)

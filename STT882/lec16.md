@@ -1,6 +1,5 @@
 # 16 — Radon–Nikodym, Lebesgue Decomposition, and Kakutani
-STT 882  
-Feb 19, 2025
+
 
 Goal: Prove the Radon–Nikodym theorem in the simple setting of measures on  
 $(0,1], \mathcal{B}$, following Durrett §5.5.3, p. 206.
