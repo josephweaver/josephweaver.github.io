@@ -1,4 +1,4 @@
-# Lecture 11 — Doob’s Upcrossing Lemma and Martingale Convergence  
+# 11 — Doob’s Upcrossing Lemma and Martingale Convergence
 STT 882  
 Feb 7, 2025
 

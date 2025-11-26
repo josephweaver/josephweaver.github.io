@@ -1,4 +1,4 @@
-# Lecture 7 — H–S 0–1 Law, Applications, and Return-Time Results  
+# 7 — H–S 0–1 Law, Applications, and Return-Time Results
 STT 882  
 Jan 29, 2025
 

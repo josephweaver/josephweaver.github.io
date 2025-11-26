@@ -1,4 +1,4 @@
-# Lecture 16 — Radon–Nikodym, Lebesgue Decomposition, and Kakutani 
+# 16 — Radon–Nikodym, Lebesgue Decomposition, and Kakutani
 STT 882  
 Feb 19, 2025
 

@@ -1,4 +1,4 @@
-# Lecture 9 — Conditional Expectation
+# 9 — Conditional Expectation
 STT 882  
 Feb 3, 2025
 

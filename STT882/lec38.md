@@ -1,4 +1,4 @@
-# **Lecture 38 — Two-Sided Hitting, Gambler’s Ruin for BM, and Exponential Martingales**
+# 38 — Two-Sided Hitting, Gambler’s Ruin for BM, and Exponential Martingales
 STT 882  
 April 23, 2025
 

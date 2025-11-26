@@ -1,4 +1,4 @@
-# **Lecture 34 — Strong Markov Property, Hitting Times, Stopping Times**
+# 34 — Strong Markov Property, Hitting Times, Stopping Times
 STT 882  
 April 14, 2025
 

@@ -1,4 +1,4 @@
-# Lecture 26 — Optional Stopping for Random Walks, Expected Hitting Times
+# 26 — Optional Stopping for Random Walks, Expected Hitting Times
 STT 882  
 March 21, 2025
 

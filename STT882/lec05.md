@@ -1,4 +1,4 @@
-# STT 882 — Lecture 5 Notes
+# 5 — Filtrations
 STT 882  
 Jan 24, 2025
 

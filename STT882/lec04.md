@@ -1,4 +1,4 @@
-# Lecture 4 — Stopping Times
+# 4 — Stopping Times
 STT 882  
 Jan 22, 2025
 

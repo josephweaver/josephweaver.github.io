@@ -1,5 +1,5 @@
 
-# Lecture 3: Multivariate CLT in $\mathbb{R}^d$
+# 3 — Multivariate CLT in $\mathbb{R}^d$
 STT 882  
 Jan 20, 2025
 

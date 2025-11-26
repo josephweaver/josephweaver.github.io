@@ -1,4 +1,4 @@
-# Lecture 18 — Doob's $L^p$ Inequality and Branching Processes
+# 18 — Doob's $L^p$ Inequality and Branching Processes
 STT 882  
 Feb 24, 2025
 

@@ -1,4 +1,4 @@
-# **Lecture 10 Regular Conditional Probability / Distribution**  
+# 10 Regular Conditional Probability / Distribution
 STT 882  
 Feb 5, 2025
 

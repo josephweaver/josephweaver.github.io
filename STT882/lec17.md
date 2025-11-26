@@ -1,4 +1,4 @@
-# **Lecture 17 — Optional Stopping, Doob Inequalities, Maximal Inequalities**
+# 17 — Optional Stopping, Doob Inequalities, Maximal Inequalities
 STT 882  
 Feb 22, 2025
 

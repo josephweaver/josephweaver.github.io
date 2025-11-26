@@ -1,4 +1,4 @@
-# Lecture 23 — Conditioning, UI vs DCT, Reverse Martingales
+# 23 — Conditioning, UI vs DCT, Reverse Martingales
 STT 882  
 March 14, 2025
 

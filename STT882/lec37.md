@@ -1,4 +1,4 @@
-# **Lecture 37 — Martingales for Brownian Motion**
+# 37 — Martingales for Brownian Motion
 STT 882  
 April 21, 2025
 

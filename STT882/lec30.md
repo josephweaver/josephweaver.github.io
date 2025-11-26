@@ -1,4 +1,4 @@
-# **Lecture 30 — Lévy Modulus of Continuity and Haar Basis Construction of Brownian Motion**
+# 30 — Lévy Modulus of Continuity and Haar Basis Construction of Brownian Motion
 STT 882  
 April 2, 2025
 

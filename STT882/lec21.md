@@ -1,4 +1,4 @@
-# Lecture 21 — Doob’s $L^p$ Inequality, BDG Inequality, and Uniform Integrability  
+# 21 — Doob’s $L^p$ Inequality, BDG Inequality, and Uniform Integrability
 STT 882  
 March 10, 2025
 

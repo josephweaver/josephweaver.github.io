@@ -1,4 +1,4 @@
-# **Lecture 36 — Scaling of Hitting Times, Stability, and Zero Set Structure**
+# 36 — Scaling of Hitting Times, Stability, and Zero Set Structure
 STT 882  
 April 18, 2025
 

@@ -1,4 +1,4 @@
-# Lecture 32 — Markov Property of Brownian Motion
+# 32 — Markov Property of Brownian Motion
 STT 882  
 April 9, 2025
 

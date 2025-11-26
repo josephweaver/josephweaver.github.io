@@ -1,4 +1,4 @@
-# **Lecture 27 — Central Limit Theorem for Martingales**  
+# 27 — Central Limit Theorem for Martingales
 STT 882  
 March 24, 2025
 

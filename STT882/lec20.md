@@ -1,4 +1,4 @@
-# Lecture 20 — L² Martingales, BCII+, Polya Scheme, Extensions
+# 20 — L² Martingales, BCII+, Polya Scheme, Extensions
 STT 882  
 March 8, 2025
 

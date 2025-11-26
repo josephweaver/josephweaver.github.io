@@ -1,4 +1,4 @@
-# **Lecture 6 — Wald’s Equations and Hitting Times (01-27)**
+# 6 — Wald’s Equations and Hitting Times (01-27)
 STT 882  
 Jan 27, 2025
 

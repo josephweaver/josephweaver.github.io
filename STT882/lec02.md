@@ -1,5 +1,5 @@
 
-# Lecture 2: Characteristic Functions, Independence, and Weak Convergence in $\mathbb{R}^d$
+# 2 - Characteristic Functions, Independence, and Weak Convergence in $\mathbb{R}^d$
 STT 882  
 Jan 18, 2025
 

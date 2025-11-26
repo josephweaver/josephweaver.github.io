@@ -1,4 +1,4 @@
-# **Lecture 35 — Strong Markov Property and Reflection Principle**
+# 35 — Strong Markov Property and Reflection Principle
 STT 882  
 April 16, 2025
 

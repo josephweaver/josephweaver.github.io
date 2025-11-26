@@ -1,4 +1,4 @@
-# Lecture 24 — Backwards Martingales, Exchangeability, de Finetti
+# 24 — Backwards Martingales, Exchangeability, de Finetti
 STT 882  
 March 17, 2025
 

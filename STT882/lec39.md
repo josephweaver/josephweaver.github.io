@@ -1,4 +1,4 @@
-# **Lecture 39 — Embedding Random Variables into Brownian Motion (Skorokhod Embedding) and CLT via Brownian Motion**
+# 39 — Embedding Random Variables into Brownian Motion (Skorokhod Embedding) and CLT via Brownian Motion
 STT 882  
 April 25, 2025
 

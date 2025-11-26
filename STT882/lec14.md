@@ -1,4 +1,4 @@
-# Lecture 14 — Doob’s Decomposition and Uniqueness  
+# 14 — Doob’s Decomposition and Uniqueness
 STT 882  
 Feb 14, 2025
 
