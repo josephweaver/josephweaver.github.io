@@ -40,51 +40,61 @@
     <nav class="site-nav">
       <ul class="site-nav__links">
         <li><a href="{{ "/" | relative_url }}">Home</a></li>
-        <li><a href="{{ "/STT882/lec01.html" | relative_url }}">STT882</a></li>
+        <li><a href="{{ "/STT882/lec1.html" | relative_url }}">STT882</a></li>
       </ul>
-
-      {% if page.path contains "STT882/lec" %}
-        {% assign lecture_pages = site.pages | where_exp: "p", "p.path contains 'STT882/lec'" %}
-        {% assign lecture_pages = lecture_pages | sort_natural: "path" %}
-        {% assign lecture_static = site.static_files | where_exp: "f", "f.path contains '/STT882/lec'" %}
-        {% assign lecture_static = lecture_static | sort_natural: "path" %}
-        {% if lecture_pages == empty and lecture_static != empty %}
-          {% assign lectures = lecture_static %}
-        {% else %}
-          {% assign lectures = lecture_pages %}
-        {% endif %}
-        {% assign lectures = lectures | sort_natural: "path" %}
-
-        <div class="lecture-nav">
-          <span class="lecture-nav__title">STT882 Lectures</span>
-          <ul class="lecture-nav__list">
-            {% for lecture in lectures %}
-              {% assign label = lecture.title | default: lecture.data.title | default: lecture.name %}
-              {% assign label = label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " %}
-              <li>
-                <a class="{% if lecture.url == page.url %}active{% endif %}"
-                   href="{{ lecture.url | default: lecture.path | relative_url }}">
-                  {{ label }}
-                </a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-      {% endif %}
     </nav>
   </header>
 
-  <main class="page-content" aria-label="Content">
-    <div class="wrapper">
-      {{ content }}
-    </div>
-  </main>
+  <div class="layout">
+    {% assign is_lecture = page.path contains "STT882/lec" %}
+    {% if is_lecture %}
+      {% assign lecture_pages = site.pages | where_exp: "p", "p.path contains 'STT882/lec'" | sort_natural: "path" %}
+      {% assign lecture_static = site.static_files | where_exp: "f", "f.path contains '/STT882/lec'" | sort_natural: "path" %}
+      {% if lecture_pages == empty and lecture_static != empty %}
+        {% assign lectures = lecture_static %}
+      {% else %}
+        {% assign lectures = lecture_pages %}
+      {% endif %}
+      {% assign lectures = lectures | sort_natural: "path" %}
+
+      <aside class="sidebar" id="lectureSidebar">
+        <div class="sidebar__header">
+          <span>STT882 Lectures</span>
+          <a class="sidebar__reset" href="#" id="sidebarReset" title="Reset width">Reset</a>
+        </div>
+        <ul class="lecture-nav__list">
+          {% for lecture in lectures %}
+            {% assign label = lecture.title | default: lecture.data.title | default: lecture.name %}
+            {% assign label = label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " %}
+            <li>
+              <a class="{% if lecture.url == page.url %}active{% endif %}"
+                 href="{{ lecture.url | default: lecture.path | relative_url }}">
+                {{ label }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </aside>
+      <div class="sidebar-resizer" id="sidebarResizer" role="separator" aria-orientation="vertical" aria-label="Resize lecture navigation"></div>
+    {% endif %}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+  </div>
 
   <footer class="site-footer">
     <small>&copy; {{ site.time | date: "%Y" }} {{ site.author | default: site.title }}</small>
   </footer>
 
   <style>
+    :root {
+      --sidebar-width: 240px;
+      --sidebar-min: 180px;
+      --sidebar-max: 520px;
+    }
     .site-header {
       border-bottom: 1px solid #dfe2e5;
       margin-bottom: 1.5rem;
@@ -112,31 +122,56 @@
     .site-nav__links a:focus-visible {
       border-color: #159957;
     }
-    .lecture-nav {
+    .layout {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+    .sidebar {
       background: #f7f7f7;
       border: 1px solid #dfe2e5;
-      border-radius: 6px;
+      border-radius: 8px;
       padding: 0.75rem;
-      overflow-x: auto;
+      width: var(--sidebar-width);
+      max-width: 100%;
+      min-width: var(--sidebar-min);
+      box-sizing: border-box;
+      overflow-y: auto;
+      position: sticky;
+      top: 0.75rem;
+      align-self: start;
+      height: calc(100vh - 4rem);
     }
-    .lecture-nav__title {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 0.35rem;
+    .sidebar__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+    .sidebar__reset {
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: #159957;
+    }
+    .sidebar__reset:hover,
+    .sidebar__reset:focus-visible {
+      text-decoration: underline;
     }
     .lecture-nav__list {
-      display: flex;
-      flex-wrap: wrap;
       list-style: none;
-      gap: 0.5rem 0.75rem;
       padding: 0;
       margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
     }
     .lecture-nav__list a {
       text-decoration: none;
       color: inherit;
-      padding: 0.2rem 0.4rem;
+      padding: 0.25rem 0.35rem;
       border-radius: 4px;
+      display: block;
     }
     .lecture-nav__list a:hover,
     .lecture-nav__list a:focus-visible {
@@ -147,11 +182,85 @@
       background: #159957;
       color: #fff;
     }
-    @media (max-width: 640px) {
+    .sidebar-resizer {
+      width: 6px;
+      cursor: col-resize;
+      background: transparent;
+      position: relative;
+    }
+    .sidebar-resizer::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 2px;
+      width: 2px;
+      background: #dfe2e5;
+      border-radius: 2px;
+    }
+    .page-content {
+      width: 100%;
+    }
+    @media (min-width: 820px) {
+      .layout {
+        grid-template-columns: auto 6px 1fr;
+        align-items: flex-start;
+      }
+    }
+    @media (max-width: 819px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar,
+      .sidebar-resizer {
+        display: none;
+      }
       .site-nav__links {
         gap: 0.75rem;
       }
     }
   </style>
+
+  <script>
+    (function() {
+      var sidebar = document.getElementById('lectureSidebar');
+      var resizer = document.getElementById('sidebarResizer');
+      var resetBtn = document.getElementById('sidebarReset');
+      if (!sidebar || !resizer) return;
+
+      var stored = localStorage.getItem('sttSidebarWidth');
+      if (stored) {
+        sidebar.style.width = stored;
+      }
+
+      var startX = 0;
+      var startWidth = 0;
+      function onMouseMove(e) {
+        var delta = e.clientX - startX;
+        var minW = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--sidebar-min'));
+        var maxW = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--sidebar-max'));
+        var newWidth = Math.min(Math.max(startWidth + delta, minW), maxW);
+        sidebar.style.width = newWidth + 'px';
+      }
+      function onMouseUp() {
+        localStorage.setItem('sttSidebarWidth', sidebar.style.width);
+        document.removeEventListener('mousemove', onMouseMove);
+        document.removeEventListener('mouseup', onMouseUp);
+      }
+      resizer.addEventListener('mousedown', function(e) {
+        startX = e.clientX;
+        startWidth = sidebar.getBoundingClientRect().width;
+        document.addEventListener('mousemove', onMouseMove);
+        document.addEventListener('mouseup', onMouseUp);
+      });
+      if (resetBtn) {
+        resetBtn.addEventListener('click', function(e) {
+          e.preventDefault();
+          sidebar.style.width = getComputedStyle(document.documentElement).getPropertyValue('--sidebar-width');
+          localStorage.removeItem('sttSidebarWidth');
+        });
+      }
+    })();
+  </script>
 </body>
 </html>
