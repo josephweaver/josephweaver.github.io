@@ -5,7 +5,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
 
   {%- seo -%}
 
@@ -22,7 +22,7 @@
         packages: {'[+]': ['noerrors']}      // avoid throwing visible errors on the page
       },
       options: {
-        skipHtmlTags: ['script','noscript','style','textarea','pre','code'] // don’t typeset inside code blocks
+        skipHtmlTags: ['script','noscript','style','textarea','pre','code'] // don't typeset inside code blocks
       }
     };
   </script>
@@ -37,10 +37,6 @@
 
 <body>
   <header class="site-header">
-    <div class="site-header__top">
-      <h1 class="site-title"><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
-      {% if site.description %}<p class="site-description">{{ site.description }}</p>{% endif %}
-    </div>
     <nav class="site-nav">
       <ul class="site-nav__links">
         <li><a href="{{ "/" | relative_url }}">Home</a></li>
@@ -49,14 +45,15 @@
 
       {% if page.path contains "STT882/lec" %}
         {% assign lecture_pages = site.pages | where_exp: "p", "p.path contains 'STT882/lec'" %}
-        {% assign lecture_pages = lecture_pages | sort: "path" %}
+        {% assign lecture_pages = lecture_pages | sort_natural: "path" %}
         {% assign lecture_static = site.static_files | where_exp: "f", "f.path contains '/STT882/lec'" %}
-        {% assign lecture_static = lecture_static | sort: "path" %}
+        {% assign lecture_static = lecture_static | sort_natural: "path" %}
         {% if lecture_pages == empty and lecture_static != empty %}
           {% assign lectures = lecture_static %}
         {% else %}
           {% assign lectures = lecture_pages %}
         {% endif %}
+        {% assign lectures = lectures | sort_natural: "path" %}
 
         <div class="lecture-nav">
           <span class="lecture-nav__title">STT882 Lectures</span>
@@ -91,14 +88,6 @@
     .site-header {
       border-bottom: 1px solid #dfe2e5;
       margin-bottom: 1.5rem;
-    }
-    .site-header__top {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 1rem;
-      flex-wrap: wrap;
-      padding-bottom: 0.5rem;
     }
     .site-nav {
       display: flex;
@@ -159,10 +148,6 @@
       color: #fff;
     }
     @media (max-width: 640px) {
-      .site-header__top {
-        flex-direction: column;
-        align-items: flex-start;
-      }
       .site-nav__links {
         gap: 0.75rem;
       }
