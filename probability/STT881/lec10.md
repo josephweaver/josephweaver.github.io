@@ -271,8 +271,8 @@ The notes remark (bottom of page 2 and page 3):
 
 Thus:
 
-\vert  Tool \vert  Condition \vert  Guarantees \vert 
-\vert ------\vert -----------\vert ------------\vert 
-\vert  **DCT** \vert  $\vert X_n\vert \le g$ and $X_n\to X$ a.e., $g\in L^1$ \vert  $\mathbb{E}X_n\to\mathbb{E}X$ \vert 
-\vert  **UI** \vert  tail control only \vert  $\mathbb{E}X_n\to\mathbb{E}X$ \vert 
+| Tool | Condition | Guarantees |
+|------|-----------|------------|
+| **DCT** | $|X_n|\le g$ and $X_n\to X$ a.e., $g\in L^1$ | $\mathbb{E}X_n\to\mathbb{E}X$ |
+| **UI** | tail control only | $\mathbb{E}X_n\to\mathbb{E}X$ |
 

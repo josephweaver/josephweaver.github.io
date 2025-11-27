@@ -148,7 +148,7 @@ such that:
 3. **Countable additivity** for disjoint sets:  
    If $A_i \in \mathcal{A}$ are pairwise disjoint and $\bigcup_{i=1}^\infty A_i \in \mathcal{A}$, then
    $$
-   \mu\!\(\bigcup_{i=1}^\infty A_i\)
+   \mu\!(\bigcup_{i=1}^\infty A_i)
       = \sum_{i=1}^\infty \mu(A_i).
    $$
 

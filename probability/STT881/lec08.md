@@ -117,11 +117,12 @@ $$
 $$
 
 Integrate:
+
 $$
-\int \vert f+g\vert ^p
-\le 
-\int \vert f\vert \; \vert f+g\vert ^{p-1}
-+ \int \vert g\vert \; \vert f+g\vert ^{p-1}.
+  \int \vert f+g\vert ^p
+  \le 
+  \int \vert f\vert \; \vert f+g\vert ^{p-1}
+  + \int \vert g\vert \; \vert f+g\vert ^{p-1}.
 $$
 
 Apply Hölder:
@@ -154,8 +155,8 @@ $$
 
 $$
 \vert f+g\vert _\infty
-= \esssup \vert f+g\vert 
-\le \esssup \vert f\vert  + \esssup \vert g\vert 
+= \operatorname{esssup} \vert f+g\vert 
+\le \operatorname{esssup} \vert f\vert  + \operatorname{esssup} \vert g\vert 
 = \vert f\vert _\infty + \vert g\vert _\infty.
 $$
 

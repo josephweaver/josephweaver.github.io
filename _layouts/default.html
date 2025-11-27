@@ -36,25 +36,20 @@
 </head>
 
 <body>
-  {% assign is_prob1 = page.path contains "STT881/lec" %}
-  {% assign is_prob2 = page.path contains "STT882/lec" %}
-  {% assign lecture_pages_881 = site.pages | where_exp: "p", "p.path contains 'STT881/lec'" | sort_natural: "path" %}
-  {% assign lecture_static_881 = site.static_files | where_exp: "f", "f.path contains '/STT881/lec'" | sort_natural: "path" %}
-  {% if lecture_pages_881 == empty and lecture_static_881 != empty %}
-    {% assign lectures_881 = lecture_static_881 %}
-  {% else %}
-    {% assign lectures_881 = lecture_pages_881 %}
+  {% assign active_section = nil %}
+  {% if page.path contains "probability/" %}
+    {% assign active_section = "probability" %}
+  {% elsif page.path contains "research/" %}
+    {% assign active_section = "research" %}
+  {% elsif page.path contains "fiction/" %}
+    {% assign active_section = "fiction" %}
   {% endif %}
-  {% assign lectures_881 = lectures_881 | sort_natural: "path" %}
-
-  {% assign lecture_pages_882 = site.pages | where_exp: "p", "p.path contains 'STT882/lec'" | sort_natural: "path" %}
-  {% assign lecture_static_882 = site.static_files | where_exp: "f", "f.path contains '/STT882/lec'" | sort_natural: "path" %}
-  {% if lecture_pages_882 == empty and lecture_static_882 != empty %}
-    {% assign lectures_882 = lecture_static_882 %}
-  {% else %}
-    {% assign lectures_882 = lecture_pages_882 %}
+  {% assign active_subsection = nil %}
+  {% if active_section %}
+    {% assign subsection_segments = page.path | remove_first: active_section | remove_first: "/" | split: "/" %}
+    {% assign active_subsection = subsection_segments | first %}
   {% endif %}
-  {% assign lectures_882 = lectures_882 | sort_natural: "path" %}
+  {% assign nav_sections = "probability:Probability,research:Research,fiction:Fiction" | split: "," %}
 
   <div class="layout">
     <aside class="sidebar" id="lectureSidebar">
@@ -62,45 +57,96 @@
         <span>Navigation</span>
         <a class="sidebar__reset" href="#" id="sidebarReset" title="Reset width">Reset</a>
       </div>
-      <ul class="lecture-nav__list">
+      <ul class="nav-list">
         <li>
           <a class="{% if page.url == "/" or page.url == "/index.html" %}active{% endif %}"
              href="{{ "/" | relative_url }}">Home</a>
         </li>
-        <li>
-          <a class="{% if is_prob1 %}active{% endif %}"
-             href="{{ "/STT881/lec01.html" | relative_url }}">Probability 1</a>
-        </li>
-        <li>
-          <a class="{% if is_prob2 %}active{% endif %}"
-             href="{{ "/STT882/lec01.html" | relative_url }}">Probability 2</a>
-        </li>
-        {% if is_prob1 %}
-          <li class="lecture-nav__heading">Probability 1 Lectures</li>
-          {% for lecture in lectures_881 %}
-            {% assign label = lecture.title | default: lecture.data.title | default: lecture.name %}
-            {% assign label = label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " %}
-            <li>
-              <a class="{% if lecture.url == page.url %}active{% endif %}"
-                 href="{{ lecture.url | default: lecture.path | relative_url }}">
-                {{ label }}
-              </a>
-            </li>
-          {% endfor %}
-        {% endif %}
-        {% if is_prob2 %}
-          <li class="lecture-nav__heading">Probability 2 Lectures</li>
-          {% for lecture in lectures_882 %}
-            {% assign label = lecture.title | default: lecture.data.title | default: lecture.name %}
-            {% assign label = label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " %}
-            <li>
-              <a class="{% if lecture.url == page.url %}active{% endif %}"
-                 href="{{ lecture.url | default: lecture.path | relative_url }}">
-                {{ label }}
-              </a>
-            </li>
-          {% endfor %}
-        {% endif %}
+        {% for entry in nav_sections %}
+          {% assign parts = entry | split: ":" %}
+          {% assign section_key = parts[0] | strip %}
+          {% assign section_label = parts[1] | strip %}
+          {% assign section_prefix = section_key | append: "/" %}
+          {% assign section_id = "nav-" | append: section_key %}
+          {% assign is_section_active = active_section == section_key %}
+
+          {% assign section_landing = site.pages | where_exp: "p", "p.path == section_prefix | append: 'README.md'" | first %}
+          {% if section_landing == nil %}
+            {% assign section_landing = site.pages | where_exp: "p", "p.path == section_prefix | append: 'index.md'" | first %}
+          {% endif %}
+          {% if section_landing == nil %}
+            {% assign section_landing = site.pages | where_exp: "p", "p.path == section_prefix | append: 'index.html'" | first %}
+          {% endif %}
+          {% assign section_url = section_landing.url | default: section_prefix %}
+
+          {% assign section_pages = site.pages | where_exp: "p", "p.path contains section_prefix" %}
+          {% assign subsections = section_pages | group_by_exp: "p", "p.path | remove_first: section_prefix | split: '/' | first" | sort: "name" %}
+
+          <li class="nav__section{% if is_section_active %} is-open{% endif %}">
+            <div class="nav__section-row">
+              <a class="nav__section-link{% if is_section_active %} active{% endif %}"
+                 href="{{ section_url | relative_url }}">{{ section_label }}</a>
+              <button class="nav__toggle" type="button"
+                      aria-expanded="{% if is_section_active %}true{% else %}false{% endif %}"
+                      aria-controls="{{ section_id }}"
+                      data-toggle-target="{{ section_id }}">
+                <span class="nav__toggle-icon">&gt;</span>
+              </button>
+            </div>
+            <ul id="{{ section_id }}"
+                class="nav__sublist{% unless is_section_active %} is-collapsed{% endunless %}">
+              {% for subsection in subsections %}
+                {% assign subgroup = subsection.name %}
+                {% if subgroup == "" %}{% continue %}{% endif %}
+                {% if subgroup == "README.md" or subgroup == "index.md" or subgroup == "index.html" %}{% continue %}{% endif %}
+
+                {% assign sub_prefix = section_prefix | append: subgroup | append: "/" %}
+                {% assign sub_id = section_id | append: "-" | append: subgroup | slugify %}
+                {% assign is_sub_active = is_section_active and page.path contains sub_prefix %}
+                {% assign sub_label = subgroup | replace: "-", " " | replace: "_", " " %}
+
+                {% assign sub_landing = site.pages | where_exp: "p", "p.path == sub_prefix | append: 'README.md'" | first %}
+                {% if sub_landing == nil %}
+                  {% assign sub_landing = site.pages | where_exp: "p", "p.path == sub_prefix | append: 'index.md'" | first %}
+                {% endif %}
+                {% if sub_landing == nil %}
+                  {% assign sub_landing = site.pages | where_exp: "p", "p.path == sub_prefix | append: 'index.html'" | first %}
+                {% endif %}
+                {% assign sub_url = sub_landing.url | default: sub_prefix %}
+
+                {% assign pages = subsection.items | sort_natural: "path" %}
+                <li class="nav__subsection{% if is_sub_active %} is-open{% endif %}">
+                  <div class="nav__subsection-row">
+                    <a class="nav__subsection-link{% if is_sub_active %} active{% endif %}"
+                       href="{{ sub_url | relative_url }}">{{ sub_label }}</a>
+                    <button class="nav__toggle nav__toggle--small" type="button"
+                            aria-expanded="{% if is_sub_active %}true{% else %}false{% endif %}"
+                            aria-controls="{{ sub_id }}"
+                            data-toggle-target="{{ sub_id }}">
+                      <span class="nav__toggle-icon">&gt;</span>
+                    </button>
+                  </div>
+                  <ul id="{{ sub_id }}"
+                      class="nav__page-list{% unless is_sub_active %} is-collapsed{% endunless %}">
+                    {% for subpage in pages %}
+                      {% assign filename = subpage.name %}
+                      {% if filename == "README.md" or filename == "index.md" or filename == "index.html" %}{% continue %}{% endif %}
+
+                      {% assign label = subpage.title | default: subpage.data.title | default: filename %}
+                      {% assign label = label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " | replace: "-", " " %}
+                      <li>
+                        <a class="{% if subpage.url == page.url %}active{% endif %}"
+                           href="{{ subpage.url | default: subpage.path | relative_url }}">
+                          {{ label }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% endfor %}
       </ul>
     </aside>
     <div class="sidebar-resizer" id="sidebarResizer" role="separator" aria-orientation="vertical" aria-label="Resize navigation"></div>
@@ -158,36 +204,127 @@
     .sidebar__reset:focus-visible {
       text-decoration: underline;
     }
-    .lecture-nav__list {
+    .nav-list {
       list-style: none;
       padding: 0;
       margin: 0;
       display: flex;
       flex-direction: column;
-      gap: 0.2rem;
+      gap: 0.35rem;
     }
-    .lecture-nav__heading {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: #5c6f82;
-      margin-top: 0.4rem;
-    }
-    .lecture-nav__list a {
+    .nav-list > li > a {
       text-decoration: none;
       color: inherit;
       padding: 0.25rem 0.35rem;
-      border-radius: 4px;
+      border-radius: 6px;
       display: block;
+      font-weight: 600;
     }
-    .lecture-nav__list a:hover,
-    .lecture-nav__list a:focus-visible {
+    .nav-list > li > a.active {
+      background: #159957;
+      color: #fff;
+    }
+    .nav__section {
+      border: 1px solid #dfe2e5;
+      border-radius: 8px;
+      background: #ffffff;
+    }
+    .nav__section-row,
+    .nav__subsection-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      padding: 0.35rem 0.45rem;
+    }
+    .nav__section-row {
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 0.95rem;
+      letter-spacing: 0.04em;
+    }
+    .nav__section-link,
+    .nav__subsection-link {
+      text-decoration: none;
+      color: inherit;
+      flex: 1;
+      border-radius: 6px;
+      padding: 0.25rem 0.3rem;
+    }
+    .nav__section-link.active,
+    .nav__subsection-link.active {
       background: #e6f3ec;
       color: #0c6d3f;
     }
-    .lecture-nav__list a.active {
+    .nav__sublist,
+    .nav__page-list {
+      list-style: none;
+      padding: 0 0.45rem 0.45rem;
+      margin: 0;
+    }
+    .nav__sublist {
+      border-top: 1px solid #e7ebf0;
+    }
+    .nav__subsection {
+      border: 1px solid #e7ebf0;
+      border-radius: 6px;
+      margin-top: 0.35rem;
+      background: #f9fafc;
+    }
+    .nav__page-list {
+      padding-left: 0.85rem;
+      border-left: 2px solid #e0e5ec;
+    }
+    .nav__page-list a {
+      text-decoration: none;
+      color: inherit;
+      padding: 0.25rem 0.3rem;
+      display: block;
+      border-radius: 5px;
+      font-size: 0.95rem;
+    }
+    .nav__page-list a:hover,
+    .nav__page-list a:focus-visible {
+      background: #e6f3ec;
+      color: #0c6d3f;
+    }
+    .nav__page-list a.active {
       background: #159957;
       color: #fff;
+    }
+    .nav__toggle {
+      border: 1px solid #dfe2e5;
+      background: #fff;
+      color: #5c6f82;
+      width: 28px;
+      height: 28px;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+    .nav__toggle:hover,
+    .nav__toggle:focus-visible {
+      background: #e6f3ec;
+      border-color: #159957;
+    }
+    .nav__toggle--small {
+      width: 26px;
+      height: 26px;
+      font-size: 0.8rem;
+    }
+    .nav__toggle-icon {
+      display: inline-block;
+      transition: transform 0.2s ease;
+    }
+    .nav__section.is-open > .nav__section-row .nav__toggle-icon,
+    .nav__subsection.is-open > .nav__subsection-row .nav__toggle-icon {
+      transform: rotate(90deg);
+    }
+    .is-collapsed {
+      display: none;
     }
     .sidebar-resizer {
       width: 6px;
@@ -258,6 +395,26 @@
           localStorage.removeItem('sttSidebarWidth');
         });
       }
+    })();
+
+    (function() {
+      var toggles = document.querySelectorAll('[data-toggle-target]');
+      toggles.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+          var targetId = btn.getAttribute('data-toggle-target');
+          var target = document.getElementById(targetId);
+          if (!target) return;
+
+          var isCollapsed = target.classList.toggle('is-collapsed');
+          var expanded = !isCollapsed;
+          btn.setAttribute('aria-expanded', expanded);
+
+          var parentSection = btn.closest('.nav__section, .nav__subsection');
+          if (parentSection) {
+            parentSection.classList.toggle('is-open', expanded);
+          }
+        });
+      });
     })();
   </script>
 </body>

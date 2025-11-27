@@ -107,12 +107,12 @@ We start with the algebra:
 $$
 \mathcal{L}
 =
-\left\{
+\{
 \bigcup_{i=1}^m A_i \times B_i :
 A_i\in\mathcal{F}_1,\,
 B_i\in\mathcal{F}_2,\,
 (A_i\times B_i)\text{ disjoint}
-\right\}.
+\}.
 $$
 
 Define
@@ -221,7 +221,7 @@ Given $E\in\mathcal{F}$,
   $$
   E_x=
   \begin{cases}
-  B,& x\in A\$$4pt]
+  B,& x\in A \\
   \varnothing,& x\notin A.
   \end{cases}
   $$

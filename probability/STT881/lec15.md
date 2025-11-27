@@ -1,35 +1,8 @@
-# 15 — Lebesgue Decomposition, Radon–Nikodym, and Probability Measures
+# 15 - Lebesgue Decomposition, Radon-Nikodym, and Probability Measures
 
-Lecture 15 covers:
-
-Lebesgue Decomposition Theorem: splitting any σ-finite measure 
-𝜈
-ν into an absolutely continuous part and a singular part relative to 
-𝜇
-μ.
-
-Radon–Nikodym Theorem: existence of densities for absolutely continuous measures.
-
-Examples:
-
-mixture of Lebesgue measure with a point mass at 
-1
-/
-2
-1/2 (page 1),
-
-the Cantor distribution as a purely singular measure (pages 1–2),
-
-modification to create mixed singular + absolutely continuous parts.
-
-Jacobian connection: Change-of-variable formula as a Radon–Nikodym derivative (page 2 diagram).
-
-Random variables, joint distributions, densities (page 2),
-
-Measurability of RVs, vectors of RVs, and limits (page 3).
+Lecture 15 reviews the Lebesgue decomposition and Radon-Nikodym theorems for $\sigma$-finite measures, works through a mixed measure on $[0,1]$ and the Cantor distribution, links Jacobians to Radon-Nikodym derivatives via change of variables, and refreshes probability basics on random variables, distributions, measurability, and limits.
 
 ---
-
 # 1. Lebesgue Decomposition Theorem
 
 Given a measurable space $(\Omega,\mathcal{F})$ and **σ-finite** measures  
@@ -293,4 +266,6 @@ This uses only closure of measurability under countable operations.
 - Jacobians in multivariable calculus *are* Radon–Nikodym derivatives of pushforward measures.  
 - Random variables and vectors are measurable maps; their distributions arise from pushforward measures.  
 - Measurability is stable under composition, sums, limits, sup, inf.
+
+
 
