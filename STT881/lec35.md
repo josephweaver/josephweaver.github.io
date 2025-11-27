@@ -47,7 +47,7 @@ We “remove the iid assumption’’ by adding a single condition that controls
 For every $\varepsilon>0$,
 $$
 L_n(\varepsilon)
-= \sum_{k=1}^n E\!\left[X_{n,k}^2;\; |X_{n,k}|>\varepsilon\right]
+= \sum_{k=1}^n E\!\left[X_{n,k}^2;\; \vert X_{n,k}\vert >\varepsilon\right]
 \;\xrightarrow[n\to\infty]{}\; 0.
 \tag{1}
 $$
@@ -86,9 +86,9 @@ Fix $\varepsilon>0$. Let $k^*(n)$ be an index where the maximum variance occurs.
 $$
 E[X_{n,k^*}^2]
 =
-E[X_{n,k^*}^2;\, |X_{n,k^*}|>\varepsilon]
+E[X_{n,k^*}^2;\, \vert X_{n,k^*}\vert >\varepsilon]
 +
-E[X_{n,k^*}^2;\, |X_{n,k^*}|\le\varepsilon].
+E[X_{n,k^*}^2;\, \vert X_{n,k^*}\vert \le\varepsilon].
 $$
 
 The first term is $\le L_n(\varepsilon)\to0$.  
@@ -130,17 +130,17 @@ For $f\in C_B^3(\mathbb R)$ define:
 $$
 I_{n,k}
 =
-\Big|
+\Big\vert 
 E[f(T_{n,k}+X_{n,k})]
 -
 E[f(T_{n,k}+\sigma_{n,k} Z_k)]
-\Big|.
+\Big\vert .
 $$
 
 Exactly as in Lecture 34:
 
 $$
-|E[f(S_n)] - E[f(Z_n^\*)]|
+\vert E[f(S_n)] - E[f(Z_n^\*)]\vert 
 \;\le\;
 \sum_{k=1}^n I_{n,k}.
 \tag{3}
@@ -153,11 +153,11 @@ I_{n,k}
 \le 
 C\,
 E\!\left(
-|X_{n,k}|^2\,\mathbf{1}_{|X_{n,k}|>\varepsilon}
+\vert X_{n,k}\vert ^2\,\mathbf{1}_{\vert X_{n,k}\vert >\varepsilon}
 +
-|X_{n,k}|^3\,\mathbf{1}_{|X_{n,k}|\le\varepsilon}
+\vert X_{n,k}\vert ^3\,\mathbf{1}_{\vert X_{n,k}\vert \le\varepsilon}
 +
-\sigma_{n,k}^3\,E|Z_k|^3
+\sigma_{n,k}^3\,E\vert Z_k\vert ^3
 \right).
 \tag{4}
 $$
@@ -197,7 +197,7 @@ $$
 If for some $\delta>0$,
 
 $$
-\sum_{k=1}^n E\big(|X_{n,k}|^{2+\delta}\big)
+\sum_{k=1}^n E\big(\vert X_{n,k}\vert ^{2+\delta}\big)
 \;\xrightarrow[n\to\infty]{} 0,
 \tag{6}
 $$
@@ -206,13 +206,13 @@ then the Lindeberg condition holds.
 
 **Proof from notes (page 1–bottom to page 2 top):**
 
-If $|X_{n,k}|>\varepsilon$, then $|X_{n,k}|^{2+\delta} > \varepsilon^{2+\delta}$.  
+If $\vert X_{n,k}\vert >\varepsilon$, then $\vert X_{n,k}\vert ^{2+\delta} > \varepsilon^{2+\delta}$.  
 Thus:
 
 $$
-|X_{n,k}|^2 \mathbf{1}_{|X_{n,k}|>\varepsilon}
+\vert X_{n,k}\vert ^2 \mathbf{1}_{\vert X_{n,k}\vert >\varepsilon}
 \le
-\varepsilon^{-\delta}|X_{n,k}|^{2+\delta}.
+\varepsilon^{-\delta}\vert X_{n,k}\vert ^{2+\delta}.
 $$
 
 Summing:
@@ -221,7 +221,7 @@ $$
 L_n(\varepsilon)
 \le 
 \varepsilon^{-\delta}
-\sum_{k=1}^n E\big(|X_{n,k}|^{2+\delta}\big)
+\sum_{k=1}^n E\big(\vert X_{n,k}\vert ^{2+\delta}\big)
 \to 0.
 $$
 
@@ -247,7 +247,7 @@ $$
 ### Key identities (page 2)
 
 - **Magnitude**:  
-  $|a+ib| = \sqrt{a^2+b^2}$.
+  $\vert a+ib\vert  = \sqrt{a^2+b^2}$.
 
 - **Conjugate**:
   $$
@@ -256,7 +256,7 @@ $$
 
 - **Basic properties** (Theorem 3.3.1):
   1. $\varphi_X(0)=1$,  
-  2. $|\varphi_X(t)| \le 1$,  
+  2. $\vert \varphi_X(t)\vert  \le 1$,  
   3. $\varphi_{X+Y}(t)=\varphi_X(t)\varphi_Y(t)$ if $X\perp Y$.
 
 ### Relation to the MGF
@@ -301,7 +301,7 @@ The table on pages 2–3 works through a discrete example illustrating dependenc
   Condition:  
   $$
   L_n(\varepsilon)
-  =\sum_k E[X_{n,k}^2; |X_{n,k}|>\varepsilon] \to 0.
+  =\sum_k E[X_{n,k}^2; \vert X_{n,k}\vert >\varepsilon] \to 0.
   $$
 
 - Lindeberg ⇒ no dominant term:
@@ -309,13 +309,13 @@ The table on pages 2–3 works through a discrete example illustrating dependenc
 
 - One-by-one replacement (as in Lecture 34) yields:
   $$
-  |E[f(S_n)] - E[f(Z)]|
+  \vert E[f(S_n)] - E[f(Z)]\vert 
   \le
   C L_n(\varepsilon) + \varepsilon.
   $$
 
 - Sufficient condition:  
-  $\sum_k E(|X_{n,k}|^{2+\delta})\to0$ for some $\delta>0$.
+  $\sum_k E(\vert X_{n,k}\vert ^{2+\delta})\to0$ for some $\delta>0$.
 
 - **Characteristic functions** introduced:  
   $$

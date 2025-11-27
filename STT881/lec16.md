@@ -79,7 +79,7 @@ $$
 For any square-integrable $X$ with mean $m$ and variance $\sigma^2$,
 
 $$
-P(|X - m| > a)
+P(\vert X - m\vert  > a)
 \le
 \frac{\sigma^2}{a^2}.
 $$
@@ -91,7 +91,7 @@ Given $Y$ with $\mathbb{E}[Y]=m$, $\operatorname{Var}(Y)=\sigma^2$, the notes de
 $$
 P(Y > a)
 \le
-P(|Y+b| > a+b)
+P(\vert Y+b\vert  > a+b)
 \le
 \frac{\mathbb{E}[(Y+b)^2]}{(a+b)^2}
 =

@@ -7,7 +7,7 @@ We want to prove the SLLN in the general case:
 > **Theorem (SLLN).**  
 > If $\{X_k\}_{k\ge 1}$ are iid with  
 > $$
-> E|X| < \infty, \qquad E[X]=\mu,
+> E\vert X\vert  < \infty, \qquad E[X]=\mu,
 > $$  
 > then  
 > $$
@@ -61,21 +61,21 @@ If we can show both terms converge almost surely, we are done.
 Define truncated variables:
 
 $$
-Y_k = X_k\,\mathbf{1}_{\{|X_k|\le k\}}.
+Y_k = X_k\,\mathbf{1}_{\{\vert X_k\vert \le k\}}.
 $$
 
 Then:
 
 $$
 P(X_k \ne Y_k)
-= P(|X_k| > k)
-= P(|X| > k).
+= P(\vert X_k\vert  > k)
+= P(\vert X\vert  > k).
 $$
 
-Since $E|X| = \int_0^\infty P(|X|>t)\,dt < \infty$,
+Since $E\vert X\vert  = \int_0^\infty P(\vert X\vert >t)\,dt < \infty$,
 
 $$
-\sum_{k=1}^\infty P(|X|>k) < \infty.
+\sum_{k=1}^\infty P(\vert X\vert >k) < \infty.
 $$
 
 Thus by **Borel–Cantelli I**,
@@ -121,13 +121,13 @@ $$
 Let
 
 $$
-Y_n = X\,\mathbf{1}_{\{|X|\le a_n\}},\qquad a_n = n.
+Y_n = X\,\mathbf{1}_{\{\vert X\vert \le a_n\}},\qquad a_n = n.
 $$
 
 Assume as above:
 
 $$
-\sum_{n=1}^\infty P(|X|>a_n) < \infty.
+\sum_{n=1}^\infty P(\vert X\vert >a_n) < \infty.
 $$
 
 Then we want to show:
@@ -138,19 +138,19 @@ $$
 
 ### Proof sketch (page 2):
 
-Decompose according to the annuli $a_{m-1} < |X|\le a_m$:
+Decompose according to the annuli $a_{m-1} < \vert X\vert \le a_m$:
 
 $$
 \sum_{n=1}^\infty \frac{E[Y_n^2]}{a_n^2}
 =
 \sum_{n=1}^\infty a_n^{-2}
-\sum_{m=1}^n E(X^2; a_{m-1}<|X|\le a_m).
+\sum_{m=1}^n E(X^2; a_{m-1}<\vert X\vert \le a_m).
 $$
 
 Swap summation order:
 
 $$
-\sum_{m=1}^\infty E(X^2; a_{m-1}<|X|\le a_m)
+\sum_{m=1}^\infty E(X^2; a_{m-1}<\vert X\vert \le a_m)
 \sum_{n=m}^\infty a_n^{-2}.
 $$
 
@@ -166,9 +166,9 @@ $$
 \sum_{n=1}^\infty \frac{E[Y_n^2]}{a_n^2}
 \le
 C \sum_{m=1}^\infty 
-E\!\left(\frac{X^2}{a_m^2}; a_{m-1}<|X|\le a_m\right)
+E\!\left(\frac{X^2}{a_m^2}; a_{m-1}<\vert X\vert \le a_m\right)
 \le
-C \sum_{m=1}^\infty m\, P(|X|>a_m)
+C \sum_{m=1}^\infty m\, P(\vert X\vert >a_m)
 <\infty.
 $$
 
@@ -246,7 +246,7 @@ $$
 We already have:
 
 $$
-E[Y_k] = E(X; |X|\le k) \xrightarrow{k\to\infty} E[X] = \mu
+E[Y_k] = E(X; \vert X\vert \le k) \xrightarrow{k\to\infty} E[X] = \mu
 $$
 by Dominated Convergence.
 
@@ -305,7 +305,7 @@ This completes the proof of the SLLN.
 
 # **Cheat-Sheet Summary — Lecture 24**
 
-- Use truncation $Y_k = X_k \mathbf{1}_{\{|X_k|\le k\}}$.  
+- Use truncation $Y_k = X_k \mathbf{1}_{\{\vert X_k\vert \le k\}}$.  
   BC I shows truncation changes only finitely many terms.
 
 - Introduce **good sequences** $\{a_n\}$ to guarantee  

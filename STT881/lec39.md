@@ -67,12 +67,12 @@ $$
 The Lindeberg condition holds trivially because:
 
 $$
-|Y_k - 1/k|\le 1,
+\vert Y_k - 1/k\vert \le 1,
 \qquad
-|X_{n,k}| \le \frac{1}{\sqrt{\log n}}\to0.
+\vert X_{n,k}\vert  \le \frac{1}{\sqrt{\log n}}\to0.
 $$
 
-Thus $\max_{1\le k\le n}|X_{n,k}|\to0$, which implies Lindeberg.
+Thus $\max_{1\le k\le n}\vert X_{n,k}\vert \to0$, which implies Lindeberg.
 
 So the **Lindeberg–Feller CLT applies** and yields the above normal limit.
 
@@ -108,7 +108,7 @@ so this defines a probability distribution.
 But:
 
 $$
-E|X_{n,1}| = \infty,
+E\vert X_{n,1}\vert  = \infty,
 \qquad
 E[X_{n,1}^2] = \infty,
 $$
@@ -126,7 +126,7 @@ Define the “good” variables:
 $$
 Y_{n,m}
 =
-X_{n,m}\mathbf{1}_{|X_{n,m}|\le 1/\sqrt n}.
+X_{n,m}\mathbf{1}_{\vert X_{n,m}\vert \le 1/\sqrt n}.
 $$
 
 Then from page 2:
@@ -174,7 +174,7 @@ Page 2–3:
 $$
 P(S_n \neq T_n)
 \le
-n\,P(|X_{n,1}|>1/\sqrt n)
+n\,P(\vert X_{n,1}\vert >1/\sqrt n)
 =
 \frac{n}{n^2}
 =
@@ -214,8 +214,8 @@ Paul Lévy’s condition:
 
 $$
 \boxed{
-\frac{y^2 P(|X|>y)}
-     {E[X^2;\,|X|\le y]}
+\frac{y^2 P(\vert X\vert >y)}
+     {E[X^2;\,\vert X\vert \le y]}
 \;\xrightarrow[y\to\infty]{}\;
 0.
 }
@@ -239,17 +239,17 @@ i.e., no normalization (even nonlinear) will yield a CLT-like limit without seve
 If $X_1,X_2,\dots$ iid with:
 
 $$
-E[X]=0, \quad \mathrm{Var}(X)=1,\quad E|X|^3<\infty,
+E[X]=0, \quad \mathrm{Var}(X)=1,\quad E\vert X\vert ^3<\infty,
 $$
 
 then:
 
 $$
-\left|
+\vert 
 F_n(x) - \Phi(x)
-\right|
+\vert 
 \le
-\frac{3E|X|^3}{\sqrt n},
+\frac{3E\vert X\vert ^3}{\sqrt n},
 \qquad
 \forall x\in\mathbb R,
 $$
@@ -265,7 +265,7 @@ $$
 Notes emphasize:
 
 - “Convergence is **uniform**, not pointwise.”  
-- $\sup |F_n-\Phi|\sim 1/\sqrt n$.
+- $\sup \vert F_n-\Phi\vert \sim 1/\sqrt n$.
 
 ---
 
@@ -351,8 +351,8 @@ $$
 If conditions (1)–(3) of the triangular-array lemma hold:
 
 1. $\sum_{m=1}^n a_{n,m} \to \lambda(e^{it}-1)$,  
-2. $\sup_n \sum_m |a_{n,m}|<\infty$,  
-3. $\max_m |a_{n,m}|\to 0$,
+2. $\sup_n \sum_m \vert a_{n,m}\vert <\infty$,  
+3. $\max_m \vert a_{n,m}\vert \to 0$,
 
 then:
 
@@ -384,12 +384,12 @@ $$
 
 - **Lévy’s criterion**:  
   $$
-  \frac{y^2 P(|X|>y)}{E[X^2;|X|\le y]}\to 0
+  \frac{y^2 P(\vert X\vert >y)}{E[X^2;\vert X\vert \le y]}\to 0
   \iff X\ \text{in Gaussian DOA}.
   $$
 
 - **Berry–Esseen** gives uniform CLT rate  
-  $\sup|F_n-\Phi|\le 3E|X|^3/\sqrt n$.
+  $\sup\vert F_n-\Phi\vert \le 3E\vert X\vert ^3/\sqrt n$.
 
 - **Poisson convergence theorem**:  
   If $\sum p_{n,m}\to\lambda$ and $\max p_{n,m}\to0$, then  

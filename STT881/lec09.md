@@ -15,7 +15,7 @@ Dominated Convergence Theorem (DCT)
 We continue on a σ-finite measure space $(\Omega, \mathcal{F}, \mu)$.  
 Recall from last time:
 
-If $\mu(\Omega) < \infty$, $f_n \to f$ almost everywhere, and $|f_n| \le M$, then by the **Bounded Convergence Theorem**:
+If $\mu(\Omega) < \infty$, $f_n \to f$ almost everywhere, and $\vert f_n\vert  \le M$, then by the **Bounded Convergence Theorem**:
 $$
 \int f_n \to \int f.
 $$
@@ -148,7 +148,7 @@ Let $\mu$ be σ-finite.
 Suppose:
 
 1. $f_n \to f$ almost everywhere,  
-2. $|f_n| \le g$ for some integrable $g$ (i.e. $\int g < \infty$).
+2. $\vert f_n\vert  \le g$ for some integrable $g$ (i.e. $\int g < \infty$).
 
 Then:
 
@@ -246,7 +246,7 @@ $$
 $$
 
 ### **Dominated Convergence (DCT)**  
-If $f_n \to f$ a.e. and $|f_n| \le g$ with $\int g < \infty$,  
+If $f_n \to f$ a.e. and $\vert f_n\vert  \le g$ with $\int g < \infty$,  
 $$
 \int f_n \to \int f.
 $$

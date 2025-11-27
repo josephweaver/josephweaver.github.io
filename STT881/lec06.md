@@ -126,7 +126,7 @@ Both $f^+$ and $f^-$ are non-negative measurable.
 
 If:
 $$
-I(|f|) = I(f^+ + f^-) < \infty,
+I(\vert f\vert ) = I(f^+ + f^-) < \infty,
 $$
 i.e. $f$ is **integrable**, define:
 $$
@@ -135,14 +135,14 @@ $$
 
 ### Properties
 
-- $|f| = f^+ + f^- \implies I(|f|) < \infty$ gives finite values for both $I(f^+)$ and $I(f^-)$.
+- $\vert f\vert  = f^+ + f^- \implies I(\vert f\vert ) < \infty$ gives finite values for both $I(f^+)$ and $I(f^-)$.
 - If $f \ge 0$, then $f^- = 0$ and we recover the previous definition.
 
 ---
 
 # 6. Additivity for Integrable Functions
 
-If $f,g$ satisfy $I(|f|)<\infty$ and $I(|g|)<\infty$, then:
+If $f,g$ satisfy $I(\vert f\vert )<\infty$ and $I(\vert g\vert )<\infty$, then:
 $$
 I(f+g) = I(f) + I(g).
 $$
@@ -191,7 +191,7 @@ Proof outline (page 3 of the notes):
    \quad
    \int f = \int f^+ - \int f^-,
    \quad
-   \text{provided } \int |f| < \infty.
+   \text{provided } \int \vert f\vert  < \infty.
    $$
 
 This gives the full Lebesgue integral for real-valued functions.

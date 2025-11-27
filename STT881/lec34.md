@@ -10,7 +10,7 @@ We prove the classical CLT using **Taylor expansion** and a comparison between t
 Let \(X_1,X_2,\dots\) be iid with
 
 $$
-E[X]=0,\qquad E[X^2]=1,\qquad E[|X|^3]<\infty.
+E[X]=0,\qquad E[X^2]=1,\qquad E[\vert X\vert ^3]<\infty.
 $$
 
 Let
@@ -67,13 +67,13 @@ Each term replaces one \(X_m\) by one \(Z_m\) while holding all others fixed.
 Let
 
 $$
-I_m = \Big| E f(T_m + X_m/\sqrt n) - E f(T_m + Z_m/\sqrt n) \Big|.
+I_m = \Big\vert  E f(T_m + X_m/\sqrt n) - E f(T_m + Z_m/\sqrt n) \Big\vert .
 $$
 
 Then:
 
 $$
-|E f(S_n) - E f(Z_n)|
+\vert E f(S_n) - E f(Z_n)\vert 
 \le \sum_{m=1}^n I_m.
 \tag{4}
 $$
@@ -95,11 +95,11 @@ f(x)
 + f'(x)h
 + \frac{f''(x)}{2} h^2
 + \frac{f^{(3)}(\xi)}{6}h^3,
-\qquad |\xi-x|<|h|.
+\qquad \vert \xi-x\vert <\vert h\vert .
 \tag{5}
 $$
 
-Diagram on page 1 shows the geometric idea: the difference between the Taylor polynomial and \(f\) is controlled by \(|h|^3\).
+Diagram on page 1 shows the geometric idea: the difference between the Taylor polynomial and \(f\) is controlled by \(\vert h\vert ^3\).
 
 Let \(B=T_m\).  
 Let \(Y = X_m/\sqrt n\) and \(W=Z_m/\sqrt n\).
@@ -127,14 +127,14 @@ $$
 where the remainders satisfy (page 1, formula labelled (B)):
 
 $$
-|R_Y| \le C |Y|^3,
+\vert R_Y\vert  \le C \vert Y\vert ^3,
 \qquad 
-|R_W| \le C |W|^3,
+\vert R_W\vert  \le C \vert W\vert ^3,
 \tag{6}
 $$
 with
 $$
-C = \sup_x \frac{|f^{(3)}(x)|}{6} < \infty.
+C = \sup_x \frac{\vert f^{(3)}(x)\vert }{6} < \infty.
 $$
 
 ---
@@ -153,9 +153,9 @@ Let \(B,Y,W\) be real random variables such that:
 Then for \(f\in C_B^3\):
 
 $$
-\Big|E f(B+Y) - E f(B+W)\Big|
+\Big\vert E f(B+Y) - E f(B+W)\Big\vert 
 \le
-C\, E(|Y|^3 + |W|^3).
+C\, E(\vert Y\vert ^3 + \vert W\vert ^3).
 \tag{7}
 $$
 
@@ -193,9 +193,9 @@ $$
 I_m
 \le
 C\, E\Big(
-\frac{|X_m|^3}{n^{3/2}}
+\frac{\vert X_m\vert ^3}{n^{3/2}}
 +
-\frac{|Z_m|^3}{n^{3/2}}
+\frac{\vert Z_m\vert ^3}{n^{3/2}}
 \Big).
 \tag{8}
 $$
@@ -206,17 +206,17 @@ $$
 \sum_{m=1}^n I_m
 \le
 C\Big(
-\frac{n E|X|^3}{n^{3/2}}
+\frac{n E\vert X\vert ^3}{n^{3/2}}
 +
-\frac{n E|Z|^3}{n^{3/2}}
+\frac{n E\vert Z\vert ^3}{n^{3/2}}
 \Big)
 =
-\frac{C(E|X|^3 + E|Z|^3)}{\sqrt n}
+\frac{C(E\vert X\vert ^3 + E\vert Z\vert ^3)}{\sqrt n}
 \to 0.
 \tag{9}
 $$
 
-Since \(E|Z|^3<\infty\), this goes to zero.
+Since \(E\vert Z\vert ^3<\infty\), this goes to zero.
 
 This proves (4) tends to zero.
 
@@ -229,25 +229,25 @@ On page 2–3 your notes add the truncation argument:
 Split
 
 $$
-E|X|^3
+E\vert X\vert ^3
 =
-E\big[ |X|^3 \mathbf{1}_{|X|\le \varepsilon\sqrt n} \big]
+E\big[ \vert X\vert ^3 \mathbf{1}_{\vert X\vert \le \varepsilon\sqrt n} \big]
 +
-E\big[ |X|^3 \mathbf{1}_{|X|> \varepsilon\sqrt n} \big].
+E\big[ \vert X\vert ^3 \mathbf{1}_{\vert X\vert > \varepsilon\sqrt n} \big].
 $$
 
 Using the comparison (page 2 bottom):
 
 $$
-|Y|^2\wedge |Y|^3
+\vert Y\vert ^2\wedge \vert Y\vert ^3
 =
-\frac{1}{n^{3/2}}\big( X^2\mathbf{1}_{|X|>\varepsilon\sqrt n} + |X|^3\mathbf{1}_{|X|\le \varepsilon\sqrt n} \big).
+\frac{1}{n^{3/2}}\big( X^2\mathbf{1}_{\vert X\vert >\varepsilon\sqrt n} + \vert X\vert ^3\mathbf{1}_{\vert X\vert \le \varepsilon\sqrt n} \big).
 $$
 
 The second term vanishes because \(\varepsilon\sqrt n\to\infty\). For the first:
 
 $$
-E\big[X^2\,\mathbf{1}_{|X|>\varepsilon\sqrt n}\big]
+E\big[X^2\,\mathbf{1}_{\vert X\vert >\varepsilon\sqrt n}\big]
 \to 0
 \quad\text{by dominated convergence},
 $$
@@ -267,7 +267,7 @@ Thus the bound in (9) is in fact arbitrarily small for large \(n\).
 Putting everything together:
 
 $$
-|E f(S_n) - E f(Z_n)| \to 0
+\vert E f(S_n) - E f(Z_n)\vert  \to 0
 \quad\text{for all } f\in C_B^3(\mathbb R).
 $$
 
@@ -300,7 +300,7 @@ $$
 - Replace each \(X_m\) by \(Z_m\) and sum the errors.
 - Linear and quadratic Taylor terms cancel thanks to  
   \(E[X_m]=E[Z_m]=0\), \(E[X_m^2]=E[Z_m^2]=1\).
-- Remainder is controlled by third derivatives of \(f\) and by \(E|X|^3\).
+- Remainder is controlled by third derivatives of \(f\) and by \(E\vert X\vert ^3\).
 - Summed error is \(O(1/\sqrt n)\to 0\).
 - Finally, \(Z_n\Rightarrow N(0,1)\) and smoothing gives the CLT.
 

@@ -6,7 +6,7 @@ We restate the goal:
 
 Let $\{X_k\}_{k\ge1}$ be iid with  
 $$
-E|X| < \infty, \qquad E[X] = \mu.
+E\vert X\vert  < \infty, \qquad E[X] = \mu.
 $$
 Define
 $$
@@ -23,14 +23,14 @@ $$
 
 Define  
 $$
-Y_k = X_k \mathbf{1}_{\{|X_k|\le k\}}.
+Y_k = X_k \mathbf{1}_{\{\vert X_k\vert \le k\}}.
 $$
 
 Since  
 $$
-\sum_{k=1}^\infty P(|X_k| > k)
-  = \sum_{k=1}^\infty P(|X|>k)
-  \le E|X| < \infty,
+\sum_{k=1}^\infty P(\vert X_k\vert  > k)
+  = \sum_{k=1}^\infty P(\vert X\vert >k)
+  \le E\vert X\vert  < \infty,
 $$
 **Borel–Cantelli I** gives  
 $$
@@ -100,10 +100,10 @@ $$
 
 **Step 4: Compute the limit of the means**
 
-Because $Y_k = X_k \mathbf{1}_{\{|X_k|\le k\}}$,
+Because $Y_k = X_k \mathbf{1}_{\{\vert X_k\vert \le k\}}$,
 
 $$
-E[Y_k] = E(X; |X|\le k) \xrightarrow{k\to\infty} E[X] = \mu.
+E[Y_k] = E(X; \vert X\vert \le k) \xrightarrow{k\to\infty} E[X] = \mu.
 $$
 
 Then
@@ -208,7 +208,7 @@ $$
 \{S_n \text{ converges}\} 
 = \left\{
 \forall \epsilon>0\ \exists N\ 
-\text{such that } |S_l-S_m|<\epsilon\ 
+\text{such that } \vert S_l-S_m\vert <\epsilon\ 
 \text{ for all } l>m\ge N
 \right\}
 $$
@@ -244,7 +244,7 @@ Thus this reduces to Borel–Cantelli.
 
 ### Example 2
 
-If $\sum E|X_n| <\infty$ and the $X_n$ are independent, then
+If $\sum E\vert X_n\vert  <\infty$ and the $X_n$ are independent, then
 
 $$
 \sum X_n \quad\text{converges a.s.}
@@ -257,7 +257,7 @@ This is the classical Kolmogorov convergence criterion for random series.
 # **Cheat-Sheet Summary — Lecture 25**
 
 - The SLLN is obtained by:
-  1. Truncation at level $k$: $Y_k = X_k1_{\{|X|\le k\}}$.
+  1. Truncation at level $k$: $Y_k = X_k1_{\{\vert X\vert \le k\}}$.
   2. BC I ensures truncation differs only finitely often.
   3. Prove $\sum E[Y_k^2]/k^2<\infty$.
   4. Use block decomposition $U_n$ to show $T_{2^n}/2^n \to \mu$.

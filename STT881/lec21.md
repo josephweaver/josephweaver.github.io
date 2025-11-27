@@ -21,7 +21,7 @@ WLOG assume $\mu = 0$.
 To show $S_n/n \to 0$ almost surely, fix $\varepsilon>0$:
 
 $$
-P(|S_n| > n\varepsilon)
+P(\vert S_n\vert  > n\varepsilon)
 = P(S_n^4 > n^4\varepsilon^4)
 \le \frac{\mathbb{E}[S_n^4]}{n^4\varepsilon^4}.
 $$
@@ -40,20 +40,20 @@ for some constant $C$, because all mixed odd-order terms vanish (iid with mean 0
 Thus,
 
 $$
-P(|S_n| > n\varepsilon)
+P(\vert S_n\vert  > n\varepsilon)
 \le \frac{C}{\varepsilon^4} \cdot \frac{1}{n^2}.
 $$
 
 Since $\sum_{n=1}^\infty n^{-2} < \infty$, Borel–Cantelli(I) implies:
 
 $$
-P(|S_n| > n\varepsilon \text{ i.o.}) = 0.
+P(\vert S_n\vert  > n\varepsilon \text{ i.o.}) = 0.
 $$
 
 Thus a.s.:
 
 $$
-\limsup_{n\to\infty} \frac{|S_n|}{n} \le \varepsilon.
+\limsup_{n\to\infty} \frac{\vert S_n\vert }{n} \le \varepsilon.
 $$
 
 Because this holds for all $\varepsilon = 1/m$, $m\in\mathbb{N}$, we conclude:
@@ -132,13 +132,13 @@ $$
 
 ---
 
-## 4. Application: When $E|X| = \infty$
+## 4. Application: When $E\vert X\vert  = \infty$
 
-Let $\{X_k\}$ be iid and $E|X| = \infty$. Then:
+Let $\{X_k\}$ be iid and $E\vert X\vert  = \infty$. Then:
 
 1.  
    $$
-   P(|X_n| \ge n \text{ i.o.}) = 1.
+   P(\vert X_n\vert  \ge n \text{ i.o.}) = 1.
    $$
 
 2.  
@@ -151,28 +151,28 @@ Let $\{X_k\}$ be iid and $E|X| = \infty$. Then:
 Since
 
 $$
-E|X| = \int_0^\infty P(|X|\ge t)\,dt,
+E\vert X\vert  = \int_0^\infty P(\vert X\vert \ge t)\,dt,
 $$
 
-and $E|X|=\infty$, the integral diverges. The notes approximate the integral by the discrete sum:
+and $E\vert X\vert =\infty$, the integral diverges. The notes approximate the integral by the discrete sum:
 
 $$
-\sum_{n=0}^\infty P(|X|\ge n) = \infty.
+\sum_{n=0}^\infty P(\vert X\vert \ge n) = \infty.
 $$
 
 Because $\{X_k\}$ are iid,  
 
 $$
-\sum_{n=0}^\infty P(|X_n|\ge n) = \infty.
+\sum_{n=0}^\infty P(\vert X_n\vert \ge n) = \infty.
 $$
 
 By BC II:
 
 $$
-P(|X_n|\ge n\text{ i.o.}) = 1.
+P(\vert X_n\vert \ge n\text{ i.o.}) = 1.
 $$
 
-Since $|X_n|\ge n$ infinitely often, the increments in $S_n/n$ fluctuate so wildly that:
+Since $\vert X_n\vert \ge n$ infinitely often, the increments in $S_n/n$ fluctuate so wildly that:
 
 $$
 P\left(\lim_{n\to\infty} \frac{S_n}{n} \text{ exists finitely}\right) = 0.
@@ -194,7 +194,7 @@ $$
 Observation:
 
 - If $S_n/n$ converges, the difference must go to 0.
-- Under the infinite-mean case, the left-hand expression does **not** go to 0 (because $|X_{n+1}|\ge n+1$ i.o.), so no limit can exist.
+- Under the infinite-mean case, the left-hand expression does **not** go to 0 (because $\vert X_{n+1}\vert \ge n+1$ i.o.), so no limit can exist.
 
 ---
 
@@ -233,7 +233,7 @@ Your notes mention: “There’s another extension in the book”—this refers 
   For independent events, divergence of $\sum P(A_n)$ implies $A_n$ occurs infinitely often.
 
 - **Infinite mean case:**  
-  If $E|X|=\infty$, then $|X_n|\ge n$ infinitely often a.s., so $S_n/n$ cannot converge.
+  If $E\vert X\vert =\infty$, then $\vert X_n\vert \ge n$ infinitely often a.s., so $S_n/n$ cannot converge.
 
 - **Pairwise independent BC II:**  
   Under pairwise independence,  

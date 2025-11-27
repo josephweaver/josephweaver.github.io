@@ -27,7 +27,7 @@ Assume:
 Then:
 
 $$
-\|P_n - P\| := \sum_{k\in\mathbb Z} |P_{n,k} - P_k| \xrightarrow{n\to\infty} 0.
+\\vert P_n - P\\vert  := \sum_{k\in\mathbb Z} \vert P_{n,k} - P_k\vert  \xrightarrow{n\to\infty} 0.
 $$
 
 This implies convergence of the CDF at all continuity points:
@@ -53,7 +53,7 @@ because both are probability distributions.
 Thus:
 
 $$
-\sum_k |P_{n,k}-P_k|
+\sum_k \vert P_{n,k}-P_k\vert 
 = \sum_k (P_k - P_{n,k})^+ + \sum_k (P_k - P_{n,k})^-
 = 2\sum_k (P_k - P_{n,k})^+.
 $$
@@ -76,7 +76,7 @@ Let:
 If:
 
 1. $f_n(k)\to f(k)$ pointwise,
-2. $|f_n(k)|\le g(k)$ with $\sum_k g(k)<\infty$,
+2. $\vert f_n(k)\vert \le g(k)$ with $\sum_k g(k)<\infty$,
 
 then:
 
@@ -90,7 +90,7 @@ This justifies:
 
 $$
 P_{n,k}\to P_k \quad\Longrightarrow\quad 
-\|P_n-P\| = \sum_k |P_{n,k}-P_k|\to 0.
+\\vert P_n-P\\vert  = \sum_k \vert P_{n,k}-P_k\vert \to 0.
 $$
 
 ---
@@ -115,9 +115,9 @@ For probability measures $\mu_1,\mu_2$ on $\mathbb Z$:
 **Key inequality (page 4):**
 
 $$
-\|\mu_1\times \mu_2 - \nu_1\times\nu_2\|
+\\vert \mu_1\times \mu_2 - \nu_1\times\nu_2\\vert 
 \le
-\|\mu_1-\nu_1\| + \|\mu_2 - \nu_2\|.
+\\vert \mu_1-\nu_1\\vert  + \\vert \mu_2 - \nu_2\\vert .
 \tag{1}
 $$
 
@@ -125,9 +125,9 @@ Then:
 
 $$
 \boxed{
-\|\mu_1 * \mu_2 - \nu_1 * \nu_2\|
+\\vert \mu_1 * \mu_2 - \nu_1 * \nu_2\\vert 
 \le
-\|\mu_1 - \nu_1\| + \|\mu_2-\nu_2\|.
+\\vert \mu_1 - \nu_1\\vert  + \\vert \mu_2-\nu_2\\vert .
 }
 \tag{2}
 $$
@@ -187,7 +187,7 @@ Goal (page 3):
 
 $$
 \boxed{
-\|P_n - Q_n\|
+\\vert P_n - Q_n\\vert 
 \le
 2\sum_{m=1}^n p_{n,m}^2.
 }
@@ -204,7 +204,7 @@ $$
 we obtain:
 
 $$
-\|P_n - Q_n\| \to 0.
+\\vert P_n - Q_n\\vert  \to 0.
 $$
 
 Thus **Poisson convergence is uniform in total variation**.
@@ -231,16 +231,16 @@ Notice:
 Apply (2) repeatedly:
 
 $$
-\|P_n - Q_n\|
+\\vert P_n - Q_n\\vert 
 \le
-\sum_{m=1}^n \|M_m - \nu_m\|.
+\sum_{m=1}^n \\vert M_m - \nu_m\\vert .
 \tag{4}
 $$
 
 So the problem reduces to bounding:
 
 $$
-\|M_m - \nu_m\|
+\\vert M_m - \nu_m\\vert 
 \quad\text{for a single } p=p_{n,m}.
 $$
 
@@ -264,15 +264,15 @@ $$
 Total variation:
 
 $$
-\|M_m - \nu_m\|
+\\vert M_m - \nu_m\\vert 
 =
-\frac12\sum_{k=0}^\infty |M_m(k)-\nu_m(k)|.
+\frac12\sum_{k=0}^\infty \vert M_m(k)-\nu_m(k)\vert .
 $$
 
 Summation (page 5):
 
 $$
-|1-p - e^{-p}| + |p - pe^{-p}| + P(\mathrm{Poisson}(p)\ge2).
+\vert 1-p - e^{-p}\vert  + \vert p - pe^{-p}\vert  + P(\mathrm{Poisson}(p)\ge2).
 $$
 
 Use:
@@ -291,7 +291,7 @@ $$
 Summing:
 
 $$
-\|M_m - \nu_m\|
+\\vert M_m - \nu_m\\vert 
 \le
 2p(1-e^{-p})
 \le 2p^2,
@@ -302,7 +302,7 @@ because $1-e^{-p} \le p$.
 Thus:
 
 $$
-\|M_m - \nu_m\|\le 2p_{n,m}^2.
+\\vert M_m - \nu_m\\vert \le 2p_{n,m}^2.
 \tag{5}
 $$
 
@@ -311,7 +311,7 @@ $$
 ## 5.2 Combine (4) and (5)
 
 $$
-\|P_n - Q_n\|
+\\vert P_n - Q_n\\vert 
 \le
 \sum_{m=1}^n 2p_{n,m}^2
 =
@@ -324,7 +324,7 @@ Since $\sum p_{n,m}^2\to 0$ under the rare-event conditions, we conclude:
 
 $$
 \boxed{
-\|P_n - Q_n\| \to 0.
+\\vert P_n - Q_n\\vert  \to 0.
 }
 $$
 
@@ -335,7 +335,7 @@ Therefore, the Poisson limit holds in **total variation**, which is stronger tha
 # **Cheat–Sheet Summary — Lecture 40**
 
 - On $\mathbb Z$, dominated convergence applies to sums $ \sum_k f_n(k) $.
-- If $P_{n,k}\to P_k$ pointwise, then $ \|P_n-P\|\to 0 $.
+- If $P_{n,k}\to P_k$ pointwise, then $ \\vert P_n-P\\vert \to 0 $.
 - For independent Bernoulli($p_{n,m}$):
 
   $$
@@ -351,7 +351,7 @@ Therefore, the Poisson limit holds in **total variation**, which is stronger tha
   **Poisson approximation bound**:
 
   $$
-  \|P_n - Q_n\|
+  \\vert P_n - Q_n\\vert 
   \le
   2\sum_{m=1}^n p_{n,m}^2.
   $$
@@ -359,15 +359,15 @@ Therefore, the Poisson limit holds in **total variation**, which is stronger tha
 - Convolution inequality:
 
   $$
-  \|\mu_1*\mu_2 - \nu_1*\nu_2\|
+  \\vert \mu_1*\mu_2 - \nu_1*\nu_2\\vert 
   \le
-  \|\mu_1 - \nu_1\| + \|\mu_2 - \nu_2\|.
+  \\vert \mu_1 - \nu_1\\vert  + \\vert \mu_2 - \nu_2\\vert .
   $$
 
 - Single-term approximation:
 
   $$
-  \|\mathrm{Ber}(p) - \mathrm{Pois}(p)\|
+  \\vert \mathrm{Ber}(p) - \mathrm{Pois}(p)\\vert 
   \le
   2p^2.
   $$

@@ -22,7 +22,7 @@ We continue with:
 - A complete proof that **UI + a.s. convergence ⇒ $L^1$ convergence**,  
 - The construction of **product measures** on $(\Omega_1 \times \Omega_2, \mathcal{F}_1 \otimes \mathcal{F}_2)$,  
 - **Tonelli** (non-negative functions) and **Fubini** (integrable functions) theorems,  
-- Counterexamples where Fubini fails because $\int |f| = \infty$.
+- Counterexamples where Fubini fails because $\int \vert f\vert  = \infty$.
 
 ---
 
@@ -33,7 +33,7 @@ $$
 \phi(M)
 =
 \sup_{n \ge 1}
-\mathbb{E}\big[ |X_n| \mathbf{1}_{\{|X_n|>M\}} \big].
+\mathbb{E}\big[ \vert X_n\vert  \mathbf{1}_{\{\vert X_n\vert >M\}} \big].
 $$
 
 $$
@@ -48,11 +48,11 @@ $$
 
 $\{X_n\}$ is UI **iff**:
 
-1. $\sup_n \mathbb{E}|X_n| < \infty$,  
+1. $\sup_n \mathbb{E}\vert X_n\vert  < \infty$,  
 2. For all $\varepsilon>0$ there exists $\delta>0$ such that  
    whenever $P(A)<\delta$,
    $$
-   \sup_n \mathbb{E}\big(|X_n|\mathbf{1}_A\big) < \varepsilon.
+   \sup_n \mathbb{E}\big(\vert X_n\vert \mathbf{1}_A\big) < \varepsilon.
    $$
 
 This captures the idea that the sequence cannot concentrate large mass on small-probability sets (page 1).
@@ -68,9 +68,9 @@ As stated on page 1:
 
 - If $X_n \to X$ in $L^1$, then $\{X_n\}$ is UI.
 
-- If $\mathbb{E}|X_n|<\infty$ for all $n$, $\mathbb{E}|X|<\infty$, and
+- If $\mathbb{E}\vert X_n\vert <\infty$ for all $n$, $\mathbb{E}\vert X\vert <\infty$, and
   $$
-  \mathbb{E}|X_n - X| \to 0,
+  \mathbb{E}\vert X_n - X\vert  \to 0,
   $$
   then $\{X_n\}$ is UI (follows from the two previous items).
 
@@ -85,7 +85,7 @@ If
 
 then:
 $$
-\mathbb{E}|X_n - X| \to 0.
+\mathbb{E}\vert X_n - X\vert  \to 0.
 $$
 
 ### Proof (as in pages 1–2)
@@ -94,13 +94,13 @@ $$
 
 By Fatou:
 $$
-\mathbb{E}|X|
+\mathbb{E}\vert X\vert 
 =
-\mathbb{E}\big[\liminf |X_n|\big]
+\mathbb{E}\big[\liminf \vert X_n\vert \big]
 \le
-\liminf \mathbb{E}|X_n|
+\liminf \mathbb{E}\vert X_n\vert 
 \le
-\sup_n \mathbb{E}|X_n| < \infty.
+\sup_n \mathbb{E}\vert X_n\vert  < \infty.
 $$
 
 **Step 2.** Reduce the problem.
@@ -112,7 +112,7 @@ Thus it suffices to show:
 $$
 X_n \to 0 \text{ a.s. and } \{X_n\}\text{ UI }
 \quad\Longrightarrow\quad
-\mathbb{E}|X_n| \to 0.
+\mathbb{E}\vert X_n\vert  \to 0.
 $$
 
 **Step 3.** Tail decomposition (page 1 diagram)
@@ -120,28 +120,28 @@ $$
 Fix $M$:
 
 $$
-|X_n|
+\vert X_n\vert 
 =
-|X_n|\mathbf{1}_{\{|X_n|\le M\}}
+\vert X_n\vert \mathbf{1}_{\{\vert X_n\vert \le M\}}
 +
-|X_n|\mathbf{1}_{\{|X_n|>M\}}.
+\vert X_n\vert \mathbf{1}_{\{\vert X_n\vert >M\}}.
 $$
 
 Integrate:
 $$
-\mathbb{E}|X_n|
+\mathbb{E}\vert X_n\vert 
 \le
-\mathbb{E}\big( |X_n|\mathbf{1}_{\{|X_n|\le M\}} \big)
+\mathbb{E}\big( \vert X_n\vert \mathbf{1}_{\{\vert X_n\vert \le M\}} \big)
 +
-\sup_k \mathbb{E}\big(|X_k|\mathbf{1}_{\{|X_k|>M\}}\big).
+\sup_k \mathbb{E}\big(\vert X_k\vert \mathbf{1}_{\{\vert X_k\vert >M\}}\big).
 $$
 
 - Second term → $0$ as $M\to\infty$ by UI.  
-- First term → $0$ as $n\to\infty$ for fixed $M$, by Bounded Convergence (since on $\{|X_n|\le M\}$ we have boundedness and $X_n\to 0$ a.s.)
+- First term → $0$ as $n\to\infty$ for fixed $M$, by Bounded Convergence (since on $\{\vert X_n\vert \le M\}$ we have boundedness and $X_n\to 0$ a.s.)
 
 Finally send $M\to\infty$.
 
-So $\mathbb{E}|X_n|\to 0$.
+So $\mathbb{E}\vert X_n\vert \to 0$.
 
 Thus:
 $$
@@ -227,14 +227,14 @@ $$
 
 ### **Fubini** (integrable $f$)
 
-If $\int |f|\, d\mu < \infty$, then:
+If $\int \vert f\vert \, d\mu < \infty$, then:
 
 - Both iterated integrals exist and are finite,
 - And the same equality holds.
 
 ---
 
-# 7. Example: Fubini Fails When $\int|f|=\infty$
+# 7. Example: Fubini Fails When $\int\vert f\vert =\infty$
 
 From page 2:
 
@@ -252,7 +252,7 @@ Then:
 
 The two iterated integrals disagree because:
 $$
-\int_{\Omega_1\times\Omega_2} |f|\, d\mu = \infty,
+\int_{\Omega_1\times\Omega_2} \vert f\vert \, d\mu = \infty,
 $$
 so Fubini does **not** apply (Tonelli also does not, because $f$ takes negative values).
 
@@ -287,5 +287,5 @@ This completes Lecture 12:
 - The final UI theorem,  
 - Product measure construction,  
 - Tonelli & Fubini,  
-- And multiple counterexamples showing why integrability of $|f|$ is essential.
+- And multiple counterexamples showing why integrability of $\vert f\vert $ is essential.
 

@@ -79,7 +79,7 @@ WLOG set $X=0$.
 Since $X_n \xrightarrow{P} 0$, for each $k$ there exists $n_k$ such that
 
 $$
-P(|X_{n_k}| > 1/k^2) \le 1/k^2.
+P(\vert X_{n_k}\vert  > 1/k^2) \le 1/k^2.
 $$
 
 We choose $n_k$ strictly increasing:
@@ -90,19 +90,19 @@ $$
 Then
 
 $$
-\sum_{k=1}^\infty P(|X_{n_k}| > 1/k^2) \le \sum_{k=1}^\infty \frac{1}{k^2} < \infty.
+\sum_{k=1}^\infty P(\vert X_{n_k}\vert  > 1/k^2) \le \sum_{k=1}^\infty \frac{1}{k^2} < \infty.
 $$
 
 By Borel–Cantelli(I),
 
 $$
-P(|X_{n_k}| > 1/k^2 \text{ i.o.}) = 0.
+P(\vert X_{n_k}\vert  > 1/k^2 \text{ i.o.}) = 0.
 $$
 
 Thus a.s., there exists a random finite $L(\omega)$ such that for all $k\ge L(\omega)$,
 
 $$
-|X_{n_k}| \le 1/k^2 \to 0.
+\vert X_{n_k}\vert  \le 1/k^2 \to 0.
 $$
 
 Hence
@@ -118,7 +118,7 @@ $$
 Suppose:
 
 - $X_n \xrightarrow{P} X$,
-- $|X_n| \le Y$ for all $n$,
+- $\vert X_n\vert  \le Y$ for all $n$,
 - $E[Y] < \infty$.
 
 **Question:** Does $E[X_n] \to E[X]$?  
@@ -127,7 +127,7 @@ Suppose:
 ### Reason
 
 From the corollary, extract a subsequence $X_{n_k} \to X$ a.s.  
-Since $|X_{n_k}| \le Y$ and $E[Y]<\infty$, Dominated Convergence gives:
+Since $\vert X_{n_k}\vert  \le Y$ and $E[Y]<\infty$, Dominated Convergence gives:
 
 $$
 E[X_{n_k}] \to E[X].
@@ -136,10 +136,10 @@ $$
 To upgrade subsequence convergence to full convergence, assume the contrary:
 
 > There exists $\varepsilon_0>0$ and a subsequence $n_k$ such that  
-> $|E[X_{n_k}]| \ge \varepsilon_0$ for all $k$.
+> $\vert E[X_{n_k}]\vert  \ge \varepsilon_0$ for all $k$.
 
 Refine to a further subsequence $X_{n_{k_\ell}}\to X$ a.s.  
-DCT again gives $E[X_{n_{k_\ell}}]\to E[X]$, contradicting $|E[X_{n_k}]|\ge\varepsilon_0$.  
+DCT again gives $E[X_{n_{k_\ell}}]\to E[X]$, contradicting $\vert E[X_{n_k}]\vert \ge\varepsilon_0$.  
 Thus:
 
 $$
@@ -152,7 +152,7 @@ $$
 
 Up to now, the WLLN says:
 
-If $\{X_n\}$ are iid and $E|X|<\infty$, then
+If $\{X_n\}$ are iid and $E\vert X\vert <\infty$, then
 
 $$
 \frac{S_n}{n} \xrightarrow{P} E[X].
@@ -161,14 +161,14 @@ $$
 We also know:
 
 $$
-xP(|X| > x) \to 0
+xP(\vert X\vert  > x) \to 0
 $$
 
 is sufficient for some versions of WLLN/SLLN criteria (your notes allude to this heavy-tail condition).
 
 ### Strong Law of Large Numbers (SLLN)
 
-If $\{X_n\}$ iid and $E|X| < \infty$, then
+If $\{X_n\}$ iid and $E\vert X\vert  < \infty$, then
 
 $$
 \frac{S_n}{n} \xrightarrow{a.s.} E[X].
@@ -202,6 +202,6 @@ Though your notes only sketch this, the purpose is:
 - **Borel–Cantelli (I):** If $\sum P(A_n)<\infty$, then $A_n$ occurs only finitely often a.s.
 - **Subsequence principle:** Convergence in probability implies existence of an almost surely convergent subsequence.
 - **DCT via subsequences:**  
-  If $X_n\to X$ in probability and $|X_n|\le Y$ with $EY<\infty$, then $E[X_n]\to E[X]$.
+  If $X_n\to X$ in probability and $\vert X_n\vert \le Y$ with $EY<\infty$, then $E[X_n]\to E[X]$.
 - **SLLN link:** Borel–Cantelli and moment expansions lead to almost sure convergence of averages for iid integrable variables.
 

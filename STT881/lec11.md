@@ -58,7 +58,7 @@ This is the fundamental mechanism behind UI.
 
 A family $\{X_n\}_{n\ge 1}$ is **uniformly integrable** if:
 $$
-\phi(M) = \sup_{n\ge 1} \mathbb{E}\big[ |X_n| \mathbf{1}_{\{|X_n|>M\}} \big]
+\phi(M) = \sup_{n\ge 1} \mathbb{E}\big[ \vert X_n\vert  \mathbf{1}_{\{\vert X_n\vert >M\}} \big]
      \xrightarrow[M\to\infty]{} 0.
 $$
 
@@ -69,9 +69,9 @@ The graphical note on **page 3** shows that UI prevents the “mass” of $X_n$ 
 # 3. Dominating Function Implies UI
 
 **Observation (page 1):**  
-If $|X_n| \le Y$ for all $n$ and $\mathbb{E}[Y] < \infty$, then:
+If $\vert X_n\vert  \le Y$ for all $n$ and $\mathbb{E}[Y] < \infty$, then:
 $$
-|X_n| \mathbf{1}_{\{|X_n| > M\}}
+\vert X_n\vert  \mathbf{1}_{\{\vert X_n\vert  > M\}}
 \le 
 Y \mathbf{1}_{\{Y > M\}}.
 $$
@@ -85,7 +85,7 @@ $$
 Hence:
 $$
 \boxed{
-|X_n|\le Y\in L^1 \quad \Longrightarrow \quad \{X_n\} \text{ is UI}.
+\vert X_n\vert \le Y\in L^1 \quad \Longrightarrow \quad \{X_n\} \text{ is UI}.
 }
 $$
 
@@ -117,7 +117,7 @@ $$
 2. **Expectations:**  
    $$
    \mathbb{E}[X_n] 
-   = \frac{2^n}{n} \cdot |I_n|
+   = \frac{2^n}{n} \cdot \vert I_n\vert 
    = \frac{2^n}{n} \cdot \frac{1}{2^{n+1}}
    = \frac{1}{2n}
    \to 0.
@@ -156,7 +156,7 @@ If:
 
 then:
 $$
-\mathbb{E}|X_n - X| \to 0.
+\mathbb{E}\vert X_n - X\vert  \to 0.
 $$
 
 ### Consequences:
@@ -175,7 +175,7 @@ From page 2:
 
 If
 $$
-\sup_n \mathbb{E}|X_n|^p < \infty
+\sup_n \mathbb{E}\vert X_n\vert ^p < \infty
 \quad\text{for some } p>1,
 $$
 then $\{X_n\}$ is UI.
@@ -183,11 +183,11 @@ then $\{X_n\}$ is UI.
 ### Proof (as in notes):
 For any $M>0$, by Hölder/Markov:
 $$
-\mathbb{E}\big(|X_n|\mathbf{1}_{\{|X_n|>M\}}\big)
+\mathbb{E}\big(\vert X_n\vert \mathbf{1}_{\{\vert X_n\vert >M\}}\big)
 \le
-\mathbb{E}\left(\frac{|X_n|^p}{M^{p-1}}\right)
+\mathbb{E}\left(\frac{\vert X_n\vert ^p}{M^{p-1}}\right)
 =
-\frac{\mathbb{E}|X_n|^p}{M^{p-1}}
+\frac{\mathbb{E}\vert X_n\vert ^p}{M^{p-1}}
 \le
 \frac{C}{M^{p-1}}
 \to 0.
@@ -212,13 +212,13 @@ A family $\{X_n\}\subset L^1$ is UI **iff**:
 
 1. **Uniformly bounded expectations:**  
    $$
-   \sup_n \mathbb{E}|X_n| < \infty.
+   \sup_n \mathbb{E}\vert X_n\vert  < \infty.
    $$
 
 2. **Tight control on small-probability sets:**  
    For every $\varepsilon>0$ there exists $\delta>0$ such that for every measurable set $A$ with $P(A)<\delta$,
    $$
-   \sup_n \mathbb{E}\big(|X_n|\mathbf{1}_A\big) \le \varepsilon.
+   \sup_n \mathbb{E}\big(\vert X_n\vert \mathbf{1}_A\big) \le \varepsilon.
    $$
 
 This version is extremely useful in probability theory (e.g., Prokhorov-type ideas and martingale convergence).
@@ -231,7 +231,7 @@ From **page 3**:
 
 - If $\{X_n\}$ and $\{Y_n\}$ are UI, then $\{X_n + Y_n\}$ is UI.
 - If $X_n \to X$ in $L^1$, then $\{X_n\}$ is UI.
-- If $\sup_n \mathbb{E}|X_n| < \infty$ and $X=0$ with $\mathbb{E}|X_n|\to 0$, then $\{X_n\}$ is UI (detailed proof given in the notes).
+- If $\sup_n \mathbb{E}\vert X_n\vert  < \infty$ and $X=0$ with $\mathbb{E}\vert X_n\vert \to 0$, then $\{X_n\}$ is UI (detailed proof given in the notes).
 
 ---
 
@@ -240,7 +240,7 @@ From **page 3**:
 The lecture concludes with:
 
 > If $X_n \to X$ a.s. and $\{X_n\}$ is UI, then not only  
-> $\mathbb{E}|X_n - X| \to 0$,  
+> $\mathbb{E}\vert X_n - X\vert  \to 0$,  
 > but also  
 > $$
 > \lim_{M\to\infty} \phi(M) = 0,

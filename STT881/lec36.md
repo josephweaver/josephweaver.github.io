@@ -109,9 +109,9 @@ Show that $t\mapsto \varphi(t)$ is **uniformly continuous** on $\mathbb R$.
 Compute:
 
 $$
-|\varphi(t+h)-\varphi(t)|
+\vert \varphi(t+h)-\varphi(t)\vert 
 =
-\left|E(e^{i(t+h)X}-e^{itX})\right|.
+\vert E(e^{i(t+h)X}-e^{itX})\vert .
 $$
 
 Factor:
@@ -125,48 +125,48 @@ $$
 Thus:
 
 $$
-|\varphi(t+h)-\varphi(t)|
+\vert \varphi(t+h)-\varphi(t)\vert 
 \le 
-E|e^{ihX}-1|.
+E\vert e^{ihX}-1\vert .
 \tag{1}
 $$
 
 Page 3 splits the expectation:
 
 $$
-E|e^{ihX}-1|
+E\vert e^{ihX}-1\vert 
 =
-E\big(|e^{ihX}-1|;\, |X|\ge M\big)
+E\big(\vert e^{ihX}-1\vert ;\, \vert X\vert \ge M\big)
 +
-E\big(|e^{ihX}-1|;\, |X|<M\big).
+E\big(\vert e^{ihX}-1\vert ;\, \vert X\vert <M\big).
 $$
 
-For $|X|\ge M$:
+For $\vert X\vert \ge M$:
 
 $$
-|e^{ihX}-1| \le 2 \quad\Rightarrow\quad
-E(|e^{ihX}-1|;\, |X|\ge M) \le 2\,P(|X|\ge M).
+\vert e^{ihX}-1\vert  \le 2 \quad\Rightarrow\quad
+E(\vert e^{ihX}-1\vert ;\, \vert X\vert \ge M) \le 2\,P(\vert X\vert \ge M).
 $$
 
-For $|X|<M$:
+For $\vert X\vert <M$:
 
 $$
-|e^{ihX}-1|
-\le |hX|
-\le |h|M.
+\vert e^{ihX}-1\vert 
+\le \vert hX\vert 
+\le \vert h\vert M.
 $$
 
 Thus:
 
 $$
-|\varphi(t+h)-\varphi(t)|
+\vert \varphi(t+h)-\varphi(t)\vert 
 \le
-2P(|X|\ge M) + |h|M.
+2P(\vert X\vert \ge M) + \vert h\vert M.
 \tag{2}
 $$
 
-Given any $\varepsilon>0$, choose $M$ with $P(|X|\ge M)<\varepsilon$.  
-Then choose $|h|<\varepsilon/M$.  
+Given any $\varepsilon>0$, choose $M$ with $P(\vert X\vert \ge M)<\varepsilon$.  
+Then choose $\vert h\vert <\varepsilon/M$.  
 Hence:
 
 $$
@@ -279,7 +279,7 @@ Thus characteristic functions determine distribution functions.
 - **Normal CF**: obtained either by integration by parts or by analytic continuation of the MGF.
 - **Uniform continuity** of CFs:  
   $$
-  |\varphi(t+h)-\varphi(t)|\le 2P(|X|\ge M)+|h|M.
+  \vert \varphi(t+h)-\varphi(t)\vert \le 2P(\vert X\vert \ge M)+\vert h\vert M.
   $$
 - **Uniqueness**: if CFs agree, the distributions agree.
 - **Inversion Formula**:  

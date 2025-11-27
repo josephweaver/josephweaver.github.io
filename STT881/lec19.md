@@ -36,7 +36,7 @@ n
 Let $\{X_{n,k}\}_{1 \le k \le n}$ be independent for each $n$, and define truncated variables
 
 $$
-\bar X_{n,k} = X_{n,k} \mathbf{1}\{|X_{n,k}| \le b_n\}.
+\bar X_{n,k} = X_{n,k} \mathbf{1}\{\vert X_{n,k}\vert  \le b_n\}.
 $$
 
 Let
@@ -50,9 +50,9 @@ A standard inequality (via Markov + variance control on truncated part) gives:
 
 $$
 P\!\left( \frac{S_n - a_n}{b_n} > \varepsilon \right)
-   \le \underbrace{\sum_{k=1}^n P(|X_{n,k}| > b_n)}_{(I)}
+   \le \underbrace{\sum_{k=1}^n P(\vert X_{n,k}\vert  > b_n)}_{(I)}
       + \underbrace{\frac{1}{\varepsilon^2 b_n^2}\sum_{k=1}^n 
-          \mathbb{E}(X_{n,k}^2 \mathbf{1}\{|X_{n,k}|\le b_n\})}_{(II)}.
+          \mathbb{E}(X_{n,k}^2 \mathbf{1}\{\vert X_{n,k}\vert \le b_n\})}_{(II)}.
 $$
 
 **Conclusion.**  
@@ -74,14 +74,14 @@ $$
 If $\{X_k\}$ are iid with partial sums $S_n = \sum_{k=1}^n X_k$ then:
 
 $$
-(I)=n\,P(|X| > b_n), \qquad
-(II)=\frac{n\,\mathbb{E}(X^2 \mathbf{1}\{|X|\le b_n\})}{\varepsilon^2 b_n^2},
+(I)=n\,P(\vert X\vert  > b_n), \qquad
+(II)=\frac{n\,\mathbb{E}(X^2 \mathbf{1}\{\vert X\vert \le b_n\})}{\varepsilon^2 b_n^2},
 $$
 
 and
 
 $$
-a_n = n \,\mathbb{E}(X \mathbf{1}\{|X|\le b_n\}).
+a_n = n \,\mathbb{E}(X \mathbf{1}\{\vert X\vert \le b_n\}).
 $$
 
 If both vanish, then

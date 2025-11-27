@@ -30,28 +30,28 @@ We then analyze a heavy–tailed example where variance is infinite, showing how
 For all real $x$:
 
 $$
-|e^{ix} - 1| \le |x| \wedge 2.
+\vert e^{ix} - 1\vert  \le \vert x\vert  \wedge 2.
 $$
 
 This follows from:
 
 $$
-\left|\int_0^x e^{iu}\,du\right| = \left|\frac{e^{ix}-1}{i}\right| \le |x|.
+\vert \int_0^x e^{iu}\,du\vert  = \vert \frac{e^{ix}-1}{i}\vert  \le \vert x\vert .
 $$
 
 **Second-order bound**:
 
 $$
-|e^{ix} - (1 + ix)| \le \frac{x^2}{2} \wedge 2|x|.
+\vert e^{ix} - (1 + ix)\vert  \le \frac{x^2}{2} \wedge 2\vert x\vert .
 $$
 
 **Third-order bound (used for CLT)**:
 
 $$
 \boxed{
-\left|e^{ix} - \left(1 + ix - \frac{x^2}{2}\right)\right|
+\vert e^{ix} - \left(1 + ix - \frac{x^2}{2}\right)\vert 
 \,\le\,
-\frac{|x|^3}{6} \wedge x^2.
+\frac{\vert x\vert ^3}{6} \wedge x^2.
 }
 \tag{1}
 $$
@@ -73,12 +73,12 @@ Using (1):
 
 $$
 \boxed{
-\left|
+\vert 
 \varphi_X(t) - \left(1 + it\,E[X] - \frac{t^2E[X^2]}{2}\right)
-\right|
+\vert 
 \le
 E\!\left[
-\frac{|tX|^3}{6} \wedge t^2 X^2
+\frac{\vert tX\vert ^3}{6} \wedge t^2 X^2
 \right].
 }
 \tag{2}
@@ -87,10 +87,10 @@ $$
 If $E[X]=0$, this simplifies to:
 
 $$
-\left|\varphi_X(t) - \left(1 - \frac{t^2E[X^2]}{2}\right)\right|
+\vert \varphi_X(t) - \left(1 - \frac{t^2E[X^2]}{2}\right)\vert 
 \le
 E\!\left[
-\frac{|t|^3|X|^3}{6} \wedge t^2 X^2
+\frac{\vert t\vert ^3\vert X\vert ^3}{6} \wedge t^2 X^2
 \right].
 \tag{3}
 $$
@@ -147,37 +147,37 @@ $\max_m\sigma_{n,m}^2\to0$), we may treat (4) as a good 2nd-order CF approximati
 Using (3):
 
 $$
-|Z_{n,m}(t) - w_{n,m}(t)|
+\vert Z_{n,m}(t) - w_{n,m}(t)\vert 
 \le
 E\!\left[
-\frac{|t|^3|X_{n,m}|^3}{6} \wedge t^2 X_{n,m}^2
+\frac{\vert t\vert ^3\vert X_{n,m}\vert ^3}{6} \wedge t^2 X_{n,m}^2
 \right].
 $$
 
-Split on $|X_{n,m}| \le \varepsilon$:
+Split on $\vert X_{n,m}\vert  \le \varepsilon$:
 
-- If $|X_{n,m}|\le \varepsilon$, then  
-  $|X_{n,m}|^3 \le \varepsilon X_{n,m}^2$.
+- If $\vert X_{n,m}\vert \le \varepsilon$, then  
+  $\vert X_{n,m}\vert ^3 \le \varepsilon X_{n,m}^2$.
 
-- If $|X_{n,m}|>\varepsilon$, use the Lindeberg term.
+- If $\vert X_{n,m}\vert >\varepsilon$, use the Lindeberg term.
 
 Thus:
 
 $$
-|Z_{n,m}-w_{n,m}|
+\vert Z_{n,m}-w_{n,m}\vert 
 \le 
-\frac{\varepsilon |t|^3}{6} E[X_{n,m}^2]
+\frac{\varepsilon \vert t\vert ^3}{6} E[X_{n,m}^2]
 +
-t^2 E[X_{n,m}^2;\,|X_{n,m}|>\varepsilon].
+t^2 E[X_{n,m}^2;\,\vert X_{n,m}\vert >\varepsilon].
 \tag{5}
 $$
 
 Sum over $m=1,\dots,n$:
 
 $$
-\sum_{m=1}^n |Z_{n,m}-w_{n,m}|
+\sum_{m=1}^n \vert Z_{n,m}-w_{n,m}\vert 
 \le 
-\frac{\varepsilon |t|^3}{6}
+\frac{\varepsilon \vert t\vert ^3}{6}
 +
 t^2 L_n(\varepsilon),
 \tag{6}
@@ -186,11 +186,11 @@ $$
 where
 
 $$
-L_n(\varepsilon) = \sum_{m=1}^n E[X_{n,m}^2;\ |X_{n,m}|>\varepsilon].
+L_n(\varepsilon) = \sum_{m=1}^n E[X_{n,m}^2;\ \vert X_{n,m}\vert >\varepsilon].
 $$
 
 Under Lindeberg: $L_n(\varepsilon)\to0$.  
-Thus the RHS of (6) → $\varepsilon |t|^3/6$.  
+Thus the RHS of (6) → $\varepsilon \vert t\vert ^3/6$.  
 Then send $\varepsilon\to0$.  
 (Page 2: the full computation matches this.)
 
@@ -205,12 +205,12 @@ $$
 = \prod_{m=1}^n Z_{n,m}(t).
 $$
 
-Since $|Z_{n,m}|\le1$ and $|w_{n,m}|\le1$, the inequality (page 2):
+Since $\vert Z_{n,m}\vert \le1$ and $\vert w_{n,m}\vert \le1$, the inequality (page 2):
 
 $$
-\left|\prod_{m=1}^n Z_{n,m}-\prod_{m=1}^n w_{n,m}\right|
+\vert \prod_{m=1}^n Z_{n,m}-\prod_{m=1}^n w_{n,m}\vert 
 \le
-\sum_{m=1}^n |Z_{n,m}-w_{n,m}|
+\sum_{m=1}^n \vert Z_{n,m}-w_{n,m}\vert 
 \tag{7}
 $$
 
@@ -227,7 +227,7 @@ $$
 $$
 
 because $\sum \sigma_{n,m}^2 =1$ and $\max_m\sigma_{n,m}^2\to0$.  
-(Page 2 includes the standard lemma: if $\sum a_{n,m}\to a$, $\max |a_{n,m}|\to0$, then $\prod (1+a_{n,m})\to e^a$.)
+(Page 2 includes the standard lemma: if $\sum a_{n,m}\to a$, $\max \vert a_{n,m}\vert \to0$, then $\prod (1+a_{n,m})\to e^a$.)
 
 Thus:
 
@@ -253,10 +253,10 @@ This proves the **Lindeberg–Feller CLT** via characteristic functions.
 Let $X_1,X_2,\dots$ be iid, symmetric ($X\overset d= -X$), with tail:
 
 $$
-P(|X|\ge x)=x^{-2}, \qquad x\ge1,
+P(\vert X\vert \ge x)=x^{-2}, \qquad x\ge1,
 $$
 
-and $P(|X|<1)=0$.
+and $P(\vert X\vert <1)=0$.
 
 Then:
 
@@ -271,7 +271,7 @@ Let
 $$
 C_n = \sqrt{n\log\log n},
 \qquad
-Y_{n,m} = X_m\,\mathbf{1}_{|X_m|\le C_n}.
+Y_{n,m} = X_m\,\mathbf{1}_{\vert X_m\vert \le C_n}.
 $$
 
 Define:
@@ -291,7 +291,7 @@ $$
 $$
 P(S_n \ne T_n)
 \le 
-n\,P(|X|>C_n)
+n\,P(\vert X\vert >C_n)
 =
 \frac{n}{C_n^2}
 =
@@ -364,7 +364,7 @@ Lévy’s criterion:
 
 $$
 \boxed{
-\frac{y^2\,P(|X|>y)}{E[X^2;\,|X|>y]}
+\frac{y^2\,P(\vert X\vert >y)}{E[X^2;\,\vert X\vert >y]}
 \;\xrightarrow[y\to\infty]{}\; 0.
 }
 \tag{9}
@@ -380,11 +380,11 @@ Our example satisfies this with the normalization $b_n=\sqrt{n\log n}$.
 
 - Third-order Taylor bound for CFs:
   $$
-  |e^{ix}-(1+ix-x^2/2)|\le |x|^3/6 \wedge x^2.
+  \vert e^{ix}-(1+ix-x^2/2)\vert \le \vert x\vert ^3/6 \wedge x^2.
   $$
 - CF bound:
   $$
-  |\varphi_X(t)-(1 - t^2E[X^2]/2)|\le E[(|tX|^3/6)\wedge t^2X^2].
+  \vert \varphi_X(t)-(1 - t^2E[X^2]/2)\vert \le E[(\vert tX\vert ^3/6)\wedge t^2X^2].
   $$
 - Lindeberg–Feller CLT follows by approximating:
   $$
@@ -400,6 +400,6 @@ Our example satisfies this with the normalization $b_n=\sqrt{n\log n}$.
   $$
 - Lévy’s necessary and sufficient condition for normal attraction:
   $$
-  \frac{y^2 P(|X|>y)}{E[X^2;|X|>y]}\to 0.
+  \frac{y^2 P(\vert X\vert >y)}{E[X^2;\vert X\vert >y]}\to 0.
   $$
 

@@ -67,7 +67,7 @@ Thus (2) recovers **point mass** at any $x\in\mathbb{R}$.
 # 1.2 When $X$ has a density
 
 Page 1–2:  
-If $\int_{-\infty}^\infty |\varphi_X(t)|\,dt <\infty$, then $X$ has a **PDF** $f_X$, with:
+If $\int_{-\infty}^\infty \vert \varphi_X(t)\vert \,dt <\infty$, then $X$ has a **PDF** $f_X$, with:
 
 $$
 f_X(x)
@@ -82,11 +82,11 @@ Moreover, the truncated integral approximates the density:
 $$
 \lim_{T\to\infty}
 \frac{1}{2\pi}
-\left|\int_{-T}^{T} e^{-itx}\varphi_X(t)\,dt\right|
+\vert \int_{-T}^{T} e^{-itx}\varphi_X(t)\,dt\vert 
 = f_X(x).
 $$
 
-(Your notes show the inequality bounding the tail by $(1/2T)\int |\varphi_X|\to0$.)
+(Your notes show the inequality bounding the tail by $(1/2T)\int \vert \varphi_X\vert \to0$.)
 
 ---
 
@@ -149,34 +149,34 @@ $$
 \tag{6}
 $$
 
-Since $|\varphi(t)|\le 1$, the right-hand side is bounded by 2.
+Since $\vert \varphi(t)\vert \le 1$, the right-hand side is bounded by 2.
 
 Further in the notes (page 2):
 
 $$
-|X|\ge a \ \Rightarrow\ 
+\vert X\vert \ge a \ \Rightarrow\ 
 1 - \varphi(t)
 \ge 
-c\,P(|X|\ge a)
+c\,P(\vert X\vert \ge a)
 \quad\text{for suitable }c>0.
 \tag{7}
 $$
 
-The intuition is that if $|X|$ is large, the oscillation in $e^{itX}$ forces the average in (6) up.
+The intuition is that if $\vert X\vert $ is large, the oscillation in $e^{itX}$ forces the average in (6) up.
 
 Combining (6)–(7), for each $\varepsilon>0$ one finds an $M$ such that:
 
 $$
 \frac{1}{u}\int_{-u}^u \big(1-g(t)\big)\,dt <\varepsilon
 \quad\Rightarrow\quad
-P(|X|>M) < \varepsilon.
+P(\vert X\vert >M) < \varepsilon.
 \tag{8}
 $$
 
 This step (page 2 boxed conclusion):
 
 $$
-P(|X_n|\ge M) < \varepsilon
+P(\vert X_n\vert \ge M) < \varepsilon
 \quad\text{uniformly in }n,
 $$
 
@@ -246,7 +246,7 @@ This is the foundation of all the CF-based limit theorems, especially the CLT, s
   \frac{b-a}{2\pi}\int_{-T}^{T}\varphi_X(t)\varphi_{-U}(t)\,dt
   \to P(a<X<b)+\tfrac12(P(X=a)+P(X=b)).
   $$
-- If $\int |\varphi_X|\!<\infty$, then $X$ has a density and  
+- If $\int \vert \varphi_X\vert \!<\infty$, then $X$ has a density and  
   $$
   f_X(x)=\frac{1}{2\pi}\int e^{-itx}\varphi_X(t)\,dt.
   $$

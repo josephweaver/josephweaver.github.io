@@ -1,13 +1,13 @@
 # 1 — Cardinality, Cantor’s Theorem, Series, Measure Theory
 
-Lecture 01 covers early measure-theoretic foundations: countable vs uncountable sets, Cantor’s diagonal argument (including (|A|<|2^A|)), binary expansions showing ((0,1)) is uncountable, basics of sequences/series (convergence, harmonic vs (p)-series, alternating divergence), and first steps in measure theory—definition of an algebra of sets and a measure on it.
+Lecture 01 covers early measure-theoretic foundations: countable vs uncountable sets, Cantor’s diagonal argument (including (\vert A\vert <\vert 2^A\vert )), binary expansions showing ((0,1)) is uncountable, basics of sequences/series (convergence, harmonic vs (p)-series, alternating divergence), and first steps in measure theory—definition of an algebra of sets and a measure on it.
 
 ## 1. Cardinality of Sets
 
 A set is **finite**, **countably infinite**, or **uncountable**.
 
 ### Definition (Cardinality)
-For a set $A$, the **cardinality** $|A|$ is the “number of elements” in $A$.  
+For a set $A$, the **cardinality** $\vert A\vert $ is the “number of elements” in $A$.  
 - If there is a bijection $A \leftrightarrow \mathbb{N}$, then $A$ is **countable**.  
 - If no such bijection exists, $A$ is **uncountable**.
 
@@ -20,14 +20,14 @@ A typical enumeration of $\mathbb{Q}$ uses the lattice of integer pairs $(m,n)$ 
 
 ### Real numbers are uncountable
 $$
-|\mathbb{R}| > |\mathbb{Z}|.
+\vert \mathbb{R}\vert  > \vert \mathbb{Z}\vert .
 $$
 
 This is shown using **Cantor’s diagonal argument**.
 
 ---
 
-## 2. Cantor’s Theorem: $|A| < |2^A|$
+## 2. Cantor’s Theorem: $\vert A\vert  < \vert 2^A\vert $
 
 ### Power Set
 For any set $A$, the **power set**
@@ -39,7 +39,7 @@ has cardinality strictly greater than $A$.
 ### Theorem (Cantor)
 For every set $A$,
 $$
-|A| < |2^A|.
+\vert A\vert  < \vert 2^A\vert .
 $$
 
 ### Proof (Diagonal Argument)
@@ -63,7 +63,7 @@ Now consider whether $b\in B$:
 - If $b\in B$, then by definition of $B$, $b\notin f(b)=B$. Contradiction.
 - If $b\notin B$, then by definition of $B$, $b\in f(b)=B$. Contradiction.
 
-Thus no bijection exists and $|A| < |2^A|$.
+Thus no bijection exists and $\vert A\vert  < \vert 2^A\vert $.
 
 ---
 
@@ -162,7 +162,7 @@ This is the foundation for the **probability measure** $P$ later in the course.
 - Uncountable: ℝ, (0,1), {0,1}^ℕ.
 
 ## Cantor’s Theorem
-- For any set A: |A| < |2^A|.
+- For any set A: \vert A\vert  < \vert 2^A\vert .
 - Proof uses diagonal set B = {a∈A : a∉f(a)}.
 
 ## Binary Expansion

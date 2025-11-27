@@ -5,7 +5,7 @@
 Let $\{X_k\}_{k\ge1}$ be iid with
 
 - $E[X]=0$,
-- $E|X|^p < \infty$ for some $1\le p < 2$.
+- $E\vert X\vert ^p < \infty$ for some $1\le p < 2$.
 
 Let  
 $$
@@ -22,14 +22,14 @@ $$
 
 1. **Define truncated variables**
    $$
-   Y_k = X_k\,\mathbf{1}_{\{|X_k|\le k^{1/p}\}}.
+   Y_k = X_k\,\mathbf{1}_{\{\vert X_k\vert \le k^{1/p}\}}.
    $$
 
 2. **Bad events are summable**
    $$
    \sum_k P(Y_k\ne X_k)
-   =\sum_k P(|X|>k^{1/p})
-   =\sum_k P(|X|^p > k)
+   =\sum_k P(\vert X\vert >k^{1/p})
+   =\sum_k P(\vert X\vert ^p > k)
    <\infty.
    $$
    So by Borel–Cantelli I, $X_k = Y_k$ eventually a.s.
@@ -43,9 +43,9 @@ $$
    A key lemma (pages 1–2):
 
    > If $a_n$ is “good" and  
-   > $\sum P(|X|>a_n)<\infty$, then  
+   > $\sum P(\vert X\vert >a_n)<\infty$, then  
    > $\sum E(Y_n^2)/a_n^2 <\infty$,  
-   > where $Y_n = X_n \mathbf{1}_{|X_n|\le a_n}$.
+   > where $Y_n = X_n \mathbf{1}_{\vert X_n\vert \le a_n}$.
 
    For M–Z, take $a_n = n^{1/p}$.  
    The sequence $\{a_n / n^{1/p}\} = \{1\}$ is (trivially) non-decreasing, so $a_n$ is “good”.
@@ -81,46 +81,46 @@ $$
 
 For  
 $$
-Y_k = X_k \mathbf{1}_{\{|X_k|\le k^{1/p}\}},
+Y_k = X_k \mathbf{1}_{\{\vert X_k\vert \le k^{1/p}\}},
 $$
 we have
 $$
-E[Y_k] = E\bigl[ X\,;\ |X|\le k^{1/p}\bigr]
-= E[X] - E\bigl[X\,;\ |X|>k^{1/p}\bigr]
-= -E\bigl[ X\,;\ |X|>k^{1/p}\bigr],
+E[Y_k] = E\bigl[ X\,;\ \vert X\vert \le k^{1/p}\bigr]
+= E[X] - E\bigl[X\,;\ \vert X\vert >k^{1/p}\bigr]
+= -E\bigl[ X\,;\ \vert X\vert >k^{1/p}\bigr],
 $$
 since $E[X]=0$.
 
 Thus,
 $$
-|E[Y_k]|
-\le E\left( |X|\,;\ |X|>k^{1/p}\right).
+\vert E[Y_k]\vert 
+\le E\left( \vert X\vert \,;\ \vert X\vert >k^{1/p}\right).
 $$
 
 To bound this, use **identities from integration by parts** (page 2):
 
 For $x>k^{1/p}$,
 $$
-|X| = \frac{|X|^p}{|X|^{p-1}}
-\le \frac{|X|^p}{k^{(p-1)/p}}.
+\vert X\vert  = \frac{\vert X\vert ^p}{\vert X\vert ^{p-1}}
+\le \frac{\vert X\vert ^p}{k^{(p-1)/p}}.
 $$
 
 Hence,
 $$
-|E[Y_k]|
+\vert E[Y_k]\vert 
 \le k^{-(p-1)/p} \,
-E\left(|X|^p\,;\ |X| > k^{1/p}\right).
+E\left(\vert X\vert ^p\,;\ \vert X\vert  > k^{1/p}\right).
 $$
 
 As $k\to\infty$,
 $$
-E\left(|X|^p\,;\ |X|>k^{1/p}\right) \to 0,
+E\left(\vert X\vert ^p\,;\ \vert X\vert >k^{1/p}\right) \to 0,
 $$
-because $E|X|^p<\infty$.  
+because $E\vert X\vert ^p<\infty$.  
 Therefore:
 
 $$
-|E[Y_k]| \le C k^{-(p-1)/p} \quad\text{for large }k.
+\vert E[Y_k]\vert  \le C k^{-(p-1)/p} \quad\text{for large }k.
 $$
 
 ### Sum bound
@@ -136,7 +136,7 @@ Therefore:
 
 $$
 \frac{1}{n^{1/p}}
-\sum_{k=1}^n |E[Y_k]|
+\sum_{k=1}^n \vert E[Y_k]\vert 
 \le
 \frac{1}{n^{1/p}}
 \sum_{k=1}^n k^{-(p-1)/p}
@@ -168,7 +168,7 @@ This finishes the Marcinkiewicz–Zygmund SLLN.
 
 (William Feller’s theorem, page 2–3.)
 
-Let $\{X_k\}$ be iid with $E|X|<\infty$.  
+Let $\{X_k\}$ be iid with $E\vert X\vert <\infty$.  
 Take any positive sequence $a_n$ such that
 
 - $a_n>0$,
@@ -181,11 +181,11 @@ Let $S_n = \sum_{k=1}^n X_k$.
 
 (a) If  
 $$
-\sum_{n=1}^\infty P(|X|\ge a_n) < \infty,
+\sum_{n=1}^\infty P(\vert X\vert \ge a_n) < \infty,
 $$
 then
 $$
-\overline{\lim_{n\to\infty}} \frac{|S_n|}{a_n} =0 \quad\text{a.s.}
+\overline{\lim_{n\to\infty}} \frac{\vert S_n\vert }{a_n} =0 \quad\text{a.s.}
 $$
 In particular,
 $$
@@ -194,14 +194,14 @@ $$
 
 (b) If  
 $$
-\sum_{n=1}^\infty P(|X|\ge a_n) = \infty,
+\sum_{n=1}^\infty P(\vert X\vert \ge a_n) = \infty,
 $$
 then
 $$
-\lim_{n\to\infty} \frac{|S_n|}{a_n} = \infty \quad\text{a.s.}
+\lim_{n\to\infty} \frac{\vert S_n\vert }{a_n} = \infty \quad\text{a.s.}
 $$
 
-Thus **the series $\sum P(|X|\ge a_n)$** completely determines the almost-sure growth rate of $S_n$.
+Thus **the series $\sum P(\vert X\vert \ge a_n)$** completely determines the almost-sure growth rate of $S_n$.
 
 ---
 
@@ -211,40 +211,40 @@ Thus **the series $\sum P(|X|\ge a_n)$** completely determines the almost-sure g
 
 Assume  
 $$
-\sum_n P(|X|\ge a_n) = \infty.
+\sum_n P(\vert X\vert \ge a_n) = \infty.
 $$
 
 Then for any fixed $k\ge 1$,
 
 $$
-\sum_n P(|X|\ge k a_n)
-\ge \frac{1}{k} \sum_{n=k}^\infty P(|X|\ge a_n)
+\sum_n P(\vert X\vert \ge k a_n)
+\ge \frac{1}{k} \sum_{n=k}^\infty P(\vert X\vert \ge a_n)
 = \infty.
 $$
 
 By **Borel–Cantelli II**,
 $$
-P(|X_n|\ge k a_n \ \text{i.o.}) = 1.
+P(\vert X_n\vert \ge k a_n \ \text{i.o.}) = 1.
 $$
 
 Thus,
 $$
-\overline{\lim_{n\to\infty}} \frac{|X_n|}{a_n} \ge k \quad \text{a.s.}
+\overline{\lim_{n\to\infty}} \frac{\vert X_n\vert }{a_n} \ge k \quad \text{a.s.}
 $$
 
 Since $k$ is arbitrary,
 $$
-\overline{\lim_{n\to\infty}} \frac{|X_n|}{a_n} = \infty \quad\text{a.s.}
+\overline{\lim_{n\to\infty}} \frac{\vert X_n\vert }{a_n} = \infty \quad\text{a.s.}
 $$
 
 Finally, using
 $$
-|X_n| = |S_n - S_{n-1}| \le |S_n| + |S_{n-1}|
-\le 2 \max(|S_n|,|S_{n-1}|),
+\vert X_n\vert  = \vert S_n - S_{n-1}\vert  \le \vert S_n\vert  + \vert S_{n-1}\vert 
+\le 2 \max(\vert S_n\vert ,\vert S_{n-1}\vert ),
 $$
 we get
 $$
-\frac{|S_n|}{a_n} \to \infty \quad\text{a.s.}
+\frac{\vert S_n\vert }{a_n} \to \infty \quad\text{a.s.}
 $$
 
 ---
@@ -255,7 +255,7 @@ $$
 
 If  
 $$
-\sum P(|X|\ge a_n) < \infty,
+\sum P(\vert X\vert \ge a_n) < \infty,
 $$
 then:
 
@@ -280,7 +280,7 @@ Your notes say “look at book for proof,” but the outline is exactly parallel
 # **Cheat-Sheet Summary — Lecture 29**
 
 - **M–Z SLLN:**
-  If $E|X|^p<\infty$, $1\le p<2$, then  
+  If $E\vert X\vert ^p<\infty$, $1\le p<2$, then  
   $$
   S_n / n^{1/p} \to 0 \text{ a.s.}
   $$
@@ -292,8 +292,8 @@ Your notes say “look at book for proof,” but the outline is exactly parallel
 - **Feller’s Theorem:**
   Given $a_n$ with $a_n/n$ non-decreasing:
 
-  - If $\sum P(|X|\ge a_n)<\infty$, then $S_n/a_n \to 0$ a.s.
-  - If $\sum P(|X|\ge a_n)=\infty$, then $S_n/a_n\to\infty$ a.s.
+  - If $\sum P(\vert X\vert \ge a_n)<\infty$, then $S_n/a_n \to 0$ a.s.
+  - If $\sum P(\vert X\vert \ge a_n)=\infty$, then $S_n/a_n\to\infty$ a.s.
 
 This provides a precise **growth-rate dichotomy** for partial sums of iid integrable variables.
 

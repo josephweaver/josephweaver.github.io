@@ -64,7 +64,7 @@ By independence and Chebyshev:
 
 $$
 P\!\left(
-\max_{M\le m\le N} |S_m - S_M| > \epsilon
+\max_{M\le m\le N} \vert S_m - S_M\vert  > \epsilon
 \right)
 \;\le\;
 \frac{\operatorname{Var}(S_N - S_M)}{\epsilon^2}
@@ -76,7 +76,7 @@ Letting $N\to\infty$:
 
 $$
 P\!\left(
-\sup_{m\ge M} |S_m - S_M| > \epsilon
+\sup_{m\ge M} \vert S_m - S_M\vert  > \epsilon
 \right)
 \le
 \frac{\sum_{k=M+1}^\infty \operatorname{Var}(X_k)}{\epsilon^2}
@@ -88,7 +88,7 @@ because $\sum\operatorname{Var}(X_k)$ converges.
 Now define the nonnegative random variables:
 
 $$
-W_M = \sup_{m\ge M} |S_m - S_M|.
+W_M = \sup_{m\ge M} \vert S_m - S_M\vert .
 $$
 
 - The sequence $W_M$ is **monotone decreasing**.  
@@ -104,7 +104,7 @@ $$
 So
 
 $$
-\sup_{n,m\ge M}|S_n - S_m| \;\xrightarrow{M\to\infty}{a.s.}\; 0.
+\sup_{n,m\ge M}\vert S_n - S_m\vert  \;\xrightarrow{M\to\infty}{a.s.}\; 0.
 $$
 
 Thus $\{S_n\}$ is a.s. Cauchy, hence convergent almost surely.
@@ -119,7 +119,7 @@ Let $\{X_k\}_{k\ge1}$ be independent.
 Fix a truncation constant $A>0$, and define:
 
 $$
-Y_k = X_k \, \mathbf{1}_{\{|X_k|\le A\}},
+Y_k = X_k \, \mathbf{1}_{\{\vert X_k\vert \le A\}},
 \qquad
 M_k = E[Y_k].
 $$
@@ -137,7 +137,7 @@ The series $\sum_{k=1}^\infty X_k$ converges a.s. **iff** all three series below
 
 1. **Large jumps are rare:**
    $$
-   \sum_{k=1}^\infty P(|X_k| > A) < \infty.
+   \sum_{k=1}^\infty P(\vert X_k\vert  > A) < \infty.
    $$
 
 2. **The expected truncated values sum:**
@@ -158,7 +158,7 @@ These conditions do not depend on the choice of $A>0$.
 ## 4. Interpretation (from diagrams and notes on pages 1–2)
 
 ### Condition (1): “Rare large jumps”
-The event $|X_k|>A$ must occur only finitely many times (Borel–Cantelli II).  
+The event $\vert X_k\vert >A$ must occur only finitely many times (Borel–Cantelli II).  
 This ensures the sequence behaves like the truncated version except for finitely many terms.
 
 ### Condition (2): “Truncated drift converges”
@@ -193,7 +193,7 @@ Assume conditions (1)–(3).
   $$
   a deterministic series.
 
-- **(1)** implies via Borel–Cantelli II that $|X_k|>A$ occurs only finitely often.  
+- **(1)** implies via Borel–Cantelli II that $\vert X_k\vert >A$ occurs only finitely often.  
   Thus:
   $$
   X_k = Y_k \quad\text{for all but finitely many }k.
@@ -222,7 +222,7 @@ Conversely, if $\sum X_k$ converges a.s., each of the three conditions must hold
 - The key idea:  
   Uniform tail probability  
   $$
-  P(\sup_{m\ge M}|S_m - S_M|>\epsilon)
+  P(\sup_{m\ge M}\vert S_m - S_M\vert >\epsilon)
   $$
   goes to 0, making $\{S_n\}$ a.s. Cauchy.
 

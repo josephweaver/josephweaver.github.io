@@ -95,7 +95,7 @@ $$
 For any $x>0$,
 
 $$
-P\Big(\max_{1\le k\le n} |S_k| \ge x\Big)
+P\Big(\max_{1\le k\le n} \vert S_k\vert  \ge x\Big)
 \le \frac{E[S_n^2]}{x^2}.
 $$
 
@@ -108,13 +108,13 @@ This is **stronger than Chebyshev's inequality**, because it controls the *maxim
 Let
 
 $$
-A_k = \big\{ |S_k|\ge x,\ |S_j|<x \text{ for } j<k \big\}.
+A_k = \big\{ \vert S_k\vert \ge x,\ \vert S_j\vert <x \text{ for } j<k \big\}.
 $$
 
 The events $A_k$ are disjoint and
 
 $$
-\bigcup_{k=1}^n A_k = \left\{\max_{1\le k\le n}|S_k|\ge x\right\}.
+\bigcup_{k=1}^n A_k = \left\{\max_{1\le k\le n}\vert S_k\vert \ge x\right\}.
 $$
 
 Compute:
@@ -123,7 +123,7 @@ $$
 E[S_n^2]
 = \sum_{k=1}^n \int_{A_k} S_n^2\, dP
 \ge x^2 \sum_{k=1}^n P(A_k)
-= x^2\, P\left(\max_{1\le k\le n}|S_k|\ge x\right).
+= x^2\, P\left(\max_{1\le k\le n}\vert S_k\vert \ge x\right).
 $$
 
 Why the inequality holds:
@@ -172,8 +172,8 @@ $$
 And also
 
 $$
-P\left(\max_{1\le k\le n} |S_k|\ge t\right)
-\le 2\, P(|S_n|\ge t).
+P\left(\max_{1\le k\le n} \vert S_k\vert \ge t\right)
+\le 2\, P(\vert S_n\vert \ge t).
 $$
 
 These inequalities are central tools in proving the LIL and many fluctuation results.
@@ -215,14 +215,14 @@ A parallel argument gives the two-sided inequality.
 - **Kolmogorov 0–1 Law:** Any tail event for independent variables has probability 0 or 1.
 - **Maximal inequality (Kolmogorov):**  
   $$
-  P(\max_{k\le n}|S_k|\ge x) \le E[S_n^2]/x^2.
+  P(\max_{k\le n}\vert S_k\vert \ge x) \le E[S_n^2]/x^2.
   $$
 - **Lévy maximal inequality (symmetric case):**  
   $$
   P(\max_{k\le n} S_k \ge t) \le 2 P(S_n \ge t).
   $$
   $$
-  P(\max_{k\le n} |S_k|\ge t) \le 2 P(|S_n|\ge t).
+  P(\max_{k\le n} \vert S_k\vert \ge t) \le 2 P(\vert S_n\vert \ge t).
   $$
 
 These inequalities are foundational for the **Law of the Iterated Logarithm** and more advanced results.

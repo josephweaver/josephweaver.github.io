@@ -176,7 +176,7 @@ $$
 
 # **3. Strong Law of Large Numbers (SLLN)**
 
-Statement: Suppose $\{X_k\}$ are iid and $E|X|<\infty$. Then
+Statement: Suppose $\{X_k\}$ are iid and $E\vert X\vert <\infty$. Then
 
 $$
 \frac{S_n}{n} \xrightarrow{a.s.} E[X].
@@ -186,7 +186,7 @@ The proof in the notes (page 2–3) uses:
 
 1. **Truncation** at level $k$:  
    $$
-   Y_k = X_k \mathbf{1}_{\{|X_k|\le k\}}.
+   Y_k = X_k \mathbf{1}_{\{\vert X_k\vert \le k\}}.
    $$
 
 2. **Borel–Cantelli I** to show that only finitely many truncations actually change the value.
@@ -198,15 +198,15 @@ The proof in the notes (page 2–3) uses:
 ## 3.1 Step 1: Truncation error happens only finitely often
 
 $$
-P(Y_k \ne X_k) = P(|X_k| > k).
+P(Y_k \ne X_k) = P(\vert X_k\vert  > k).
 $$
 
 Since
 
 $$
-\sum_{k=1}^\infty P(|X_k|>k)
-= \sum_{k=1}^\infty P(|X|>k)
-\le E|X| < \infty,
+\sum_{k=1}^\infty P(\vert X_k\vert >k)
+= \sum_{k=1}^\infty P(\vert X\vert >k)
+\le E\vert X\vert  < \infty,
 $$
 
 BC I implies:

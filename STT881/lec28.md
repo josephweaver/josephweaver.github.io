@@ -36,8 +36,8 @@ We recall two prior results:
    \sum X_n \text{ converges a.s.}
    \iff
    \begin{cases}
-   \text{(i)} & \forall A>0,\ \sum P(|X_n|>A)<\infty,\\\$$-4pt]
-   \text{(ii)} & \sum \operatorname{Var}(Y_n)<\infty,\quad Y_n=X_n\mathbf{1}_{\{|X_n|\le A\}},\\\\
+   \text{(i)} & \forall A>0,\ \sum P(\vert X_n\vert >A)<\infty,\\\$$-4pt]
+   \text{(ii)} & \sum \operatorname{Var}(Y_n)<\infty,\quad Y_n=X_n\mathbf{1}_{\{\vert X_n\vert \le A\}},\\\\
    \text{(iii)} & \sum E[Y_n]\ \text{converges}.
    \end{cases}
    $$
@@ -53,7 +53,7 @@ Let $S_n = \sum_{k=1}^n X_k$.
 ### Lemma  
 If
 
-- $\sup_{n\ge1} |S_n| < \infty$ a.s., and  
+- $\sup_{n\ge1} \vert S_n\vert  < \infty$ a.s., and  
 - $E\left( \sup_{n\ge1} X_n^2\right) < \infty$,
 
 then
@@ -70,8 +70,8 @@ $$
 
 A corollary used in the proof of the ⇒ direction in the Three–Series theorem:
 
-> If $X_n$ are independent, centered, uniformly bounded $|X_n|\le A$, and  
-> $\sup_n |S_n| <\infty$ a.s.,  
+> If $X_n$ are independent, centered, uniformly bounded $\vert X_n\vert \le A$, and  
+> $\sup_n \vert S_n\vert  <\infty$ a.s.,  
 > then  
 > $$
 > \sum X_n \quad\text{converges a.s.}
@@ -240,7 +240,7 @@ This is a **refined law of large numbers**: the normalization grows just slowly 
 Let $X_1, X_2,\dots$ be iid, with:
 
 - $E[X]=0$,
-- $E|X|^p < \infty$, for $1 \le p < 2$.
+- $E\vert X\vert ^p < \infty$, for $1 \le p < 2$.
 
 ### **Theorem (M–Z SLLN)**
 
@@ -254,7 +254,7 @@ $$
 Define truncated variables:
 
 $$
-Y_k = X_k \mathbf{1}_{\{|X_k|^p \le k\}},
+Y_k = X_k \mathbf{1}_{\{\vert X_k\vert ^p \le k\}},
 \qquad
 T_n = \sum_{k=1}^n Y_k.
 $$
@@ -262,7 +262,7 @@ $$
 1. By Markov and the $p$-moment hypothesis:  
    $$
    \sum_{k=1}^\infty P(X_k \ne Y_k)
-   =\sum_{k=1}^\infty P(|X|^p > k)
+   =\sum_{k=1}^\infty P(\vert X\vert ^p > k)
    < \infty.
    $$
    So $X_k = Y_k$ eventually a.s.
@@ -313,7 +313,7 @@ Since $T_n = S_n$ for large $n$, this proves the M–Z strong law.
   $$
 
 - **Marcinkiewicz–Zygmund SLLN:**  
-  For iid with $E|X|^p <\infty$, $1\le p<2$,
+  For iid with $E\vert X\vert ^p <\infty$, $1\le p<2$,
   $$
   S_n/n^{1/p} \to 0 \text{ a.s.}
   $$

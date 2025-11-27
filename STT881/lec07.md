@@ -11,12 +11,12 @@ We work on a σ-finite measure space $(\Omega, \mathcal{F}, \mu)$.
 
 A function $f$ is **integrable** if:
 $$
-\int_\Omega |f|\, d\mu < \infty.
+\int_\Omega \vert f\vert \, d\mu < \infty.
 $$
 
 Recall:
 $$
-|f| = f^{+} + f^{-}, \quad
+\vert f\vert  = f^{+} + f^{-}, \quad
 f^+ = f\vee 0, \quad
 f^- = -(f\wedge 0),
 $$
@@ -48,16 +48,16 @@ $$
 
 ### (4) Absolute value inequality
 $$
-|I(f)| \le I(|f|).
+\vert I(f)\vert  \le I(\vert f\vert ).
 $$
 
 Proof (page 1):
 
 $$
-|I(f)| = |I(f^+) - I(f^-)| 
+\vert I(f)\vert  = \vert I(f^+) - I(f^-)\vert  
       = \max\{ I(f^+) - I(f^-),\; I(f^-) - I(f^+)\}
       \le I(f^+) + I(f^-)
-      = I(|f|).
+      = I(\vert f\vert ).
 $$
 
 ---
@@ -174,54 +174,54 @@ $$
 
 # 5. Hölder’s Inequality
 
-Let $f,g$ be measurable. If $|f|^p$ and $|g|^q$ are integrable, then:
+Let $f,g$ be measurable. If $\vert f\vert ^p$ and $\vert g\vert ^q$ are integrable, then:
 $$
-\int_\Omega |f g|\, d\mu
+\int_\Omega \vert f g\vert \, d\mu
 \le
-\left( \int_\Omega |f|^p\, d\mu \right)^{1/p}
-\left( \int_\Omega |g|^q\, d\mu \right)^{1/q}.
+\left( \int_\Omega \vert f\vert ^p\, d\mu \right)^{1/p}
+\left( \int_\Omega \vert g\vert ^q\, d\mu \right)^{1/q}.
 $$
 
 ### Proof outline (page 2)
 
 Normalize:
 $$
-F = \frac{|f|}{\|f\|_{L^p}}, 
+F = \frac{\vert f\vert }{\\vert f\\vert _{L^p}}, 
 \qquad
-G = \frac{|g|}{\|g\|_{L^q}},
+G = \frac{\vert g\vert }{\\vert g\\vert _{L^q}},
 $$
 so that:
 $$
-\|F\|_{L^p} = 1,
+\\vert F\\vert _{L^p} = 1,
 \quad
-\|G\|_{L^q} = 1.
+\\vert G\\vert _{L^q} = 1.
 $$
 
 Apply Young’s inequality pointwise to $F(\omega)$ and $G(\omega)$:
 $$
-|F G|
-\le \frac{|F|^p}{p} + \frac{|G|^q}{q}.
+\vert F G\vert 
+\le \frac{\vert F\vert ^p}{p} + \frac{\vert G\vert ^q}{q}.
 $$
 
 Integrate:
 $$
-\int |FG|
-\le \frac{1}{p}\int |F|^p + \frac{1}{q}\int |G|^q
+\int \vert FG\vert 
+\le \frac{1}{p}\int \vert F\vert ^p + \frac{1}{q}\int \vert G\vert ^q
 = \frac{1}{p}\cdot 1 + \frac{1}{q}\cdot 1 = 1.
 $$
 
 Undo the normalization:
 $$
-\int |fg|
+\int \vert fg\vert 
 \le
-\|f\|_{L^p} \|g\|_{L^q}.
+\\vert f\\vert _{L^p} \\vert g\\vert _{L^q}.
 $$
 
 Thus:
 $$
 \boxed{
-\|fg\|_{L^1} 
-\le \|f\|_{L^p}\|g\|_{L^q}.
+\\vert fg\\vert _{L^1} 
+\le \\vert f\\vert _{L^p}\\vert g\\vert _{L^q}.
 }
 $$
 
@@ -232,36 +232,36 @@ $$
 For $p \ge 1$, the space:
 $$
 L^p(\Omega,\mathcal{F},\mu)
-= \left\{ f : \int |f|^p < \infty \right\}
+= \left\{ f : \int \vert f\vert ^p < \infty \right\}
 $$
 satisfies:
 $$
-\|f + g\|_{L^p}
+\\vert f + g\\vert _{L^p}
 \le
-\|f\|_{L^p} + \|g\|_{L^p}.
+\\vert f\\vert _{L^p} + \\vert g\\vert _{L^p}.
 $$
 
 ### Sketch of proof
 
 Start with:
 $$
-|f+g|^p \le (|f|+|g|)^p.
+\vert f+g\vert ^p \le (\vert f\vert +\vert g\vert )^p.
 $$
 
-Use convexity of $t\mapsto t^p$ or Minkowski’s inequality (derived by applying Hölder to $|f+g|^{p-1}$):
+Use convexity of $t\mapsto t^p$ or Minkowski’s inequality (derived by applying Hölder to $\vert f+g\vert ^{p-1}$):
 
 $$
-\int |f+g|^p
+\int \vert f+g\vert ^p
 \le
-\left( \|f\|_{L^p} + \|g\|_{L^p} \right)^p.
+\left( \\vert f\\vert _{L^p} + \\vert g\\vert _{L^p} \right)^p.
 $$
 
 Taking $p$-th roots:
 
 $$
 \boxed{
-\|f+g\|_{L^p}
-\le \|f\|_{L^p} + \|g\|_{L^p}.
+\\vert f+g\\vert _{L^p}
+\le \\vert f\\vert _{L^p} + \\vert g\\vert _{L^p}.
 }
 $$
 

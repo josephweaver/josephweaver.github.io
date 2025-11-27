@@ -14,7 +14,7 @@ $$
 ### Goal
 Show that
 $$
-\sup_{B\in\mathcal B(\mathbb R)} \left| P(X_n\in B) - P(X\in B) \right|
+\sup_{B\in\mathcal B(\mathbb R)} \vert  P(X_n\in B) - P(X\in B) \vert 
 \;\longrightarrow\; 0,
 $$
 i.e. convergence in **total variation**.
@@ -22,23 +22,23 @@ i.e. convergence in **total variation**.
 ### Key inequality
 For any Borel set $B$,
 $$
-\left|P(X_n\in B) - P(X\in B)\right|
+\vert P(X_n\in B) - P(X\in B)\vert 
 = 
-\left|\int_B f_n(x)\,dx - \int_B f(x)\,dx\right|
+\vert \int_B f_n(x)\,dx - \int_B f(x)\,dx\vert 
 \le
-\int_B |f_n(x) - f(x)|\,dx.
+\int_B \vert f_n(x) - f(x)\vert \,dx.
 $$
 
 Thus,
 $$
-\sup_B |P(X_n\in B) - P(X\in B)|
+\sup_B \vert P(X_n\in B) - P(X\in B)\vert 
 \le
-\int_{\mathbb R} |f_n(x)-f(x)|\,dx. \tag{1}
+\int_{\mathbb R} \vert f_n(x)-f(x)\vert \,dx. \tag{1}
 $$
 
 Hence it suffices to show:
 $$
-\int_{\mathbb R}|f_n-f| \to 0.
+\int_{\mathbb R}\vert f_n-f\vert  \to 0.
 $$
 
 ---
@@ -48,7 +48,7 @@ $$
 Using
 $$
 a = a^+ - a^-,
-\qquad |a| = a^+ + a^-,
+\qquad \vert a\vert  = a^+ + a^-,
 $$
 write:
 $$
@@ -67,7 +67,7 @@ $$
 
 Thus,
 $$
-\int |f - f_n|
+\int \vert f - f_n\vert 
 =
 2\int (f - f_n)^+. \tag{2}
 $$
@@ -97,7 +97,7 @@ $$
 Plugging into (2):
 
 $$
-\int |f_n-f| \to 0.
+\int \vert f_n-f\vert  \to 0.
 $$
 
 Then (1) gives **total variation convergence**.
@@ -109,7 +109,7 @@ Then (1) gives **total variation convergence**.
 In our setting, $P(X=x)=0$ for all $x\in\mathbb R$.  
 Thus the CDFs are continuous.
 
-If $\|M_n - M\|_{TV}\to 0$, then:
+If $\\vert M_n - M\\vert _{TV}\to 0$, then:
 
 $$
 F_{X_n}(x) = P(X_n \le x) \to P(X\le x) = F_X(x)
@@ -129,10 +129,10 @@ This comment appears in your notes as:
 For probability measures $M_n(B)=P(X_n\in B)$:
 
 $$
-\|M_n - M\|
+\\vert M_n - M\\vert 
 =
 \sup_{B\in \mathcal B(\mathbb R)}
-|M_n(B) - M(B)|
+\vert M_n(B) - M(B)\vert 
 \to 0.
 $$
 

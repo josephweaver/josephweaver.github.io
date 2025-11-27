@@ -68,7 +68,7 @@ $$
 By Chebyshev:
 
 $$
-P(|S_n - \mu_n| > \delta \mu_n)
+P(\vert S_n - \mu_n\vert  > \delta \mu_n)
 \le \frac{\mathrm{Var}(S_n)}{\delta^2 \mu_n^2}
 \le \frac{1}{\delta^2 \mu_n}.
 $$
@@ -101,7 +101,7 @@ For this subsequence:
 
 $$
 P\left(
-   |S_{n_k} - \mu_{n_k}|
+   \vert S_{n_k} - \mu_{n_k}\vert 
    > \delta(k^2 + 1)
  \right)
 \le

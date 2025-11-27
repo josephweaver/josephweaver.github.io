@@ -41,8 +41,8 @@ We work on a σ-finite measure space $(\Omega, \mathcal{F}, \mu)$.
 
 For $1 \le p < \infty$,
 $$
-\|f\|_p
-= \left( \int_\Omega |f(\omega)|^p\, d\mu(\omega) \right)^{1/p}.
+\\vert f\\vert _p
+= \left( \int_\Omega \vert f(\omega)\vert ^p\, d\mu(\omega) \right)^{1/p}.
 $$
 
 A function $f : \Omega \to \mathbb{R}$ is measurable if:
@@ -56,29 +56,29 @@ $$
 
 For $1 \le p < \infty$ and $q$ such that $1/p + 1/q = 1$:
 $$
-\int_\Omega |f g|\, d\mu
+\int_\Omega \vert f g\vert \, d\mu
 \le 
-\|f\|_p \cdot \|g\|_q.
+\\vert f\\vert _p \cdot \\vert g\\vert _q.
 $$
 
 ## Case $p=1,\ q=\infty$
 
-Here $\|g\|_\infty$ is the **essential supremum**:
+Here $\\vert g\\vert _\infty$ is the **essential supremum**:
 $$
-\|g\|_\infty = \inf\{ a \ge 0 : \mu(\{ |g| > a \}) = 0 \}.
+\\vert g\\vert _\infty = \inf\{ a \ge 0 : \mu(\{ \vert g\vert  > a \}) = 0 \}.
 $$
 
 Then:
 $$
-\int_\Omega |f g|\, d\mu
+\int_\Omega \vert f g\vert \, d\mu
 \le 
-\|f\|_1 \, \|g\|_\infty.
+\\vert f\\vert _1 \, \\vert g\\vert _\infty.
 $$
 
 Reason (page 1):  
-On the set where $|g| \le \|g\|_\infty$ (ignoring measure-zero sets):
+On the set where $\vert g\vert  \le \\vert g\\vert _\infty$ (ignoring measure-zero sets):
 $$
-|fg| \le |f| \cdot \|g\|_\infty,
+\vert fg\vert  \le \vert f\vert  \cdot \\vert g\\vert _\infty,
 $$
 hence integrate and use monotonicity.
 
@@ -88,7 +88,7 @@ hence integrate and use monotonicity.
 
 $$
 L^p(\Omega, \mathcal{F}, \mu) 
-= \{f\text{ measurable}: \|f\|_p < \infty\}.
+= \{f\text{ measurable}: \\vert f\\vert _p < \infty\}.
 $$
 
 The full notation in the notes is:
@@ -104,59 +104,59 @@ $$
 
 Goal:
 $$
-\|f+g\|_p \le \|f\|_p + \|g\|_p.
+\\vert f+g\\vert _p \le \\vert f\\vert _p + \\vert g\\vert _p.
 $$
 
 ### Proof (page 2)
 
 Start from:
 $$
-|f+g|^p
-= |f+g| \cdot |f+g|^{p-1}
-\le |f|\, |f+g|^{p-1} + |g|\, |f+g|^{p-1}.
+\vert f+g\vert ^p
+= \vert f+g\vert  \cdot \vert f+g\vert ^{p-1}
+\le \vert f\vert \, \vert f+g\vert ^{p-1} + \vert g\vert \, \vert f+g\vert ^{p-1}.
 $$
 
 Integrate:
 $$
-\int |f+g|^p
+\int \vert f+g\vert ^p
 \le 
-\int |f|\; |f+g|^{p-1}
-+ \int |g|\; |f+g|^{p-1}.
+\int \vert f\vert \; \vert f+g\vert ^{p-1}
++ \int \vert g\vert \; \vert f+g\vert ^{p-1}.
 $$
 
 Apply Hölder:
 
-- Exponent $p$ for $|f|$ or $|g|$,
-- Exponent $q = \frac{p}{p-1}$ for $|f+g|^{p-1}$.
+- Exponent $p$ for $\vert f\vert $ or $\vert g\vert $,
+- Exponent $q = \frac{p}{p-1}$ for $\vert f+g\vert ^{p-1}$.
 
 We get:
 $$
-\int |f|\; |f+g|^{p-1}
-  \le \|f\|_p \, \|f+g\|_p^{p-1},
+\int \vert f\vert \; \vert f+g\vert ^{p-1}
+  \le \\vert f\\vert _p \, \\vert f+g\\vert _p^{p-1},
 $$
 and similarly with $g$.
 
 Thus:
 $$
-\|f+g\|_p^p
-\le (\|f\|_p + \|g\|_p)\, \|f+g\|_p^{p-1}.
+\\vert f+g\\vert _p^p
+\le (\\vert f\\vert _p + \\vert g\\vert _p)\, \\vert f+g\\vert _p^{p-1}.
 $$
 
-Divide both sides by $\|f+g\|_p^{p-1}$ (nonzero unless the inequality is trivial):
+Divide both sides by $\\vert f+g\\vert _p^{p-1}$ (nonzero unless the inequality is trivial):
 
 $$
 \boxed{
-\|f+g\|_p \le \|f\|_p + \|g\|_p.
+\\vert f+g\\vert _p \le \\vert f\\vert _p + \\vert g\\vert _p.
 }
 $$
 
 ### Case $p=\infty$
 
 $$
-\|f+g\|_\infty
-= \esssup |f+g|
-\le \esssup |f| + \esssup |g|
-= \|f\|_\infty + \|g\|_\infty.
+\\vert f+g\\vert _\infty
+= \esssup \vert f+g\vert 
+\le \esssup \vert f\vert  + \esssup \vert g\vert 
+= \\vert f\\vert _\infty + \\vert g\\vert _\infty.
 $$
 
 ---
@@ -166,7 +166,7 @@ $$
 Assume:
 
 - $\mu(\Omega) < \infty$,
-- $|f_n| \le M < \infty$ for all $n$,
+- $\vert f_n\vert  \le M < \infty$ for all $n$,
 - $f_n \to f$ **almost everywhere**.
 
 Then:
@@ -189,7 +189,7 @@ Definition:
 $$
 f_n \xrightarrow{\mu} f
 \quad \text{means} \quad
-\mu\{ |f_n - f| > \varepsilon \} \to 0
+\mu\{ \vert f_n - f\vert  > \varepsilon \} \to 0
 \quad \forall \varepsilon > 0.
 $$
 
@@ -202,7 +202,7 @@ f_n \xrightarrow{\mu} f.
 $$
 
 ### Proof idea (page 3):
-Let $A_{n,\varepsilon} = \{|f_n - f| > \varepsilon\}$.  
+Let $A_{n,\varepsilon} = \{\vert f_n - f\vert  > \varepsilon\}$.  
 If $f_n \to f$ a.e., then:
 
 $$

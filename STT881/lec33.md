@@ -29,7 +29,7 @@ $f:\mathbb R\to\mathbb R$ is uniformly continuous if
 
 $$
 \forall\varepsilon>0\ \exists\delta>0\ \text{ such that }\ 
-|x_1-x_2|<\delta \ \Rightarrow\ |f(x_1)-f(x_2)|<\varepsilon
+\vert x_1-x_2\vert <\delta \ \Rightarrow\ \vert f(x_1)-f(x_2)\vert <\varepsilon
 \quad\forall x_1,x_2.
 $$
 
@@ -67,16 +67,16 @@ $$
    for small $\sigma$,
 
    $$
-   |f(x+\sigma Y) - f(x)| \le 
-   \varepsilon\cdot\mathbf{1}_{\{|\sigma Y|\le\delta\}}
-   + 2\|f\|_\infty\mathbf{1}_{\{|\sigma Y|>\delta\}}.
+   \vert f(x+\sigma Y) - f(x)\vert  \le 
+   \varepsilon\cdot\mathbf{1}_{\{\vert \sigma Y\vert \le\delta\}}
+   + 2\\vert f\\vert _\infty\mathbf{1}_{\{\vert \sigma Y\vert >\delta\}}.
    $$
 
-   The tail probability $P(|Y|>\delta/\sigma)\to 0$ as $\sigma\to 0$.  
+   The tail probability $P(\vert Y\vert >\delta/\sigma)\to 0$ as $\sigma\to 0$.  
    Thus:
 
    $$
-   \sup_x |f_\sigma(x) - f(x)| \to 0.
+   \sup_x \vert f_\sigma(x) - f(x)\vert  \to 0.
    $$
 
 Therefore:
@@ -106,7 +106,7 @@ Because $f_\sigma\to f$ uniformly and the error bound does not depend on $n$, yo
 
 $$
 \limsup_{n\to\infty} 
-|E[f(X_n)] - E[f(X)]|
+\vert E[f(X_n)] - E[f(X)]\vert 
 \le 3\varepsilon
 \quad\text{for small enough }\sigma.
 $$
@@ -183,7 +183,7 @@ A family $\{F_n\}$ of CDFs is tight if:
 
 $$
 \forall \varepsilon>0\,\exists M>0\text{ such that }
-\sup_n P(|X_n|\ge M)
+\sup_n P(\vert X_n\vert \ge M)
 =
 \sup_n\bigl(1 - F_n(M) + F_n(-M)\bigr)
 <\varepsilon.
@@ -203,7 +203,7 @@ If $F_n\Rightarrow F$ and all are CDFs, then $\{F_n\}\cup\{F\}$ is tight.
 ### **Theorem 3.2.8**
 If there exists a measurable $\varphi\ge0$ such that
 
-- $\varphi(x)\to\infty$ as $|x|\to\infty$,
+- $\varphi(x)\to\infty$ as $\vert x\vert \to\infty$,
 - $$
   C = \sup_n \int \varphi(x)\,dF_n(x) < \infty,
   $$
@@ -212,10 +212,10 @@ then $\{F_n\}$ is tight.
 
 Your notes sketch the proof (page 2):
 
-- Choose $M$ so that $\varphi(x)\ge 1/\varepsilon$ for $|x|\ge M$.  
+- Choose $M$ so that $\varphi(x)\ge 1/\varepsilon$ for $\vert x\vert \ge M$.  
 - Then:
   $$
-  P(|X_n|>M)
+  P(\vert X_n\vert >M)
   \le
   \varepsilon \int\varphi(x)\,dF_n(x)
   \le 

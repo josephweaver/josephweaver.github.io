@@ -22,7 +22,7 @@ Properties:
 
 - $K$ is **uncountable**, with cardinality:
   $$
-  |K| = |\mathbb{R}| = 2^{\aleph_0}.
+  \vert K\vert  = \vert \mathbb{R}\vert  = 2^{\aleph_0}.
   $$
 - $K = \bigcap_{n=1}^\infty K_n$, with $K_n \downarrow K$, and each $K_n$ closed  
   ⇒ $K$ is closed.
@@ -40,11 +40,11 @@ $$
 A \in \mathcal{F}^*.
 $$
 
-Since the Cantor set is uncountable and has measure zero, it has $2^{|K|} = 2^{|\mathbb{R}|}$ subsets, most of which are **not** Borel — but all are Lebesgue measurable.
+Since the Cantor set is uncountable and has measure zero, it has $2^{\vert K\vert } = 2^{\vert \mathbb{R}\vert }$ subsets, most of which are **not** Borel — but all are Lebesgue measurable.
 
 Thus:
 $$
-|\mathcal{F}| = |\mathbb{R}| < |\mathcal{F}^*| = 2^{|\mathbb{R}|}.
+\vert \mathcal{F}\vert  = \vert \mathbb{R}\vert  < \vert \mathcal{F}^*\vert  = 2^{\vert \mathbb{R}\vert }.
 $$
 
 ---

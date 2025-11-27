@@ -83,7 +83,7 @@ $x\in\Omega_1,\,y\in\Omega_2$.
 If $f:\Omega\to\mathbb{R}$ is measurable and either
 
 1. $f\ge 0$, or  
-2. $\displaystyle \int_\Omega |f|\,d\mu<\infty$,
+2. $\displaystyle \int_\Omega \vert f\vert \,d\mu<\infty$,
 
 then:
 
@@ -96,7 +96,7 @@ $$
 $$
 
 Tonelli = “$f\ge 0$” case.  
-Fubini = “$\int |f|<\infty$” case.
+Fubini = “$\int \vert f\vert <\infty$” case.
 
 ---
 
@@ -191,7 +191,7 @@ f = f^+ - f^-,
 \qquad f^+,f^-\ge 0.
 $$
 
-Both are integrable since $\int|f|<\infty$.  
+Both are integrable since $\int\vert f\vert <\infty$.  
 Apply Tonelli to each:
 
 $$

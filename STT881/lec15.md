@@ -201,7 +201,7 @@ the factor $r$ *is* the Radon–Nikodym derivative of the pushforward of Lebesgu
 
 Formally:
 $$
-\frac{d(\mu\circ f^{-1})}{d\lambda} = |\det J_f|.
+\frac{d(\mu\circ f^{-1})}{d\lambda} = \vert \det J_f\vert .
 $$
 
 ---

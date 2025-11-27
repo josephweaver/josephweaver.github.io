@@ -35,7 +35,7 @@ Let $\{X_k\}_{k\ge 1}$ be i.i.d.
 
 **Assume:**
 $$
-x\, P(|X| > x) \xrightarrow[x\to\infty]{} 0.
+x\, P(\vert X\vert  > x) \xrightarrow[x\to\infty]{} 0.
 \tag{1}
 $$
 
@@ -44,9 +44,9 @@ This condition appears at the top of page 1
 
 Markov’s inequality gives only:
 $$
-x\, P(|X| > x) \le E|X|,
+x\, P(\vert X\vert  > x) \le E\vert X\vert ,
 $$
-which is not useful by itself unless $E|X|<\infty$.  
+which is not useful by itself unless $E\vert X\vert <\infty$.  
 The assumption (1) is strictly stronger and is used to guarantee truncation works.
 
 ---
@@ -56,22 +56,22 @@ The assumption (1) is strictly stronger and is used to guarantee truncation work
 The notes (page 1) use:
 
 $$
-|X|\mathbf{1}_{\{|X| \ge x\}} \le |X|,
+\vert X\vert \mathbf{1}_{\{\vert X\vert  \ge x\}} \le \vert X\vert ,
 \quad
-|X|\mathbf{1}_{\{|X| \ge x\}} \xrightarrow[x\to\infty]{} 0 \ \text{a.s.}
+\vert X\vert \mathbf{1}_{\{\vert X\vert  \ge x\}} \xrightarrow[x\to\infty]{} 0 \ \text{a.s.}
 $$
 
 By **Dominated Convergence**:
 
 $$
-E\big[|X|\,\mathbf{1}_{\{|X|\ge x\}}\big] \xrightarrow[x\to\infty]{} 0.
+E\big[\vert X\vert \,\mathbf{1}_{\{\vert X\vert \ge x\}}\big] \xrightarrow[x\to\infty]{} 0.
 \tag{2}
 $$
 
 Since
 $$
-E\big[|X|\,\mathbf{1}_{\{|X|\ge x\}}\big] =
-x\,P(|X|>x) + \int_x^\infty P(|X|>t)\,dt,
+E\big[\vert X\vert \,\mathbf{1}_{\{\vert X\vert \ge x\}}\big] =
+x\,P(\vert X\vert >x) + \int_x^\infty P(\vert X\vert >t)\,dt,
 $$
 the vanishing of (2) implies (1).
 
@@ -84,7 +84,7 @@ Thus the general WLLN condition (1) is equivalent to tail integrability.
 Define the **truncated variables** (page 1):
 
 $$
-X_{n,k} = X_k\, \mathbf{1}_{\{|X_k|\le n\}},
+X_{n,k} = X_k\, \mathbf{1}_{\{\vert X_k\vert \le n\}},
 \qquad k=1,\dots,n.
 $$
 
@@ -110,14 +110,14 @@ so we truncate to gain finite variance.
 Because truncation only removes the tail events:
 
 $$
-P(S_n \neq S_n') \le \sum_{k=1}^n P(|X_k| > n)
-= n\, P(|X|>n).
+P(S_n \neq S_n') \le \sum_{k=1}^n P(\vert X_k\vert  > n)
+= n\, P(\vert X\vert >n).
 $$
 
 Using assumption (1):
 
 $$
-n\,P(|X|>n) = \frac{n}{n}\, nP(|X|>n) \to 0.
+n\,P(\vert X\vert >n) = \frac{n}{n}\, nP(\vert X\vert >n) \to 0.
 $$
 
 Thus:
@@ -134,19 +134,19 @@ $$
 On page 1:
 
 $$
-P\left(\left|\frac{S_n'}{n} - m_n\right| > \varepsilon\right)
+P\left(\vert \frac{S_n'}{n} - m_n\vert  > \varepsilon\right)
 \le
 \varepsilon^{-2}\operatorname{Var}\left(\frac{S_n'}{n}\right)
 =
 \frac{ \operatorname{Var}(X_{n,1}) }{n\varepsilon^2}.
 $$
 
-Since $|X_{n,1}| \le n$, we compute:
+Since $\vert X_{n,1}\vert  \le n$, we compute:
 
 $$
 E[X_{n,1}^2]
 =
-\int_0^\infty 2x\, P(|X_{n,1}| \ge x)\, dx.
+\int_0^\infty 2x\, P(\vert X_{n,1}\vert  \ge x)\, dx.
 \tag{4}
 $$
 
@@ -156,9 +156,9 @@ $$
 Now:
 
 $$
-P(|X_{n,1}| \ge x)
+P(\vert X_{n,1}\vert  \ge x)
 =
-P(|X| \ge x)\mathbf{1}_{\{x\le n\}}.
+P(\vert X\vert  \ge x)\mathbf{1}_{\{x\le n\}}.
 $$
 
 Thus:
@@ -167,7 +167,7 @@ $$
 \frac{E[X_{n,1}^2]}{n}
 =
 \frac{1}{n}
-\int_0^n 2x\, P(|X|\ge x)\, dx.
+\int_0^n 2x\, P(\vert X\vert \ge x)\, dx.
 \tag{5}
 $$
 
@@ -177,10 +177,10 @@ $$
 \frac{E[X_{n,1}^2]}{n}
 =
 \frac{1}{n}
-\int_0^M 2x P(|X|\ge x)\, dx
+\int_0^M 2x P(\vert X\vert \ge x)\, dx
 +
 \frac{1}{n}
-\int_M^n 2x P(|X|\ge x)\, dx.
+\int_M^n 2x P(\vert X\vert \ge x)\, dx.
 $$
 
 - First term  
@@ -197,7 +197,7 @@ $$
 Therefore:
 
 $$
-P\left(\left|\frac{S_n'}{n} - m_n\right| > \varepsilon\right)
+P\left(\vert \frac{S_n'}{n} - m_n\vert  > \varepsilon\right)
 \to 0.
 \tag{6}
 $$
@@ -206,7 +206,7 @@ $$
 
 # 6. Step 3 — Convergence of the Means
 
-$m_n = E[X\,\mathbf{1}_{\{|X|\le n\}}]$.  
+$m_n = E[X\,\mathbf{1}_{\{\vert X\vert \le n\}}]$.  
 By Dominated Convergence:
 
 $$
@@ -244,7 +244,7 @@ This is the **Weak Law of Large Numbers** proved via truncation.
 
 # 8. Corollary — Khinchin’s Theorem (page 1)
 
-If $E|X|<\infty$ then the WLLN follows:
+If $E\vert X\vert <\infty$ then the WLLN follows:
 
 $$
 \frac{S_n}{n} \xrightarrow{p} E[X].
@@ -268,14 +268,14 @@ Let $b_n \to \infty$.
 Define truncated variables:
 
 $$
-\bar X_{n,k} = X_{n,k}\mathbf{1}_{\{|X_{n,k}| \le b_n\}}.
+\bar X_{n,k} = X_{n,k}\mathbf{1}_{\{\vert X_{n,k}\vert  \le b_n\}}.
 $$
 
 **Assumptions:**
 
 (i) Tail condition  
 $$
-\sum_{k=1}^n P(|X_{n,k}| > b_n) \to 0.
+\sum_{k=1}^n P(\vert X_{n,k}\vert  > b_n) \to 0.
 $$
 
 (ii) Variance condition  
@@ -333,8 +333,8 @@ This shows a non-standard normalization is needed when the mean is infinite.
 # 11. Summary
 
 - WLLN can be proved for i.i.d. using truncation if the tail condition  
-  $ x P(|X|>x)\to 0 $ holds.  
-- This tail condition is equivalent to $E|X|<\infty$.  
+  $ x P(\vert X\vert >x)\to 0 $ holds.  
+- This tail condition is equivalent to $E\vert X\vert <\infty$.  
 - WLLN generalizes to **triangular arrays** with two conditions:  
   - controlled tail probability,  
   - controlled truncated second moments.  

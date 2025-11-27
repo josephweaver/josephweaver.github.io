@@ -61,11 +61,11 @@ We are given (page 1):
 
 - $p \ge 1$,
 - $f_n \to f$ almost everywhere,
-- $\|f_n\|_p \to \|f\|_p < \infty$.
+- $\\vert f_n\\vert _p \to \\vert f\\vert _p < \infty$.
 
 Goal:
 $$
-\|\,f_n - f\,\|_p \to 0.
+\\vert \,f_n - f\,\\vert _p \to 0.
 $$
 
 This is not trivial: convergence in $L^p$ does *not* generally follow from a.e. convergence and convergence of norms, unless convexity is exploited.
@@ -74,71 +74,71 @@ This is not trivial: convergence in $L^p$ does *not* generally follow from a.e. 
 
 Page 1 contains the inequality:
 $$
-\left( \frac{|x| + |y|}{2} \right)^p
-\le \frac{|x|^p + |y|^p}{2}, \qquad p \ge 1.
+\left( \frac{\vert x\vert  + \vert y\vert }{2} \right)^p
+\le \frac{\vert x\vert ^p + \vert y\vert ^p}{2}, \qquad p \ge 1.
 $$
 
 Algebraic rearrangement gives:
 $$
-2^{p-1}\,( |x|^p + |y|^p ) - |x - y|^p \ge 0,
+2^{p-1}\,( \vert x\vert ^p + \vert y\vert ^p ) - \vert x - y\vert ^p \ge 0,
 \qquad x,y \in \mathbb{R}.
 $$
 
 Apply this to $x = f$, $y = f_n$:
 $$
-2^{p-1}(|f|^p + |f_n|^p) - |f - f_n|^p \ge 0.
+2^{p-1}(\vert f\vert ^p + \vert f_n\vert ^p) - \vert f - f_n\vert ^p \ge 0.
 $$
 
 Thus for all $n$:
 $$
-|f - f_n|^p
+\vert f - f_n\vert ^p
 \le
-2^{p-1}(|f|^p + |f_n|^p).
+2^{p-1}(\vert f\vert ^p + \vert f_n\vert ^p).
 $$
 
 ### Step 2: Apply Fatou to the difference
 
 Rearrange to match Fatou’s lemma (page 1):
 $$
-2^{p}\,|f|^p
+2^{p}\,\vert f\vert ^p
 \le
 \liminf_{n\to\infty}
 \left[
-2^{p-1}(|f|^p + |f_n|^p) - |f - f_n|^p
+2^{p-1}(\vert f\vert ^p + \vert f_n\vert ^p) - \vert f - f_n\vert ^p
 \right].
 $$
 
 Integrate and use Fatou:
 $$
-2^{p}\int |f|^p
+2^{p}\int \vert f\vert ^p
 \le
 \liminf_n 
 \left[
-2^{p-1} \big( \int|f|^p + \int|f_n|^p \big)
-- \int |f - f_n|^p
+2^{p-1} \big( \int\vert f\vert ^p + \int\vert f_n\vert ^p \big)
+- \int \vert f - f_n\vert ^p
 \right].
 $$
 
-But $\|f_n\|_p^p = \int|f_n|^p \to \|f\|_p^p$. Plugging this in yields the right-hand side approaching:
+But $\\vert f_n\\vert _p^p = \int\vert f_n\vert ^p \to \\vert f\\vert _p^p$. Plugging this in yields the right-hand side approaching:
 $$
-2^{p} \int |f|^p - \limsup_n \int |f - f_n|^p.
+2^{p} \int \vert f\vert ^p - \limsup_n \int \vert f - f_n\vert ^p.
 $$
 
 Hence:
 $$
-2^{p}\int|f|^p
+2^{p}\int\vert f\vert ^p
 \le
-2^{p}\int|f|^p - \limsup_n \int|f - f_n|^p.
+2^{p}\int\vert f\vert ^p - \limsup_n \int\vert f - f_n\vert ^p.
 $$
 
 This forces:
 $$
-\limsup_n \int|f - f_n|^p = 0,
+\limsup_n \int\vert f - f_n\vert ^p = 0,
 $$
 so
 $$
 \boxed{
-\|f_n - f\|_p^p = \int|f_n - f|^p \to 0.
+\\vert f_n - f\\vert _p^p = \int\vert f_n - f\vert ^p \to 0.
 }
 $$
 
@@ -221,7 +221,7 @@ A family $\{X_n\}$ is **uniformly integrable** (UI) if:
 $$
 \phi(M)
 := 
-\sup_{n\ge 1} \mathbb{E}\left( |X_n| \, \mathbf{1}_{\{|X_n| \ge M\}} \right)
+\sup_{n\ge 1} \mathbb{E}\left( \vert X_n\vert  \, \mathbf{1}_{\{\vert X_n\vert  \ge M\}} \right)
 \longrightarrow 0
 \quad\text{as } M\to\infty.
 $$
@@ -240,7 +240,7 @@ If:
 then:
 $$
 \boxed{
-\mathbb{E}|X_n - X| \to 0.
+\mathbb{E}\vert X_n - X\vert  \to 0.
 }
 $$
 
@@ -253,7 +253,7 @@ $$
 
 If there exists an integrable random variable $Y$ such that:
 $$
-|X_n| \le Y \quad\text{for all } n,
+\vert X_n\vert  \le Y \quad\text{for all } n,
 $$
 then $\{X_n\}$ is UI.
 
@@ -271,8 +271,8 @@ The notes remark (bottom of page 2 and page 3):
 
 Thus:
 
-| Tool | Condition | Guarantees |
-|------|-----------|------------|
-| **DCT** | $|X_n|\le g$ and $X_n\to X$ a.e., $g\in L^1$ | $\mathbb{E}X_n\to\mathbb{E}X$ |
-| **UI** | tail control only | $\mathbb{E}X_n\to\mathbb{E}X$ |
+\vert  Tool \vert  Condition \vert  Guarantees \vert 
+\vert ------\vert -----------\vert ------------\vert 
+\vert  **DCT** \vert  $\vert X_n\vert \le g$ and $X_n\to X$ a.e., $g\in L^1$ \vert  $\mathbb{E}X_n\to\mathbb{E}X$ \vert 
+\vert  **UI** \vert  tail control only \vert  $\mathbb{E}X_n\to\mathbb{E}X$ \vert 
 

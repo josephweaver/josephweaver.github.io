@@ -14,7 +14,7 @@ $$
 $$
 \frac{a_n}{n} \uparrow \infty
 \quad\text{and}\quad 
-\sum_{n=1}^\infty P(|X|>a_n) < \infty,
+\sum_{n=1}^\infty P(\vert X\vert >a_n) < \infty,
 $$
 then
 $$
@@ -25,25 +25,25 @@ $$
 $$
 \frac{a_n}{n} \quad\text{is non-decreasing}
 \quad\text{and}\quad
-\sum_{n=1}^\infty P(|X|>a_n) = \infty,
+\sum_{n=1}^\infty P(\vert X\vert >a_n) = \infty,
 $$
 then
 $$
-\overline{\lim_{n\to\infty}} \frac{|S_n|}{a_n} = \infty
+\overline{\lim_{n\to\infty}} \frac{\vert S_n\vert }{a_n} = \infty
 \qquad\text{a.s.}
 $$
 
 ### Remark (page 1)
-If (b) holds, then $E|X|=\infty$.  
+If (b) holds, then $E\vert X\vert =\infty$.  
 Reason: if $\frac{a_n}{n}$ is non-decreasing, then  
 $$
 a_n \ge n a_1.
 $$
 Thus
 $$
-\sum_n P(|X|>n a_1)=\infty
+\sum_n P(\vert X\vert >n a_1)=\infty
 \quad\Rightarrow\quad 
-E|X| = \infty.
+E\vert X\vert  = \infty.
 $$
 
 ---
@@ -69,7 +69,7 @@ $$
 
 Since $S_n/(n\log n)$ does **not** converge to zero a.s., Feller(b) applies:
 $$
-\sum_n P(|X|>a_n) = \infty.
+\sum_n P(\vert X\vert >a_n) = \infty.
 $$
 
 This checks the divergence of the tail condition.
@@ -80,14 +80,14 @@ This checks the divergence of the tail condition.
 
 Assume  
 $$
-E|X|^p < \infty,\qquad 0 < p < 1.
+E\vert X\vert ^p < \infty,\qquad 0 < p < 1.
 $$
 
 Then
 $$
-\sum_{n=1}^\infty P(|X|>n^{1/p})
+\sum_{n=1}^\infty P(\vert X\vert >n^{1/p})
 =
-\sum_{n=1}^\infty P(|X|^p > n)
+\sum_{n=1}^\infty P(\vert X\vert ^p > n)
 < \infty.
 $$
 
@@ -103,7 +103,7 @@ $$
 
 Hence by Feller(a),
 $$
-\frac{|S_n|}{n^{1/p}} \xrightarrow{\text{a.s.}} 0.
+\frac{\vert S_n\vert }{n^{1/p}} \xrightarrow{\text{a.s.}} 0.
 $$
 
 This is exactly the Marcinkiewicz–Zygmund strong law for $0<p<1$.
@@ -119,16 +119,16 @@ Write $z = a + bi$.
 
 Define
 $$
-\theta_i = \max\{1, |z_i|, |w_i|\}.
+\theta_i = \max\{1, \vert z_i\vert , \vert w_i\vert \}.
 $$
 
 A key inequality (derived on page 2):
 
 ### **Inequality A (better than the naïve bound):**
 $$
-\left| \sum_{k=1}^n z_k - \prod_{k=1}^n w_k \right|
+\vert  \sum_{k=1}^n z_k - \prod_{k=1}^n w_k \vert 
 \;\le\;
-\sum_{k=1}^n |z_k - w_k|\, \theta_k.
+\sum_{k=1}^n \vert z_k - w_k\vert \, \theta_k.
 $$
 
 This is a flexible inequality used for characteristic function approximations in the CLT.
@@ -146,12 +146,12 @@ Given a triangular array $a_{n,m}\in\mathbb{C}$, $1\le m\le n$, suppose:
 
 2. **(ii)**  
    $$
-   \sup_n \sum_{m=1}^n |a_{n,m}| < \infty.
+   \sup_n \sum_{m=1}^n \vert a_{n,m}\vert  < \infty.
    $$
 
 3. **(iii)**  
    $$
-   \max_{1\le m\le n} |a_{n,m}| \xrightarrow{n\to\infty} 0.
+   \max_{1\le m\le n} \vert a_{n,m}\vert  \xrightarrow{n\to\infty} 0.
    $$
 
 Then
@@ -173,10 +173,10 @@ Then (i), (ii), and (iii) follow immediately.
 
 ## 5. Inequality for complex exponentials (page 3)
 
-For any complex $z$ with $|z|\le 1$:
+For any complex $z$ with $\vert z\vert \le 1$:
 
 $$
-|e^z - (1+z)| \le |z|^2.
+\vert e^z - (1+z)\vert  \le \vert z\vert ^2.
 $$
 
 This is established by the Taylor series:
@@ -185,7 +185,7 @@ e^z = 1 + z + \frac{z^2}{2!} + \frac{z^3}{3!} + \cdots,
 $$
 and the remainder is bounded by
 $$
-|z|^2\left(\frac{1}{2!} + \frac{1}{3!} + \cdots\right) < |z|^2.
+\vert z\vert ^2\left(\frac{1}{2!} + \frac{1}{3!} + \cdots\right) < \vert z\vert ^2.
 $$
 
 This inequality justifies replacing products by exponentials when proving the CLT.
