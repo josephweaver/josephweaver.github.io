@@ -109,7 +109,7 @@ Then (1) gives **total variation convergence**.
 In our setting, $P(X=x)=0$ for all $x\in\mathbb R$.  
 Thus the CDFs are continuous.
 
-If $\\vert M_n - M\\vert _{TV}\to 0$, then:
+If $\vert M_n - M\vert _{TV}\to 0$, then:
 
 $$
 F_{X_n}(x) = P(X_n \le x) \to P(X\le x) = F_X(x)
@@ -129,7 +129,7 @@ This comment appears in your notes as:
 For probability measures $M_n(B)=P(X_n\in B)$:
 
 $$
-\\vert M_n - M\\vert 
+\vert M_n - M\vert 
 =
 \sup_{B\in \mathcal B(\mathbb R)}
 \vert M_n(B) - M(B)\vert 

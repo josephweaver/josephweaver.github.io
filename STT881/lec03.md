@@ -208,7 +208,7 @@ $$
 
 2. **$\mathcal{A}^*$ is a σ-algebra.**
 
-3. **$\mu^*$ restricted to $\mathcal{A}^*$ is a complete measure.**
+3. $\mu^*$ **restricted to** $\mathcal{A}^*$ **is a complete measure.**
 
 4. If $\mu^*(E) = 0$, then $E \in \mathcal{A}^*$  
    (Outer measure is *complete*).

@@ -1,6 +1,6 @@
 # 2 — Algebras, Measures, Length Measure, Continuity, σ-Algebras
 
-Lecture 2 deepens the algebra/measure part from Lec 1—formalizes algebras on (\mathbb{R}) via finite unions of semiopen intervals, defines length pre-measure (b-a), proves countable additivity on those sets, and introduces (\sigma)-algebras and extension to Borel sets.
+Lecture 2 deepens the algebra/measure part from Lec 1—formalizes algebras on $\mathbb{R}$ via finite unions of semiopen intervals, defines length pre-measure (b-a), proves countable additivity on those sets, and introduces (\sigma)-algebras and extension to Borel sets.
 
 ---
 
@@ -98,7 +98,7 @@ This generalizes Lebesgue measure (for which $F(x)=x$).
 
 Assume:
 $$
-A = \left\{ \bigcup_{i=1}^n (a_i,b_i] \subset (0,1] \right\},
+A = \{ \bigcup_{i=1}^n (a_i,b_i] \subset (0,1]\},
 \quad \mu((0,1]) = 1.
 $$
 
@@ -107,9 +107,9 @@ $\bigcup_{i=1}^\infty A_i \in \mathcal{A}$.
 
 Then:
 $$
-\mu\Big( \bigcup_{i=1}^\infty A_i \Big)
- = \mu\left(\bigcup_{i=1}^n A_i \right)
- + \mu\left(\bigcup_{i=n+1}^\infty A_i\right).
+\mu( \bigcup_{i=1}^\infty A_i )
+ = \mu(\bigcup_{i=1}^n A_i )
+ + \mu(\bigcup_{i=n+1}^\infty A_i).
 $$
 
 Let

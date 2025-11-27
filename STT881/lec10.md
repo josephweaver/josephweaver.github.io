@@ -61,11 +61,11 @@ We are given (page 1):
 
 - $p \ge 1$,
 - $f_n \to f$ almost everywhere,
-- $\\vert f_n\\vert _p \to \\vert f\\vert _p < \infty$.
+- $\vert f_n\vert _p \to \vert f\vert _p < \infty$.
 
 Goal:
 $$
-\\vert \,f_n - f\,\\vert _p \to 0.
+\vert \,f_n - f\,\vert _p \to 0.
 $$
 
 This is not trivial: convergence in $L^p$ does *not* generally follow from a.e. convergence and convergence of norms, unless convexity is exploited.
@@ -119,7 +119,7 @@ $$
 \right].
 $$
 
-But $\\vert f_n\\vert _p^p = \int\vert f_n\vert ^p \to \\vert f\\vert _p^p$. Plugging this in yields the right-hand side approaching:
+But $\vert f_n\vert _p^p = \int\vert f_n\vert ^p \to \vert f\vert _p^p$. Plugging this in yields the right-hand side approaching:
 $$
 2^{p} \int \vert f\vert ^p - \limsup_n \int \vert f - f_n\vert ^p.
 $$
@@ -138,7 +138,7 @@ $$
 so
 $$
 \boxed{
-\\vert f_n - f\\vert _p^p = \int\vert f_n - f\vert ^p \to 0.
+\vert f_n - f\vert _p^p = \int\vert f_n - f\vert ^p \to 0.
 }
 $$
 

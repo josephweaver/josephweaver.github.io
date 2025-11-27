@@ -69,7 +69,7 @@ $$
    $$
    \vert f(x+\sigma Y) - f(x)\vert  \le 
    \varepsilon\cdot\mathbf{1}_{\{\vert \sigma Y\vert \le\delta\}}
-   + 2\\vert f\\vert _\infty\mathbf{1}_{\{\vert \sigma Y\vert >\delta\}}.
+   + 2\vert f\vert _\infty\mathbf{1}_{\{\vert \sigma Y\vert >\delta\}}.
    $$
 
    The tail probability $P(\vert Y\vert >\delta/\sigma)\to 0$ as $\sigma\to 0$.  

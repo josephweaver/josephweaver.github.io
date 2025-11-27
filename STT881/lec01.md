@@ -1,6 +1,6 @@
 # 1 — Cardinality, Cantor’s Theorem, Series, Measure Theory
 
-Lecture 01 covers early measure-theoretic foundations: countable vs uncountable sets, Cantor’s diagonal argument (including (\vert A\vert <\vert 2^A\vert )), binary expansions showing ((0,1)) is uncountable, basics of sequences/series (convergence, harmonic vs (p)-series, alternating divergence), and first steps in measure theory—definition of an algebra of sets and a measure on it.
+Lecture 01 covers early measure-theoretic foundations: countable vs uncountable sets, Cantor’s diagonal argument (including $vert A\vert <\vert 2^A\vert $), binary expansions showing ($(0,1)$) is uncountable, basics of sequences/series (convergence, harmonic vs (p)-series, alternating divergence), and first steps in measure theory—definition of an algebra of sets and a measure on it.
 
 ## 1. Cardinality of Sets
 
@@ -14,7 +14,7 @@ For a set $A$, the **cardinality** $\vert A\vert $ is the “number of elements�
 ### Examples of Countable Sets
 - $\mathbb{N} = \{1,2,3,\dots\}$
 - $\mathbb{Z} = \{\dots,-2,-1,0,1,2,\dots\}$
-- $\mathbb{Q} = \left\{\frac{m}{n}: m,n\in\mathbb{Z}, n\neq 0\right\}$
+- $\mathbb{Q} = \{\frac{m}{n}: m,n\in\mathbb{Z}, n\neq 0\}$
 
 A typical enumeration of $\mathbb{Q}$ uses the lattice of integer pairs $(m,n)$ arranged in diagonals.
 
@@ -148,50 +148,8 @@ such that:
 3. **Countable additivity** for disjoint sets:  
    If $A_i \in \mathcal{A}$ are pairwise disjoint and $\bigcup_{i=1}^\infty A_i \in \mathcal{A}$, then
    $$
-   \mu\!\left(\bigcup_{i=1}^\infty A_i\right)
+   \mu\!\(\bigcup_{i=1}^\infty A_i\)
       = \sum_{i=1}^\infty \mu(A_i).
    $$
 
 This is the foundation for the **probability measure** $P$ later in the course.
-
-# Lecture 1 — Cheat Sheet
-
-## Cardinality
-- Countable: bijection with ℕ.
-- Examples: ℕ, ℤ, ℚ are countable.
-- Uncountable: ℝ, (0,1), {0,1}^ℕ.
-
-## Cantor’s Theorem
-- For any set A: \vert A\vert  < \vert 2^A\vert .
-- Proof uses diagonal set B = {a∈A : a∉f(a)}.
-
-## Binary Expansion
-- Every x∈(0,1) has representation:
-  x = Σ ε_k / 2^k, ε_k∈{0,1}.
-- Shows (0,1) uncountable.
-
-## Sequences and Series
-- Sequence = function a:ℕ→ℝ.
-- Series converges if S_N → S finite.
-- Key examples:
-  Σ 1/n diverges.
-  Σ 1/n^2 converges.
-  Alternating (−1)^n does not converge.
-
-## Algebras
-A collection 𝓐 is an algebra if:
-- A,B∈𝓐 ⇒ A∩B∈𝓐,
-- A∈𝓐 ⇒ A^c∈𝓐,
-- ∅∈𝓐,
-- hence A∪B∈𝓐.
-
-Example: finite unions of (a,b].
-
-## Measure
-A measure μ on 𝓐 satisfies:
-- μ(A) ≥ 0,
-- μ(∅)=0,
-- If A_i disjoint & ⋃A_i ∈ 𝓐,  
-  μ(⋃A_i) = Σ μ(A_i).
-
-Foundation for probability measure P.

@@ -41,7 +41,7 @@ We work on a σ-finite measure space $(\Omega, \mathcal{F}, \mu)$.
 
 For $1 \le p < \infty$,
 $$
-\\vert f\\vert _p
+\vert f\vert _p
 = \left( \int_\Omega \vert f(\omega)\vert ^p\, d\mu(\omega) \right)^{1/p}.
 $$
 
@@ -58,27 +58,27 @@ For $1 \le p < \infty$ and $q$ such that $1/p + 1/q = 1$:
 $$
 \int_\Omega \vert f g\vert \, d\mu
 \le 
-\\vert f\\vert _p \cdot \\vert g\\vert _q.
+\vert f\vert _p \cdot \vert g\vert _q.
 $$
 
 ## Case $p=1,\ q=\infty$
 
-Here $\\vert g\\vert _\infty$ is the **essential supremum**:
+Here $\vert g\vert _\infty$ is the **essential supremum**:
 $$
-\\vert g\\vert _\infty = \inf\{ a \ge 0 : \mu(\{ \vert g\vert  > a \}) = 0 \}.
+\vert g\vert _\infty = \inf\{ a \ge 0 : \mu(\{ \vert g\vert  > a \}) = 0 \}.
 $$
 
 Then:
 $$
 \int_\Omega \vert f g\vert \, d\mu
 \le 
-\\vert f\\vert _1 \, \\vert g\\vert _\infty.
+\vert f\vert _1 \, \vert g\vert _\infty.
 $$
 
 Reason (page 1):  
-On the set where $\vert g\vert  \le \\vert g\\vert _\infty$ (ignoring measure-zero sets):
+On the set where $\vert g\vert  \le \vert g\vert _\infty$ (ignoring measure-zero sets):
 $$
-\vert fg\vert  \le \vert f\vert  \cdot \\vert g\\vert _\infty,
+\vert fg\vert  \le \vert f\vert  \cdot \vert g\vert _\infty,
 $$
 hence integrate and use monotonicity.
 
@@ -88,7 +88,7 @@ hence integrate and use monotonicity.
 
 $$
 L^p(\Omega, \mathcal{F}, \mu) 
-= \{f\text{ measurable}: \\vert f\\vert _p < \infty\}.
+= \{f\text{ measurable}: \vert f\vert _p < \infty\}.
 $$
 
 The full notation in the notes is:
@@ -104,7 +104,7 @@ $$
 
 Goal:
 $$
-\\vert f+g\\vert _p \le \\vert f\\vert _p + \\vert g\\vert _p.
+\vert f+g\vert _p \le \vert f\vert _p + \vert g\vert _p.
 $$
 
 ### Proof (page 2)
@@ -132,31 +132,31 @@ Apply Hölder:
 We get:
 $$
 \int \vert f\vert \; \vert f+g\vert ^{p-1}
-  \le \\vert f\\vert _p \, \\vert f+g\\vert _p^{p-1},
+  \le \vert f\vert _p \, \vert f+g\vert _p^{p-1},
 $$
 and similarly with $g$.
 
 Thus:
 $$
-\\vert f+g\\vert _p^p
-\le (\\vert f\\vert _p + \\vert g\\vert _p)\, \\vert f+g\\vert _p^{p-1}.
+\vert f+g\vert _p^p
+\le (\vert f\vert _p + \vert g\vert _p)\, \vert f+g\vert _p^{p-1}.
 $$
 
-Divide both sides by $\\vert f+g\\vert _p^{p-1}$ (nonzero unless the inequality is trivial):
+Divide both sides by $\vert f+g\vert _p^{p-1}$ (nonzero unless the inequality is trivial):
 
 $$
 \boxed{
-\\vert f+g\\vert _p \le \\vert f\\vert _p + \\vert g\\vert _p.
+\vert f+g\vert _p \le \vert f\vert _p + \vert g\vert _p.
 }
 $$
 
 ### Case $p=\infty$
 
 $$
-\\vert f+g\\vert _\infty
+\vert f+g\vert _\infty
 = \esssup \vert f+g\vert 
 \le \esssup \vert f\vert  + \esssup \vert g\vert 
-= \\vert f\\vert _\infty + \\vert g\\vert _\infty.
+= \vert f\vert _\infty + \vert g\vert _\infty.
 $$
 
 ---

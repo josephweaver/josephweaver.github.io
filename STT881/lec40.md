@@ -27,7 +27,7 @@ Assume:
 Then:
 
 $$
-\\vert P_n - P\\vert  := \sum_{k\in\mathbb Z} \vert P_{n,k} - P_k\vert  \xrightarrow{n\to\infty} 0.
+\vert P_n - P\vert  := \sum_{k\in\mathbb Z} \vert P_{n,k} - P_k\vert  \xrightarrow{n\to\infty} 0.
 $$
 
 This implies convergence of the CDF at all continuity points:
@@ -90,7 +90,7 @@ This justifies:
 
 $$
 P_{n,k}\to P_k \quad\Longrightarrow\quad 
-\\vert P_n-P\\vert  = \sum_k \vert P_{n,k}-P_k\vert \to 0.
+\vert P_n-P\vert  = \sum_k \vert P_{n,k}-P_k\vert \to 0.
 $$
 
 ---
@@ -115,9 +115,9 @@ For probability measures $\mu_1,\mu_2$ on $\mathbb Z$:
 **Key inequality (page 4):**
 
 $$
-\\vert \mu_1\times \mu_2 - \nu_1\times\nu_2\\vert 
+\vert \mu_1\times \mu_2 - \nu_1\times\nu_2\vert 
 \le
-\\vert \mu_1-\nu_1\\vert  + \\vert \mu_2 - \nu_2\\vert .
+\vert \mu_1-\nu_1\vert  + \vert \mu_2 - \nu_2\vert .
 \tag{1}
 $$
 
@@ -125,9 +125,9 @@ Then:
 
 $$
 \boxed{
-\\vert \mu_1 * \mu_2 - \nu_1 * \nu_2\\vert 
+\vert \mu_1 * \mu_2 - \nu_1 * \nu_2\vert 
 \le
-\\vert \mu_1 - \nu_1\\vert  + \\vert \mu_2-\nu_2\\vert .
+\vert \mu_1 - \nu_1\vert  + \vert \mu_2-\nu_2\vert .
 }
 \tag{2}
 $$
@@ -187,7 +187,7 @@ Goal (page 3):
 
 $$
 \boxed{
-\\vert P_n - Q_n\\vert 
+\vert P_n - Q_n\vert 
 \le
 2\sum_{m=1}^n p_{n,m}^2.
 }
@@ -204,7 +204,7 @@ $$
 we obtain:
 
 $$
-\\vert P_n - Q_n\\vert  \to 0.
+\vert P_n - Q_n\vert  \to 0.
 $$
 
 Thus **Poisson convergence is uniform in total variation**.
@@ -231,16 +231,16 @@ Notice:
 Apply (2) repeatedly:
 
 $$
-\\vert P_n - Q_n\\vert 
+\vert P_n - Q_n\vert 
 \le
-\sum_{m=1}^n \\vert M_m - \nu_m\\vert .
+\sum_{m=1}^n \vert M_m - \nu_m\vert .
 \tag{4}
 $$
 
 So the problem reduces to bounding:
 
 $$
-\\vert M_m - \nu_m\\vert 
+\vert M_m - \nu_m\vert 
 \quad\text{for a single } p=p_{n,m}.
 $$
 
@@ -264,7 +264,7 @@ $$
 Total variation:
 
 $$
-\\vert M_m - \nu_m\\vert 
+\vert M_m - \nu_m\vert 
 =
 \frac12\sum_{k=0}^\infty \vert M_m(k)-\nu_m(k)\vert .
 $$
@@ -291,7 +291,7 @@ $$
 Summing:
 
 $$
-\\vert M_m - \nu_m\\vert 
+\vert M_m - \nu_m\vert 
 \le
 2p(1-e^{-p})
 \le 2p^2,
@@ -302,7 +302,7 @@ because $1-e^{-p} \le p$.
 Thus:
 
 $$
-\\vert M_m - \nu_m\\vert \le 2p_{n,m}^2.
+\vert M_m - \nu_m\vert \le 2p_{n,m}^2.
 \tag{5}
 $$
 
@@ -311,7 +311,7 @@ $$
 ## 5.2 Combine (4) and (5)
 
 $$
-\\vert P_n - Q_n\\vert 
+\vert P_n - Q_n\vert 
 \le
 \sum_{m=1}^n 2p_{n,m}^2
 =
@@ -324,7 +324,7 @@ Since $\sum p_{n,m}^2\to 0$ under the rare-event conditions, we conclude:
 
 $$
 \boxed{
-\\vert P_n - Q_n\\vert  \to 0.
+\vert P_n - Q_n\vert  \to 0.
 }
 $$
 
@@ -335,7 +335,7 @@ Therefore, the Poisson limit holds in **total variation**, which is stronger tha
 # **Cheat–Sheet Summary — Lecture 40**
 
 - On $\mathbb Z$, dominated convergence applies to sums $ \sum_k f_n(k) $.
-- If $P_{n,k}\to P_k$ pointwise, then $ \\vert P_n-P\\vert \to 0 $.
+- If $P_{n,k}\to P_k$ pointwise, then $ \vert P_n-P\vert \to 0 $.
 - For independent Bernoulli($p_{n,m}$):
 
   $$
@@ -351,7 +351,7 @@ Therefore, the Poisson limit holds in **total variation**, which is stronger tha
   **Poisson approximation bound**:
 
   $$
-  \\vert P_n - Q_n\\vert 
+  \vert P_n - Q_n\vert 
   \le
   2\sum_{m=1}^n p_{n,m}^2.
   $$
@@ -359,15 +359,15 @@ Therefore, the Poisson limit holds in **total variation**, which is stronger tha
 - Convolution inequality:
 
   $$
-  \\vert \mu_1*\mu_2 - \nu_1*\nu_2\\vert 
+  \vert \mu_1*\mu_2 - \nu_1*\nu_2\vert 
   \le
-  \\vert \mu_1 - \nu_1\\vert  + \\vert \mu_2 - \nu_2\\vert .
+  \vert \mu_1 - \nu_1\vert  + \vert \mu_2 - \nu_2\vert .
   $$
 
 - Single-term approximation:
 
   $$
-  \\vert \mathrm{Ber}(p) - \mathrm{Pois}(p)\\vert 
+  \vert \mathrm{Ber}(p) - \mathrm{Pois}(p)\vert 
   \le
   2p^2.
   $$

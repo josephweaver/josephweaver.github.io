@@ -186,15 +186,15 @@ $$
 
 Normalize:
 $$
-F = \frac{\vert f\vert }{\\vert f\\vert _{L^p}}, 
+F = \frac{\vert f\vert }{\vert f\vert _{L^p}}, 
 \qquad
-G = \frac{\vert g\vert }{\\vert g\\vert _{L^q}},
+G = \frac{\vert g\vert }{\vert g\vert _{L^q}},
 $$
 so that:
 $$
-\\vert F\\vert _{L^p} = 1,
+\vert F\vert _{L^p} = 1,
 \quad
-\\vert G\\vert _{L^q} = 1.
+\vert G\vert _{L^q} = 1.
 $$
 
 Apply Young’s inequality pointwise to $F(\omega)$ and $G(\omega)$:
@@ -214,14 +214,14 @@ Undo the normalization:
 $$
 \int \vert fg\vert 
 \le
-\\vert f\\vert _{L^p} \\vert g\\vert _{L^q}.
+\vert f\vert _{L^p} \vert g\vert _{L^q}.
 $$
 
 Thus:
 $$
 \boxed{
-\\vert fg\\vert _{L^1} 
-\le \\vert f\\vert _{L^p}\\vert g\\vert _{L^q}.
+\vert fg\vert _{L^1} 
+\le \vert f\vert _{L^p}\vert g\vert _{L^q}.
 }
 $$
 
@@ -236,9 +236,9 @@ L^p(\Omega,\mathcal{F},\mu)
 $$
 satisfies:
 $$
-\\vert f + g\\vert _{L^p}
+\vert f + g\vert _{L^p}
 \le
-\\vert f\\vert _{L^p} + \\vert g\\vert _{L^p}.
+\vert f\vert _{L^p} + \vert g\vert _{L^p}.
 $$
 
 ### Sketch of proof
@@ -253,15 +253,15 @@ Use convexity of $t\mapsto t^p$ or Minkowski’s inequality (derived by applying
 $$
 \int \vert f+g\vert ^p
 \le
-\left( \\vert f\\vert _{L^p} + \\vert g\\vert _{L^p} \right)^p.
+\left( \vert f\vert _{L^p} + \vert g\vert _{L^p} \right)^p.
 $$
 
 Taking $p$-th roots:
 
 $$
 \boxed{
-\\vert f+g\\vert _{L^p}
-\le \\vert f\\vert _{L^p} + \\vert g\\vert _{L^p}.
+\vert f+g\vert _{L^p}
+\le \vert f\vert _{L^p} + \vert g\vert _{L^p}.
 }
 $$
 
