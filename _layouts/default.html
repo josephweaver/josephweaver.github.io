@@ -68,14 +68,20 @@
           {% assign section_label = parts[1] | strip %}
           {% assign section_prefix = section_key | append: "/" %}
           {% assign section_id = "nav-" | append: section_key %}
-          {% assign is_section_active = active_section == section_key %}
+          {% assign is_section_active = false %}
+          {% if active_section == section_key %}
+            {% assign is_section_active = true %}
+          {% endif %}
 
-          {% assign section_landing = site.pages | where_exp: "p", "p.path == section_prefix | append: 'README.md'" | first %}
+          {% assign section_readme = section_prefix | append: 'README.md' %}
+          {% assign section_index_md = section_prefix | append: 'index.md' %}
+          {% assign section_index_html = section_prefix | append: 'index.html' %}
+          {% assign section_landing = site.pages | where_exp: "p", "p.path == section_readme" | first %}
           {% if section_landing == nil %}
-            {% assign section_landing = site.pages | where_exp: "p", "p.path == section_prefix | append: 'index.md'" | first %}
+            {% assign section_landing = site.pages | where_exp: "p", "p.path == section_index_md" | first %}
           {% endif %}
           {% if section_landing == nil %}
-            {% assign section_landing = site.pages | where_exp: "p", "p.path == section_prefix | append: 'index.html'" | first %}
+            {% assign section_landing = site.pages | where_exp: "p", "p.path == section_index_html" | first %}
           {% endif %}
           {% assign section_url = section_landing.url | default: section_prefix %}
 
@@ -102,15 +108,21 @@
 
                 {% assign sub_prefix = section_prefix | append: subgroup | append: "/" %}
                 {% assign sub_id = section_id | append: "-" | append: subgroup | slugify %}
-                {% assign is_sub_active = is_section_active and page.path contains sub_prefix %}
+                {% assign is_sub_active = false %}
+                {% if is_section_active and page.path contains sub_prefix %}
+                  {% assign is_sub_active = true %}
+                {% endif %}
                 {% assign sub_label = subgroup | replace: "-", " " | replace: "_", " " %}
 
-                {% assign sub_landing = site.pages | where_exp: "p", "p.path == sub_prefix | append: 'README.md'" | first %}
+                {% assign sub_readme = sub_prefix | append: 'README.md' %}
+                {% assign sub_index_md = sub_prefix | append: 'index.md' %}
+                {% assign sub_index_html = sub_prefix | append: 'index.html' %}
+                {% assign sub_landing = site.pages | where_exp: "p", "p.path == sub_readme" | first %}
                 {% if sub_landing == nil %}
-                  {% assign sub_landing = site.pages | where_exp: "p", "p.path == sub_prefix | append: 'index.md'" | first %}
+                  {% assign sub_landing = site.pages | where_exp: "p", "p.path == sub_index_md" | first %}
                 {% endif %}
                 {% if sub_landing == nil %}
-                  {% assign sub_landing = site.pages | where_exp: "p", "p.path == sub_prefix | append: 'index.html'" | first %}
+                  {% assign sub_landing = site.pages | where_exp: "p", "p.path == sub_index_html" | first %}
                 {% endif %}
                 {% assign sub_url = sub_landing.url | default: sub_prefix %}
 
