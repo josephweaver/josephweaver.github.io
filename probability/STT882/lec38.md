@@ -192,7 +192,7 @@ Then
 $$
 E[X\mid \mathcal F_1]
    = \begin{cases}
-      -\tfrac74, & X=-\tfrac74,\$$6pt]
+      -\tfrac74, & X=-\tfrac74,\\
       \frac{1\cdot0.5 + 2\cdot0.1}{0.6}
       = \tfrac76, & X\in\{1,2\}.
      \end{cases}
@@ -212,4 +212,4 @@ This is an application of optional stopping + gambler’s ruin probabilities ret
 
 ---
 
-# **End of Lecture 39**
+# **End of Lecture 38**

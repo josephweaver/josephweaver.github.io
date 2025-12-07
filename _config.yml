@@ -6,3 +6,18 @@ markdown: kramdown
 kramdown:
   input: GFM
   math_engine: mathjax
+
+defaults:
+  - scope:
+      path: "probability"
+    values:
+      layout: default
+      math: true
+  - scope:
+      path: "research"
+    values:
+      layout: default
+  - scope:
+      path: "fiction"
+    values:
+      layout: default
