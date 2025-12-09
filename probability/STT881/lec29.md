@@ -203,6 +203,9 @@ $$
 
 Thus **the series $\sum P(\vert X\vert \ge a_n)$** completely determines the almost-sure growth rate of $S_n$.
 
+> #### Durrett Probablity 4e Theorem 2.5.9. Feller's Theorem
+> Let $X_1, X_2, \ldots$ be i.i.d. with $E\vert X_1\vert = \infty$ and let $S_n=X_1 + ... + X_n$.  Let $a_n$ be a sequence of positive numbers with $a_n/n$ increasing.  Then $\limsup_{n\to\infty} \vert S_n\vert /a_n = 0$ or $\infty$ according as $\sum_n P(\vert X_1\vert \ge a_n) < \infty$ or $= \infty$.
+
 ---
 
 ## 4. Proof of Part (b)

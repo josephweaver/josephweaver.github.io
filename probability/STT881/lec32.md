@@ -236,6 +236,18 @@ The following are equivalent:
    P(X_n\in A)\to P(X\in A).
    $$
 
+> #### Durrett Probability 3.2.5 - Portmanteau Theorem
+> The following are equivalent:
+> $$
+\begin{aligned}
+&\quad(i)\quad X_n\Rightarrow X_\infty, \\
+&\quad(ii)\quad \text{ for all open sets } G, \liminf_{n\to\infty} P(X_n\in G)\ge P(X_\infty\in G), \\
+&\quad(iii)\quad \text{ for all closed sets } F, \limsup_{n\to\infty} P(X_n\in F)\le P(X_\infty\in F), \\
+&\quad(iv)\quad \text{ for all Borel sets }A\text{ with } P(X_\infty\in \partial A)=0, \lim_{n\to\infty} P(X_n\in A)= P(X_\infty\in A).
+\end{aligned}
+> $$
+
+
 ### Sketch: (4) ⇒ (1)
 (Page 3 diagram.)
 

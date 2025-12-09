@@ -107,11 +107,11 @@ This is the triangular-array analogue of “maximal term goes to 0”.
 Let $Z_1, \dots, Z_n$ be iid $N(0,1)$. Define the **comparison sum**
 
 $$
-Z_n^\* = \sum_{k=1}^n \sigma_{n,k} Z_k,
+Z_n^* = \sum_{k=1}^n \sigma_{n,k} Z_k,
 \qquad \sigma_{n,k}^2 := E[X_{n,k}^2].
 $$
 
-Then $Z_n^\* \sim N(0,1)$.
+Then $Z_n^* \sim N(0,1)$.
 
 Let
 
@@ -140,7 +140,7 @@ $$
 Exactly as in Lecture 34:
 
 $$
-\vert E[f(S_n)] - E[f(Z_n^\*)]\vert 
+\vert E[f(S_n)] - E[f(Z_n^*)]\vert 
 \;\le\;
 \sum_{k=1}^n I_{n,k}.
 \tag{3}

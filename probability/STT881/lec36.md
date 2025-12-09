@@ -184,9 +184,21 @@ This is a major theorem: the CF uniquely determines the distribution.
 
 ---
 
-# 4. Inversion Formula (Durrett Theorem 3.3.4)
+# 4. Inversion Formula
 
 Pages 3–4 contain the inversion theorem, developed using a smoothing device based on a uniform variable.
+
+> #### Durrett Probability 4.1e - Theorem 3.3.4 Inversion Formula  
+> Let $\varphi(t)=\int e^{itx}\mu(dx)$ where \mu is a probability measure. if $a<b$ then 
+> $$ 
+\lim_{T\to\infty} (2\pi)^{-1}\int_{-T}^T \frac{e^{-ita}-e^{-itb}}{it}\varphi(t)dt = \mu(a,b) + \frac{1}{2}\mu(\{a,b\}).
+> $$  
+
+> #### Durrett Probability 4.1e - Theorem 3.3.5 
+> if $\int\vert \varphi_X(t)\vert dt <\infty$ then $\mu$ has bounded continuous density
+> $$
+> f(x) = \frac{1}{2\pi}\int e^{-itx}\varphi(t)dt.
+> $$ 
 
 ### Setup
 
@@ -212,6 +224,8 @@ $$
 \varphi_X(t)\,\varphi_{-U}(t).
 \tag{3}
 $$
+
+
 
 ---
 

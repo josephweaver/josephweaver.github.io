@@ -1,20 +1,9 @@
 # **Lecture 28 — Kronecker’s Lemma and Applications**
 
 This lecture completes the arc of:
-
-Kolmogorov’s three–series theorem
-
-Kronecker’s lemma (full proof via integration by parts for step functions)
-
-Applications to normalized sums
-
-Marcinkiewicz–Zygmund Strong Laws for 
-1
-≤
-𝑝
-<
-2
-1≤p<2
+- Kolmogorov’s three–series theorem
+- Kronecker’s lemma (full proof via integration by parts for step functions)
+- Marcinkiewicz–Zygmund Strong Laws for $1≤𝑝<2$.
 
 Let $\{X_n\}_{n\ge1}$ be independent.
 
@@ -36,13 +25,23 @@ We recall two prior results:
    \sum X_n \text{ converges a.s.}
    \iff
    \begin{cases}
-   \text{(i)} & \forall A>0,\ \sum P(\vert X_n\vert >A)<\infty,\\\$$-4pt]
-   \text{(ii)} & \sum \operatorname{Var}(Y_n)<\infty,\quad Y_n=X_n\mathbf{1}_{\{\vert X_n\vert \le A\}},\\\\
+   \text{(i)} & \forall A>0,\ \sum P(\vert X_n\vert >A)<\infty,\\
+   \text{(ii)} & \sum \operatorname{Var}(Y_n)<\infty,\quad Y_n=X_n\mathbf{1}_{\{\vert X_n\vert \le A\}},\\
    \text{(iii)} & \sum E[Y_n]\ \text{converges}.
    \end{cases}
    $$
 
----
+> #### Durrett Probability 4.1e - Theorem 2.5.4 Three Series Theorem
+> Let $X_1, X_2, ...$ be independent.$  Let $A>0$ and let $Y_i=X_i1_{\vert X_i\vert \le A}.$  In order that $\sum_{n=1}^\infty X_n$ converse a.s. it is necessary and sufficient that
+> $$
+(i)\quad\sum_{n=1}^\infty P(\vert X_n\vert > A) < \infty,
+> $$
+> $$
+(ii)\quad\sum_{n=1}^\infty \mathbb{E}(Y_n) \text{ converges},
+> $$
+> $$
+(iii)\quad\sum_{n=1}^\infty \operatorname{Var}(Y_n) < \infty.
+> $$.
 
 # **1. A Useful Lemma from the Three–Series Proof**
 
@@ -102,6 +101,11 @@ $$
 
 This relates **convergence of weighted series** to the behavior of **normalized partial sums**.
 
+> #### Durret Probablity 4.1e - Theorem 2.5.5 Kronecker's Lemma
+> if $a_n\uparrow\infty$ and $\sum_{n=1}^\infty x_n/a_n$ converges then 
+>  $$
+a_n^{-1}\sum_{m=1}^n x_m\to 0.
+> $$
 ---
 
 ## **3. Proof of Kronecker’s Lemma (as in your notes, pp. 1–2)**
@@ -287,6 +291,8 @@ $$
 
 Since $T_n = S_n$ for large $n$, this proves the M–Z strong law.
 
+> #### Durrett Probability 4.1e - Theorem 2.5.8 Marcinkiewicz-Zygmund Strong Law
+> Let $X_1, X_2, ...$ be iid with $E[X_1]=0$ and $E[\vert X_1\vert ^p] < \infty$ where $1 < p < 2$. If $S_n = X_1 +...+X_n$ then $S_n/n{1/p}\to 0 \text{ a.s.}$
 ---
 
 # **Cheat-Sheet Summary — Lecture 28**

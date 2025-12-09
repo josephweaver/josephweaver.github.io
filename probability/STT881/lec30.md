@@ -110,6 +110,10 @@ This is exactly the Marcinkiewicz–Zygmund strong law for $0<p<1$.
 
 ---
 
+# === Starting Durrett Chapter 3 ===
+
+---
+
 ## 3. Transition to Chapter 3 — Complex Inequalities
 
 Starting on page 2, your notes introduce complex notation for the coming Central Limit Theorem proof.

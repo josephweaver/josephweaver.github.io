@@ -126,6 +126,10 @@ Then:
 This is the most powerful implication:  
 **Pointwise convergence of CFs + continuity at 0 ⇒ weak convergence**.
 
+> #### Durrett Probability 4.1e - Theorem 3.3.6 Continuity Theorem
+> Let $\mu_n,1\ge n\ge\infty$ be probability measures with characteristic functions $\varphi_n$.
+(i) If $\mu_n\Rightarrow \mu_\infty$ then $\varphi_n(t)\to \varphi_\infty(t)$ for all $t$. (ii) If $\varphi_n(t)$ converges pointwise to a limit $\varphi(t)$ that is continuous at $0$, then the associated sequence of distributions $\mu_n$ is tight and converges weakly to the measure $\mu$ with characteristic function $\varphi$.
+
 ---
 
 # 3. Proof Sketch of the Continuity Theorem

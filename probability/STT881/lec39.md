@@ -134,7 +134,7 @@ Then from page 2:
 $$
 Y_{n,1} =
 \begin{cases}
-0, & \text{with prob } 1/n \$$4pt]
+0, & \text{with prob } 1/n
 \pm\,1/\sqrt n, &\text{with prob } \frac12 - \frac{1}{2n^2}.
 \end{cases}
 $$

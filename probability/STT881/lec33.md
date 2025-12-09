@@ -122,7 +122,7 @@ This gives another route to establishing weak convergence.
 
 ---
 
-# 4. Helly’s Selection Theorem (Theorem 3.2.6)
+# 4. Helly’s Selection Theorem
 
 This is the major theorem in the second half of the notes (yellow highlight on page 1–2).
 
@@ -136,6 +136,9 @@ $$
 F_{n_k}(x) \to F(x)
 \quad\text{at every continuity point of }F.
 $$
+
+> #### Durrett Probability 4.1e - Theorem 3.2.6 Helly's Selection Theorem (p. 88)
+> For every sequence $F_n$ of distribution functions, there exists a subsequence $F_{n_k}$ and a right continuous nondecreasing function $F$ so that $\lim_{n\to\infty}F_{n_k}(y)=F(y)$ at all continuity points $y$ of $F$.
 
 ---
 

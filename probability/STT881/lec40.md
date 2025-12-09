@@ -172,6 +172,17 @@ $$
 S_n \Rightarrow \mathrm{Poisson}(\lambda).
 $$
 
+> #### Durrett Theorem 3.6.1. Poisson Limit Theorem for Triangular Arrays of Bernoulli RVs
+> For each n let $X_{n,m}, 1\le m\le n$ be independent Bernoulli random variables with $P(X_{n,m}=1)=p_{n,m}, P(X_{n,m}=0)=1-p_{n,m}$. Suppose
+> $$
+(i)\quad\sum_{m=1}^n p_{n,m} \to \lambda \in (0,\infty),
+> $$
+> $$
+(ii)\quad\max_{1\le m\le n} p_{n,m} \to 0.
+> $$
+> If $S_n = \sum_{m=1}^n X_{n,m}$, then $S_n \Rightarrow  Z$  where $Z$ is $\mathrm{Poisson}(\lambda)$.
+
+
 This was proved earlier by characteristic functions.  
 **Today: we prove convergence in total variation**.
 
