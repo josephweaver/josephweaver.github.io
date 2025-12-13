@@ -19,6 +19,8 @@ We recall two prior results:
    \quad\text{converges a.s.}
    $$
 
+
+
 2. **Kolmogorov’s Three–Series Theorem**:
 
    $$
@@ -42,6 +44,17 @@ We recall two prior results:
 > $$
 (iii)\quad\sum_{n=1}^\infty \operatorname{Var}(Y_n) < \infty.
 > $$.
+
+--- 
+
+> #### Durrett Probability 4.1e - Theorem 2.5.3 Kolmogorov's Variance Criterion
+> If $X_1, X_2, ...$ are independent and have $\mathbb{E}[X_n]=0$.  If 
+> $$
+\sum_{n=1}^\infty \operatorname{Var}(X_n) < \infty,
+> $$
+then with probability one $\sum_{n=1}^\infty X_n(\omega)$ converges.
+
+--- 
 
 # **1. A Useful Lemma from the Three–Series Proof**
 

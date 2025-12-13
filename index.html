@@ -1,198 +1,269 @@
 ---
 layout: default
-title: Joseph M. Weaver
+title: Blog
 ---
 
-<section class="hero">
-  <div class="hero__media">
-    <img src="{{ 'assets/images/1618685561588.jfif' | relative_url }}" alt="Portrait of Joseph M. Weaver" class="hero__img" />
+<section class="blog-hero">
+  <p class="eyebrow">Field notes & experiments</p>
+  <h1>Bayesian crop risk, geospatial systems, and learning in public.</h1>
+  <p class="lede">Short, candid entries on statistical modeling, data engineering patterns, and the teaching artifacts I use to explain both.</p>
+  <div class="hero-actions">
+    <a class="btn" href="#latest">Start reading</a>
+    <a class="btn ghost" href="{{ '/2025/12/08/hello-absurd.html' | relative_url }}">Read the first post</a>
+    <a class="btn ghost" href="{{ '/about.html' | relative_url }}">About Joseph</a>
   </div>
-  <div class="hero__text">
-    <p class="eyebrow">Biographical Sketch</p>
-    <h1>Joseph M. Weaver</h1>
-    <p class="lede">Ph.D. student in Statistics at Michigan State University focused on Bayesian crop-risk modeling, intrinsic dimension learning, and large-scale geospatial and HPC pipelines.</p>
-    <div class="hero__meta">
-      <span>weave151@msu.edu</span>
-      <a href="https://www.linkedin.com/in/joseph-weaver-ai-researcher">LinkedIn</a>
-    </div>
-    <div class="hero__actions">
-      <a class="btn" href="{{ '/assets/documents/Biosketch - WEAVER(2025).pdf' | relative_url }}">Download biosketch</a>
-      <a class="btn ghost" href="{{ '/assets/documents/Joseph M. Weaver - Resume - 2024 General Purpose.pdf' | relative_url }}">Resume</a>
-    </div>
+  <div class="hero-meta">
+    <span>Frequent topics: Bayesian workflow, intrinsic dimension, spatial pipelines, and classroom-ready demos.</span>
   </div>
 </section>
 
-<section class="panel">
-  <h2>About</h2>
-  <p>Consultant with Land Core building Bayesian crop-yield risk models and geospatial data systems (5+ TB), and senior AI engineer background leading distributed data and ML platforms at Jackson National Life. I blend statistical theory, reproducible pipelines, and scalable infrastructure across MSU HPCC, Spark, PostGIS, DuckDB, and containerized workflows.</p>
+<section class="blog-grid" id="latest">
+  <a class="blog-card" href="{{ '/2025/12/08/hello-absurd.html' | relative_url }}">
+    <p class="eyebrow">Latest post</p>
+    <h2>Hello to everybody and nobody</h2>
+    <p>A quick wave, a humor disclaimer (absurdity ahead), and a recap of what changed on the site today.</p>
+    <ul class="tag-list">
+      <li>Meta</li>
+      <li>Humor</li>
+      <li>Site update</li>
+    </ul>
+  </a>
+  <article class="blog-card">
+    <p class="eyebrow">Series</p>
+    <h2>Crop-risk modeling</h2>
+    <p>Hands-on posts covering priors, spatial correlation structures, and pipelines for multi-terabyte yield data.</p>
+    <ul class="tag-list">
+      <li>Hierarchical models</li>
+      <li>Stan & PyMC</li>
+      <li>Uncertainty</li>
+    </ul>
+  </article>
+  <article class="blog-card">
+    <p class="eyebrow">Notebook</p>
+    <h2>Intrinsic dimension</h2>
+    <p>Practical diagnostics, manifold assumptions, and visual heuristics that make ID estimates legible to stakeholders.</p>
+    <ul class="tag-list">
+      <li>Manifold learning</li>
+      <li>Diagnostics</li>
+      <li>Visual intuition</li>
+    </ul>
+  </article>
 </section>
 
-<section class="panel panel--grid">
-  <div>
-    <h3>Highlights</h3>
-    <ul>
-      <li>Designed ETL and risk modeling pipelines for multi-terabyte geospatial datasets in PostGIS and DuckDB.</li>
-      <li>Built containerized Spark and HPC workflows with CI/CD, self-healing, and compliance-first design.</li>
-      <li>Instructor for STT 200; mentor bridging statistical learning, stochastic processes, and applied computing.</li>
-    </ul>
-  </div>
-  <div>
-    <h3>Research & Interests</h3>
-    <ul>
-      <li>Bayesian hierarchical crop yield risk modeling and uncertainty quantification.</li>
-      <li>Intrinsic dimension estimation and manifold learning for high-dimensional data.</li>
-      <li>Reproducible research pipelines: YAML metadata, GitHub Actions, and automated documentation.</li>
-    </ul>
-  </div>
+<section class="panel roadmap">
+  <h2>Upcoming posts</h2>
+  <ul class="roadmap-list">
+    <li><span class="pill">In progress</span> Building a reproducible spatial ETL stack with PostGIS + DuckDB.</li>
+    <li><span class="pill">Queued</span> Teaching Bayesian updating with crop-yield examples and classroom visuals.</li>
+    <li><span class="pill">Queued</span> Intrinsic dimension experiments that bridge math notes to GPU-friendly code.</li>
+    <li><span class="pill">Queued</span> Lightweight CI/CD for research repos: pre-commit hooks, docs, and tests.</li>
+  </ul>
 </section>
 
-<section class="panel panel--grid">
-  <div>
-    <h3>Current Roles</h3>
-    <ul>
-      <li>Ph.D. Student, Statistics & Probability, Michigan State University (in progress)</li>
-      <li>Consultant, Land Core - data pipelines and crop-risk modeling (2022-present)</li>
-      <li>Graduate Instructor (TA), STT 200: Introduction to Statistics</li>
-    </ul>
+<section class="panel resources">
+  <h2>Explore my work</h2>
+  <div class="resource-grid">
+    <a class="resource-card" href="{{ '/about.html' | relative_url }}">
+      <p class="eyebrow">Profile</p>
+      <h3>About me</h3>
+      <p>Background, roles, and collaboration interests.</p>
+    </a>
+    <a class="resource-card" href="{{ '/research/' | relative_url }}">
+      <p class="eyebrow">Research</p>
+      <h3>Notes & drafts</h3>
+      <p>Landing pages for ongoing research threads.</p>
+    </a>
+    <a class="resource-card" href="{{ '/probability/' | relative_url }}">
+      <p class="eyebrow">Teaching</p>
+      <h3>Probability notes</h3>
+      <p>Course-style writeups and exercises.</p>
+    </a>
+    <a class="resource-card" href="{{ '/fiction/' | relative_url }}">
+      <p class="eyebrow">Worldbuilding</p>
+      <h3>Fiction sandbox</h3>
+      <p>Space voxel concepts and transport sketches.</p>
+    </a>
   </div>
-  <div>
-    <h3>Selected Prior Experience</h3>
-    <ul>
-      <li>Senior AI Engineer, Jackson National Life (2018-2022): led AI/data engineering architecture and Spark pipelines.</li>
-      <li>Senior Capacity Planner, Jackson National Life (2011-2018): automated regression/cluster forecasting for infra.</li>
-      <li>Senior Software Developer, Jackson National Life (2005-2011): unified .NET automation for nationwide broker-dealer systems.</li>
-    </ul>
-  </div>
-</section>
-
-<section class="panel">
-  <h2>Collaboration</h2>
-  <p>Collaborating with teams at Rice University and Land Core on Bayesian crop-risk modeling, geospatial ETL, and reproducible workflows that connect theory to decision systems. Open to research collaborations and data engineering engagements.</p>
 </section>
 
 <style>
   :root {
-    --ink: #112240;
-    --muted: #5c6f82;
-    --accent: #159957;
-    --panel: #f6f8fb;
-    --border: #dfe3eb;
+    --ink: #0f1f36;
+    --muted: #5c6880;
+    --accent: #0f8d7b;
+    --accent-soft: #e4f4f1;
+    --border: #d9e2ec;
+    --panel: #ffffff;
+    --shadow: 0 16px 40px rgba(8, 24, 52, 0.08);
   }
   body {
     color: var(--ink);
+    background: linear-gradient(135deg, #eef3f8 0%, #eaf4f1 35%, #f5f7fb 100%);
   }
-  .hero {
-    display: grid;
-    grid-template-columns: minmax(220px, 260px) 1fr;
-    gap: 1.5rem;
-    align-items: center;
-    background: linear-gradient(120deg, #f3f8ff 0%, #f7fbf7 60%, #ffffff 100%);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.5rem;
-    box-shadow: 0 12px 30px rgba(0,0,0,0.04);
+  .blog-hero {
+    background: linear-gradient(120deg, #0f8d7b 0%, #16b79c 35%, #ffffff 100%);
+    color: #0b1c2f;
+    border-radius: 14px;
+    padding: 1.6rem 1.8rem;
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: var(--shadow);
   }
-  .hero__media {
-    display: flex;
-    justify-content: center;
-  }
-  .hero__img {
-    width: 100%;
-    max-width: 240px;
-    border-radius: 12px;
-    object-fit: cover;
-    border: 4px solid #fff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-  }
-  .hero__text h1 {
-    margin: 0.2rem 0 0.4rem;
+  .blog-hero h1 {
+    margin: 0.2rem 0 0.6rem;
     font-size: 2rem;
-    line-height: 1.1;
+    line-height: 1.15;
   }
-  .eyebrow {
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    font-weight: 700;
-    font-size: 0.8rem;
-    color: var(--muted);
-    margin: 0;
-  }
-  .lede {
+  .blog-hero .lede {
     font-size: 1.05rem;
-    color: var(--muted);
-    margin: 0.35rem 0 0.75rem;
+    color: #0b1c2f;
+    max-width: 720px;
   }
-  .hero__meta {
+  .hero-actions {
     display: flex;
-    gap: 1rem;
+    gap: 0.75rem;
     flex-wrap: wrap;
-    color: var(--muted);
+    margin: 0.9rem 0 0.4rem;
+  }
+  .hero-meta {
+    color: #0b1c2f;
     font-weight: 600;
-  }
-  .hero__meta a {
-    color: var(--accent);
-    text-decoration: none;
-    border-bottom: 2px solid transparent;
-  }
-  .hero__meta a:hover,
-  .hero__meta a:focus-visible {
-    border-color: var(--accent);
-  }
-  .hero__actions {
-    margin-top: 0.8rem;
-    display: flex;
-    gap: 0.6rem;
-    flex-wrap: wrap;
   }
   .btn {
     display: inline-block;
     padding: 0.55rem 0.95rem;
-    border-radius: 8px;
-    background: var(--accent);
+    border-radius: 10px;
+    background: #0b1c2f;
     color: #fff;
     text-decoration: none;
     font-weight: 700;
-    border: 1px solid var(--accent);
+    border: 1px solid #0b1c2f;
+    box-shadow: 0 10px 25px rgba(11, 28, 47, 0.16);
   }
   .btn.ghost {
-    background: transparent;
-    color: var(--accent);
+    background: rgba(255,255,255,0.18);
+    color: #0b1c2f;
+    border-color: rgba(255,255,255,0.6);
+    box-shadow: none;
   }
   .btn:hover,
   .btn:focus-visible {
-    box-shadow: 0 8px 20px rgba(21,153,87,0.25);
+    box-shadow: 0 10px 25px rgba(11, 28, 47, 0.28);
   }
-  .panel {
-    background: #fff;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.2rem 1.4rem;
-    margin-top: 1.2rem;
-  }
-  .panel h2, .panel h3 {
-    margin-top: 0;
-  }
-  .panel p {
-    color: var(--muted);
-    margin: 0.4rem 0 0;
-  }
-  .panel ul {
-    color: var(--muted);
-    padding-left: 1.2rem;
-    margin: 0.4rem 0 0;
-  }
-  .panel--grid {
+  .blog-grid {
+    margin-top: 1.4rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1rem;
   }
+  .blog-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.1rem 1.2rem;
+    box-shadow: var(--shadow);
+  }
+  .blog-card {
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .blog-card:hover,
+  .blog-card:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 18px 36px rgba(8, 24, 52, 0.12);
+  }
+  .blog-card h2 {
+    margin: 0.25rem 0 0.4rem;
+    font-size: 1.35rem;
+  }
+  .tag-list {
+    list-style: none;
+    padding: 0;
+    margin: 0.6rem 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+  .tag-list li {
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 999px;
+    padding: 0.25rem 0.65rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    border: 1px solid #c7e6df;
+  }
+  .roadmap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 0.65rem;
+  }
+  .roadmap-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: var(--muted);
+  }
+  .pill {
+    background: var(--accent-soft);
+    color: var(--accent);
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    font-weight: 700;
+    border: 1px solid #c7e6df;
+    min-width: 98px;
+    text-align: center;
+  }
+  .resources {
+    margin-top: 1.1rem;
+  }
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.9rem;
+    margin-top: 0.6rem;
+  }
+  .resource-card {
+    display: block;
+    padding: 1rem 1.05rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
+    box-shadow: var(--shadow);
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .resource-card:hover,
+  .resource-card:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(8, 24, 52, 0.12);
+  }
+  .resource-card h3 {
+    margin: 0.2rem 0 0.2rem;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: var(--muted);
+    margin: 0;
+  }
+  .panel h2 {
+    margin-top: 0;
+  }
   @media (max-width: 720px) {
-    .hero {
-      grid-template-columns: 1fr;
-      text-align: left;
+    .blog-hero {
+      padding: 1.25rem 1.15rem;
     }
-    .hero__media {
-      justify-content: flex-start;
+    .blog-hero h1 {
+      font-size: 1.6rem;
+    }
+    .blog-grid {
+      grid-template-columns: 1fr;
     }
   }
 </style>

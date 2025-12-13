@@ -60,7 +60,11 @@
       <ul class="nav-list">
         <li>
           <a class="{% if page.url == "/" or page.url == "/index.html" %}active{% endif %}"
-             href="{{ "/" | relative_url }}">Home</a>
+             href="{{ "/" | relative_url }}">Blog</a>
+        </li>
+        <li>
+          <a class="{% if page.url == "/about.html" %}active{% endif %}"
+             href="{{ "/about.html" | relative_url }}">About</a>
         </li>
         {% for entry in nav_sections %}
           {% assign parts = entry | split: ":" %}
