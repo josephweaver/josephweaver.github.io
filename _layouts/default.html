@@ -150,7 +150,8 @@
                 {% assign sub_url = sub_landing.url | default: sub_prefix %}
 
                 {% assign sub_pages = section_pages | where_exp: "p", "p.dir == sub_dir" | sort_natural: "path" %}
-                {% assign sub_subsections = section_pages | where_exp: "p", "p.path contains sub_prefix and p.dir != sub_dir" | group_by_exp: "p", "p.path | remove_first: sub_prefix | split: '/' | first" | sort: "name" %}
+                {% assign sub_candidates = section_pages | where_exp: "p", "p.path contains sub_prefix" %}
+                {% assign sub_subsections = sub_candidates | where_exp: "p", "p.dir != sub_dir" | group_by_exp: "p", "p.path | remove_first: sub_prefix | split: '/' | first" | sort: "name" %}
 
                 <li class="nav__subsection{% if is_sub_active %} is-open{% endif %}">
                   <div class="nav__subsection-row">
