@@ -3,7 +3,7 @@ title: Binomial Distribution
 permalink: /probability/distributions/binomial/
 section: distributions
 category: discrete
-layout: page
+layout: default
 order: 52
 ---
 

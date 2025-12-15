@@ -3,7 +3,7 @@ title: Exponential Distribution
 permalink: /probability/distributions/exponential/
 section: distributions
 category: continuous
-layout: page
+layout: default
 order: 61
 ---
 # Exponential Distribution — $ \mathrm{Exp}(\lambda) $

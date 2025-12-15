@@ -3,7 +3,7 @@ title: Chi-Squared Distribution
 permalink: /probability/distributions/chi-squared/
 section: distributions
 category: continuous
-layout: page
+layout: default
 order: 61
 ---
 

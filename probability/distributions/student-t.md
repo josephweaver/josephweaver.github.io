@@ -3,7 +3,7 @@ title: Student t Distribution
 permalink: /probability/distributions/student-t/
 section: distributions
 category: continuous
-layout: page
+layout: default
 order: 63
 ---
 

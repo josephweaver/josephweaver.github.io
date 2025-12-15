@@ -3,7 +3,7 @@ title: Multinomial Distribution
 permalink: /probability/distributions/mutlinomial/
 section: distributions
 category: discrete
-layout: page
+layout: default
 order: 54
 ---
 

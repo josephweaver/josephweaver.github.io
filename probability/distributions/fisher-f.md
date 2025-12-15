@@ -3,7 +3,7 @@ title: F Distribution
 permalink: /probability/distributions/fisher-f/
 section: distributions
 category: continuous
-layout: page
+layout: default
 order: 62
 ---
 # F Distribution — $ F_{\nu_1,\nu_2} $

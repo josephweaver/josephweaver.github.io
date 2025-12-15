@@ -3,7 +3,7 @@ title: Negative Binomial Distribution
 permalink: /probability/distributions/negative-binomial/
 section: distributions
 category: discrete
-layout: page
+layout: default
 order: 56
 ---
 # Negative Binomial Distribution — $ \mathrm{NegBin}(r,p) $

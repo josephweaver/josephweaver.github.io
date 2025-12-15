@@ -2,8 +2,7 @@
 title: Summary of Distrubutions
 permalink: /probability/distributions/summary/
 section: distributions
-category: continuous
-layout: page
+layout: default
 order: 90
 ---
 

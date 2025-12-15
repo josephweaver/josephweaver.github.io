@@ -1,3 +1,9 @@
+---
+title: Characteristic Functions
+permalink: /probability/characteristic-functions/
+layout: default
+---
+
 # **Complex numbers**
 
 - **complex number**. $z\in\mathbb{C}$ that has the form $z = a + ib$, where $\text{Re}(z) = a$ and $\text{Im}(z) = b$ where $i=\sqrt{-1}$.

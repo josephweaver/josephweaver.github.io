@@ -3,7 +3,7 @@ title: Pareto Distribution
 permalink: /probability/distributions/pareto/
 section: distributions
 category: continuous
-layout: page
+layout: default
 order: 37
 ---
 

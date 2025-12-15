@@ -3,7 +3,7 @@ title: Uniform Distribution
 permalink: /probability/distributions/uniform/
 section: distributions
 category: continuous
-layout: page
+layout: default
 order: 38
 ---
 

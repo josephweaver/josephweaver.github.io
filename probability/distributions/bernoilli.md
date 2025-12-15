@@ -3,7 +3,7 @@ title: Bernoulli Distribution
 permalink: /probability/distributions/bernoulli/
 section: distributions
 category: discrete
-layout: page
+layout: default
 order: 50
 ---
 

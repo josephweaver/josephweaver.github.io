@@ -3,7 +3,7 @@ title: Geometric Distribution
 permalink: /probability/distributions/geometric/
 section: distributions
 category: discrete
-layout: page
+layout: default
 order: 53
 ---
 

@@ -3,7 +3,7 @@ title: Poisson Distribution
 permalink: /probability/distributions/poisson/
 section: distributions
 category: discrete
-layout: page
+layout: default
 order: 57
 ---
 

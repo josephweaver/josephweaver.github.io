@@ -3,7 +3,7 @@ title: Gamma Distribution
 permalink: /probability/distributions/gamma/
 section: distributions
 category: continuous
-layout: page
+layout: default
 order: 33
 ---
 

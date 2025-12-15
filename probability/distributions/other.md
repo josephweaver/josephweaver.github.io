@@ -2,7 +2,7 @@
 title: Other Distribution
 permalink: /probability/distributions/other/
 section: distributions
-layout: page
+layout: default
 order: 80
 ---
 

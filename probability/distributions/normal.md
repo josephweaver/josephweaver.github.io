@@ -3,7 +3,7 @@ title: Normal Distribution
 permalink: /probability/distributions/normal/
 section: distributions
 category: continuous
-layout: page
+layout: default
 order: 34
 ---
 

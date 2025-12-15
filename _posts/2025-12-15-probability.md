@@ -20,3 +20,4 @@ I also published pages of characteristic function adjuscent Trigonometry, and fo
 
 - [Useful Trigonometry]({{ site.baseurl }}/probability/trigonomtry/)
 - [Real Analysis for Probability]({{ site.baseurl }}/probability/real-analysis/)
+- [Characteristic Functions]({{ site.baseurl }}/probability/characteristic-functions/)

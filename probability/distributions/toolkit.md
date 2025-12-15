@@ -3,7 +3,7 @@ title: Distrubution Toolkit
 permalink: /probability/distributions/toolkit/
 section: distributions
 category: continuous
-layout: page
+layout: default
 order: 91
 ---
 # Distribution Toolkit: Properties, Transformations, and Order Statistics
