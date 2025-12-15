@@ -90,7 +90,9 @@
           {% assign section_url = section_landing.url | default: section_prefix %}
 
           {% assign section_pages = site.pages | where_exp: "p", "p.path contains section_prefix" %}
-          {% assign subsections = section_pages | group_by_exp: "p", "p.path | remove_first: section_prefix | split: '/' | first" | sort: "name" %}
+          {% assign root_dir = "/" | append: section_prefix %}
+          {% assign root_pages = section_pages | where_exp: "p", "p.dir == root_dir" | sort_natural: "path" %}
+          {% assign subsections = section_pages | where_exp: "p", "p.dir != root_dir" | group_by_exp: "p", "p.path | remove_first: section_prefix | split: '/' | first" | sort: "name" %}
 
           <li class="nav__section{% if is_section_active %} is-open{% endif %}">
             <div class="nav__section-row">
@@ -105,6 +107,21 @@
             </div>
             <ul id="{{ section_id }}"
                 class="nav__sublist{% unless is_section_active %} is-collapsed{% endunless %}">
+              {% comment %}Root-level pages under this section{% endcomment %}
+              {% for subpage in root_pages %}
+                {% assign filename = subpage.name %}
+                {% if filename == "README.md" or filename == "index.md" or filename == "index.html" %}{% continue %}{% endif %}
+                {% assign label = subpage.title | default: subpage.data.title | default: filename %}
+                {% assign label = label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " | replace: "-", " " %}
+                <li>
+                  <a class="{% if subpage.url == page.url %}active{% endif %}"
+                     href="{{ subpage.url | default: subpage.path | relative_url }}">
+                    {{ label }}
+                  </a>
+                </li>
+              {% endfor %}
+
+              {% comment %}First-level subdirectories{% endcomment %}
               {% for subsection in subsections %}
                 {% assign subgroup = subsection.name %}
                 {% if subgroup == "" %}{% continue %}{% endif %}
@@ -112,6 +129,7 @@
                 {% if subgroup == "README.md" or subgroup == "index.md" or subgroup == "index.html" %}{% continue %}{% endif %}
 
                 {% assign sub_prefix = section_prefix | append: subgroup | append: "/" %}
+                {% assign sub_dir = "/" | append: sub_prefix %}
                 {% assign sub_id = section_id | append: "-" | append: subgroup | slugify %}
                 {% assign is_sub_active = false %}
                 {% if is_section_active and page.path contains sub_prefix %}
@@ -131,7 +149,9 @@
                 {% endif %}
                 {% assign sub_url = sub_landing.url | default: sub_prefix %}
 
-                {% assign pages = subsection.items | sort_natural: "path" %}
+                {% assign sub_pages = section_pages | where_exp: "p", "p.dir == sub_dir" | sort_natural: "path" %}
+                {% assign sub_subsections = section_pages | where_exp: "p", "p.path contains sub_prefix and p.dir != sub_dir" | group_by_exp: "p", "p.path | remove_first: sub_prefix | split: '/' | first" | sort: "name" %}
+
                 <li class="nav__subsection{% if is_sub_active %} is-open{% endif %}">
                   <div class="nav__subsection-row">
                     <a class="nav__subsection-link{% if is_sub_active %} active{% endif %}"
@@ -145,7 +165,8 @@
                   </div>
                   <ul id="{{ sub_id }}"
                       class="nav__page-list{% unless is_sub_active %} is-collapsed{% endunless %}">
-                    {% for subpage in pages %}
+                    {% comment %}Pages directly under this subdirectory{% endcomment %}
+                    {% for subpage in sub_pages %}
                       {% assign filename = subpage.name %}
                       {% if filename == "README.md" or filename == "index.md" or filename == "index.html" %}{% continue %}{% endif %}
 
@@ -156,6 +177,58 @@
                            href="{{ subpage.url | default: subpage.path | relative_url }}">
                           {{ label }}
                         </a>
+                      </li>
+                    {% endfor %}
+
+                    {% comment %}Second-level subdirectories{% endcomment %}
+                    {% for subsub in sub_subsections %}
+                      {% assign subsubgroup = subsub.name %}
+                      {% if subsubgroup == "" %}{% continue %}{% endif %}
+                      {% if subsubgroup contains "." %}{% continue %}{% endif %}
+
+                      {% assign subsub_prefix = sub_prefix | append: subsubgroup | append: "/" %}
+                      {% assign subsub_dir = "/" | append: subsub_prefix %}
+                      {% assign subsub_id = sub_id | append: "-" | append: subsubgroup | slugify %}
+                      {% assign is_subsub_active = false %}
+                      {% if is_sub_active and page.path contains subsub_prefix %}
+                        {% assign is_subsub_active = true %}
+                      {% endif %}
+                      {% assign subsub_label = subsubgroup | replace: "-", " " | replace: "_", " " %}
+
+                      {% assign subsub_readme = subsub_prefix | append: 'README.md' %}
+                      {% assign subsub_index_md = subsub_prefix | append: 'index.md' %}
+                      {% assign subsub_index_html = subsub_prefix | append: 'index.html' %}
+                      {% assign subsub_landing = site.pages | where_exp: "p", "p.path == subsub_readme" | first %}
+                      {% if subsub_landing == nil %}
+                        {% assign subsub_landing = site.pages | where_exp: "p", "p.path == subsub_index_md" | first %}
+                      {% endif %}
+                      {% if subsub_landing == nil %}
+                        {% assign subsub_landing = site.pages | where_exp: "p", "p.path == subsub_index_html" | first %}
+                      {% endif %}
+                      {% assign subsub_url = subsub_landing.url | default: subsub_prefix %}
+
+                      {% assign subsub_pages = section_pages | where_exp: "p", "p.dir == subsub_dir" | sort_natural: "path" %}
+                      <li class="nav__subsection{% if is_subsub_active %} is-open{% endif %}">
+                        <div class="nav__subsection-row">
+                          <a class="nav__subsection-link{% if is_subsub_active %} active{% endif %}"
+                             href="{{ subsub_url | relative_url }}">{{ subsub_label }}</a>
+                        </div>
+                        <ul id="{{ subsub_id }}"
+                            class="nav__page-list{% unless is_subsub_active %} is-collapsed{% endunless %}">
+                          {% for subsubpage in subsub_pages %}
+                            {% assign filename = subsubpage.name %}
+                            {% if filename == "README.md" or filename == "index.md" or filename == "index.html" %}{% continue %}{% endif %}
+
+                            {% assign label = subsubpage.title | default: subsubpage.data.title | default: filename %}
+                            {% assign label = label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " | replace: "-", " " %}
+                            <li>
+                              <a class="{% if subsubpage.url == page.url %}active{% endif %}"
+                                 href="{{ subsubpage.url | default: subsubpage.path | relative_url }}">
+                                {{ label }}
+                              </a>
+                            </li>
+                          {% endfor %}
+                        </ul>
                       </li>
                     {% endfor %}
                   </ul>
