@@ -1,3 +1,12 @@
+---
+title: Summary of Distrubutions
+permalink: /probability/distributions/summary/
+section: distributions
+category: continuous
+layout: page
+order: 90
+---
+
 # Probability Distributions – Cheat Sheet
 
 This page collects common probability distributions with their key properties, moments, likelihood forms, and Bayesian relationships.

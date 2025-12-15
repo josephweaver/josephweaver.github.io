@@ -1,3 +1,12 @@
+---
+title: Gamma Distribution
+permalink: /probability/distributions/gamma/
+section: distributions
+category: continuous
+layout: page
+order: 33
+---
+
 # Gamma Distribution — $ \mathrm{Gamma}(\alpha,\lambda) $
 
 ## Definition

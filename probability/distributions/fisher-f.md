@@ -1,3 +1,11 @@
+---
+title: F Distribution
+permalink: /probability/distributions/fisher-f/
+section: distributions
+category: continuous
+layout: page
+order: 62
+---
 # F Distribution — $ F_{\nu_1,\nu_2} $
 
 The F distribution arises as a **ratio of two independent Chi-square variables scaled by their degrees of freedom**. It is the central distribution for **variance ratios, ANOVA, and likelihood ratio tests** in linear models.

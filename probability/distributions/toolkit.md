@@ -1,3 +1,11 @@
+---
+title: Distrubution Toolkit
+permalink: /probability/distributions/toolkit/
+section: distributions
+category: continuous
+layout: page
+order: 91
+---
 # Distribution Toolkit: Properties, Transformations, and Order Statistics
 
 This page summarizes **general techniques** for extracting properties of a random variable given its **pdf/pmf, MGF, or characteristic function**. These tools apply to *any* distribution and are heavily used on prelim exams.

@@ -1,3 +1,11 @@
+---
+title: Other Distribution
+permalink: /probability/distributions/other/
+section: distributions
+layout: page
+order: 80
+---
+
 # Other Common Distributions (Recognition Only)
 
 This page collects distributions that appear **occasionally** in lectures and prelim problems, usually as **contrasts, counterexamples, or modeling alternatives**. You are expected to recognize them, not derive them.

@@ -1,3 +1,13 @@
+---
+title: Geometric Distribution
+permalink: /probability/distributions/geometric/
+section: distributions
+category: discrete
+layout: page
+order: 53
+---
+
+
 # Geometric Distribution — $ \mathrm{Geom}(p) $
 
 The Geometric distribution models the **waiting time until the first success** in a sequence of independent Bernoulli trials. It is the **unique discrete memoryless distribution** and the discrete analogue of the Exponential distribution.

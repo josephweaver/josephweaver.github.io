@@ -1,3 +1,11 @@
+---
+title: Negative Binomial Distribution
+permalink: /probability/distributions/negative-binomial/
+section: distributions
+category: discrete
+layout: page
+order: 56
+---
 # Negative Binomial Distribution — $ \mathrm{NegBin}(r,p) $
 
 The Negative Binomial distribution models the **number of failures before the $ r $-th success** in a sequence of independent Bernoulli trials. It is the discrete analogue of the Gamma distribution and generalizes the Geometric distribution.

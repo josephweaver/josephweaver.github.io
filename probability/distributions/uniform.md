@@ -1,3 +1,12 @@
+---
+title: Uniform Distribution
+permalink: /probability/distributions/uniform/
+section: distributions
+category: continuous
+layout: page
+order: 38
+---
+
 # Uniform Distribution — $ \mathrm{Unif}(a,b) $
 
 ## Definition

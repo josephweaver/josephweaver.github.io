@@ -1,3 +1,11 @@
+---
+title: Beta Distribution
+permalink: /probability/distributions/beta/
+section: distributions
+category: continuous
+layout: page
+order: 31
+---
 # Beta Distribution — $ \mathrm{Beta}(\alpha,\beta) $
 
 ## Definition

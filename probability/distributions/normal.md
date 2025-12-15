@@ -1,3 +1,12 @@
+---
+title: Normal Distribution
+permalink: /probability/distributions/normal/
+section: distributions
+category: continuous
+layout: page
+order: 34
+---
+
 # Normal Distribution — $ \mathcal{N}(\mu,\sigma^2) $
 
 ## Definition

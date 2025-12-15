@@ -1,3 +1,12 @@
+---
+title: Chi-Squared Distribution
+permalink: /probability/distributions/chi-squared/
+section: distributions
+category: continuous
+layout: page
+order: 61
+---
+
 # Chi-Square Distribution — \( \chi^2_\nu \)
 
 The Chi-square distribution arises from **sums of squares of standard Normal variables** and plays a central role in **variance inference, pivots, and likelihood ratio tests**.

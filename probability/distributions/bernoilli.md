@@ -1,3 +1,12 @@
+---
+title: Bernoulli Distribution
+permalink: /probability/distributions/bernoulli/
+section: distributions
+category: discrete
+layout: page
+order: 50
+---
+
 # Bernoulli Distribution — $ \mathrm{Bern}(p) $
 
 ## Definition

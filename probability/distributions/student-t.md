@@ -1,3 +1,12 @@
+---
+title: Student t Distribution
+permalink: /probability/distributions/student-t/
+section: distributions
+category: continuous
+layout: page
+order: 63
+---
+
 # Student’s t Distribution — $ t_\nu $
 
 The Student’s t distribution arises as a **ratio of a Normal variable and the square root of an independent Chi-square variable**. It is the fundamental distribution for **mean inference with unknown variance** and a canonical example of a **pivot**.

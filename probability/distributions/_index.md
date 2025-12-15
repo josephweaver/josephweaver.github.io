@@ -1,3 +1,9 @@
+---
+title: Probability Distributions
+permalink: /probability/distributions/
+---
+
+
 ## Probability Distributions — Index
 
 ### Core Distributions

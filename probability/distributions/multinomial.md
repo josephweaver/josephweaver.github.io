@@ -1,3 +1,12 @@
+---
+title: Multinomial Distribution
+permalink: /probability/distributions/mutlinomial/
+section: distributions
+category: discrete
+layout: page
+order: 54
+---
+
 # Multinomial Distribution — $ \mathrm{Mult}(n,\mathbf{p}) $
 
 The Multinomial distribution generalizes the Binomial distribution to **multiple categories**. It models **counts across categories** from repeated independent trials and is fundamental in likelihood theory, sufficiency, and categorical data models.

@@ -1,3 +1,11 @@
+---
+title: Exponential Distribution
+permalink: /probability/distributions/exponential/
+section: distributions
+category: continuous
+layout: page
+order: 61
+---
 # Exponential Distribution — $ \mathrm{Exp}(\lambda) $
 
 ## Definition

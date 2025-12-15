@@ -1,3 +1,12 @@
+---
+title: Binomial Distribution
+permalink: /probability/distributions/binomial/
+section: distributions
+category: discrete
+layout: page
+order: 52
+---
+
 # Binomial Distribution — $ \mathrm{Bin}(n,p) $
 
 ## Definition
