@@ -90,9 +90,7 @@
           {% assign section_url = section_landing.url | default: section_prefix %}
 
           {% assign section_pages = site.pages | where_exp: "p", "p.path contains section_prefix" %}
-          {% assign section_root_dir = "/" | append: section_prefix %}
-          {% assign subsection_pages = section_pages | where_exp: "p", "p.dir != section_root_dir" %}
-          {% assign subsections = subsection_pages | group_by: "dir" | sort: "name" %}
+          {% assign subsections = section_pages | group_by_exp: "p", "p.path | remove_first: section_prefix | split: '/' | first" | sort: "name" %}
 
           <li class="nav__section{% if is_section_active %} is-open{% endif %}">
             <div class="nav__section-row">
@@ -108,8 +106,9 @@
             <ul id="{{ section_id }}"
                 class="nav__sublist{% unless is_section_active %} is-collapsed{% endunless %}">
               {% for subsection in subsections %}
-                {% assign subgroup = subsection.name | remove_first: section_root_dir | split: "/" | first %}
+                {% assign subgroup = subsection.name %}
                 {% if subgroup == "" %}{% continue %}{% endif %}
+                {% if subgroup contains "." %}{% continue %}{% endif %}
                 {% if subgroup == "README.md" or subgroup == "index.md" or subgroup == "index.html" %}{% continue %}{% endif %}
 
                 {% assign sub_prefix = section_prefix | append: subgroup | append: "/" %}
