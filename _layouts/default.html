@@ -90,7 +90,8 @@
           {% assign section_url = section_landing.url | default: section_prefix %}
 
           {% assign section_pages = site.pages | where_exp: "p", "p.path contains section_prefix" %}
-          {% assign subsections = section_pages | group_by_exp: "p", "p.path | remove_first: section_prefix | split: '/' | first" | sort: "name" %}
+          {% assign subsection_pages = section_pages | where_exp: "p", "p.path | remove_first: section_prefix | split: '/' | size > 1" %}
+          {% assign subsections = subsection_pages | group_by_exp: "p", "p.path | remove_first: section_prefix | split: '/' | first" | sort: "name" %}
 
           <li class="nav__section{% if is_section_active %} is-open{% endif %}">
             <div class="nav__section-row">
