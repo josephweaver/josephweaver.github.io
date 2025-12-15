@@ -87,6 +87,20 @@ $$
 $$
 
 ---
+## **Martingale via increments (discrete time). 
+Let $(\mathcal F_n)$ be a filtration and $(Y_n)$ be adapted with $\mathbb E|Y_n|<\infty$ for all $n$.
+If the increments $\Delta Y_k := Y_k-Y_{k-1}$ satisfy
+$$
+\mathbb E(\Delta Y_k \mid \mathcal F_{k-1})=0 \quad \text{a.s. for all } k\ge 1,
+$$
+then $(Y_n,\mathcal F_n)$ is a martingale, since
+$$
+\mathbb E(Y_k\mid \mathcal F_{k-1})
+=\mathbb E(Y_{k-1}+\Delta Y_k\mid \mathcal F_{k-1})
+=Y_{k-1}.
+$$
+
+---
 
 ## Basic Properties
 
