@@ -9,7 +9,7 @@ title: Blog
   <p class="lede">Short, candid entries on statistical modeling, data engineering patterns, and the teaching artifacts I use to explain both.</p>
   <div class="hero-actions">
     <a class="btn" href="#latest">Start reading</a>
-    <a class="btn ghost" href="{{ '/2025/12/08/hello-absurd.html' | relative_url }}">Read the first post</a>
+    <a class="btn ghost" href="{{ site.posts.first.url | relative_url }}">Read the latest post</a>
     <a class="btn ghost" href="{{ '/about.html' | relative_url }}">About Joseph</a>
   </div>
   <div class="hero-meta">
@@ -18,36 +18,29 @@ title: Blog
 </section>
 
 <section class="blog-grid" id="latest">
-  <a class="blog-card" href="{{ '/2025/12/08/hello-absurd.html' | relative_url }}">
-    <p class="eyebrow">Latest post</p>
-    <h2>Hello to everybody and nobody</h2>
-    <p>A quick wave, a humor disclaimer (absurdity ahead), and a recap of what changed on the site today.</p>
-    <ul class="tag-list">
-      <li>Meta</li>
-      <li>Humor</li>
-      <li>Site update</li>
-    </ul>
-  </a>
-  <article class="blog-card">
-    <p class="eyebrow">Series</p>
-    <h2>Crop-risk modeling</h2>
-    <p>Hands-on posts covering priors, spatial correlation structures, and pipelines for multi-terabyte yield data.</p>
-    <ul class="tag-list">
-      <li>Hierarchical models</li>
-      <li>Stan & PyMC</li>
-      <li>Uncertainty</li>
-    </ul>
-  </article>
-  <article class="blog-card">
-    <p class="eyebrow">Notebook</p>
-    <h2>Intrinsic dimension</h2>
-    <p>Practical diagnostics, manifold assumptions, and visual heuristics that make ID estimates legible to stakeholders.</p>
-    <ul class="tag-list">
-      <li>Manifold learning</li>
-      <li>Diagnostics</li>
-      <li>Visual intuition</li>
-    </ul>
-  </article>
+  {% assign posts = site.posts %}
+  {% if posts and posts.size > 0 %}
+    {% for post in posts limit:6 %}
+      <a class="blog-card" href="{{ post.url | relative_url }}">
+        <p class="eyebrow">{{ post.date | date: "%b %-d, %Y" }}</p>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
+        {% if post.tags %}
+          <ul class="tag-list">
+            {% for tag in post.tags limit:4 %}
+              <li>{{ tag }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </a>
+    {% endfor %}
+  {% else %}
+    <article class="blog-card">
+      <p class="eyebrow">No posts yet</p>
+      <h2>Posts will appear here soon</h2>
+      <p>As soon as you add Markdown files to <code>_posts/</code>, the latest entries will show up on this grid.</p>
+    </article>
+  {% endif %}
 </section>
 
 <section class="panel roadmap">
