@@ -1,7 +1,13 @@
 
+---
+title: Useful Trigonometry For Probability
+permalink: /probability/trigonometry/
+layout: default
+order: 31
+---
 
 
-# Trigonometry
+# Useful Trigonometry For Probability
 - **Euler**. $\quad e^{iu} = \cos u + i\sin u\qquad e^{-iu} = \cos u - i\sin u$
 $$ 
 \cos u = \frac{e^{iu}+e^{-iu}}{2}\qquad\sin u = \frac{e^{iu}-e^{-iu}}{2i}
