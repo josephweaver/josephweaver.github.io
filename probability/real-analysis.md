@@ -2,7 +2,6 @@
 title: Real Analysis For Probability
 permalink: /probability/real-analysis/
 layout: default
-order: 31
 ---
 
 # Real Analysis for Probability

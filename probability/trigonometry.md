@@ -3,7 +3,6 @@
 title: Useful Trigonometry For Probability
 permalink: /probability/trigonometry/
 layout: default
-order: 31
 ---
 
 
