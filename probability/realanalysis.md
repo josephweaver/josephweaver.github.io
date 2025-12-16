@@ -1,6 +1,6 @@
 ---
-title: Real Analysis For Probability
-permalink: /probability/real-analysis/
+title: Real Analysis
+permalink: /probability/realanalysis/
 layout: default
 ---
 

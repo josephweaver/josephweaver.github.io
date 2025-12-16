@@ -1,6 +1,6 @@
 
 ---
-title: Useful Trigonometry For Probability
+title: Trigonometry
 permalink: /probability/trigonometry/
 layout: default
 ---

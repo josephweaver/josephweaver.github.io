@@ -1,6 +1,6 @@
 ---
 title: Characteristic Functions
-permalink: /probability/characteristic-functions/
+permalink: /probability/characteristicfunctions/
 layout: default
 ---
 

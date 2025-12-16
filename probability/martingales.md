@@ -1,4 +1,11 @@
-# Martingales — Prelim Survival Guide
+
+---
+title: Martingales
+permalink: /probability/martingales/
+layout: default
+---
+
+# Martingales
 
 ## Filtrations
 
