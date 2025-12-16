@@ -91,12 +91,20 @@
 
           {% assign section_pages = site.pages | where_exp: "p", "p.path contains section_prefix" %}
           {% assign root_dir = "/" | append: section_prefix %}
-          {% assign root_pages = section_pages
-            | where_exp: "p", "p.path | remove_first: section_prefix | split: '/' | size == 1"
-            | sort_natural: "path" %}
 
-          {% assign subsections = section_pages
-            | where_exp: "p", "p.path | remove_first: section_prefix | split: '/' | size > 1"
+          {% assign root_pages = "" | split: "" %}
+          {% assign subsection_pages = "" | split: "" %}
+          {% for candidate in section_pages %}
+            {% assign rel_parts = candidate.path | remove_first: section_prefix | split: "/" %}
+            {% assign rel_size = rel_parts | size %}
+            {% if rel_size == 1 %}
+              {% assign root_pages = root_pages | push: candidate %}
+            {% else %}
+              {% assign subsection_pages = subsection_pages | push: candidate %}
+            {% endif %}
+          {% endfor %}
+          {% assign root_pages = root_pages | sort_natural: "path" %}
+          {% assign subsections = subsection_pages
             | group_by_exp: "p", "p.path | remove_first: section_prefix | split: '/' | first"
             | sort: "name" %}
 
