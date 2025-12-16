@@ -104,10 +104,9 @@ $$
 
 ### Special Cases
 - Cauchy–Schwarz is Hölder with $ p = q = 2 $
-- Setting $ Y = 1 $ in Hölder gives
+- Setting $ Y = 1 $ in Cauchy–Schwarz gives
 $$
-\mathbb{E}|X| \le (\mathbb{E}|X|^p)^{1/p}
-\quad \text{for } p \ge 1
+\mathbb{E}|X| \le \sqrt{\mathbb{E}X^2}
 $$
 
 ---
