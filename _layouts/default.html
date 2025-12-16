@@ -92,11 +92,11 @@
           {% assign section_pages = site.pages | where_exp: "p", "p.path contains section_prefix" %}
           {% assign root_dir = "/" | append: section_prefix %}
           {% assign root_pages = section_pages
-            | where_exp: "p", "(p.path | remove_first: section_prefix | split: '/' | size) == 1"
+            | where_exp: "p", "p.path | remove_first: section_prefix | split: '/' | size == 1"
             | sort_natural: "path" %}
 
           {% assign subsections = section_pages
-            | where_exp: "p", "(p.path | remove_first: section_prefix | split: '/' | size) > 1"
+            | where_exp: "p", "p.path | remove_first: section_prefix | split: '/' | size > 1"
             | group_by_exp: "p", "p.path | remove_first: section_prefix | split: '/' | first"
             | sort: "name" %}
 
