@@ -16,6 +16,20 @@ $$
 \left(\frac{p}{p-1}\right)^p = \left(\frac{2}{1}\right)^2 = 4.
 $$
 
+> #### **Durrett Probablity 4e - Theorem 5.4.5. $L^p$ convergence Theorem**
+> 
+> If X_n is a martingale with $\sup\vert X_n\vert^p <\infty$ where $p>1$, then $x_n\to X$ a.s and in $L^p$.
+
+> #### Durrett Probability 4e - Theorem 5.4.2. Doob's Inequality.
+> Let X_n be a submartingale, 
+> $$
+    \bar{X}_n=\max_{0\le m\le n}X^+_m
+> $$
+> $\lambda>0$, and $A=\{\bar{X}_n\ge\lambda\}$. Then 
+> $$
+    \lambda P(A)\le EX_n1_A\le EX^+_n
+> $$
+
 **Remarks**
 
 - For a submartingale that is not necessarily nonnegative, use $(X_n^+)_{n\ge 0}$.

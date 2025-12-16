@@ -104,6 +104,18 @@ $$
 P(A)\in\{0,1\}.
 $$
 
+> #### **Durrett Probability 4e - Theorem 4.1.1. - Hewitt-Savage 0-1 law.**
+>
+> If $X_1, X_2,...$ are i.i.d. and $A\in\mathcal{E}$ then $P(A)\in\{0,1\}$.
+>
+>
+> where
+> - **finite permutation $\pi$** - a bijection $\pi : \mathbb{N}\to\mathbb{N}$ s.t. $\{i\in\mathbb{N} : \pi(i)\ne i\}$ is finite.
+> - **permutable event A** - $\pi^{-1}A = A$ where $\pi^{-1}A\equiv \{\omega : \pi omega \in A\}$
+> - **exchangeable $\sigma$-field $\mathcal{E}$** - Is a set of permutable events.
+
+**My own words:** HS 0–1: For i.i.d. sequences, any event invariant under all finite permutations has probability 0 or 1.
+
 ### Examples
 
 #### (1) Tail events  

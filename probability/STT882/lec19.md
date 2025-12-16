@@ -44,6 +44,10 @@ $$
 E(A_\infty) = \sup_n E(X_n^2).
 $$
 
+> #### **Durrett Probability 4e - Theorem 5.2.10 Doob's Decomposition.**
+>
+> Any submartingale $X_n$, $n\ge 0$, can be written in a unique way as $X_n=M_n+A_n$, where $M_n$ is a martingale and $A_n$ is a predictable increasing sequence with $A_0=0$. 
+
 ---
 
 ## Doob’s $L^2$ Inequality
@@ -57,6 +61,17 @@ $$
 
 This is Doob’s $L^2$ maximal inequality (special case of the general $L^p$ inequality for $p>1$).
 
+> **Durrett Probablity 4e - Theorem 5.4.3. $L^p$ Maximum Inequality**
+>
+> If $X_n$ is a submartingale then or $1<p<\infty$,
+> $$
+   \mathbb{E}(\bar{X}^p_n)\le (\frac{p}{1-p})^p \mathbb{E}(X^+_n)^p
+> $$
+> Consequently, if $Y_n$ is a martingale and $Y_n^*=\max_{0\le m\le n}\vert Y_n\vert^p$,
+> $$
+   \mathbb{E}(Y^*_n)\le (\frac{p}{1-p})^p \mathbb{E}[\vert Y_n\vert^p]
+> $$
+
 ---
 
 ## Convergence Theorem (No independence assumed)
@@ -68,6 +83,8 @@ $$
 where $D_k = X_k - X_{k-1}$.
 
 Then $X_n$ converges a.s. to a finite r.v. on the event $\{A_\infty < \infty\}$.
+
+
 
 ### Proof Sketch
 Define the stopping time
@@ -103,6 +120,13 @@ Then on $\{A_\infty = \infty\}$,
 $$
 Y_n \to 0 \quad\text{a.s.}
 $$
+
+> #### **Durrett Probability 4e - Theorem 2.5.5. Kronecker's Lemma.**
+> 
+> If $a_n\uparrow\infty$ and $\sum_{n=1}^\infty x_n/a_n$ converges then 
+> $$
+a^{-1}_n\sum_{m=1}^n x_m\to 0.
+> $$
 
 ### Sketch
 Expand using the martingale transform idea:

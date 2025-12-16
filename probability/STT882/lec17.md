@@ -50,6 +50,13 @@ E(X_0) \le E(X_T) \le E(X_M)
 \tag{1}
 $$
 
+> #### Durrett Probability 4e - Theorem 5.4.1.
+> If $X_n$ is a submartingale and $N$ is a stopping time with $P(N\le k)=1$ then
+> $$
+\mathbb{E} X_0 \le \mathbb{E} X_N \le \mathbb{E} X_k
+> $$
+
+
 ---
 
 ## **Proof Idea**

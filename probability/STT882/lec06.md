@@ -46,6 +46,10 @@ $$
 
 This deceptively simple identity is extremely powerful and used repeatedly in gambling, random walks, queueing theory, and renewal theory.
 
+> #### **Durrett Probability 4e - Theorem 5.1.5 Wald's Equation**
+>
+> Let $Χ_1, Χ_2, ...$ i.i.d. with $\mathbb{E}\vert X_i\vert<\infty$. If $N$ is a stopping time with $\mathbb{E}N<\infty$ then $\mathbb{E}S_N=\mathbb{E}X_1\mathbb{E}N$.
+
 ---
 
 # **3. Example: SSRW Hitting Times**
@@ -199,6 +203,9 @@ $$
 
 This appears in red ink on page **2** of the PDF :contentReference[oaicite:3]{index=3}.
 
+> #### **Durrett Probability 4e - Theorem 4.1.6 Wald's second Equation.**
+>
+> Let $X_1, X_2, ...$ be i.i.d. with $\mathbb{E}X_n=0$ and $\mathbb{E}X^2_n=\sigma^2<\infty$. If $T$ is a stopping time with $\mathbb{T}<\infty$ then $\mathbb{E}S^2_T=\sigma^2\mathbb{E}T$. 
 ---
 
 ## **Proof Sketch**
@@ -210,7 +217,9 @@ The proof (pages **2–3**) uses:
   S_{T\wedge(n+1)} - S_{T\wedge n} = X_{n+1}\,\mathbf 1_{\{T\ge n+1\}}
   $$
 - Independence and adaptedness  
-  $$X_{n+k}\perp \mathbf 1_{\{T\ge n+1\}}$$  
+  $$
+  X_{n+k}\perp \mathbf 1_{\{T\ge n+1\}}
+  $$  
   because $X_{n+k}$ is independent of $\mathcal F_{n+k-1}$.
 - No cross-terms survive (zero expectation).
 
