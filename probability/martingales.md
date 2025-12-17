@@ -77,7 +77,7 @@ Let $(X_n, \mathcal F_n)$ be a stochastic process.
 ### Definition
 $(X_n)$ is a **martingale** if:
 1. **Adapted:** $X_n$ is $\mathcal F_n$-measurable
-2. **Integrable:** $\mathbb E|X_n| < \infty$
+2. **Integrable:** $\mathbb E|X_n| < \infty,  \forall n=1,2,...$
 3. **Fair game:**  
 $$
 \mathbb E[X_{n+1} \mid \mathcal F_n] = X_n
