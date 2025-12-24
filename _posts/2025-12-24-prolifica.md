@@ -34,3 +34,5 @@ Not necessarily in that order. 🙂
 Then I realized it was only 3:00 p.m.
 
 That’s what I call productivity.
+
+post-post edit: Then by 5:30 I did another prelim problem and identified the core philosophy of my whisper fiction.
