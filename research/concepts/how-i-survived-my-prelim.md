@@ -1,136 +1,180 @@
 # How I Survived My Probability Prelim  
-*(working title, promotion contingent on outcome)*
+## An Applied Toolkit (with Field Notes)
 
-## Concept Page
-
-### Elevator pitch
-This is a short, memoir-esque essay about surviving a PhD probability prelim, written from the inside, not as a victory lap, but as a field guide. It is part narrative, part technical reflection, and part protest against the myth that prelim success is purely about raw intelligence or encyclopedic recall.
-
-If the exam goes very well, the title may be upgraded to:
-
-> **How I Not Only Survived My Probability Prelim**
-
-This contingency is intentional and part of the tone.
+*(working title, subject to outcome and revisionism)*
 
 ---
 
-## Core thesis
+## What this is
 
-Prelims do not test whether you can think freely or creatively.  
-They test whether you can **think inside a box under pressure**.
+This document combines two things that are usually kept separate:
 
-Research is about building boxes.  
-Prelims are about finding them quickly and not breaking the walls.
+1. A **Probability Prelim Survival Guide**  
+2. A **memoir-esque record of what actually worked under pressure**
 
-Most failure modes come not from lack of knowledge, but from:
-- misidentifying the box,
+Together, they form an **applied toolkit**.
+
+This is not a polished reference text.  
+This is not a motivational essay.  
+This is not a collection of clever tricks.
+
+It is a record of **what I tried, what failed, what worked**, and why those things worked *in the specific context of a probability prelim*.
+
+The tone is intentionally dry. Any humor is incidental.
+
+---
+
+## The organizing idea
+
+Most prelim resources focus on solving problems.
+
+This toolkit focuses on something upstream:
+
+> **How to figure out what kind of problem this is, quickly enough to solve it under exam constraints.**
+
+Prelims reward correctness, but they punish misorientation more than ignorance.
+
+---
+
+## The core claim
+
+Prelims are not tests of creativity or depth.  
+They are tests of **controlled reasoning inside a constrained box**.
+
+Research rewards building boxes.  
+Prelims reward finding the right one and not leaving it.
+
+Most failure modes come from:
 - entering the wrong box,
-- or refusing to enter one at all.
+- expanding the box unnecessarily,
+- or refusing to acknowledge that a box exists.
 
 ---
 
-## Intended audience
+## Why combine a Survival Guide and a memoir
 
-- PhD students preparing for probability or statistics prelims
-- Students who “know the material” but freeze on exams
-- People who think structurally, analogically, or too broadly
-- Anyone who has ever said: “I don’t know what they want”
+Separately:
+- a Survival Guide risks feeling mechanical,
+- a memoir risks feeling anecdotal.
 
-This is **not** a how-to for first exposure to probability theory.
+Combined:
+- tools are grounded in lived failure and adjustment,
+- reflection is anchored to concrete technique,
+- abstraction is justified by application.
 
----
-
-## Tone and style
-
-- First-person, reflective, occasionally dryly funny
-- Honest about confusion, frustration, and overthinking
-- Minimal motivational fluff
-- Technical where necessary, but never performative
-- Written for stressed readers with limited cognitive bandwidth
-
-Think:
-- calm,
-- precise,
-- slightly amused by the absurdity of the process.
+The result is not inspiration, it is **transfer**.
 
 ---
 
-## Structural outline (tentative)
+## How each entry is structured
 
-### 1. The problem with being good at math
-- Thinking outside the box is rewarded everywhere except prelims
-- How pattern-seeking and abstraction become liabilities
-- The mismatch between training and testing
+Each problem or topic follows the same applied pattern.
 
-### 2. The exam is not adversarial (but it feels like it)
-- What prelim writers are actually doing
-- Why problems are scaffolded into parts (a), (b), (c)
-- How to read the problem as a guided corridor, not a maze
+### 1. Orientation (30-second pass)
+A deliberately incomplete, pre-proof phase.
 
-### 3. The box heuristic
-- “What do I know?”
-- “What do I need to show?”
-- How this defines the box
-- Why writing this down matters more than you think
+- What kind of object is this?
+- What tools are likely relevant?
+- What does the grader probably expect?
+- What is the *offish target*?
 
-### 4. The 30-second orientation pass
-- Offish targeting as a survival skill
-- How to aim before you prove
-- Targets as expressions vs targets as theorems
-- Why this is not hand-waving
-
-### 5. Common failure modes (and how I fell into them)
-- Over-rigor
-- Premature generalization
-- Using the right theorem for the wrong reason
-- Forgetting what the question actually asked
-
-### 6. Brownian motion as a psychological test
-- Why Brownian motion problems feel harder than they are
-- Covariance kernels, Fubini, and ritual incantations
-- Learning to stop once the target appears
-
-### 7. Writing for graders, not for posterity
-- What “enough rigor” actually means
-- When to quote a theorem instead of reproving it
-- How to leave breadcrumbs for partial credit
-
-### 8. Aftermath
-- What changed about how I think
-- What did not
-- Why I still like probability despite everything
+This section is about **aiming**, not justifying.  
+It is explicitly non-rigorous by design.
 
 ---
 
-## Relationship to other work
+### 2. The box
+A precise statement of:
+- what is given,
+- what must be shown,
+- what tools are allowed or relevant.
 
-This essay is a companion to:
-- my Probability Prelim Survival Guide,
-- annotated solutions to past prelims,
-- and structured “orientation + solution” writeups.
-
-It focuses on **process**, not solutions.
-
----
-
-## What this is not
-
-- Not a complaint letter
-- Not an exam prep manual
-- Not a list of tricks
-- Not a motivational manifesto
-
-It is a record of learning how to **aim**, under constraints, without losing oneself.
+If the solution fails later, it is usually because the box was misidentified here.
 
 ---
 
-## Closing note (to the reader)
+### 3. Tools inventory
+A short, constrained list of:
+- theorems,
+- identities,
+- structural facts,
 
-If you are reading this before your prelim:
-- You are not broken.
-- You are probably not underprepared.
-- You are likely missing orientation, not content.
+that are actually needed.
 
-I wish someone had written this for me.
+This is not a brain dump.  
+It is a commitment to *not* using everything else.
 
-So I did.
+---
+
+### 4. Execution
+A clean, exam-facing solution.
+
+- Minimal prose
+- No unnecessary generality
+- Theorem names instead of re-proofs when allowed
+- Stops as soon as the target is reached
+
+This section is written for graders, not posterity.
+
+---
+
+### 5. Postmortem (field notes)
+What happened in practice.
+
+- Where I overthought
+- Where I almost left the box
+- Where a small recognition saved time
+- What I would change next time
+
+This is the applied part most resources omit.
+
+---
+
+## Recurring tools and patterns
+
+These appear repeatedly, by design:
+
+- “What do I know / what do I show”
+- Offish targets (expressions vs theorems)
+- The 30-second orientation pass
+- Recognizing when Fubini is the point vs when it is a formality
+- Knowing when measurability is being tested
+- Stopping early without guilt
+
+The repetition is intentional. Pattern recognition is the skill.
+
+---
+
+## Tone contract with the reader
+
+- I will not pretend this was easy.
+- I will not retroactively hide confusion.
+- I will not exaggerate cleverness.
+- I will not claim universality.
+
+What worked for me worked **under these constraints**, on **these exams**, with **this background**.
+
+Your mileage may vary. The map is still useful.
+
+---
+
+## Who this is for
+
+- People who “know probability” but freeze on exams
+- People whose instinct is to generalize too early
+- People who over-rigor before orienting
+- People who suspect the problem is not content but control
+
+If you want a textbook, this is not it.
+
+If you want to see how someone learned to aim under pressure, it might help.
+
+---
+
+## Closing note
+
+I did not become a different thinker to pass my prelim.
+
+I learned when not to be one.
+
+That distinction turned out to matter.
