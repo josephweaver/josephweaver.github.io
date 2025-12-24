@@ -1,8 +1,5 @@
-
-
-# Convergence
-
 ## Almost Sure Convergence (a.s.)
+
 $$
 X_n \xrightarrow[n\to\infty]{\text{a.s.}} X
 $$
