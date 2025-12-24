@@ -9,7 +9,7 @@ The goal is **recognition and triage**, not re-proving theorems from scratch.
 
 ## Convergence Hierarchy
 
-![Convergence Hierarchy](assets/images/Convergence%20Hierarchy.svg)
+![Convergence Hierarchy](../../assets/images/Convergence%20Hierarchy.svg)
 
 The standard strength relationships are:
 
