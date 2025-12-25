@@ -6,7 +6,7 @@
 
 ## Build / theme
 - `_config.yml` uses `remote_theme: pages-themes/cayman@v0.2.0` with `jekyll-remote-theme` plugin; Markdown via kramdown + MathJax (math enabled by default for `probability/`).
-- `_layouts/default.html` defines the page chrome: sidebar navigation (Blog, About, Probability, Research, Fiction) with collapsible sections/subsections, resizable width (localStorage `sttSidebarWidth`), and MathJax v3 config. Loads `assets/css/custom.css` plus inline styles per page.
+- `_layouts/default.html` defines the page chrome: sidebar navigation (Blog, About, Probability, Research, Fiction) with collapsible sections/subsections, resizable width (localStorage `sttSidebarWidth`), MathJax v3 config, sibling prev/next links (per folder), edit-on-GitHub links top/bottom of articles, and optional Giscus comments when `site.giscus` is configured. Loads `assets/css/custom.css` plus inline styles per page.
 - `assets/css/custom.css` supplies typography/colors/layout shell; page-level styles live inline in `index.html` and `about.html`.
 - Assets: `assets/documents/` (resume + biosketch PDFs), `assets/images/1618685561588.jfif` (portrait), and other media folders.
 
@@ -26,3 +26,5 @@
 - Add actual blog posts or remove placeholder cards on `index.html` to avoid implying missing links; currently only one post exists.
 - Expand `README.md` with project purpose and GitHub Pages build notes; consider noting resume/biosketch locations.
 - Fill `research/concepts/ai-homework/discovery-ready.md` or remove if unnecessary.
+- Configure `site.giscus` in `_config.yml` (repo id/category id, etc.) and enable Discussions to turn on comments; set `repository_url` locally if GitHub metadata plugin is absent so edit links resolve in local builds.
+- New `.github/PULL_REQUEST_TEMPLATE.md` added; consider `CODEOWNERS` if you want automatic review requests.
