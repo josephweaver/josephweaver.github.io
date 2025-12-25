@@ -333,6 +333,30 @@
             {% endif %}
           </nav>
         {% endif %}
+
+        {% if site.giscus and site.giscus.repo and site.giscus.repo_id and site.giscus.category and site.giscus.category_id %}
+          <section class="comments" aria-label="Comments">
+            <h2 class="comments__title">Comments</h2>
+            <div id="giscus_thread"></div>
+            <script src="https://giscus.app/client.js"
+                    data-repo="{{ site.giscus.repo }}"
+                    data-repo-id="{{ site.giscus.repo_id }}"
+                    data-category="{{ site.giscus.category }}"
+                    data-category-id="{{ site.giscus.category_id }}"
+                    data-mapping="{{ site.giscus.mapping | default: 'pathname' }}"
+                    data-strict="{{ site.giscus.strict | default: 0 }}"
+                    data-reactions-enabled="{{ site.giscus.reactions_enabled | default: 1 }}"
+                    data-emit-metadata="{{ site.giscus.emit_metadata | default: 0 }}"
+                    data-input-position="{{ site.giscus.input_position | default: 'bottom' }}"
+                    data-theme="{{ site.giscus.theme | default: 'light' }}"
+                    data-lang="{{ site.giscus.lang | default: 'en' }}"
+                    data-loading="{{ site.giscus.loading | default: 'lazy' }}"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+            <noscript>Please enable JavaScript to view comments powered by Giscus.</noscript>
+          </section>
+        {% endif %}
       </div>
     </main>
   </div>
@@ -551,6 +575,17 @@
     }
     .sibling-nav__placeholder {
       flex: 1;
+    }
+    .comments {
+      margin-top: 1.5rem;
+      padding: 1rem 1.25rem;
+      border: 1px solid #dfe2e5;
+      border-radius: 10px;
+      background: #f9fafc;
+    }
+    .comments__title {
+      margin: 0 0 0.75rem;
+      font-size: 1.1rem;
     }
     @media (max-width: 819px) {
       .layout {

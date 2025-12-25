@@ -21,3 +21,16 @@ defaults:
       path: "fiction"
     values:
       layout: default
+
+giscus:
+  repo: josephweaver/josephweaver.github.io
+  repo_id: R_kgDOJRcmlg
+  category: Page Discussions
+  category_id: DIC_kwDOJRcmls4C0O8F
+  mapping: pathname
+  reactions_enabled: 1
+  emit_metadata: 0
+  input_position: bottom
+  theme: light
+  lang: en
+  loading: lazy
