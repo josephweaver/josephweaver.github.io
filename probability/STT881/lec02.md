@@ -105,7 +105,8 @@ $$
 Suppose $A_i \in \mathcal{A}$ are pairwise disjoint and  
 $\bigcup_{i=1}^\infty A_i \in \mathcal{A}$.
 
-Then:
+Then
+
 $$
 \mu( \bigcup_{i=1}^\infty A_i )
  = \mu(\bigcup_{i=1}^n A_i )
@@ -117,13 +118,14 @@ $$
 B_n = \bigcup_{i=n+1}^\infty A_i.
 $$
 
-Then:
+Then
 
 - $B_{n+1} \subseteq B_n$ (decreasing sequence).  
 - $\bigcap_{n=1}^\infty B_n = \varnothing$.  
 - $\mu(B_n) \downarrow 0$.  
 
-Hence:
+Hence
+
 $$
 \sum_{i=1}^\infty \mu(A_i)
  = \lim_{n\to\infty} \sum_{i=1}^n \mu(A_i)
@@ -134,7 +136,8 @@ $$
 
 # 7. Example of Decreasing Sets with Vanishing Measure
 
-Let:
+Let
+
 $$
 D_n = \left( 0, \frac{1}{n} \right], 
 $$
