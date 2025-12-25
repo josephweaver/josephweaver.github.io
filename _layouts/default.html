@@ -257,8 +257,82 @@
     <div class="sidebar-resizer" id="sidebarResizer" role="separator" aria-orientation="vertical" aria-label="Resize navigation"></div>
 
     <main class="page-content" aria-label="Content">
+      {% assign current_dir = page.dir | default: "/" %}
+      {% assign page_siblings = site.pages | where_exp: "p", "p.dir == current_dir" %}
+      {% assign post_siblings = site.posts | where_exp: "p", "p.dir == current_dir" %}
+      {% assign sibling_candidates = page_siblings | concat: post_siblings %}
+      {% assign sibling_pool = "" | split: "" %}
+      {% for entry in sibling_candidates %}
+        {% assign fname = entry.name | downcase %}
+        {% if fname == "index.md" or fname == "index.html" or fname == "readme.md" %}{% continue %}{% endif %}
+        {% assign sibling_pool = sibling_pool | push: entry %}
+      {% endfor %}
+      {% assign siblings = sibling_pool | sort_natural: "path" %}
+
+      {% assign current_index = nil %}
+      {% for entry in siblings %}
+        {% if entry.path == page.path %}
+          {% assign current_index = forloop.index0 %}
+        {% endif %}
+      {% endfor %}
+
+      {% assign prev_page = nil %}
+      {% assign next_page = nil %}
+      {% if current_index != nil %}
+        {% if current_index > 0 %}
+          {% assign prev_page = siblings[current_index | minus: 1] %}
+        {% endif %}
+        {% assign nxt_index = current_index | plus: 1 %}
+        {% if nxt_index < siblings.size %}
+          {% assign next_page = siblings[nxt_index] %}
+        {% endif %}
+      {% endif %}
+
+      {% if prev_page %}
+        {% assign prev_label = prev_page.title | default: prev_page.data.title | default: prev_page.name %}
+        {% assign prev_label = prev_label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " | replace: "-", " " %}
+      {% endif %}
+      {% if next_page %}
+        {% assign next_label = next_page.title | default: next_page.data.title | default: next_page.name %}
+        {% assign next_label = next_label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " | replace: "-", " " %}
+      {% endif %}
+
       <div class="wrapper">
+        {% if prev_page or next_page %}
+          <nav class="sibling-nav" aria-label="Article navigation">
+            {% if prev_page %}
+              <a class="sibling-nav__link is-prev"
+                 href="{{ prev_page.url | default: prev_page.path | relative_url }}">&larr; Previous: {{ prev_label }}</a>
+            {% else %}
+              <span class="sibling-nav__placeholder"></span>
+            {% endif %}
+            {% if next_page %}
+              <a class="sibling-nav__link is-next"
+                 href="{{ next_page.url | default: next_page.path | relative_url }}">Next: {{ next_label }} &rarr;</a>
+            {% else %}
+              <span class="sibling-nav__placeholder"></span>
+            {% endif %}
+          </nav>
+        {% endif %}
+
         {{ content }}
+
+        {% if prev_page or next_page %}
+          <nav class="sibling-nav is-bottom" aria-label="Article navigation">
+            {% if prev_page %}
+              <a class="sibling-nav__link is-prev"
+                 href="{{ prev_page.url | default: prev_page.path | relative_url }}">&larr; Previous: {{ prev_label }}</a>
+            {% else %}
+              <span class="sibling-nav__placeholder"></span>
+            {% endif %}
+            {% if next_page %}
+              <a class="sibling-nav__link is-next"
+                 href="{{ next_page.url | default: next_page.path | relative_url }}">Next: {{ next_label }} &rarr;</a>
+            {% else %}
+              <span class="sibling-nav__placeholder"></span>
+            {% endif %}
+          </nav>
+        {% endif %}
       </div>
     </main>
   </div>
@@ -449,6 +523,34 @@
     }
     .page-content {
       width: 100%;
+    }
+    .sibling-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      background: #f5f9f7;
+      border: 1px solid #dfe2e5;
+      border-radius: 10px;
+      padding: 0.75rem 1rem;
+      margin: 0 0 1rem;
+      flex-wrap: wrap;
+    }
+    .sibling-nav.is-bottom {
+      margin-top: 1.25rem;
+    }
+    .sibling-nav__link {
+      color: #0c6d3f;
+      text-decoration: none;
+      font-weight: 700;
+      flex: 1;
+    }
+    .sibling-nav__link:hover,
+    .sibling-nav__link:focus-visible {
+      text-decoration: underline;
+    }
+    .sibling-nav__placeholder {
+      flex: 1;
     }
     @media (max-width: 819px) {
       .layout {
