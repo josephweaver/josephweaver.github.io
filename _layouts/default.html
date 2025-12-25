@@ -297,7 +297,18 @@
         {% assign next_label = next_label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " | replace: "-", " " %}
       {% endif %}
 
+      {% assign edit_url = nil %}
+      {% if site.github and site.github.repository_url and page.path %}
+        {% assign edit_url = site.github.repository_url | append: '/edit/main/' | append: page.path %}
+      {% endif %}
+
       <div class="wrapper">
+        {% if edit_url %}
+          <div class="edit-link is-top">
+            <a href="{{ edit_url }}">Edit this page on GitHub</a>
+          </div>
+        {% endif %}
+
         {% if prev_page or next_page %}
           <nav class="sibling-nav" aria-label="Article navigation">
             {% if prev_page %}
@@ -316,6 +327,12 @@
         {% endif %}
 
         {{ content }}
+
+        {% if edit_url %}
+          <div class="edit-link is-bottom">
+            <a href="{{ edit_url }}">Edit this page on GitHub</a>
+          </div>
+        {% endif %}
 
         {% if prev_page or next_page %}
           <nav class="sibling-nav is-bottom" aria-label="Article navigation">
@@ -575,6 +592,26 @@
     }
     .sibling-nav__placeholder {
       flex: 1;
+    }
+    .edit-link {
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 0 1rem;
+      font-size: 0.95rem;
+    }
+    .edit-link.is-bottom {
+      margin-top: 1rem;
+      margin-bottom: 1.25rem;
+    }
+    .edit-link a {
+      color: #5c6f82;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .edit-link a:hover,
+    .edit-link a:focus-visible {
+      text-decoration: underline;
+      color: #0c6d3f;
     }
     .comments {
       margin-top: 1.5rem;
