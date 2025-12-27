@@ -48,7 +48,7 @@ $$
 Then:
 
 $$
-\frac{Y_n - \mathbb{E}[Y_n]}{b_n} \xrightarrow{p} 0.
+\frac{Y_n - \mathbb{E}[Y_n]}{b_n} \xrightarrow{L^2+p} 0.
 $$
 
 ### Proof idea (as written in your notes)

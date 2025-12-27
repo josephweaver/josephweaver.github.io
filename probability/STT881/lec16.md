@@ -2,9 +2,9 @@
 
 This lecture has two main components:
 
-Tail bounds for random variables (Markov, Chebyshev, Chernoff/Exponential tail for the Gaussian).
+- Tail bounds for random variables (Markov, Chebyshev, Chernoff/Exponential tail for the Gaussian).
+- Independence of σ-algebras and random variables via the π–λ theorem.
 
-Independence of σ-algebras and random variables via the π–λ theorem.
 ---
 
 # 1. Gaussian Tail Bounds
