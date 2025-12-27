@@ -4,19 +4,10 @@
 
 Lecture 10 covers four major topics:
 
-An application of MCT to infinite series of non-negative measurable functions,
-
-A tricky Fatou-based argument showing 
-𝐿
-𝑝
-L
-p
- convergence from pointwise convergence + norm convergence,
-
-The change-of-variable formula for pushforward measures,
-
-Uniform integrability, its definition, and its key convergence theorem
-
+- An application of MCT to infinite series of non-negative measurable functions
+- A tricky Fatou-based argument showing $𝐿^𝑝$ convergence from pointwise convergence + norm convergence,
+- The change-of-variable formula for pushforward measures,
+- Uniform integrability, its definition, and its key convergence theorem
 
 ---
 
@@ -109,13 +100,14 @@ $$
 $$
 
 Integrate and use Fatou:
+
 $$
-2^{p}\int \vert f\vert ^p
+2^{p}\int \vert f\vert^p
 \le
 \liminf_n 
 \left[
-2^{p-1} \big( \int\vert f\vert ^p + \int\vert f_n\vert ^p \big)
-- \int \vert f - f_n\vert ^p
+2^{p-1} \big( \int\vert f\vert^p + \int\vert f_n\vert^p \big)
+- \int \vert f - f_n\vert^p
 \right].
 $$
 
@@ -273,6 +265,6 @@ Thus:
 
 | Tool | Condition | Guarantees |
 |------|-----------|------------|
-| **DCT** | $|X_n|\le g$ and $X_n\to X$ a.e., $g\in L^1$ | $\mathbb{E}X_n\to\mathbb{E}X$ |
+| **DCT** | $\vert X_n\vert\le g$ and $X_n\to X$ a.e., $g\in L^1$ | $\mathbb{E}X_n\to\mathbb{E}X$ |
 | **UI** | tail control only | $\mathbb{E}X_n\to\mathbb{E}X$ |
 
