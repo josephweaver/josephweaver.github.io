@@ -1,11 +1,20 @@
-
-
-# Weak Laws of Large numbers
+# Weak Laws of Large Numbers
 
 The Weak Laws of Large Numbers are often remembered through a single canonical statement, that the average of i.i.d. random variables with finite mean converges in probability to that mean. While correct, this formulation is incomplete and can be actively misleading in exam settings. The weak law is **not** fundamentally about independence or identical distributions. Rather, it is about forcing normalized fluctuations to vanish, typically by **collapsing variance** or **controlling rare large deviations**. Below, organizes the weak laws by their underlying mechanisms and assumptions, starting with the most commonly encountered prelim tools and working toward more specialized results. At the end of this article there are summary information and possible review sheet entries you may want.
 
 ## Table of Contents
-{:toc}
+
+- [What is a Weak Law?](#what-do-we-mean-by-a-weak-law-of-large-numbers)
+- [Canonical i.i.d. WLLN](#the-canonical-weak-law-classical-iid-formulation)
+- [Variance Engine](#the-variance-engine-behind-weak-laws-chebyshevkhintchine)
+- [L² Weak Law](#the-l2-weak-law-a-strengthened-variance-based-result)
+- [Truncation & Triangular Arrays](#truncation-based-weak-laws-triangular-arrays)
+- [i.i.d. Heavy-Tail WLLNs](#iid-weak-laws-under-heavy-tails-truncation-as-the-main-idea)
+- [Decision Checklist](#which-weak-law-should-i-try-exam-decision-checklist)
+- [Comparison Table](#comparison-of-weak-laws-of-large-numbers)
+- [Cheat Sheet](#prelim-cheat-sheet-what-to-write-down-for-weak-laws)
+- [Ultra-Summary](#ultra-summary-weak-law-formulas-one-glance-reference)
+
 
 ## What do we mean by a Weak Law of Large Numbers?
 
@@ -37,7 +46,7 @@ The most familiar version of the Weak Law of Large Numbers is the following.
 >
 > Let $X_1, X_2, \dots$ be i.i.d. random variables with
 > $$
-> \mathbb{E}|X_1| < \infty.
+> \mathbb{E}\vert X_1\vert  < \infty.
 > $$
 > Let $S_n = X_1 + \cdots + X_n$ and $\mu = \mathbb{E}X_1$. Then
 > $$
@@ -53,7 +62,7 @@ However, despite its prominence, this result conceals the true structure of weak
 
 > **Durrett, Theorem 2.2.9**
 >
-> Let $X_1, X_2, \dots$ be i.i.d. with $\mathbb{E}|X_1| < \infty$.
+> Let $X_1, X_2, \dots$ be i.i.d. with $\mathbb{E}\vert X_1\vert  < \infty$.
 > Let
 > $$
 > S_n = X_1 + \cdots + X_n, \quad \mu = \mathbb{E}X_1.
@@ -194,15 +203,17 @@ The key idea is simple: write each summand as a sum of a bounded part and a rare
 ### The truncation strategy
 
 Given random variables $X_{n,k}$, choose a truncation level $b_n \to \infty$ and define
+
 $$
-\hat X_{n,k} = X_{n,k} \mathbf{1}(|X_{n,k}| \le b_n).
+\hat X_{n,k} = X_{n,k} \mathbf{1}(\vert X_{n,k}\vert  \le b_n).
 $$
 
 Then decompose the sum
+
 $$
 S_n = \sum_{k=1}^n X_{n,k}
 = \sum_{k=1}^n \hat X_{n,k}
-+ \sum_{k=1}^n X_{n,k}\mathbf{1}(|X_{n,k}| > b_n).
++ \sum_{k=1}^n X_{n,k}\mathbf{1}(\vert X_{n,k}\vert  > b_n).
 $$
 
 A truncation-based weak law proceeds by verifying two facts:
@@ -222,11 +233,11 @@ This strategy is formalized by the triangular array weak law.
 >
 > For each $n$, let $X_{n,k}$, $1 \le k \le n$, be independent. Let $b_n > 0$ with $b_n \to \infty$, and define
 > $$
-> \hat X_{n,k} = X_{n,k}\mathbf{1}(|X_{n,k}| \le b_n).
+> \hat X_{n,k} = X_{n,k}\mathbf{1}(\vert X_{n,k}\vert  \le b_n).
 > $$
 > Suppose that, as $n \to \infty$,
 > $$
-> \text{(i)} \quad \sum_{k=1}^n P(|X_{n,k}| > b_n) \to 0,
+> \text{(i)} \quad \sum_{k=1}^n P(\vert X_{n,k}\vert  > b_n) \to 0,
 > $$
 > and
 > $$
@@ -272,11 +283,11 @@ The weakest i.i.d. weak law in Durrett is formulated directly in terms of tail b
 >
 > Let $X_1, X_2, \dots$ be i.i.d. random variables such that
 > $$
-> x \, P(|X_1| > x) \longrightarrow 0 \quad \text{as } x \to \infty.
+> x \, P(\vert X_1\vert  > x) \longrightarrow 0 \quad \text{as } x \to \infty.
 > $$
 > Let $S_n = X_1 + \cdots + X_n$, and define
 > $$
-> \mu_n = \mathbb{E}\!\left[X_1 \mathbf{1}(|X_1| \le n)\right].
+> \mu_n = \mathbb{E}\!\left[X_1 \mathbf{1}(\vert X_1\vert  \le n)\right].
 > $$
 > Then
 > $$
@@ -287,7 +298,7 @@ The weakest i.i.d. weak law in Durrett is formulated directly in terms of tail b
 
 #### Interpretation
 
-- The condition $x P(|X_1| > x) \to 0$ ensures that extreme values do not dominate the average.
+- The condition $x P(\vert X_1\vert  > x) \to 0$ ensures that extreme values do not dominate the average.
 - No moment assumptions are required.
 - The centering constant $\mu_n$ reflects the fact that $\mathbb{E}X_1$ may not exist.
 
@@ -306,7 +317,7 @@ When the random variables have a finite first moment, the truncation disappears 
 >
 > Let $X_1, X_2, \dots$ be i.i.d. random variables with
 > $$
-> \mathbb{E}|X_1| < \infty.
+> \mathbb{E}\vert X_1\vert  < \infty.
 > $$
 > Let $S_n = X_1 + \cdots + X_n$ and $\mu = \mathbb{E}X_1$. Then
 > $$
@@ -317,9 +328,9 @@ When the random variables have a finite first moment, the truncation disappears 
 
 #### Why this follows immediately
 
-If $\mathbb{E}|X_1| < \infty$, then
+If $\mathbb{E}\vert X_1\vert  < \infty$, then
 $$
-\mu_n = \mathbb{E}\!\left[X_1 \mathbf{1}(|X_1| \le n)\right] \longrightarrow \mathbb{E}X_1 = \mu
+\mu_n = \mathbb{E}\!\left[X_1 \mathbf{1}(\vert X_1\vert  \le n)\right] \longrightarrow \mathbb{E}X_1 = \mu
 $$
 by dominated convergence. Combining this with the previous result yields the classical weak law.
 
@@ -331,7 +342,7 @@ by dominated convergence. Combining this with the previous result yields the cla
 - Truncation is the underlying mechanism, even when it is invisible.
 - If variance is finite, use variance-based weak laws.
 - If variance fails but tails are controlled, use truncation.
-- If only $\mathbb{E}|X| < \infty$ is given, truncation + convergence of the centering constant completes the argument.
+- If only $\mathbb{E}\vert X\vert  < \infty$ is given, truncation + convergence of the centering constant completes the argument.
 
 In short: **i.i.d. weak laws are special cases of truncation-based weak laws**, not a separate theory.
 
@@ -436,14 +447,14 @@ This section is **not** a summary of results. It is a checklist of formulas, ine
 
 - **Chebyshev**
 $$
-P(|X - \mathbb{E}X| > \varepsilon)
+P(\vert X - \mathbb{E}X\vert  > \varepsilon)
 \le \frac{\operatorname{Var}(X)}{\varepsilon^2}
 $$
 
 - **Union bound (for truncation)**
 $$
-P\!\left(\max_{1\le k\le n} |X_{n,k}| > b_n\right)
-\le \sum_{k=1}^n P(|X_{n,k}| > b_n)
+P\!\left(\max_{1\le k\le n} \vert X_{n,k}\vert  > b_n\right)
+\le \sum_{k=1}^n P(\vert X_{n,k}\vert  > b_n)
 $$
 
 These two inequalities prove most WLLNs.
@@ -484,13 +495,13 @@ $$
 
 - **Truncation decomposition**
 $$
-X = X\mathbf{1}(|X|\le b_n)
-+ X\mathbf{1}(|X|>b_n)
+X = X\mathbf{1}(\vert X\vert \le b_n)
++ X\mathbf{1}(\vert X\vert >b_n)
 $$
 
 - **Tail condition (i.i.d.)**
 $$
-xP(|X|>x)\to 0
+xP(\vert X\vert >x)\to 0
 \quad\Rightarrow\quad
 \text{WLLN via truncation}
 $$
@@ -502,8 +513,8 @@ $$
 - $L^2$ convergence $\Rightarrow$ convergence in probability
 - Dominated convergence gives
 $$
-\mathbb{E}[X\mathbf{1}(|X|\le n)] \to \mathbb{E}X
-\quad\text{if } \mathbb{E}|X|<\infty
+\mathbb{E}[X\mathbf{1}(\vert X\vert \le n)] \to \mathbb{E}X
+\quad\text{if } \mathbb{E}\vert X\vert <\infty
 $$
 - Independence is **sufficient**, not **necessary**, for variance additivity
 
@@ -523,7 +534,7 @@ If the problem gives a nonstandard normalization, it is often a hint to use a va
 
 - No variance assumption stated → consider truncation
 - Triangular array notation $X_{n,k}$ → Durrett 2.2.6
-- Only $\mathbb{E}|X|<\infty$ given → truncation-based i.i.d. WLLN
+- Only $\mathbb{E}\vert X\vert <\infty$ given → truncation-based i.i.d. WLLN
 - Uncorrelated + bounded variance → $L^2$ weak law
 
 ---
@@ -571,7 +582,7 @@ $$
 
 - **Triangular array**
 $$
-\sum_{k=1}^n P(|X_{n,k}|>b_n)\to0,\quad
+\sum_{k=1}^n P(\vert X_{n,k}\vert >b_n)\to0,\quad
 b_n^{-2}\sum_{k=1}^n \mathbb{E}[\hat X_{n,k}^2]\to0
 \;\Rightarrow\;
 \frac{S_n-a_n}{b_n}\xrightarrow{P}0
@@ -583,14 +594,14 @@ $$
 
 - **Tail-based**
 $$
-xP(|X|>x)\to0
+xP(\vert X\vert >x)\to0
 \;\Rightarrow\;
 \frac{S_n}{n}-\mu_n\xrightarrow{P}0
 $$
 
 - **Finite mean (classical WLLN)**
 $$
-\mathbb{E}|X|<\infty
+\mathbb{E}\vert X\vert <\infty
 \;\Rightarrow\;
 \frac{S_n}{n}\xrightarrow{P}\mathbb{E}X
 $$
