@@ -494,6 +494,7 @@ $$
 $$
 
 - **Truncation decomposition**
+
 $$
 X = X\mathbf{1}(\vert X\vert \le b_n)
 + X\mathbf{1}(\vert X\vert >b_n)
