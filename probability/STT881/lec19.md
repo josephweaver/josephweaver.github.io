@@ -2,34 +2,9 @@
 
 Truncation arguments
 
-Weak Law of Large Numbers with infinite mean
-
-The St. Petersburg paradox
-
-Choosing normalizing sequences 
-𝑏
-𝑛
-b
-n
-	​
-
- so that 
-𝑆
-𝑛
-/
-𝑏
-𝑛
-→
-1
-S
-n
-	​
-
-/b
-n
-	​
-
-→1 in probability for heavy-tailed distributions.
+- Weak Law of Large Numbers with infinite mean
+- The St. Petersburg paradox
+- Choosing normalizing sequences $b_n$ so that $\frac{S_b}{b_n}\to 1$ in probability for heavy-tailed distributions.
 
 ## 1. General Truncation Inequality
 
@@ -95,7 +70,7 @@ The problem becomes choosing **a normalizing sequence $b_n$** that makes both te
 ---
 
 ## 3. **The St. Petersburg Paradox**  
-Durrett Example 2.2.7. :contentReference[oaicite:2]{index=2}
+Durrett Example 2.2.7. 
 
 $$
 P(X = 2^k) = 2^{-k},\quad k\ge 1.

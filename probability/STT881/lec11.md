@@ -1,27 +1,13 @@
 # 11 — Uniform Integrability (UI)
 
 Lecture 11 continues the theme of Uniform Integrability (UI), showing:
-
-Why integrability of a single dominating function implies UI,
-
-A classical counterexample showing UI does not always come from DCT hypotheses,
-
-The main theorem relating UI + a.s. convergence to convergence of expectations,
-
-Characterizations of UI and how to check it,
-
-A very important sufficient condition: bounded in 
-𝐿
-𝑝
-L
-p
- for some 
-𝑝
->
-1
-p>1 implies UI,
-
-A two-part characterization: (i) bounded expectations, (ii) tight tails on sets of small probability.
+- Why integrability of a single dominating function implies UI,
+- A classical counterexample showing UI does not always come from DCT hypotheses,
+- The main theorem relating UI + a.s. convergence to convergence of expectations,
+- Characterizations of UI and how to check it,
+- A very important sufficient condition: bounded in $L^p$ for some 
+$𝑝>1$ implies UI,
+- A two-part characterization: (i) bounded expectations, (ii) tight tails on sets of small probability.
 
 We work on a probability space $(\Omega, \mathcal{F}, P)$ with $P(\Omega)=1$.
 

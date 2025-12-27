@@ -2,30 +2,13 @@
 
 Lecture 18 covers:
 
-A general Weak Law of Large Numbers (WLLN) assumption:
-
-𝑥
-𝑃
-(
-∣
-𝑋
-∣
->
-𝑥
-)
-→
-0
-xP(∣X∣>x)→0.
-
-Truncation method for proving WLLN.
-
-Khinchin-type corollary.
-
-Full WLLN proof for i.i.d. with finite mean.
-
-Weak Law for Triangular Arrays, including the two required conditions.
-
-St. Petersburg paradox as an example with infinite mean and unusual normalization.
+- A general Weak Law of Large Numbers (WLLN) assumption:
+  - $x P(\vert X\vert>x)\to 0$
+- Truncation method for proving WLLN.
+- Khinchin-type corollary.
+- Full WLLN proof for i.i.d. with finite mean.
+- Weak Law for Triangular Arrays, including the two required conditions.
+- St. Petersburg paradox as an example with infinite mean and unusual normalization.
 
 ---
 
@@ -38,9 +21,6 @@ $$
 x\, P(\vert X\vert  > x) \xrightarrow[x\to\infty]{} 0.
 \tag{1}
 $$
-
-This condition appears at the top of page 1  
-:contentReference[oaicite:2]{index=2}.
 
 Markov’s inequality gives only:
 $$
@@ -131,8 +111,6 @@ $$
 
 # 5. Step 2 — Chebyshev Bound for Truncated Variables
 
-On page 1:
-
 $$
 P\left(\vert \frac{S_n'}{n} - m_n\vert  > \varepsilon\right)
 \le
@@ -149,9 +127,6 @@ E[X_{n,1}^2]
 \int_0^\infty 2x\, P(\vert X_{n,1}\vert  \ge x)\, dx.
 \tag{4}
 $$
-
-(Equation (4) is explicitly written in the notes on page 1  
-:contentReference[oaicite:3]{index=3}.)
 
 Now:
 
@@ -242,7 +217,7 @@ This is the **Weak Law of Large Numbers** proved via truncation.
 
 ---
 
-# 8. Corollary — Khinchin’s Theorem (page 1)
+# 8. Corollary — Khinchin’s Theorem 
 
 If $E\vert X\vert <\infty$ then the WLLN follows:
 
@@ -254,7 +229,7 @@ This is because (1) holds automatically for integrable random variables.
 
 ---
 
-# 9. Weak Law for Triangular Arrays (page 2)
+# 9. Weak Law for Triangular Arrays 
 
 We have a set of independent RVs in each row:
 
@@ -299,9 +274,6 @@ $$
 \frac{S_n - a_n}{b_n} \xrightarrow{p} 0.
 }
 $$
-
-This is written verbatim on page 2  
-:contentReference[oaicite:4]{index=4}.
 
 ---
 

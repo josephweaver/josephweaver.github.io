@@ -222,3 +222,4 @@ $$
 \boxed{
 \text{Number of record values up to } n \sim \log n \quad (a.s.).
 }
+$$

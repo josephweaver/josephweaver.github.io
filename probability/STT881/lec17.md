@@ -2,15 +2,11 @@
 
 This lecture covers:
 
-Weak Law of Large Numbers (WLLN)
-
-Khinchin’s theorem (variance-over-scaling implies convergence in probability)
-
-Two classical examples:
-
-The Coupon Collector Problem (Example 2.2.3 in Durrett)
-
-Bernstein Polynomials (Example 2.2.1 in Durrett), which gives a probabilistic proof of the Weierstrass Approximation Theorem
+- Weak Law of Large Numbers (WLLN)
+- Khinchin’s theorem (variance-over-scaling implies convergence in probability)
+- Two classical examples:
+  - The Coupon Collector Problem (Example 2.2.3 in Durrett)
+  - Bernstein Polynomials (Example 2.2.1 in Durrett), which gives a probabilistic proof of the Weierstrass Approximation Theorem
 
 (Chapter 2.2, Durrett)
 
@@ -41,9 +37,6 @@ $$
 ---
 
 # 2. Variance Condition for Convergence in Probability (Khinchin-type Lemma)
-
-This is the orange text on page 1  
-:contentReference[oaicite:2]{index=2}.
 
 Let $\{Y_n\}$ be random variables and $\{b_n\}$ a nonzero scaling sequence.
 
@@ -80,9 +73,6 @@ This lemma is the core tool for both examples in the lecture.
 ---
 
 # 3. Coupon Collector Problem (Example 2.2.3 Durrett)
-
-This is the long calculation covering the center of page 1  
-:contentReference[oaicite:3]{index=3}.
 
 Let $X_1, X_2, \ldots$ be i.i.d. uniform on $\{1,\dots,n\}$.  
 Let $\tau_k^{(n)}$ be the number of draws needed to obtain **k distinct** coupons.
@@ -171,9 +161,6 @@ This is the WLLN for the coupon collector.
 ---
 
 # 4. Bernstein Polynomials (Example 2.2.1 Durrett)
-
-This is the bottom half of pages 1–2  
-:contentReference[oaicite:4]{index=4}.
 
 Goal: For any continuous $f:[0,1]\to\mathbb{R}$ and any $\varepsilon>0$,  
 find a polynomial $P_n$ such that

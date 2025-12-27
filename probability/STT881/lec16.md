@@ -121,7 +121,7 @@ $$
 
 # 3. Independence (Durrett Ch. 2.1)
 
-Let $\{\mathcal{F}_\alpha\}_{\alpha\in I}$ be sub-σ-algebras of $\mathcal{F}$.
+Let $ \{\mathcal{F}_\alpha\}_{\alpha\in I} \text{ be sub-σ-algebras of } \mathcal{F}$.
 
 ## 3.1 Definition
 
@@ -153,9 +153,6 @@ $$
 ---
 
 # 4. Independence via π–λ Theorem (Key Theorem)
-
-This occupies the bottom of page 1 and all of page 2  
-:contentReference[oaicite:2]{index=2}.
 
 > **Theorem.**  
 > If the collections $\{A_i\}$ are independent **on a π-system** and each $A_i$ generates a σ-algebra, then the σ-algebras they generate are independent.
