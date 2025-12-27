@@ -542,58 +542,58 @@ This section is a **compression layer**. It is not meant for learning, only for 
 ---
 
 ### Abstract WLLN template
-\[
+$$
 \frac{S_n - a_n}{b_n} \xrightarrow{P} 0
 \quad\text{if fluctuations vanish at scale } b_n.
-\]
+$$
 
 ---
 
 ### Variance-based weak laws
 
 - **Chebyshev–Khinchin**
-\[
+$$
 \frac{\operatorname{Var}(Y_n)}{b_n^2} \to 0
 \;\Rightarrow\;
 \frac{Y_n - \mathbb{E}Y_n}{b_n} \xrightarrow{P} 0
-\]
+$$
 
-- **Uncorrelated, bounded variance ( \(L^2\) WLLN )**
-\[
+- **Uncorrelated, bounded variance ( $L^2$ WLLN )**
+$$
 \mathbb{E}X_i=\mu,\ \operatorname{Var}(X_i)\le C
 \;\Rightarrow\;
 \frac{S_n}{n}\to\mu \text{ in } L^2 \text{ and } P
-\]
+$$
 
 ---
 
 ### Truncation-based weak laws
 
 - **Triangular array**
-\[
+$$
 \sum_{k=1}^n P(|X_{n,k}|>b_n)\to0,\quad
 b_n^{-2}\sum_{k=1}^n \mathbb{E}[\hat X_{n,k}^2]\to0
 \;\Rightarrow\;
 \frac{S_n-a_n}{b_n}\xrightarrow{P}0
-\]
+$$
 
 ---
 
 ### i.i.d. weak laws
 
 - **Tail-based**
-\[
+$$
 xP(|X|>x)\to0
 \;\Rightarrow\;
 \frac{S_n}{n}-\mu_n\xrightarrow{P}0
-\]
+$$
 
 - **Finite mean (classical WLLN)**
-\[
+$$
 \mathbb{E}|X|<\infty
 \;\Rightarrow\;
 \frac{S_n}{n}\xrightarrow{P}\mathbb{E}X
-\]
+$$
 
 ---
 
