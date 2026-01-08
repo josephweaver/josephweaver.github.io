@@ -346,7 +346,7 @@ $$
 ### Equivalent Conditions (TFAE)
 For integrable $X_n$:
 1. $(X_n)$ is UI
-2. $\sup_n \mathbb E|X_n| < \infty$ and tails vanish
+2. $\sup_n \mathbb E\|X_n\| < \infty$ and tails vanish
 3. $X_n \to X$ in $L^1$ implies UI
 
 ### Useful Facts
