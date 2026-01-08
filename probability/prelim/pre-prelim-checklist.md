@@ -293,7 +293,7 @@ A good partial solution typically contains **one** of the following:
 - Clear statement of why the construction is relevant
 
 Example:
-> “Define \( Y_n = X_n \mathbf{1}_{\{|X_n| \le a_n\}} \). Then \( (Y_n) \) is adapted to \( \mathcal{F}_n \) and satisfies …”
+> “Define \( Y_n = X_n \mathbf{1}_{\{\|X_n\| \le a_n\}} \). Then \( (Y_n) \) is adapted to \( \mathcal{F}_n \) and satisfies …”
 
 ---
 
@@ -312,7 +312,7 @@ Example:
 
 Example:
 > “Thus it remains to verify that  
-> \( \sum_n \mathbb{P}(|X_n| > a_n) < \infty \).”
+> \( \sum_n \mathbb{P}(\|X_n\| > a_n) < \infty \).”
 
 ---
 
