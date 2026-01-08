@@ -13,7 +13,7 @@ To use it in integrals or expectations, it must be converted into a **global bou
 ### Standard Conversion (Template)
 
 Assume:
-- $ \limsup_{|x|\to\infty} |g(x)|/h(x) \le C $,
+- $ \limsup_{\|x\|\to\infty} \|g(x)\|/h(x) \le C $,
 - $ g $ is continuous (or locally bounded),
 - $ h(x)\ge 0 $.
 
@@ -22,7 +22,7 @@ Then:
 1. **Tail control**  
    There exists $R>0$ and $C_1>0$ such that
    $$
-   |x|>R \;\Rightarrow\; |g(x)| \le C_1 h(x).
+   \|x\|>R \;\Rightarrow\; |g(x)| \le C_1 h(x).
    $$
 
 2. **Compact control**  
@@ -80,8 +80,8 @@ $$
 ---
 
 ### What This Buys You (Gaussian Context)
-If $Z\sim N(0,1)$ and $h(x)=|x|^k$:
-- $E|g(Z)|<\infty$,
+If $Z\sim N(0,1)$ and $h(x)=\|x\|^k$:
+- $E\|g(Z)\|<\infty$,
 - boundary terms $g(x)\phi(x)\to 0$,
 - integration by parts is justified.
 
