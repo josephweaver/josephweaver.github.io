@@ -37,4 +37,4 @@ $$
 - **Repeated Sin double-Angle**. $\quad\sin(x)=2^n\sin(\frac{x}{2^n})\prod_{k=1}^ncos(\frac{x}{2^k})$
 - **symmetries**. $\quad\cos(-u) = \cos u,\qquad \sin(-u) = -\sin u $
 - **Polar Form of a Complex Number** $ z = r e^{i\theta} $, where $r = \vert z\vert $, $\theta = \arg(z)$
-- **helpers$$. $e^{i\theta}=e^{i\theta/2}e^{i\theta/2}\quad 1=e^{i\theta-i\theta}$
+- **helpers**. $e^{i\theta}=e^{i\theta/2}e^{i\theta/2}\quad 1=e^{i\theta-i\theta}$
