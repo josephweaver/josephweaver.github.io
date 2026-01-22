@@ -136,6 +136,7 @@ Choose **2 traits** from any categories below.
 - **Evasive** — First hit per combat deals one fewer wound.
 - **Deceptive Feint** — On a miss, force target to suffer disadvantage.
 - **Light Foot** — Ignore minor encumbrance penalties when sneaking or climbing.
+- **Skulker** - Ignore penalities for low and no light whil
 
 ---
 
