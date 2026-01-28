@@ -1,0 +1,1 @@
+The most dangerous cosmic horror is one that convinces you your fear is knowledge.

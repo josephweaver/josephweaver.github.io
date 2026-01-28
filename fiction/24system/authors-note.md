@@ -1,0 +1,3 @@
+Author’s Note
+
+I write under the name Virgil-lost, a moniker that once described being lost in games, worlds, and systems I escaped into, and now describes something different. I believe games matter, not as distractions, but as maps for navigating uncertainty, risk, and consequence. The 24-System was built from years of loving rules, breaking rules, and noticing how pressure, choice, and responsibility shape experience more than randomness ever did. This system is not about winning, optimization, or mastery, it is about deciding when to push, when to yield, and what it costs to do either. The Guide does not oppose the players, and the world is not fair, but it is legible, and meaning emerges from the paths you choose to walk through it

@@ -43,50 +43,73 @@ If your result **meets or exceeds the DC**, you succeed as intended.
 You accomplish your goal cleanly, with no added cost.
 
 ---
+### Push Your Luck (Optional Reroll)
 
-#### Success with Complication
+If you fail a roll, you may choose to **push your luck**.
 
-If your result is **below the DC**, you may choose to **push the action**:
+When you do so:
 
-- Reroll **one die** of your choice
-- Take the new result, even if it is worse
-- Accept a **Minor Complication**
+- You must **accept a Minor Complication** immediately.
+- You **reroll the entire dice pool**.
+- You must keep the new result.
 
-This option allows progress under pressure at a cost.
+This represents forcing the action through stress, danger, or desperation.
 
 ---
 
-#### Critical Failure
+### Outcomes After Pushing
 
-A Critical Failure represents a complete loss of control due to overwhelming circumstances, not lack of skill.
+After the reroll, resolve the outcome normally, with the following escalation rules:
+
+- **Reroll Succeeds (meets or exceeds DC)**  
+  You succeed, but the **Minor Complication applies**.
+
+- **Reroll Succeeds with a Partial Critical**  
+  You gain the Partial Critical benefit, but the **Minor Complication still applies**.
+
+- **Reroll Fails**  
+  The failure **escalates into a Critical Failure**.  
+  You must take a **Major Complication** instead of a minor one.
+
+Pushing your luck always carries risk, success comes at a cost, failure compounds.
+
+---
+
+### Critical Failure
+
+A **Critical Failure** represents a loss of control caused by escalation, bad positioning, or pushing beyond safe limits.
 
 A Critical Failure occurs when:
 
-- You **push a failed roll** while under **high Pressure** (3 or more pressure), or
+- A pushed reroll still fails,
 - The Guide declares the situation has escalated beyond safe limits
 
 On a Critical Failure:
 
+- You fail the action
 - You must accept a **Major Complication**
-- The situation escalates immediately
-- The outcome meaningfully changes the scene
+- The situation escalates immediately and meaningfully
 
-Highly skilled characters are less likely to suffer Critical Failures, but even experts can be overwhelmed when they push their limits.
-
-
-#### Miss
-
-If you choose not to push, or still fail to meet the DC, you do not achieve your goal.
-
-- The situation may change
-- Time may pass
-- Opponents may react
-- New dangers may emerge
-
-Failure should move the scene forward, not stall it.
+Critical Failures are not about incompetence, they are about pressure, risk, and consequence.
 
 ---
 
+### Miss (No Push)
+
+If your result is below the DC and you **choose not to push**:
+
+- You fail to achieve your goal
+- No complication is automatically applied
+- The Guide advances the situation naturally
+
+Examples include:
+
+- Time passes
+- The environment changes
+- Opponents reposition or react
+- New information or threats emerge
+
+Failure should move the scene forward, not stall play.
 
 ### Minor Complications
 

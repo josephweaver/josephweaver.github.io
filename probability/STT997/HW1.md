@@ -1,16 +1,19 @@
 # STT 997 — Homework 1
 
+> Joseph M. Weaver  
+> 2026-01-23
+
 ## Question 1
 
-If  
-$$
+> If  
+> $$
 K(x,x') = \phi(\|x - x'\|)
-$$
-is a valid kernel for $x,x' \in \mathbb{R}^d$, show that
-$$
+> $$
+> is a valid kernel for $x,x' \in \mathbb{R}^d$, show that
+> $$
 K_1(x,x') = \theta_1 \, \phi(\theta_2 \|x - x'\|)
-$$
-is a valid kernel for any constants $\theta_1 > 0$, $\theta_2 > 0$.
+> $$
+> is a valid kernel for any constants $\theta_1 > 0$, $\theta_2 > 0$.
 
 ### Claim
 $K_1(x,x')$ is a valid kernel.
@@ -43,17 +46,19 @@ semidefiniteness. Therefore $\mathbf{K}_1 \succeq 0$, and $K_1$ is a valid kerne
 
 ## Question 2
 
-Show that if $K_i(x,x')$ is a kernel in $x \in \mathbb{R}^d$, $i=1,2$, then
-$$
+> Show that if $K_i(x,x')$ is a kernel in $x \in \mathbb{R}^d$, $i=1,2$, then
+> $$
 K(x,x') = K_1(x,x') + K_2(x,x')
-$$
-is a valid kernel.
+> $$
+> is a valid kernel.
 
 ### Claim
 
 $$
-K(x,x') = K_1(x,x') + K_2(x,x').
+\mathbf{K} = [K(x_i,x_j)]_{i,j=1}^n \succeq 0
 $$
+
+### Solution
 
 Let
 $$
@@ -74,15 +79,17 @@ Thus $K$ is a valid kernel.
 
 ## Question 3
 
-Show that
-$$
+> Show that
+> $$
 K(x,x') = \exp\!\left(-\|x-x'\|^{2\alpha}\right)
-$$
-is a valid kernel for $\alpha \in [0,1]$ but not for $\alpha > 1$.
+> $$
+> is a valid kernel for $\alpha \in [0,1]$ but not for $\alpha > 1$.
 
 ### Claim
 
 For $\alpha \in [0,1]$, $K(x,x')$ is valid.
+
+### Solution
 
 Let $h = x - x'$. Then
 $$
@@ -126,12 +133,14 @@ is a valid kernel for $0 < \alpha \le 1$, and not valid for $\alpha > 1$.
 
 ## Question 4
 
-Given any $n$ locations in $\mathbb{R}^d$,
-$$
+> Given any $n$ locations in $\mathbb{R}^d$,
+> $$
 s_1, s_2, \ldots, s_n,
-$$
-and any set of $n$ values $y_i$, $i=1,\ldots,n$, show that there are numerous
-Gaussian processes $Y(s)$ such that $Y(s_i) = y_i$.
+> $$
+> and any set of $n$ values $y_i$, $i=1,\ldots,n$, show that there are numerous
+> Gaussian processes $Y(s)$ such that $Y(s_i) = y_i$.
+
+### Solution
 
 Define a prior Gaussian process with arbitrary mean and covariance:
 $$
@@ -182,9 +191,21 @@ process is arbitrary, and hence there are infinitely many such GPs.
 
 ## Question 5
 
-Discuss how the statement in the previous question impacts model fitting.
+> Discuss how the statement in the previous question impacts model fitting.
 
 Since we have infinitely many Gaussian processes that interpolate the same data,
 exact fit criteria does not identify a unique model, but instead a family of
 models indexed by the parameters of our prior. Furthermore, the choice of prior
 kernel controls the uncertainty as we move farther from the observed points.
+
+
+
+## Question 6
+
+> What questions do you have for spatial statistics?  List at least two question.
+
+1) For large spatiotemporal geospatial datasets, how should space and time be encoded in a Gaussian process when the goal is to learn how covariates relate to the response, rather than simply to predict missing values? Are there important modeling choices that matter for inference but not for prediction, especially when trying to separate long-term patterns from short-term variability?
+
+2) When spatiotemporal datasets grow to billions of observations, do Gaussian process models remain viable, or does the framework fundamentally break down? What are the main bottlenecks at this scale, and what practical workarounds or related modeling approaches are used when full GPs are no longer feasible?
+
+3) In Gaussian process regression, how does multicollinearity among covariates affect model behavior and stability? Does it resemble the issues seen in linear models, where interpretation is difficult but predictions remain stable, or does it behave more like flexible models such as random forests or neural networks? Given the kernel-based formulation, can GPs implicitly perform something like dimensionality reduction, or is preprocessing still important?

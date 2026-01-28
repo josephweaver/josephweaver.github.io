@@ -20,11 +20,13 @@ Wounds apply disadvantage dice as defined in the Wounds rules. If an action uses
 
 ### Core Actions
 - **Sprint**  
-  Increase movement rate for the round. May incur fatigue or require checks in armor.
+  Spend 1 stamina and increase movement rate by +2 for the round. Teir 2 Athletics -> 1 free sprint.  
+  Teir 4 Athletics -> 2 free sprints. 
+  Teir 6 athltics -> 3 free sprints.
 - **Leap**  
-  Clear gaps, obstacles, or elevation changes.
+  Clear gaps, obstacles, or elevation changes.  DC relative to distance.
 - **Climb**  
-  Ascend vertical or steep surfaces.
+  Ascend vertical or steep surfaces.  
 - **Swim**  
   Move through water or other fluid hazards.
 
@@ -176,6 +178,15 @@ Wounds apply disadvantage dice as defined in the Wounds rules. If an action uses
 **Wound Interaction**
 - Head wounds strongly penalize Lore actions.
 - Core wounds affect sustained reasoning under stress.
+
+---
+
+### Science
+
+**Theme:** Medicine, Engineering, Physics
+
+### Core Actions
+
 
 ---
 
