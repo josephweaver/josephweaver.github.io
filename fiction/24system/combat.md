@@ -14,7 +14,7 @@ They represent instinctive, trained, or reflexive behavior.
 
 ---
 
-### Warding (H)
+### Default Guard (H)
 
 - Requires: `H`
 - Automatic while:
@@ -24,10 +24,10 @@ They represent instinctive, trained, or reflexive behavior.
 
 **Effect**
 - You threaten space and contest enemy advances
-- Warding is directional and limited to one approach by default
-- Warding ends immediately if you commit `H` elsewhere (attack, cast a spell, aim, etc.)
+- Guard is directional and limited to one approach by default
+- Guard ends immediately if you commit `H` elsewhere (attack, cast a spell, aim, etc.)
 
-Warding represents attention, posture, and readiness, not an attack.
+Default Guard represents attention, posture, and readiness, not an attack.
 
 ---
 
@@ -80,16 +80,14 @@ These actions are declared on your turn.
 
 ---
 
-### Attack
+### Wild Swing
 
 - Requires: `L`
 - Optional: `(R)` for two-handed weapons
 - Effect:
-  - Make a standard attack with your weapon
+  - Make a standard attack with your weapon increasing the DC by 2.
   - Deal wounds according to weapon type
   - Apply weapon properties on Partial Criticals
-
-Attacking commits your Head (H) and ends warding against other threats.
 
 ---
 
@@ -110,9 +108,27 @@ Focused attacks trade flexibility for precision.
 - Effect:
   - Make a fully committed attack
   - Typically grants advantage or bonus damage
-  - Leaves you unable to ward additional approaches
+  - Leaves you unable to maintain Guard against additional approaches
 
 This represents total commitment of body and intent.
+
+---
+
+### Targeting Hit Locations
+
+Attacks may target specific body regions.
+
+- **Default target:** Core
+- **Called targets:** Left Arm, Right Arm, Legs, or Head
+
+**DC Modifiers**
+- Targeting **arms or legs:** no DC change
+- Targeting **head:** `+2 DC`
+
+**On a Hit**
+- Apply wounds to the declared target location.
+
+This applies to Wild Swing, Focused Attack, and Full Martial Attack unless a specific ability says otherwise.
 
 ---
 
@@ -121,7 +137,7 @@ This represents total commitment of body and intent.
 - Requires: `F`
 - Effect:
   - Attempt to move one range state closer to a target
-  - May be contested by warding
+  - May be contested by Guard
 
 Advance is used to close distance or force engagement.
 
@@ -134,7 +150,7 @@ Advance is used to close distance or force engagement.
   - Reposition, back away, or change facing
   - Backing away is safe unless surrounded or restrained
 
-Movement does not break warding unless it commits the Head (H).
+Movement does not break Guard unless it commits the Head (H).
 
 ---
 
@@ -143,13 +159,13 @@ Movement does not break warding unless it commits the Head (H).
 - Requires: `LH`
 - Expends ammo
 - Effect:
-  - Does not deal damage
-  - Forces a warding opponent to choose between:
-    - Breaking warding
+  - Does **not** deal damage
+  - Forces an opponent using Guard to choose between:
+    - Breaking Guard
     - Taking the attack
   - On Partial Critical, both occur
 
-Covering fire disrupts attention and space control.
+Covering Fire disrupts attention and space control.
 
 ---
 
@@ -157,11 +173,11 @@ Covering fire disrupts attention and space control.
 
 If you are unsure what to do:
 
-- If enemies are approaching → **You are already warding**
-- If attacked → **Dodge, Parry, or Block**
-- If you want to hit something → **Attack**
-- If you want to hit hard → **Full Martial Attack**
-- If you want to close distance → **Advance**
+- If enemies are approaching -> **You are already in Default Guard**
+- If attacked -> **Dodge, Parry, or Block**
+- If you want to hit something -> **Attack**
+- If you want to hit hard -> **Full Martial Attack**
+- If you want to close distance -> **Advance**
 
 The system assumes competence.  
 You only need to think harder when you choose to.
@@ -171,10 +187,10 @@ You only need to think harder when you choose to.
 *Advanced combat options, custom RHLF assemblies, and special feats are covered in later sections.*
 
 
-## Range & Warding
+## Range & Guard
 
-Combat in the 24-System is resolved using **range states** and **warding**, not measurements or grids.  
-Range determines what actions are possible, while warding determines whether movement is contested.
+Combat in the 24-System is resolved using **range states** and **Guard**, not measurements or grids.  
+Range determines what actions are possible, while Guard determines whether movement is contested.
 
 ---
 
@@ -196,36 +212,57 @@ Range is categorical, not spatial. Characters do not track distance, only relati
 
 ---
 
-## Warding (Space Control)
+## Guard (Space Control)
 
-**Warding** represents actively threatening space and preventing reckless movement.
+**Guard** represents actively threatening space or waiting on a specific trigger.
 
-### Default State
-- A character who is **aware** and **not engaged** is automatically warding.
-- Warding requires no declaration and no action.
+### Default Guard (Unspoken)
+- A character who is **aware** and **not engaged** is automatically in Default Guard.
+- Default Guard requires no declaration and no action.
+
+### Triggered Action (Spoken)
+- On your turn, you may declare a specific trigger and response.
+- You must state:
+  - Trigger (what event causes the response)
+  - Response (what you do when triggered)
+  - Required anchors committed (`L`, `R`, `H`, `F`) and any ammo/stamina costs
+- Trigger language matters:
+  - The trigger resolves exactly as declared.
+  - If the declared condition happens, the response fires, even if the outcome is now undesirable.
+  - Broader wording creates broader risk.
+- Trigger examples:
+  - "If something enters, I shoot it." -> triggers on **any** entry.
+  - "If a man in a purple hat enters, I shoot him." -> triggers only on that specific condition.
+- If the trigger occurs before your next turn, resolve the response immediately.
+- If you abort after the trigger event occurs, roll `2d12` to resolve the shot.
+  - On a hit, choose one:
+    - Deal damage normally, or
+    - Deal no damage and take a **Minor Complication** instead.
+- If the trigger does not occur, the declaration expires at the start of your next turn.
+- Triggered Action does not change initiative order.
 
 ### Direction and Scope
-- Warding is **directional** and **attention-limited**.
-- By default, a character may ward **one approach**.
+- Guard is **directional** and **attention-limited**.
+- By default, a character may cover **one approach**.
 
 ### Engagement
 - A character is **engaged** when an enemy is in Melee or Grappling range with them.
-- Once engaged, a character **cannot ward additional advances** unless a special ability allows it.
+- Once engaged, a character **cannot maintain Guard against additional advances** unless a special ability allows it.
 
 ---
 
-## Weapon Interaction with Warding
+## Weapon Interaction with Guard
 
 - **Reach Weapons** (spears, polearms):
-  - May ward advances from **Separated → Melee**
-  - May ward advances from **Melee → Grappling**
-  - May ward **Move-By attempts**
+  - May contest advances from **Separated -> Melee**
+  - May contest advances from **Melee -> Grappling**
+  - May contest **Move-By attempts**
 - **Non-Reach Melee Weapons** (swords, axes, maces):
-  - May ward advances from **Melee → Grappling**
-  - May ward **Move-By attempts**
-  - Do **not** ward Separated → Melee
+  - May contest advances from **Melee -> Grappling**
+  - May contest **Move-By attempts**
+  - Do **not** contest Separated -> Melee
 - **Unarmed or Improvised Weapons**:
-  - Cannot ward advances
+  - Cannot contest advances through Guard
 
 ---
 
@@ -233,39 +270,39 @@ Range is categorical, not spatial. Characters do not track distance, only relati
 
 To move closer to an enemy, a character must attempt an **Advance**.
 
-- Advancing **toward or past** a warding opponent is a contested action.
+- Advancing **toward or past** an opponent with Guard is a contested action.
 - Advancing **away** from an opponent is safe unless surrounded or restrained.
 
 The advancing character typically rolls **Athletics**.  
-The difficulty is set by the defender’s warding strength, weapon, and situation.
+The difficulty is set by the defender's Guard strength, weapon, and situation.
 
 ---
 
-## Multiple Warders
+## Multiple Guards
 
-Multiple defenders may combine their warding against a single advancing target.
+Multiple defenders may combine their Guard against a single advancing target.
 
-- The first warder establishes the base difficulty.
-- Each additional warder increases the difficulty by **+2**.
+- The first guard sets the base difficulty.
+- Each additional guard increases the difficulty by **+2**.
 
 **Example:**  
-Four characters warding the same approach:  
-DC = Base + 2 × (4 − 1)
+Four characters covering the same approach:  
+DC = Base + 2 x (4 - 1)
 
-### Failure Against Multiple Warders
-- On a failed advance, **one warder of the defenders’ choice** resolves the consequence.
+### Failure Against Multiple Guards
+- On a failed advance, **one guard of the defenders' choice** resolves the consequence.
 - This prevents stacking damage while preserving group control.
 
-Once an advance is resolved, warding does **not** persist against subsequent advances in the same moment.
+Once an advance is resolved, Guard does **not** persist against subsequent advances in the same moment.
 
 ---
 
-## Attention and Warding (The Head – H)
+## Attention and Guard (The Head - H)
 
-Warding requires **attention**, represented by the **Head (H)**.
+Guard requires **attention**, represented by the **Head (H)**.
 
-### Actions That Break Warding
-Any action that meaningfully commits the Head breaks warding against other threats until the character’s next turn. Examples include:
+### Actions That Break Guard
+Any action that meaningfully commits the Head breaks Guard against other threats until the character's next turn. Examples include:
 - Making an attack
 - Aiming and firing at a specific target
 - Casting a spell
@@ -273,8 +310,8 @@ Any action that meaningfully commits the Head breaks warding against other threa
 - Issuing complex commands
 - Reacting to a different threat
 
-### Actions That Do NOT Break Warding
-Actions that do not require conscious focus do not break warding, including:
+### Actions That Do NOT Break Guard
+Actions that do not require conscious focus do not break Guard, including:
 - Walking or repositioning
 - Backing away
 - Raising a shield
@@ -282,20 +319,20 @@ Actions that do not require conscious focus do not break warding, including:
 - Routine reloads
 - Blind manipulation of equipment
 
-Magic is inherently dangerous; **all spellcasting requires H** and breaks warding.
+Magic is inherently dangerous; **all spellcasting requires H** and breaks Guard.
 
 ---
 
-## Voluntarily Dropping Warding
+## Voluntarily Dropping Guard
 
-A character may voluntarily drop warding at any time by committing their Head (H) to another task.  
+A character may voluntarily drop Guard at any time by committing their Head (H) to another task.  
 This requires no action and no roll.
 
 ---
 
 ## Covering Fire
 
-**Covering Fire** is a deliberate attempt to disrupt an enemy’s attention and space control.
+**Covering Fire** is a deliberate attempt to disrupt an enemy's attention and space control.
 
 ### Requirements
 - Requires: `LH`
@@ -304,37 +341,37 @@ This requires no action and no roll.
 ### Effect
 - Does **not** deal damage
 - Select one enemy:
-  - That enemy **loses warding** until the start of their next turn
+  - That enemy **loses Guard** until the start of their next turn
 
-Covering fire represents suppression, distraction, and forcing an opponent to seek cover.  
-Using covering fire breaks the user’s own warding.
+Covering Fire represents suppression, distraction, and forcing an opponent to seek cover.  
+Using Covering Fire breaks the user's own Guard.
 
 ---
 
 ## Design Notes
 
-- Warding is a **state**, not a passive aura
+- Guard is a **state**, not a passive aura
 - Attention is a scarce resource
 - Packs and flanking are dangerous by default
 - Weapon choice meaningfully shapes space control
-- Ranged and melee warding follow the same rules
+- Ranged and melee Guard follow the same rules
 
 Range control emerges naturally from intent, positioning, and commitment.
 
 
-## Warding (Refined Resolution)
+## Guard (Refined Resolution)
 
-When a character attempts to advance against a warding opponent and **fails**, the advancing character must choose one of the following outcomes:
+When a character attempts to advance against an opponent with Guard and **fails**, the advancing character must choose one of the following outcomes:
 
 - **Stop:**  
   The advance fails and the character remains at their current range.
 - **Push Through:**  
-  The character completes the advance but suffers the warding attack or consequence.
+  The character completes the advance but suffers the Guard attack or consequence.
 
 ### Critical Failure
 On a **Critical Failure**, both outcomes occur:
 - The advance fails
-- The character also suffers the warding attack or consequence
+- The character also suffers the Guard attack or consequence
 
 This represents reckless commitment, loss of footing, or overextension into danger.
 
@@ -342,28 +379,28 @@ This represents reckless commitment, loss of footing, or overextension into dang
 
 ## Covering Fire (Refined Resolution)
 
-Covering Fire represents suppressive or distracting fire intended to disrupt an enemy’s space control.
+Covering Fire represents suppressive or distracting fire intended to disrupt an enemy's space control.
 
 ### Resolution
-When Covering Fire succeeds against a warding opponent, the defender must choose one:
+When Covering Fire succeeds against an opponent with Guard, the defender must choose one:
 
 - **Take Cover:**  
-  The defender loses warding until the start of their next turn.
+  The defender loses Guard until the start of their next turn.
 - **Stand Fast:**  
-  The defender maintains warding but suffers the covering fire attack.
+  The defender maintains Guard but suffers the covering fire attack.
 
 ### Partial Critical
 On a **Partial Critical**, both outcomes occur:
-- The defender loses warding
+- The defender loses Guard
 - The defender also suffers the attack
 
-Covering Fire always expends ammo and always breaks the user’s own warding.
+Covering Fire always expends ammo and always breaks the user's own Guard.
 
 ---
 
 ## Design Intent
 
-- Warding forces hard choices, not automatic damage
-- Covering Fire mirrors warding through attention pressure
+- Guard forces hard choices, not automatic damage
+- Covering Fire mirrors Guard through attention pressure
 - Partial Criticals escalate outcomes without adding conditions
 - Critical Failures punish overcommitment, not mere bad luck
