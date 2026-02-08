@@ -36,6 +36,12 @@ Default Guard represents attention, posture, and readiness, not an attack.
 Defense represents instinctive reactions to incoming threats.  
 You may use **one defensive option** per incoming attack, if eligible.
 
+Reaction baseline:
+- Defensive reactions do not require `H` unless a rule explicitly says so.
+- A defense anchor (`L`, `R`, `F`) must have been left unspent on your own turn to be available as a reaction.
+- Footwork exception: normal movement/reposition keeps Dodge available.
+- If you used Sprint or Leap, Dodge is unavailable until your next turn unless a trait overrides it.
+
 ---
 
 #### Dodge (F)
@@ -45,6 +51,8 @@ You may use **one defensive option** per incoming attack, if eligible.
   - Attempt to evade an attack through movement or positioning
   - May avoid damage entirely
   - Less effective if feet are impaired or terrain is poor
+  - Still available after normal movement
+  - Not available after Sprint/Leap unless a trait says otherwise
 
 Dodge represents footwork, balance, and quick repositioning.
 
@@ -107,7 +115,7 @@ Focused attacks trade flexibility for precision.
 - Requires: `L(R)HF`
 - Effect:
   - Make a fully committed attack
-  - Typically grants advantage or bonus damage
+  - Typically grants one advantage step (see `core.md` Advantage Step Rule) or bonus damage
   - Leaves you unable to maintain Guard against additional approaches
 
 This represents total commitment of body and intent.
@@ -129,6 +137,10 @@ Attacks may target specific body regions.
 - Apply wounds to the declared target location.
 
 This applies to Wild Swing, Focused Attack, and Full Martial Attack unless a specific ability says otherwise.
+
+**Blind Targeting**
+- If the attacker cannot visually target, apply Blind rules from `status-effects.md`.
+- Default combat baseline for blind strikes/grapples is `+4 DC` unless fiction supports a lower/higher category.
 
 ---
 

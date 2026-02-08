@@ -4,6 +4,12 @@
 - Personal knowledge base + blog rendered with Jekyll/GitHub Pages; Markdown-heavy content organized into topical folders.
 - Public site lives at https://josephweaver.github.io/ (blog-first landing; About moved to its own page).
 
+## Sub-Project Reference
+- Active tabletop design work lives in `fiction/24system/`.
+- Start with:
+  - `fiction/24system/README.md` (system overview + file index)
+  - `fiction/24system/PROJECT_STATE.md` (latest design decisions and next steps)
+
 ## Build / theme
 - `_config.yml` uses `remote_theme: pages-themes/cayman@v0.2.0` with `jekyll-remote-theme` plugin; Markdown via kramdown + MathJax (math enabled by default for `probability/`).
 - `_layouts/default.html` defines the page chrome: sidebar navigation (Blog, About, Probability, Research, Fiction) with collapsible sections/subsections, resizable width (localStorage `sttSidebarWidth`), MathJax v3 config, sibling prev/next links (per folder), edit-on-GitHub links top/bottom of articles, and optional Giscus comments when `site.giscus` is configured. Loads `assets/css/custom.css` plus inline styles per page.

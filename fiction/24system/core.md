@@ -188,6 +188,15 @@ Your result is the **highest single die**.
 **Leverage dice are never negative.**  
 If circumstances are poor, Pressure applies instead.
 
+### Advantage Step Rule
+
+When a rule says an action gains **advantage**, grant exactly **one Leverage step**:
+
+- Start at `d4`.
+- Each additional advantage source increases by one die step (`d4 -> d6 -> d8 -> d10 -> d12`).
+- Cap the bonus die at the acting skill roll's **minimum base die size** (before Leverage).
+- Advantage effects do not jump multiple steps unless multiple separate sources apply.
+
 ---
 
 ### Pressure
@@ -218,6 +227,14 @@ Typical examples:
 - Severe injury or panic: +3 or more DC
 
 The Guide should state the adjusted DC clearly before the roll.
+
+### Status Effects
+
+Common status conditions (Blind, Prone, Grabbed, Pinned, Incapacitated, etc.) are defined in `status-effects.md`.
+
+- Status effects may add DC, remove available actions, or constrain RLHF anchors.
+- If both Pressure and a status effect apply, use both unless a specific rule says otherwise.
+- If multiple statuses affect the same action, use the most restrictive limit and highest relevant DC increase.
 
 ---
 

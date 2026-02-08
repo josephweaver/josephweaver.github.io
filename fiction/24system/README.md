@@ -45,10 +45,11 @@ If an anchor is injured, related actions degrade. If disabled, those actions can
 
 ### Baseline Combat Concepts
 
-- Warding is automatic when aware, unengaged, and not committing `H`
+- Guard is automatic when aware, unengaged, and not committing `H`
 - Combat uses range states (Separated, Melee, Grappling), not grid distance
-- Advancing into warded space is contested
-- Multiple warders stack by `+2 DC` per extra warder
+- Advancing into guarded space is contested
+- Multiple guards stack by `+2 DC` per extra defender
+- Dodge is preserved after normal movement, but Sprint/Leap normally consumes Dodge until next turn
 
 ### Core Declared Actions
 
@@ -106,12 +107,28 @@ Fear track runs 0-6:
 
 Madness is emergent from accumulated survival scars (Banes), not a separate meter.
 
+## Status Effects (`status-effects.md`)
+
+Common tactical conditions are defined in one place:
+- Blind
+- Prone
+- Grabbed
+- Pinned
+- Restrained
+- Disoriented
+- Stunned
+- Silenced
+- Incapacitated
+- Unconscious
+- Bleeding
+
 ## Character Growth
 
 ### Character Creation (`charactercreation.md`)
 
 - No attributes (no STR/DEX/INT)
 - Assign 1 specialty, 1 strong, 2 competent skills
+- Competent tier is `d10 + d12 + 2` (Rank 1)
 - Unassigned skills use vanilla roll (`2d12`)
 - Choose 2 traits
 - Add gear and narrative details
@@ -133,7 +150,13 @@ Action-centric skills define what can be attempted:
 - Lore
 - Social
 - Magic
-- Science (placeholder section)
+- Science
+
+Key framework updates:
+- Contested checks: initiator rolls against defender average (rounded up)
+- Unified legendary conversion rule
+- Per-action duration tags (`Instant`, `Short`, `Extended`, `Scene`, `Sustained`)
+- Stealth awareness ladder and scene-based stealth handling
 
 ## Perception Philosophy (`perception.md`)
 
@@ -186,6 +209,7 @@ Current spell writeups:
 - `quote.md`: thematic quote
 - `RLHF.md`: body-anchor action economy
 - `skills.md`: skill action vocabularies
+- `status-effects.md`: common tactical conditions and their mechanical effects
 - `spells.md`: spell axioms and examples
 - `weapons.md`: weapon properties, qualities, ranged action economy
 - `wounds.md`: hit locations, trauma ladder, armor conversion
@@ -196,5 +220,5 @@ Likely cleanup targets identified while compiling:
 - Standardize anchor naming (`RHLF` vs `RLHF`, and `F` vs "Legs (L)" in one defense section)
 - Resolve encoding artifacts (smart quotes/dashes rendering as mojibake in terminal output)
 - Align push-your-luck language between `core.md` and `playtest-packet.md`
-- Fill unfinished sections (`Blocking cover` heading, `Science` skill details)
+- Fill unfinished sections (`Blocking cover` heading)
 - Unify terminology for Guide/GM and action labels across reference docs

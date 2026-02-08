@@ -34,6 +34,7 @@ Apply **only the single worst penalty** from armor or pack.
 - Spending your **Leg action** allows movement up to MR
 - Movement may be split before or after other actions
 - An unused Leg action counts as unused defense
+- Normal movement/reposition still allows **Dodge** as a reaction this round
 
 ---
 
@@ -41,6 +42,7 @@ Apply **only the single worst penalty** from armor or pack.
 - Spend **1 stamina** to gain **+2 MR** for that movement
 - Sprinting is not allowed while wearing a **Heavy Pack**
 - Sprinting may be used only during your own turn
+- If you Sprint, you cannot Dodge until your next turn (unless a trait says otherwise)
 
 ---
 
@@ -91,3 +93,8 @@ These do not require separate actions, but may:
 - Be restricted by armor, packs, injuries, or terrain.
 
 The Leg action represents continuous body movement, not a single step.
+
+### Dodge Availability by Footwork
+- **Move/Reposition only:** Dodge remains available.
+- **Sprint or Leap used:** Dodge is unavailable until your next turn.
+- Traits may override this (for example, **Acrobatic Finesse**).

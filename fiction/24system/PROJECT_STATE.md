@@ -1,63 +1,64 @@
 # 24-System Project State
 
-Last updated: 2026-02-07
+Last updated: 2026-02-08
 
 ## Current Focus
 
-Primary work is on combat language and trigger-based reactions in `fiction/24system/combat.md`.
+Primary work has shifted from guard terminology to system coherence across:
+- `skills.md`
+- `status-effects.md`
+- `movement.md`
+- `combat.md`
+- `charactercreation.md`
 
 ## Key Decisions Finalized
 
-- Core space-control term is now **Guard**.
-- Official definitions:
-  - **Default Guard**: automatic, unspoken baseline state.
-  - **Triggered Action**: spoken, conditional response.
-- Initiative is not manipulated by Triggered Actions.
-- Trigger wording is binding:
-  - What is declared is exactly what triggers.
-  - Broader trigger wording creates broader risk.
-- Abort safety valve is enabled:
-  - If a trigger fires and the player aborts, resolve with `2d12`.
-  - On a hit, player chooses either:
-    - deal damage normally, or
-    - deal no damage and take a Minor Complication.
+- Contested checks use defender **average result rounded up** as DC.
+- Difficulty benchmarks were shifted down for a more cinematic baseline.
+- Legendary resolution is global in `skills.md`:
+  - apply all Partial Critical effects
+  - double numeric values
+  - Guide may add one cinematic rider
+- Reactions default to no `H` requirement.
+- Reaction anchors must normally be unspent from the acting turn.
+- Dodge exception finalized:
+  - normal movement/reposition keeps Dodge available
+  - Sprint/Leap consumes Dodge until next turn unless a trait overrides
 
-## Combat Rules Added/Updated
+## New/Updated Rule Areas
 
-In `fiction/24system/combat.md`:
+- `status-effects.md` created and integrated (Blind, Prone, Grabbed, Pinned, Restrained, Disoriented, Stunned, Silenced, Incapacitated, Unconscious, Bleeding).
+- Blindness penalties moved to status system and referenced from combat/skills.
+- Grapple framework clarified:
+  - limb parity locks
+  - speed 0 while locked
+  - 3 restrained anchors = fully restrained
+- Stealth procedure clarified in `skills.md`:
+  - one check can cover a scene
+  - NPC awareness ladder: Relaxed -> Alert -> Suspicious -> Aware
+  - Aware requires misdirection to break
+- Skill duration system added (`Instant`, `Short`, `Extended`, `Scene`, `Sustained`) with per-action durations.
+- Character creation traits aligned to Advantage Step language and current skill list (including Science).
+- New defensive override trait added:
+  - **Acrobatic Finesse** (can Dodge after Sprint/Leap at +2 DC)
 
-- Replaced prior space-control wording with **Guard** terminology.
-- Added and defined **Triggered Action (Spoken)** under Guard rules.
-- Added trigger-language examples:
-  - "If something enters, I shoot it."
-  - "If a man in a purple hat enters, I shoot him."
-- Added hit-location targeting section:
-  - Default target: Core
-  - Called targets: Left Arm, Right Arm, Legs, Head
-  - Head shots: `+2 DC`
+## Consistency Notes
 
-## Known Consistency Gaps
-
-Other documents still use older wording (for example, "warding") and need alignment to Guard terminology:
-
-- `fiction/24system/playtest-packet.md`
-- `fiction/24system/playtest-characters.md`
-- `fiction/24system/weapons.md`
-- `fiction/24system/README.md`
-- potentially other references discovered during pass
-
-## Open Design Questions
-
-- Should Triggered Action include a hard requirement for player-visible trigger wording precision (for example, no implicit hostility assumptions)?
-- Should there be a separate perception/identification check before trigger resolution in ambiguous cases, or is abort + consequence enough?
-- Should there be a cap on how many triggers can be covered by one Guard state in edge cases?
+- `skills.md` now serves as the most complete action-resolution source.
+- `movement.md` and `combat.md` now explicitly mirror Dodge availability rules.
+- `charactercreation.md` has been normalized to current dice tiers and trait wording.
 
 ## Suggested Next Steps
 
-1. Run a terminology sync pass across all `fiction/24system/*.md` to replace outdated space-control wording with Guard/Triggered Action.
-2. Add a short "Trigger Writing Guidelines" subsection in `combat.md` with 3-5 canonical examples.
-3. Update the player-facing quick references (`playtest-packet.md`, `playtest-characters.md`) to match the latest combat language.
-4. Rebuild `fiction/24system/README.md` summary after terminology sync.
+1. Sync playtest-facing docs with current rules:
+   - `playtest-packet.md`
+   - `playtest-characters.md`
+2. Add a short GM quick reference page for:
+   - contested DC by rank
+   - awareness ladder
+   - common status effects
+3. Standardize lingering RHLF/RLHF naming drift across older docs.
+4. Decide if `core.md` should include a compact global timing/action-economy summary or keep that in `skills.md` + `movement.md`.
 
 ## Working Style Preference Recorded
 
