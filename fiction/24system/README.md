@@ -13,7 +13,7 @@ The 24-System is built around these ideas:
 - Fear that biases behavior without removing agency
 - Fiction-first resolution with fast adjudication
 
-## Core Resolution (`core.md`)
+## Core Resolution ([`core.md`](core.md))
 
 - Roll skill dice plus Leverage dice (if any)
 - Result is highest die
@@ -31,7 +31,7 @@ Leverage/Pressure replacement for advantage/disadvantage:
 - Leverage adds a bonus die by tier (`d4` to `d12`)
 - Pressure increases DC instead of removing dice
 
-## Action Economy: RHLF / "Ralph" (`RLHF.md`)
+## Action Economy: RHLF / "Ralph" ([`RLHF.md`](RLHF.md))
 
 Characters commit body anchors to perform actions:
 - `L`: primary hand
@@ -41,7 +41,7 @@ Characters commit body anchors to perform actions:
 
 If an anchor is injured, related actions degrade. If disabled, those actions can become unavailable.
 
-## Combat Overview (`combat.md`, `defense.md`, `movement.md`, `weapons.md`, `wounds.md`)
+## Combat Overview ([`combat.md`](combat.md), [`defense.md`](defense.md), [`movement.md`](movement.md), [`weapons.md`](weapons.md), [`wounds.md`](wounds.md))
 
 ### Baseline Combat Concepts
 
@@ -97,7 +97,7 @@ Weapon identity is driven by partial-critical behavior and qualities:
 - Armor is a single worn unit that converts wounds to stamina loss (Light/Medium/Heavy)
 - Core wound thresholds drive failing, dying, death states
 
-## Stress Model (`fear-and-madness.md`)
+## Stress Model ([`fear-and-madness.md`](fear-and-madness.md))
 
 Fear track runs 0-6:
 - Lower levels increase caution/hypervigilance
@@ -107,7 +107,7 @@ Fear track runs 0-6:
 
 Madness is emergent from accumulated survival scars (Banes), not a separate meter.
 
-## Status Effects (`status-effects.md`)
+## Status Effects ([`status-effects.md`](status-effects.md))
 
 Common tactical conditions are defined in one place:
 - Blind
@@ -124,7 +124,7 @@ Common tactical conditions are defined in one place:
 
 ## Character Growth
 
-### Character Creation (`charactercreation.md`)
+### Character Creation ([`charactercreation.md`](charactercreation.md))
 
 - No attributes (no STR/DEX/INT)
 - Assign 1 specialty, 1 strong, 2 competent skills
@@ -133,14 +133,14 @@ Common tactical conditions are defined in one place:
 - Choose 2 traits
 - Add gear and narrative details
 
-### Advancement (`advancement.md`)
+### Advancement ([`advancement.md`](advancement.md))
 
 - No XP or levels
 - Advancement at story-arc boundaries
 - Declare one training focus per arc (skill or trait)
 - Gain one skill tier (pyramid-limited) or one earned trait per arc
 
-## Skill Framework (`skills.md`)
+## Skill Framework ([`skills.md`](skills.md))
 
 Action-centric skills define what can be attempted:
 - Athletics
@@ -158,14 +158,14 @@ Key framework updates:
 - Per-action duration tags (`Instant`, `Short`, `Extended`, `Scene`, `Sustained`)
 - Stealth awareness ladder and scene-based stealth handling
 
-## Perception Philosophy (`perception.md`)
+## Perception Philosophy ([`perception.md`](perception.md))
 
 No passive perception stat. Discovery is narrative and interaction-driven:
 - Players ask specific questions and describe methods
 - Guide seeds fair clues for secrets/traps
 - Hidden features should be foreshadowed through sensory/environmental evidence
 
-## Magic Model (`spells.md`)
+## Magic Model ([`spells.md`](spells.md))
 
 Spellcasting axioms:
 - Magic always works in type
@@ -181,44 +181,44 @@ Current spell writeups:
 
 ## Playtest Materials
 
-- `playtest-packet.md`: player-facing quick rule packet and expectations
-- `playtest-characters.md`: fast combat reference
+- [`playtest-packet.md`](playtest-packet.md): player-facing quick rule packet and expectations
+- [`playtest-characters.md`](playtest-characters.md): fast combat reference
 
 ## Setting / Thematic Documents
 
-- `Atrocitas.md`: Atrocitas Sine Auctore concept (atrocity without authorship)
+- [`Atrocitas.md`](Atrocitas.md): Atrocitas Sine Auctore concept (atrocity without authorship)
 - `monsters/echo-born-other.md`: Echo-Born Other entity and stat block
-- `authors-note.md`: design intent and authorship note
-- `quote.md`: thematic line
+- [`authors-note.md`](authors-note.md): design intent and authorship note
+- [`quote.md`](quote.md): thematic line
 
 ## File Index
 
-- `advancement.md`: arc-based training and progression
-- `Atrocitas.md`: cognitive-horror theorem and ontology note
-- `authors-note.md`: author statement and design philosophy
-- `charactercreation.md`: chargen flow, skills, traits
-- `combat.md`: warding, range states, core combat actions
-- `core.md`: outcomes, push-your-luck, leverage/pressure
-- `defense.md`: active defense options, cover/concealment
-- `fear-and-madness.md`: fear track and emergent madness model
-- `movement.md`: MR, encumbrance, terrain, sprinting
+- [`advancement.md`](advancement.md): arc-based training and progression
+- [`Atrocitas.md`](Atrocitas.md): cognitive-horror theorem and ontology note
+- [`authors-note.md`](authors-note.md): author statement and design philosophy
+- [`charactercreation.md`](charactercreation.md): chargen flow, skills, traits
+- [`combat.md`](combat.md): warding, range states, core combat actions
+- [`core.md`](core.md): outcomes, push-your-luck, leverage/pressure
+- [`defense.md`](defense.md): active defense options, cover/concealment
+- [`fear-and-madness.md`](fear-and-madness.md): fear track and emergent madness model
+- [`movement.md`](movement.md): MR, encumbrance, terrain, sprinting
 - `monsters/echo-born-other.md`: monster ecology, behavior, stat block
-- `perception.md`: narrative discovery and secret-door guidance
-- `playtest-characters.md`: quick combat cheat sheet
-- `playtest-packet.md`: player onboarding packet
-- `quote.md`: thematic quote
-- `RLHF.md`: body-anchor action economy
-- `skills.md`: skill action vocabularies
-- `status-effects.md`: common tactical conditions and their mechanical effects
-- `spells.md`: spell axioms and examples
-- `weapons.md`: weapon properties, qualities, ranged action economy
-- `wounds.md`: hit locations, trauma ladder, armor conversion
+- [`perception.md`](perception.md): narrative discovery and secret-door guidance
+- [`playtest-characters.md`](playtest-characters.md): quick combat cheat sheet
+- [`playtest-packet.md`](playtest-packet.md): player onboarding packet
+- [`quote.md`](quote.md): thematic quote
+- [`RLHF.md`](RLHF.md): body-anchor action economy
+- [`skills.md`](skills.md): skill action vocabularies
+- [`status-effects.md`](status-effects.md): common tactical conditions and their mechanical effects
+- [`spells.md`](spells.md): spell axioms and examples
+- [`weapons.md`](weapons.md): weapon properties, qualities, ranged action economy
+- [`wounds.md`](wounds.md): hit locations, trauma ladder, armor conversion
 
 ## Notes for Next Pass
 
 Likely cleanup targets identified while compiling:
 - Standardize anchor naming (`RHLF` vs `RLHF`, and `F` vs "Legs (L)" in one defense section)
 - Resolve encoding artifacts (smart quotes/dashes rendering as mojibake in terminal output)
-- Align push-your-luck language between `core.md` and `playtest-packet.md`
+- Align push-your-luck language between [`core.md`](core.md) and [`playtest-packet.md`](playtest-packet.md)
 - Fill unfinished sections (`Blocking cover` heading)
 - Unify terminology for Guide/GM and action labels across reference docs
