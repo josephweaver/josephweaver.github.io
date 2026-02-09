@@ -1,10 +1,10 @@
-## 24-System: Success & Failure Levels
+﻿## 24-System: Success & Failure Levels
 
 In the 24-System, you roll a pool of dice based on your skill and any situational benefits, then compare your result to a **Difficulty (DC)**.
 
 Your **result** is the **highest single die** rolled, after applying bonuses and Leverage.
 
----
+***
 
 ### Outcome Levels
 
@@ -18,7 +18,7 @@ If your final result is **24 or higher**, you achieve an extraordinary, cinemati
 
 Legendary results represent moments where preparation, skill, and circumstance align perfectly.
 
----
+***
 
 #### Partial Critical (Max Die)
 
@@ -34,7 +34,7 @@ Partial Criticals grant a flourish or immediate benefit, such as:
 
 Partial Criticals reward strong execution even under difficult conditions.
 
----
+***
 
 #### Success
 
@@ -42,7 +42,7 @@ If your result **meets or exceeds the DC**, you succeed as intended.
 
 You accomplish your goal cleanly, with no added cost.
 
----
+***
 ### Push Your Luck (Optional Reroll)
 
 If you fail a roll, you may choose to **push your luck**.
@@ -55,7 +55,7 @@ When you do so:
 
 This represents forcing the action through stress, danger, or desperation.
 
----
+***
 
 ### Outcomes After Pushing
 
@@ -73,7 +73,7 @@ After the reroll, resolve the outcome normally, with the following escalation ru
 
 Pushing your luck always carries risk, success comes at a cost, failure compounds.
 
----
+***
 
 ### Critical Failure
 
@@ -92,7 +92,7 @@ On a Critical Failure:
 
 Critical Failures are not about incompetence, they are about pressure, risk, and consequence.
 
----
+***
 
 ### Miss (No Push)
 
@@ -127,7 +127,7 @@ Examples include:
 
 Minor Complications should complicate the situation without stopping play.
 
----
+***
 
 ### Major Complications
 
@@ -144,7 +144,7 @@ Examples include:
 
 Major Complications always change the situation in a meaningful way.
 
----
+***
 
 ## Leverage & Pressure
 
@@ -152,7 +152,7 @@ The 24-System replaces traditional advantage and disadvantage with **Leverage** 
 
 This system rewards preparation and smart play, while keeping penalties clear and fair.
 
----
+***
 
 ### Leverage
 
@@ -168,7 +168,7 @@ Each point of Leverage grants a **bonus die**, using the step progression below.
 
 You may gain multiple points of Leverage from different sources.
 
----
+***
 
 ### Leverage Dice Progression
 
@@ -197,7 +197,7 @@ When a rule says an action gains **advantage**, grant exactly **one Leverage ste
 - Cap the bonus die at the acting skill roll's **minimum base die size** (before Leverage).
 - Advantage effects do not jump multiple steps unless multiple separate sources apply.
 
----
+***
 
 ### Pressure
 
@@ -213,7 +213,7 @@ Pressure **does not affect your dice**.
 
 Instead, Pressure **increases the DC** of the action.
 
----
+***
 
 ### Applying Pressure
 
@@ -236,7 +236,7 @@ Common status conditions (Blind, Prone, Grabbed, Pinned, Incapacitated, etc.) ar
 - If both Pressure and a status effect apply, use both unless a specific rule says otherwise.
 - If multiple statuses affect the same action, use the most restrictive limit and highest relevant DC increase.
 
----
+***
 
 ### Key Principles
 
@@ -247,7 +247,7 @@ Common status conditions (Blind, Prone, Grabbed, Pinned, Incapacitated, etc.) ar
 
 This system preserves excitement while maintaining tension and fairness.
 
----
+***
 
 ### Optional Rule: Crushing Pressure
 
@@ -257,3 +257,5 @@ In extreme situations, the Guide may declare **Crushing Pressure**.
 - The DC is increased significantly
 
 Use this sparingly, for moments of overwhelming danger.
+
+
