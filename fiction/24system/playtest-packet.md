@@ -140,6 +140,16 @@ You roll dice from your **skill** plus any **Leverage**.
 
 Failure always moves the scene forward.
 
+### Hit Location by Outcome (Attacks)
+
+If you do not declare a called shot, use this default:
+
+- **Success:** Hit the **Core**.
+- **Partial Critical on a hit:** Hit a **limb** (`L`, `R`, or Legs; attacker chooses).
+- **Legendary (24+) on a hit:** Hit the **Head**.
+
+If you do declare a called shot, that declared location overrides the default mapping.
+
 ---
 
 ## 7. Leverage & Pressure

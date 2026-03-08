@@ -95,8 +95,13 @@ Choose **one** per incoming attack:
 - **Success + Complication** – Progress at a cost
 - **Failure** – Situation changes
 
----
+### Hit Location Defaults (Attacks)
+- **Success:** Core
+- **Partial Critical on a hit:** Limb (L, R, or Legs; attacker chooses)
+- **Legendary (24+) on a hit:** Head
+- **Called shot declared before roll:** Use called location instead of default
 
+---
 ## Leverage & Pressure
 
 ### Leverage (Good Circumstances)
@@ -172,3 +177,4 @@ Fear penalizes entering danger, not survival.
 - Fiction > geometry.
 - Resolve fast and move on.
 - Retreat is success.
+

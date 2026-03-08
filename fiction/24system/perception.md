@@ -49,6 +49,30 @@ Pay attention to details in the Guide’s descriptions. Subtle sights, sounds, s
 - **Encourage teamwork:**  
   Secrets are easier to uncover when players share information and combine perspectives.
 
+## Fair Discovery Procedure (Table Contract)
+
+Use this short procedure whenever hidden danger, traps, or concealed creatures are in play.
+
+### Player Prompt (Always Allowed)
+
+Players may always ask:
+
+- "What clues do we have here?"
+
+If hidden danger exists, the Guide should provide at least one actionable clue.
+
+### Guide Response Rule
+
+- If clues were already in prior narration, the Guide may reread the description.
+- After rereading, if players are still unsure, the Guide should explicitly point to the clue elements.
+- If no clue was prepared, pause briefly and add one before resolving the hidden danger.
+
+### Fairness Rule of Thumb
+
+- No hidden threat should resolve without foreshadowing.
+- Good tension comes from readable risk, not "guess what the Guide meant."
+- If players could not reasonably infer danger from available clues, treat it as Guide-side calibration and adjust.
+
 
 ## Secret Doors & Panels
 

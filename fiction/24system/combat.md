@@ -126,15 +126,19 @@ This represents total commitment of body and intent.
 
 Attacks may target specific body regions.
 
-- **Default target:** Core
-- **Called targets:** Left Arm, Right Arm, Legs, or Head
+- **Default targeting by outcome (no called shot):**
+  - Success -> Core
+  - Partial Critical on a hit -> Left Arm, Right Arm, or Legs (attacker chooses)
+  - Legendary Success (24+) on a hit -> Head
+- **Called targets:** Left Arm, Right Arm, Legs, or Head (declared before rolling)
 
 **DC Modifiers**
 - Targeting **arms or legs:** no DC change
 - Targeting **head:** `+2 DC`
 
 **On a Hit**
-- Apply wounds to the declared target location.
+- If called shot was declared, apply wounds to the declared location.
+- If no called shot was declared, apply wounds using default targeting by outcome above.
 
 This applies to Wild Swing, Focused Attack, and Full Martial Attack unless a specific ability says otherwise.
 

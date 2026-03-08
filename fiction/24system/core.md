@@ -1,8 +1,20 @@
 ﻿## 24-System: Success & Failure Levels
 
-In the 24-System, you roll a pool of dice based on your skill and any situational benefits, then compare your result to a **Difficulty (DC)**.
+In the 24-System, you roll dice based on your skill and any situational benefits, then compare your result to a **Difficulty (DC)**.
 
-Your **result** is the **highest single die** rolled, after applying bonuses and Leverage.
+Your **result** is the sum of your **two highest dice**, plus any flat bonus from skill rank.
+
+### Skill Rank Dice Progression
+
+| Rank | Roll | Average Result |
+|---|---|---|
+| 0 | `2d12` | `13` |
+| 1 | `d10 + d12 + 2` | `14` |
+| 2 | `2d10 + 4` | `15` |
+| 3 | `d8 + d10 + 6` | `16` |
+| 4 | `2d8 + 8` | `17` |
+| 5 | `d6 + d8 + 10` | `18` |
+| 6 | `2d6 + 12` | `19` |
 
 ***
 
@@ -42,6 +54,16 @@ If your result **meets or exceeds the DC**, you succeed as intended.
 
 You accomplish your goal cleanly, with no added cost.
 
+### Hit Location by Outcome (Attacks)
+
+Unless an ability or called shot says otherwise, attack hit location follows outcome band:
+
+- **Success:** Hit the **Core**.
+- **Partial Critical on a hit:** Hit a **limb** (attacker chooses `L`, `R`, or Legs).
+- **Legendary Success (24+) on a hit:** Hit the **Head**.
+
+Called shots override this default mapping.
+
 ***
 ### Push Your Luck (Optional Reroll)
 
@@ -49,8 +71,10 @@ If you fail a roll, you may choose to **push your luck**.
 
 When you do so:
 
-- You must **accept a Minor Complication** immediately.
-- You **reroll the entire dice pool**.
+- You choose one complication track: **Position, Resource, Exposure, Strain, or Objective**.
+- You state the fiction for that track (what risk you are taking to force the reroll).
+- You must accept a **Minor Complication** on that chosen track.
+- You reroll the entire dice pool at **DC -2** (minimum pushed DC `6`).
 - You must keep the new result.
 
 This represents forcing the action through stress, danger, or desperation.
@@ -61,15 +85,14 @@ This represents forcing the action through stress, danger, or desperation.
 
 After the reroll, resolve the outcome normally, with the following escalation rules:
 
-- **Reroll Succeeds (meets or exceeds DC)**  
-  You succeed, but the **Minor Complication applies**.
+- **Reroll Succeeds (meets or exceeds pushed DC)**  
+  You succeed, and the **Minor Complication** on the chosen track applies.
 
 - **Reroll Succeeds with a Partial Critical**  
-  You gain the Partial Critical benefit, but the **Minor Complication still applies**.
+  You gain the Partial Critical benefit, and the **Minor Complication** on the chosen track still applies.
 
 - **Reroll Fails**  
-  The failure **escalates into a Critical Failure**.  
-  You must take a **Major Complication** instead of a minor one.
+  You fail the action, and the complication **escalates to a Major Complication on the same track**.
 
 Pushing your luck always carries risk, success comes at a cost, failure compounds.
 
@@ -77,17 +100,17 @@ Pushing your luck always carries risk, success comes at a cost, failure compound
 
 ### Critical Failure
 
-A **Critical Failure** represents a loss of control caused by escalation, bad positioning, or pushing beyond safe limits.
+A **Critical Failure** is optional and should be rare. It represents a collapse beyond a normal Major Complication.
 
 A Critical Failure occurs when:
 
-- A pushed reroll still fails,
-- The Guide declares the situation has escalated beyond safe limits
+- The Guide declares the situation has escalated beyond safe limits, and
+- The fiction supports a catastrophic outcome beyond a standard Major Complication.
 
 On a Critical Failure:
 
 - You fail the action
-- You must accept a **Major Complication**
+- You accept a catastrophic consequence (worse than a normal Major)
 - The situation escalates immediately and meaningfully
 
 Critical Failures are not about incompetence, they are about pressure, risk, and consequence.
@@ -111,38 +134,139 @@ Examples include:
 
 Failure should move the scene forward, not stall play.
 
-### Minor Complications
+### Retry Rule (Especially Outside Combat)
 
-Minor Complications represent setbacks, costs, or unintended consequences.
+There are no free retries under unchanged fiction.
 
-Examples include:
+- A failed roll means this approach does not work in this moment.
+- You may retry immediately by using **Push Your Luck** and accepting track consequences.
+- You may also attempt again later if the fiction changes meaningfully (different method, different tool, extra help, more time, new leverage, or a new accepted cost).
+- If nothing meaningful has changed, the original result stands.
 
-- Dropping or fumbling an item
-- Making noise or drawing attention
-- Taking minor harm or fatigue
-- Losing time or position
-- Using up resources
-- Leaving evidence behind
-- Suffering temporary disorientation
+This keeps repeated attempts fiction-first while preserving tension and pace.
 
-Minor Complications should complicate the situation without stopping play.
+## Complication Tracks
 
-***
+Complications are always resolved through these five tracks:
 
-### Major Complications
+- **Position**
+- **Resource**
+- **Exposure**
+- **Strain**
+- **Objective**
 
-Major Complications represent serious consequences or dramatic turns.
+When you push, these tracks are always available, but the chosen track must be fiction-valid for the action being attempted.
 
-Examples include:
+Rule of thumb:
 
-- Suffering a wound or lasting injury
-- Breaking important gear
-- Being discovered or trapped
-- Endangering an ally
-- Losing a critical resource
-- Escalating the threat or alerting powerful enemies
+- If a consequence causes a short setback without collapsing agency, it is **Minor**.
+- If a consequence changes control of the scene, removes a key option, or forces an immediate new problem, it is **Major**.
 
-Major Complications always change the situation in a meaningful way.
+### Position
+
+What it is:
+- Where you are, your angle, cover, footing, engagement state, or tactical lane.
+
+Minor qualifies:
+- Lose cover
+- End up in a worse approach angle
+- Give up a favorable lane or stance
+
+Major qualifies:
+- Get pinned or flanked
+- Enter a bad range state (forced melee/grapple)
+- Lose control of space and cede initiative
+
+Does not qualify:
+- Direct gear damage (use Resource)
+- Pure alertness/noise consequences (use Exposure)
+
+### Resource
+
+What it is:
+- Consumables, ammo, tools, weapon condition, armor integrity, and other finite assets.
+
+Minor qualifies:
+- Spend extra ammo/supplies
+- Tool wear, temporary jam, or reduced reliability
+- Burn a useful but replaceable item
+
+Major qualifies:
+- Break key gear
+- Destroy or lose a critical asset
+- Permanently degrade an important loadout element in-scene
+
+Does not qualify:
+- Purely being seen/identified (use Exposure)
+- Pure movement/angle loss (use Position)
+
+### Exposure
+
+What it is:
+- Being noticed, tracked, identified, or having your intent/location revealed.
+
+Minor qualifies:
+- Make noise
+- Leave trace evidence
+- Raise suspicion or awareness by one step
+
+Major qualifies:
+- Full detection or identification
+- Trigger alarm/reinforcements
+- Reveal ally plan, route, or hiding position
+
+Does not qualify:
+- Direct fatigue/stamina cost (use Strain)
+- Gear loss/breakage (use Resource)
+
+### Strain
+
+What it is:
+- Immediate physical or mental load: stamina, pain, shock, panic pressure, instability.
+
+Minor qualifies:
+- Lose stamina
+- Brief disorientation
+- Short-lived fear/panic spike that does not remove agency
+
+Major qualifies:
+- Heavy stamina loss with immediate tactical penalty
+- Strong disorientation/panic effect that constrains next action
+- Short-term functional drop in an anchor-critical moment
+
+Does not qualify:
+- Narrative clock/progress setbacks (use Objective)
+- Discovery/alert outcomes (use Exposure)
+
+### Objective
+
+What it is:
+- Progress toward the declared goal: clocks, timing windows, target acquisition, mission state.
+
+Minor qualifies:
+- Lose momentum
+- Add delay or extra step
+- Reduce quality of progress (harder follow-up)
+
+Major qualifies:
+- Target escapes or relocates
+- Clock advances to a new threat state
+- Mission branch closes, forcing a new approach
+
+Does not qualify:
+- Immediate bodily fatigue cost (use Strain)
+- Positioning-only consequences (use Position)
+
+### Table Safety and Party Harm
+
+Choosing a push consequence that intentionally puts another player character in direct harm is generally not acceptable.
+
+Only allow it when:
+- The acting player states the risk clearly before rolling, and
+- The expected benefit clearly and significantly outweighs that harm, and
+- The table is aligned with that call.
+
+If those conditions are not met, the Guide should require a different complication within the chosen track.
 
 ***
 
@@ -183,7 +307,7 @@ When you have Leverage, add **one bonus die** to your roll:
 | 5 | d12 |
 
 Roll all dice together.  
-Your result is the **highest single die**.
+Your result is the **sum of your two highest dice**, plus flat bonus.
 
 **Leverage dice are never negative.**  
 If circumstances are poor, Pressure applies instead.
@@ -194,7 +318,7 @@ When a rule says an action gains **advantage**, grant exactly **one Leverage ste
 
 - Start at `d4`.
 - Each additional advantage source increases by one die step (`d4 -> d6 -> d8 -> d10 -> d12`).
-- Cap the bonus die at the acting skill roll's **minimum base die size** (before Leverage).
+- Roll the acting skill dice and the one leverage die, then keep the two highest dice.
 - Advantage effects do not jump multiple steps unless multiple separate sources apply.
 
 ***

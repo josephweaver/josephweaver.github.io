@@ -131,6 +131,7 @@ Rules language note:
 ### Dark and Gritty Survival Traits
 
 - **Scarred Survivor** - After a Major Complication, gain one advantage step on your next action.
+- **Double Down** - Once per scene, when a pushed reroll fails, you may push again immediately. Take the first push's Major Complication, then choose a second complication track and reroll at the same pushed DC (`-2`, minimum 6). If this second reroll fails, the second track becomes a Major Complication.
 - **Desperate Strength** - When at negative stamina, your first successful attack in a scene gains +1 wound.
 - **Grim Reputation** - Gain one advantage step on Intimidate; suffer `+2 DC` on Persuade against neutral or friendly targets.
 - **Bloodied but Unbowed** - First wound in combat causes you to gain 1 stamina.
