@@ -16,7 +16,7 @@ The 24-System is built around these ideas:
 ## Core Resolution ([`core.md`](core.md))
 
 - Roll skill dice plus Leverage dice (if any)
-- Result is highest die
+- Result is sum of the two highest dice, plus flat bonus
 - Compare against DC (raised by Pressure)
 - Outcome bands:
   - Legendary Success (24+)

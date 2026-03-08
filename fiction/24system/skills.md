@@ -44,15 +44,15 @@ Use the skill's rank when rolling that skill:
 
 | Rank | Roll | Average Result | Contested DC (Rounded Up) |
 |---|---|---|---|
-| 0 | `2d12` | `8.49` | `9` |
-| 1 | `d10 + d12 + 2` | `9.88` | `10` |
-| 2 | `2d10 + 4` | `11.15` | `12` |
-| 3 | `d8 + d10 + 6` | `12.55` | `13` |
-| 4 | `2d8 + 8` | `13.81` | `14` |
-| 5 | `d6 + d8 + 10` | `15.23` | `16` |
-| 6 | `2d6 + 12` | `16.47` | `17` |
+| 0 | `2d12` | `13` | `13` |
+| 1 | `d10 + d12 + 2` | `14` | `14` |
+| 2 | `2d10 + 4` | `15` | `15` |
+| 3 | `d8 + d10 + 6` | `16` | `16` |
+| 4 | `2d8 + 8` | `17` | `17` |
+| 5 | `d6 + d8 + 10` | `18` | `18` |
+| 6 | `2d6 + 12` | `19` | `19` |
 
-Roll all dice, take the highest die, then add the flat bonus.
+Roll all dice, keep the two highest dice, then add the flat bonus.
 Leverage and Pressure from `core.md` still apply.
 
 ### Contested Checks (Explicit Rule)
@@ -64,8 +64,8 @@ For any action marked contested:
 
 Example:
 - Attacker Shove at Rank 2 rolls `2d10 + 4`.
-- Defender has Rank 3 Athletics (`d8 + d10 + 6`), average `12.55`.
-- Shove DC is `13` (round up), so attacker needs `13+`.
+- Defender has Rank 3 Athletics (`d8 + d10 + 6`), average `16`.
+- Shove DC is `16`, so attacker needs `16+`.
 
 ---
 

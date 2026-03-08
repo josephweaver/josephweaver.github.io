@@ -85,7 +85,7 @@ Choose **one** per incoming attack:
 ## Resolution Summary
 
 - Roll skill dice + Leverage
-- Take **highest die**
+- Keep **two highest dice**, then add flat bonus
 - Check for **Partial Critical** (max die)
 
 ### Outcomes

@@ -38,7 +38,7 @@ Then:
 
 - The GM sets a **Difficulty (DC)**.
 - You roll your dice.
-- The **highest die** is your result.
+- Your result is the **sum of your two highest dice** (plus flat bonus).
 - **Partial Criticals matter more than totals.**
 
 ---
@@ -166,7 +166,7 @@ Good positioning, planning, teamwork, or preparation.
 | 4 | d10 |
 | 5 | d12 |
 
-Roll all dice and take the **highest**.
+Roll all dice and keep the **two highest**.
 
 ---
 
