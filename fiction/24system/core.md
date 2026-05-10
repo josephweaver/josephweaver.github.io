@@ -65,7 +65,9 @@ Unless an ability or called shot says otherwise, attack hit location follows out
 Called shots override this default mapping.
 
 ***
-### Push Your Luck (Optional Reroll)
+### Push Your Luck (Optional Reroll) - DEPRECATED
+
+This section is deprecated. Use `push-your-luck.md` instead.
 
 If you fail a roll, you may choose to **push your luck**.
 

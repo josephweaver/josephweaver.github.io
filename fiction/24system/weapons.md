@@ -138,6 +138,23 @@ Parry weapons favor control and survivability over raw damage.
 
 ---
 
+### Lit
+
+- Weapon or projectile carries active Flame from `damage-types.md`.
+- Direct threat may increase Fear by `1`.
+- May trigger Light Exposure against creatures adapted to darkness.
+- May ignite Flammable material.
+- Does not add wound damage by default.
+- Reveals the wielder's position.
+
+Melee weapons with Lit lose `1 Integrity` at the end of the scene.
+
+Projectiles with Lit take `+2 Pressure` beyond close range unless specially prepared.
+
+Lit may be lost in water, heavy rain, strong wind, or hard impact.
+
+---
+
 ## Range Interaction Summary
 
 Weapons interact with range through **warding**, not abstract distances.
@@ -207,6 +224,34 @@ This table summarizes how each ranged weapon interacts with the **limb-based act
 ---
 
 ## Weapon Explanations
+
+### Torch
+- A torch has the Lit quality and uses the Flame rules in `damage-types.md`.
+- A torch is usually a fear, light, and control tool, not a wound weapon.
+- Against armor: usually no wound, but may increase Fear by `1`.
+- Against exposed flesh, face, hair, Flammable material, oil, or dry gear: may burn or ignite.
+- Against a creature adapted to darkness: may trigger Light Exposure if aimed at the eyes or face.
+- Against a grabbed, pinned, or restrained target: sustained contact may escalate to Location On Fire if fiction supports it.
+
+**Design Role:**  
+The torch forces flinching, reveals darkness, and threatens ignition without being a reliable killing weapon.
+
+---
+
+### Molotov Cocktail
+- A Molotov cocktail uses the Burning Fuel rules in `damage-types.md`.
+- Requires a lit bottle of flammable fuel and enough space to throw safely.
+- On a hit, the target is splashed with burning fuel and gains the Flammable quality where soaked.
+- Roll on the Random Hit Location table in `combat.md`, then keep rolling for additional affected locations until a roll repeats.
+- Each unique body location affected becomes Location On Fire.
+- A Pack / Gear result means worn or carried equipment is soaked, ignited, damaged, or becomes Item On Fire.
+- If several locations are affected, the Guide may treat the result as Body On Fire.
+- Whether it hits or misses, a Molotov usually creates a Burning Surface where it breaks.
+
+**Design Role:**  
+The Molotov is an area-denial and panic weapon. It is unreliable as precision damage, but it can rapidly turn position, gear, and fear against a target.
+
+---
 
 ### Sling
 - Fired with one arm, reloaded with the other.

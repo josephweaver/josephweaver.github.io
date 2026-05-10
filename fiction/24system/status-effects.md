@@ -176,6 +176,98 @@ Poison and disease are intentionally excluded here and handled separately.
 
 ---
 
+## On Fire
+
+**How it starts**
+- Flame attaches to a carried item, worn item, hit location, or the creature's body.
+- Usually caused by Flammable material, burning fuel, sustained fire contact, or a specific fire effect.
+
+**Effect**
+- Use the On Fire rules in `damage-types.md`.
+- Mark the scope: Item On Fire, Location On Fire, or Body On Fire.
+- Burn effects resolve at the start of the affected creature's turn.
+- Complex actions while On Fire take at least `+2 Pressure`.
+- On Fire may damage gear, spread from Flammable material into Burnable areas, or escalate if the creature remains in fire.
+
+**How it ends**
+- The fire is extinguished, smothered, doused, deprived of fuel, or the burning item is removed.
+- Becoming Wet may end On Fire if the water is sufficient for the fire's size and fuel source.
+
+---
+
+## Wet
+
+**How it starts**
+- Soaked by rain, immersion, thrown water, burst pipes, flooding, or similar exposure.
+- May also apply to specific items, hit locations, or surfaces instead of the whole creature.
+
+**Effect**
+- Wet cancels the Flammable quality while the target remains wet.
+- Wet does not remove Burnable; exposed flesh can still be burned by direct heat or flame.
+- Electrical damage may spread through Wet creatures, items, or surfaces.
+- Wet counts as `20°C` colder for cold exposure while the target remains wet.
+- Wet may impose Pressure on actions where slick grip, soaked gear, weight, or chill matters.
+
+**How it ends**
+- The target dries out, changes gear, is warmed, is wiped down, or the scene moves beyond the wet condition.
+- Strong heat or fire may end Wet on a location or item, but may also expose it to burn effects.
+
+---
+
+## Cold Exposure
+
+**How it starts**
+- Prolonged exposure to freezing air, ice water, deep snow, supernatural cold, or similar conditions.
+- Some monsters or hazards may accelerate cold exposure instead of waiting for normal environmental time.
+- Cold Exposure abstracts both hypothermia and local cold injury. It is not a medical model; it is a survival-horror timing model.
+- Environmental severity is determined by onset time. Use effective temperature, including wind chill, wetness, exposure, altitude, accumulation, and similar conditions.
+- Exposure is measured from the least protected important area. If most of the body is protected but one important area is exposed, use that exposed area to determine effective temperature.
+
+Typical onset interval:
+
+| Effective Temperature | Onset Time |
+|---|---:|
+| 10°C to 0°C | 24 hours |
+| 0°C to -10°C | 8 hours |
+| -10°C to -20°C | 1 hour |
+| -20°C to -30°C | 10 minutes |
+| -30°C and below | 1 minute |
+
+**Effect**
+- Effective temperature adjustments:
+  - Exposed flesh counts as `10°C` colder.
+  - Equipment with the Warm quality counts as `10°C` warmer for covered locations.
+  - Example: a sealed suit without a helmet still suffers the exposed flesh adjustment because the head is the least protected important area.
+
+- Cold Exposure is a status track:
+  - Chilled
+  - Hypothermic
+  - False Warmth
+  - Frostbitten
+  - Frozen
+- At each onset interval of continued exposure, worsen Cold Exposure by one step.
+
+Cold state effects:
+- Chilled: `+1 Pressure` on fine manipulation, steady aim, and quiet movement.
+- Hypothermic: `+2 Pressure` on physical actions; recovery requires warmth or shelter.
+- False Warmth: cold Pressure ends, but judgment fails. At the start of the character's turn while still exposed to cold, roll `1d4`:
+  1: Lose H. Mumbles, stares, misunderstands danger, or acts by habit.
+  2: Lose one arm. Fumbles straps, loosens gear, drops something, or loses grip.
+  3: Collapse Prone.
+  4: Act normally.
+- Frostbitten: The legs suffer cold damage or impairment by default.
+- Frozen: The creature is Incapacitated until thawed or rescued. This is a near-death experience and should cause madness or a lasting survival scar.
+
+If an ally physically guides, restrains, warms, or clearly commands a character in False Warmth, the Guide may allow a recovery check or suppress the random behavior for that turn.
+
+**How it ends**
+- Chilled may end with warmth, dry clothing, movement, or shelter.
+- Hypothermic or worse requires meaningful warmth, shelter, treatment, or scene-level recovery.
+- Frostbitten may leave cosmetic or fictional marks such as skin discoloration, numb patches, or missing fingers, but no long-lasting game effect by default.
+- Frozen may leave wounds, madness, or lasting survival scars at Guide discretion.
+
+---
+
 ## Priority Rule
 
 If multiple status effects conflict:

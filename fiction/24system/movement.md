@@ -98,3 +98,35 @@ The Leg action represents continuous body movement, not a single step.
 - **Move/Reposition only:** Dodge remains available.
 - **Sprint or Leap used:** Dodge is unavailable until your next turn.
 - Traits may override this (for example, **Acrobatic Finesse**).
+
+TODO:// 
+
+
+
+## Crawling
+
+## Swimming
+
+Swimming covers movement through water deep enough that the creature cannot stand or breathe normally.
+
+- A swimming check is only required while under pressure, such as combat, current, injury, panic, heavy load, or rough water.
+- Base swim DC is `10` in calm water.
+- Movement Rate while swimming is `1`.
+- If a creature cannot breathe, it loses `1 stamina` at the start of each round.
+- Each point of negative stamina adds `+1 Pressure` to Athletics checks to swim or remain above water.
+- Apply only the single worst Pressure from armor or pack, using the same categories as normal movement:
+  - No / Light armor or pack: no Pressure
+  - Medium armor or pack: `+1 Pressure`
+  - Heavy armor or heavy pack: `+2 Pressure`
+- Carrying or dragging another creature adds at least `+2 Pressure`.
+
+
+## Climbing
+
+
+
+## Flight
+
+Winged
+
+Supernatural

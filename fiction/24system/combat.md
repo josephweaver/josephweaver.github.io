@@ -130,6 +130,7 @@ Attacks may target specific body regions.
   - Success -> Core
   - Partial Critical on a hit -> Left Arm, Right Arm, or Legs (attacker chooses)
   - Legendary Success (24+) on a hit -> Head
+- On a Partial Critical that would affect the torso/core, the attacker may hit belt or bandolier equipment instead. Roll `1d4` for Small slots or `1d100` for Tiny slots, as described in `equipment.md`.
 - **Called targets:** Left Arm, Right Arm, Legs, or Head (declared before rolling)
 
 **DC Modifiers**
@@ -141,6 +142,25 @@ Attacks may target specific body regions.
 - If no called shot was declared, apply wounds using default targeting by outcome above.
 
 This applies to Wild Swing, Focused Attack, and Full Martial Attack unless a specific ability says otherwise.
+
+### Random Hit Location
+
+Use random hit location when an effect scatters, splashes, detonates, burns unpredictably, or otherwise does not target a single deliberate body region.
+
+Roll `1d12`:
+
+| Roll | Location |
+|---:|---|
+| 1 | Head |
+| 2-5 | Core |
+| 6 | Right Arm |
+| 7 | Left Arm |
+| 8-11 | Legs |
+| 12 | Pack / Gear |
+
+Pack / Gear is not a body wound track. It means carried or worn equipment is hit, damaged, ignited, contaminated, or otherwise affected as appropriate to the source.
+
+For spreading effects, roll once for the first location, then keep rolling for additional affected locations until a roll repeats. Apply the effect to each unique location rolled before the repeat.
 
 **Blind Targeting**
 - If the attacker cannot visually target, apply Blind rules from `status-effects.md`.

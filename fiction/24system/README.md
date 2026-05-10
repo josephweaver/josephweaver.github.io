@@ -201,6 +201,8 @@ Current spell writeups:
 - [`core.md`](core.md): outcomes, push-your-luck, leverage/pressure
 - [`defense.md`](defense.md): active defense options, cover/concealment
 - [`fear-and-madness.md`](fear-and-madness.md): fear track and emergent madness model
+- [`initiative.md`](initiative.md): encounter order, initiative modifiers, and tempo effects
+- [`light-levels.md`](light-levels.md): visibility categories from dim light through pitch darkness
 - [`movement.md`](movement.md): MR, encumbrance, terrain, sprinting
 - `monsters/echo-born-other.md`: monster ecology, behavior, stat block
 - [`perception.md`](perception.md): narrative discovery and secret-door guidance
