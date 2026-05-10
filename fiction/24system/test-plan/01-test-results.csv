@@ -1,0 +1,32 @@
+Skill,Scenario,Base DC,Pressure,Leverage,Roll result:,Outcome:,Partial Critical?:,Legendary?:,Push offered?:,Push taken?:,Complication:,Notes:
+2d12,Sprint across a dry street before a door closes.,8,0,none,,,,,,,,Success automatic
+2d12,Sprint down a clear hallway to reach a wounded ally.,8,"+1, carrying gear",none,21,Success,,,,,,
+2d12,,,,,7,Miss,N,N,Y,14,backpack loss,
+2d12,Sprint from cover to cover while watched.,8,"+2, hostile attention","d4, good route",7,Miss,N,N,Y,19,backpack loss,"Leverage dice was highest, but still failed."
+2d12,,,,,,,,,,,,
+2d12,Sprint over cracked pavement with loose stones.,10,0,none,9,Miss,N,N,Y,16,foot stuck in door.,
+2d12,Sprint through a narrow alley with trash and debris.,10,"+1, clutter",none,9,Miss,N,N,Y,15,Stinky,Critical Fail
+2d12,Sprint through scattered chairs in a dining hall.,10,"+2, panic crowding","d4, clear lane spotted",15,Success,Y,N,,,,Refund
+2d10+4,Sprint up a muddy slope before the lantern goes out.,12,0,none,15,Success,,,,,,
+2d10+4,Sprint across rain-slick cobblestone.,12,"+1, slick footing",none,11,Miss,,,Y,11,fell into pot hole.,Critical Fail
+2d10+4,Sprint down stairs with a creature behind you.,12,"+2, pursuit pressure","d6, handrail",19,Success,Y,,,,,Move faster
+2d10+4,Sprint through a cluttered workshop without knocking tools loose.,14,0,none,17,Success,,,,,,
+2d10+4,Sprint across muddy ground while rain cuts visibility.,14,"+1, poor visibility","d4, known path",13,Miss,,,Y,20,Refund + Overrun minor,
+2d10+4,Sprint through smoke toward a visible exit.,14,"+2, smoke","d6, exit light visible",20,Success,Y,,,,,Ignore difficult terrain
+2d8+8,Sprint across slick blood on tile.,14,0,none,16,Success,,,,,,
+2d8+8,Sprint over broken floorboards that may give way.,14,"+1, unstable floor",none,16,Success,,,,,,
+2d8+8,Sprint across rubble while carrying a fragile case.,14,"+2, fragile burden","d4, case has handle",15,Miss,,,Y,22,Loss shoes,
+2d8+8,Sprint through ankle-deep water over unseen debris.,16,0,none,13,Miss,,,Y,15,Heavy Stamina Loss,Critical Fail
+2d8+8,Sprint across ice while something is gaining on you.,16,"+1, ice","d6, spiked boots",21,Success,,,,,,
+2d8+8,Sprint through a collapsing hallway as beams fall.,16,"+2, collapsing terrain","d4, clear gap",15,Miss,,,Y,21,Overrun,
+2d6+12,Sprint across a narrow ledge in high wind.,16,0,none,24,Success,,Y,,,"Run off the beam, did cartiwhele",Can you get a stamina increase from a legendary?
+2d6+12,Sprint over rooftops with uneven gaps.,16,"+1, uneven footing","d6, practiced route",20,Success,,,,,,
+2d6+12,Sprint through a battlefield lane under covering fire.,16,"+2, suppression","d8, ally distraction",18,Success,,,,,,
+2d6+12,Sprint through a burning room without catching gear.,14,"+2, fire and smoke","d6, wet coat",22,Success,,,,,,
+,,,,,,,,,,,,
+Final Thoughts:,,,,,,,,,,,,
+Seemed ok.   Seems likes I would use this skill at +2 level ,,,,,,,,,,,,
+"Seemed like the better I got, the less I failed.",,,,,,,,,,,,
+"I worried that +2 movement is not enough incentive to sprint, maybe all increase defence as well.",,,,,,,,,,,,
+"I ran this without the -2 DC for push your luck, and it still seemed worth.",,,,,,,,,,,,
+"I had difficulty figuring out the DC based on description, they don't seem to line up.  Also the reasons for pressure im not sure are valid according the rules.",,,,,,,,,,,,
