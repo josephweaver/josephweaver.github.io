@@ -1,7 +1,7 @@
 ---
 layout: default
 title: A Revelation
-tags: [Probability, Prelim, Survival Guide]
+tags: [probability, prelim, survival-guide]
 ---
 
 Prelims test whether you can think inside a box.

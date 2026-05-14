@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Prolifica
-tags: [Probability, Prelim, Survival Guide, Gaussian Neural Networks, 24System]
+tags: [probability, prelim, survival-guide, gaussian-neural-networks, 24-system]
 ---
 
 **Prolifica**: a fabled land where people are always prolific and create at their maximum potential.

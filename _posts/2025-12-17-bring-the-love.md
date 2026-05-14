@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Bringing the Love, and Letting the Universe Bend
-tags: [Probability, Prelim, Space-Voxel, LandCore, Reflection]
+tags: [probability, prelim, space-voxel, landcore, reflection]
 ---
 
 Today I was told something in a LandCore meeting that stuck with me:

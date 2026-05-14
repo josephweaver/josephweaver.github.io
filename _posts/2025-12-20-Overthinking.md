@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Attempt to recoginize structure, not build it
-tags: [Probability, Prelim, Reflection]
+tags: [probability, prelim, reflection]
 ---
 
 Today felt like one of those days where I wasn’t learning new machinery so much as trying to recalibrate how I read problems.

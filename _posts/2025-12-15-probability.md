@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Mind to the Metal
-tags: [Probability, distribution]
+tags: [probability, distribution]
 ---
 
 # Mind to the Metal

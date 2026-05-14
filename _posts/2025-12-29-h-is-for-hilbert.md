@@ -1,7 +1,7 @@
 ---
 layout: default
 title: H is for Hilbert
-tags: [Probability, Prelim, Survival Guide]
+tags: [probability, prelim, survival-guide]
 ---
 
 So today was spent mostly working through probability prelim problems I’d previously solved, trying to build speed, updating the one-page cheat sheet, and knocking down the hard edges that turn a “mostly know” problem into a “know it” problem.

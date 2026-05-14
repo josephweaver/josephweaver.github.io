@@ -1,6 +1,14 @@
+title: Joseph Weaver Public Notebook
+description: Research notes on probability, geospatial systems, Bayesian modeling, AI-assisted workflows, and systems design.
+author: Joseph M. Weaver
+url: "https://josephweaver.github.io"
+repository: josephweaver/josephweaver.github.io
+timezone: America/New_York
+
 remote_theme: pages-themes/cayman@v0.2.0   # or: slate, minimal, hacker, leap-day
 plugins:
   - jekyll-remote-theme
+  - jekyll-seo-tag
 
 markdown: kramdown
 kramdown:
