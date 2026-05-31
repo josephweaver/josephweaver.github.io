@@ -81,6 +81,9 @@ Useful expectations:
 - `intake/` is raw source material waiting to be triaged.
 - `README.md` files are maps or project entry points.
 - `PROJECT_STATE.md` files capture current status and next steps.
+- `CONTRIBUTION.md` records the intake-to-publication workflow.
+- `STRATEGY_SESSION.md` is a prompt for starting future long-term strategy sessions.
+- `TODO.md` tracks practical repository and site-improvement backlog items.
 - Research concept notes may be speculative unless marked otherwise.
 - Probability notes often prioritize retrieval, exam readiness, and reusable proof patterns.
 - Fiction and game-system notes often encode serious systems thinking in a different medium.
@@ -99,6 +102,9 @@ Some pages are rough. That is deliberate. The goal is to make long-running thoug
 +-- probability/       # probability notes, prelim work, references
 +-- research/          # research concepts and active idea threads
 +-- fiction/           # systems/worldbuilding/game-design labs
++-- CONTRIBUTION.md    # personal workflow for intake and publication
++-- STRATEGY_SESSION.md # prompt for future strategy-collaboration sessions
++-- TODO.md            # practical repository/site backlog
 +-- index.html         # site landing page
 +-- about.html         # public profile
 +-- _config.yml        # GitHub Pages/Jekyll config
@@ -142,9 +148,9 @@ When promoting intake material, preserve the original if it contains useful cont
 The next improvements are organizational rather than cosmetic:
 
 - make research threads easier to browse
-- replace placeholder landing pages with real maps
 - add consistent front matter for status, tags, and thread names
 - improve discoverability of exploratory notes
 - turn the strongest concept notes into stable public essays or reproducible prototypes
+- keep `PROJECT_STATE.md` aligned with the current site structure
 
 This repository is meant to remain an evolving notebook: part research archive, part infrastructure lab, part teaching aid, and part record of how ideas become systems.
