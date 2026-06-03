@@ -7,6 +7,11 @@ categories:
   - research-notes
 project: concepts
 status: draft
+tags:
+  - pca
+  - uncertainty
+  - numerical-analysis
+  - representation-learning
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---

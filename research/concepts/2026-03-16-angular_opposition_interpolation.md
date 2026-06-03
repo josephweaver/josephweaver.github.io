@@ -3,6 +3,11 @@ title: Angular Opposition Interpolation (AOI)
 date: 2026-03-16
 project: concepts
 status: draft
+tags:
+  - interpolation
+  - geometry
+  - latent-space
+  - representation-learning
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---

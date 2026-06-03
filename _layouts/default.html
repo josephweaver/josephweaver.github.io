@@ -60,11 +60,7 @@
       <ul class="nav-list">
         <li>
           <a class="{% if page.url == "/" or page.url == "/index.html" %}active{% endif %}"
-             href="{{ "/" | relative_url }}">Blog</a>
-        </li>
-        <li>
-          <a class="{% if page.url == "/about.html" %}active{% endif %}"
-             href="{{ "/about.html" | relative_url }}">About</a>
+             href="{{ "/" | relative_url }}">Recent Activities</a>
         </li>
         <li>
           <a class="{% if page.url == "/other-topics.html" %}active{% endif %}"
@@ -165,6 +161,7 @@
                 {% if sub_landing == nil %}
                   {% assign sub_landing = site.pages | where_exp: "p", "p.path == sub_index_html" | first %}
                 {% endif %}
+                {% if sub_landing == nil %}{% continue %}{% endif %}
                 {% assign sub_url = sub_landing.url | default: sub_prefix %}
 
                 {% assign sub_pages = section_pages | where_exp: "p", "p.dir == sub_dir" | sort_natural: "path" %}
@@ -224,6 +221,7 @@
                       {% if subsub_landing == nil %}
                         {% assign subsub_landing = site.pages | where_exp: "p", "p.path == subsub_index_html" | first %}
                       {% endif %}
+                      {% if subsub_landing == nil %}{% continue %}{% endif %}
                       {% assign subsub_url = subsub_landing.url | default: subsub_prefix %}
 
                       {% assign subsub_pages = section_pages | where_exp: "p", "p.dir == subsub_dir" | sort_natural: "path" %}
@@ -256,6 +254,10 @@
             </ul>
           </li>
         {% endfor %}
+        <li>
+          <a class="{% if page.url == "/about.html" %}active{% endif %}"
+             href="{{ "/about.html" | relative_url }}">About</a>
+        </li>
       </ul>
     </aside>
     <div class="sidebar-resizer" id="sidebarResizer" role="separator" aria-orientation="vertical" aria-label="Resize navigation"></div>

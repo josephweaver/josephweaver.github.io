@@ -1,6 +1,13 @@
 ---
 title: AI Homework
 layout: default
+project: ai-homework
+status: draft
+tags:
+  - ai-tutoring
+  - education
+  - homework
+  - learning-systems
 ---
 
 # **AI-Homework: Concept Document & Primary Business Requirements**

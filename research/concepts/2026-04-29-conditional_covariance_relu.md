@@ -3,6 +3,11 @@ title: Conditional Covariance in ReLU Networks via Activation Fields
 date: 2026-04-29
 project: concepts
 status: draft
+tags:
+  - covariance
+  - relu-networks
+  - activation-fields
+  - neural-networks
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---

@@ -3,6 +3,11 @@ title: How I Survived My Probability Prelim
 date: 2025-12-24
 project: concepts
 status: draft
+tags:
+  - probability
+  - prelim
+  - study-strategy
+  - teaching
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---

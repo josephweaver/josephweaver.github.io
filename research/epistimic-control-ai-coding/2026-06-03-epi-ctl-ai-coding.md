@@ -1,3 +1,15 @@
+---
+title: Epistemic Control in AI-Assisted Programming
+date: 2026-06-03
+project: epistimic-control-ai-coding
+status: draft
+tags:
+  - research-governance
+  - epistemic-control
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
+---
+
 # Epistemic Control in AI-Assisted Programming
 
 Have you tried fully autonomous AI programming?

@@ -3,6 +3,11 @@ title: Adaptive Latent Topology Learning via Node Mitosis and Merge
 date: 2026-05-30
 project: concepts
 status: draft
+tags:
+  - latent-topology
+  - neural-networks
+  - representation-learning
+  - adaptive-models
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---

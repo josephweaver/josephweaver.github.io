@@ -3,6 +3,12 @@ title: Crop Lifecycle Temporal Modeling Notes
 date: 2026-05-14
 project: concepts
 status: draft
+tags:
+  - crop-risk
+  - geospatial-modeling
+  - remote-sensing
+  - temporal-modeling
+  - agriculture
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---
@@ -364,4 +370,3 @@ Future work will determine:
 - usefulness of SAR temporal dynamics
 - ability to disentangle weather and management
 - whether unsupervised clusters align with meaningful management practices
-

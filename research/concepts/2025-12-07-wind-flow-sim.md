@@ -4,6 +4,11 @@ layout: default
 date: 2025-12-07
 project: concepts
 status: draft
+tags:
+  - simulation
+  - atmospheric-dynamics
+  - geospatial-modeling
+  - environmental-systems
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---

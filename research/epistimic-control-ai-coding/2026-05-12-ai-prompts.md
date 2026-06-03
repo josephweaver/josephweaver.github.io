@@ -3,6 +3,11 @@ title: AI Prompt for Human-applied Ai-Codeing
 date: 2026-05-12
 project: epistimic-control-ai-coding
 status: draft
+tags:
+  - prompts
+  - ai-assisted-coding
+  - workflow-design
+  - epistemic-control
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---

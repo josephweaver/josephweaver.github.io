@@ -1,5 +1,8 @@
 ---
 title: Research
+tags:
+  - research-index
+  - project-map
 ---
 
 # Research

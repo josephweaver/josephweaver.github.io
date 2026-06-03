@@ -3,6 +3,11 @@ title: Ecological Currency and Productive-Activity-Backed Value
 date: 2026-05-14
 project: concepts
 status: draft
+tags:
+  - ecological-currency
+  - carbon-capture
+  - climate-systems
+  - incentive-design
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---

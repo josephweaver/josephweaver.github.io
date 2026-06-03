@@ -3,6 +3,11 @@ title: AI Use Compact for SMART Fellowship
 date: 2026-05-18
 project: epistimic-control-ai-coding
 status: draft
+tags:
+  - ai-policy
+  - smart-fellowship
+  - research-governance
+  - epistemic-control
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---

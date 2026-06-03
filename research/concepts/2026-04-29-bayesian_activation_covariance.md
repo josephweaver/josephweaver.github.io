@@ -3,6 +3,11 @@ title: Bayesian View of Activation Patterns in ReLU Networks
 date: 2026-04-29
 project: concepts
 status: draft
+tags:
+  - bayesian-modeling
+  - neural-networks
+  - covariance
+  - relu-networks
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---

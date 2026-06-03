@@ -3,6 +3,11 @@ title: PCA-Based Embedding and Response Model Formulation
 date: 2026-05-30
 project: concepts
 status: draft
+tags:
+  - embeddings
+  - pca
+  - regression
+  - representation-learning
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---
@@ -271,4 +276,3 @@ The current interpretation of Section 5 is:
 4. Propagate uncertainty from embedding space into predictive space.
 
 Under this interpretation, the framework appears mathematically coherent.
-

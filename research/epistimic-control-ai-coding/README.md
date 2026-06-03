@@ -3,6 +3,11 @@ title: Epistemic Control in AI-Assisted Programming
 project: epistimic-control-ai-coding
 status: active
 summary: Research notes and workflow experiments on maintaining human understanding while using AI-assisted software development tools.
+tags:
+  - ai-assisted-coding
+  - epistemic-control
+  - research-workflow
+  - human-ai-collaboration
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---

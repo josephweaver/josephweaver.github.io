@@ -3,6 +3,11 @@ title: AI Assistance Patterns for Research Software Work
 date: 2026-05-12
 project: epistimic-control-ai-coding
 status: draft
+tags:
+  - ai-assisted-coding
+  - epistemic-control
+  - research-workflow
+  - human-ai-collaboration
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---

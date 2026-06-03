@@ -1,3 +1,15 @@
+---
+title: Learned Prior for Tactic Selection
+project: prob-proof
+status: draft
+tags:
+  - proof-automation
+  - tactic-selection
+  - smooth-manifolds
+  - machine-checked-math
+  - probabilistic-modeling
+---
+
 # A Learned Prior for Tactic Selection in Smooth Manifold Proofs
 **Subtitle:** Data-driven priors from existing proofs to guide machine-checked automation in a restricted subdomain.
 

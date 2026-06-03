@@ -1,5 +1,8 @@
 ---
 title: Research Concepts
+tags:
+  - research-concepts
+  - idea-index
 ---
 
 # Research Concepts
