@@ -1,0 +1,58 @@
+---
+layout: default
+title: Other Topics
+---
+
+# Other Topics
+
+These sections are adjacent to the active research notes: teaching material, probability references, and systems-design experiments.
+
+<div class="topic-grid">
+  <a class="topic-card" href="{{ '/probability/' | relative_url }}">
+    <p class="eyebrow">Teaching</p>
+    <h2>Probability Notes</h2>
+    <p>Course-style writeups, distribution references, convergence notes, prelim preparation, and reusable proof patterns.</p>
+  </a>
+  <a class="topic-card" href="{{ '/fiction/' | relative_url }}">
+    <p class="eyebrow">Fiction</p>
+    <h2>Systems Sandboxes</h2>
+    <p>Worldbuilding, game-system sketches, and speculative design notes used to explore mechanics and constraints.</p>
+  </a>
+</div>
+
+<style>
+  .topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  .topic-card {
+    display: block;
+    padding: 1.1rem 1.2rem;
+    border: 1px solid #d9e2ec;
+    border-radius: 8px;
+    background: #ffffff;
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 12px 30px rgba(8, 24, 52, 0.08);
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .topic-card:hover,
+  .topic-card:focus-visible {
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(8, 24, 52, 0.12);
+  }
+  .topic-card h2 {
+    margin: 0.25rem 0 0.35rem;
+    font-size: 1.35rem;
+  }
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 800;
+    font-size: 0.85rem;
+    color: #5c6880;
+    margin: 0;
+  }
+</style>

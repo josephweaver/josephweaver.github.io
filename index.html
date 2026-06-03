@@ -1,80 +1,186 @@
 ---
 layout: default
-title: Blog
+title: Research Posts
 ---
 
-<section class="blog-hero">
-  <p class="eyebrow">Field notes & experiments</p>
-  <h1>Bayesian crop risk, geospatial systems, and learning in public.</h1>
-  <p class="lede">Short, candid entries on statistical modeling, data engineering patterns, and the teaching artifacts I use to explain both.</p>
-  <div class="hero-actions">
-    <a class="btn" href="#latest">Start reading</a>
-    <a class="btn ghost" href="{{ site.posts.first.url | relative_url }}">Read the latest post</a>
-    <a class="btn ghost" href="{{ '/about.html' | relative_url }}">About Joseph</a>
-  </div>
-  <div class="hero-meta">
-    <span>Frequent topics: Bayesian workflow, intrinsic dimension, spatial pipelines, and classroom-ready demos.</span>
-  </div>
+{% assign research_project_pages = site.pages | where_exp: "p", "p.path contains 'research/' and p.name == 'README.md' and p.project" %}
+{% assign research_pages = site.pages | where_exp: "p", "p.project and p.date" %}
+{% assign research_posts = site.posts | where_exp: "p", "p.project and p.date" %}
+{% assign research_items = research_pages | concat: research_posts | sort: "date" | reverse %}
+
+<section class="section-head" aria-labelledby="recent-research">
+  <h1 id="recent-research">Recent Research</h1>
+  <p>Dated project notes, working articles, and updates from active research folders.</p>
 </section>
 
-<section class="blog-grid" id="latest">
-  {% assign posts = site.posts %}
-  {% if posts and posts.size > 0 %}
-    {% for post in posts limit:6 %}
-      <a class="blog-card" href="{{ post.url | relative_url }}">
-        <p class="eyebrow">{{ post.date | date: "%b %-d, %Y" }}</p>
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.excerpt | strip_html | truncate: 160 }}</p>
-        {% if post.tags %}
-          <ul class="tag-list">
-            {% for tag in post.tags limit:4 %}
-              <li>{{ tag }}</li>
+<section class="research-feed" aria-label="Recent research notes">
+  {% if research_items and research_items.size > 0 %}
+    {% for item in research_items limit:8 %}
+      {% assign item_project = research_project_pages | where: "project", item.project | first %}
+      <article class="research-card">
+        <a class="research-card__main" href="{{ item.url | relative_url }}">
+          <p class="eyebrow">{{ item.date | date: "%b %-d, %Y" }}</p>
+          <h2>{{ item.title }}</h2>
+          <p>{{ item.excerpt | strip_html | truncate: 170 }}</p>
+        </a>
+        <div class="research-card__meta">
+          {% if item_project %}
+            <a href="{{ item_project.url | relative_url }}">{{ item_project.title }}</a>
+          {% elsif item.project %}
+            <span>{{ item.project | replace: "-", " " }}</span>
+          {% endif %}
+          {% if item.status %}
+            <span>{{ item.status }}</span>
+          {% endif %}
+          {% if item.repos %}
+            {% for repo in item.repos limit:1 %}
+              <a href="{{ repo }}">repo</a>
             {% endfor %}
-          </ul>
-        {% endif %}
-      </a>
+          {% endif %}
+        </div>
+      </article>
     {% endfor %}
   {% else %}
-    <article class="blog-card">
-      <p class="eyebrow">No posts yet</p>
-      <h2>Posts will appear here soon</h2>
-      <p>As soon as you add Markdown files to <code>_posts/</code>, the latest entries will show up on this grid.</p>
+    <article class="research-card">
+      <div class="research-card__main">
+        <p class="eyebrow">No research notes yet</p>
+        <h2>Dated project notes will appear here</h2>
+        <p>Add front matter with <code>project</code> and <code>date</code> to files under <code>research/&lt;project-name&gt;/</code>.</p>
+      </div>
     </article>
   {% endif %}
 </section>
 
-<section class="panel roadmap">
-  <h2>Upcoming posts</h2>
-  <ul class="roadmap-list">
-    <li><span class="pill">In progress</span> Building a reproducible spatial ETL stack with PostGIS + DuckDB.</li>
-    <li><span class="pill">Queued</span> Teaching Bayesian updating with crop-yield examples and classroom visuals.</li>
-    <li><span class="pill">Queued</span> Intrinsic dimension experiments that bridge math notes to GPU-friendly code.</li>
-    <li><span class="pill">Queued</span> Lightweight CI/CD for research repos: pre-commit hooks, docs, and tests.</li>
-  </ul>
+<section class="section-head is-secondary" aria-labelledby="current-projects">
+  <h2 id="current-projects">Current Projects</h2>
+  <p>Pinned projects appear first. Each project links to its research direction and recent notes.</p>
+</section>
+
+<section class="project-grid" aria-label="Current research projects">
+  {% assign rendered_projects = "|" %}
+
+  {% for item in research_items %}
+    {% assign project = research_project_pages | where: "project", item.project | first %}
+    {% if project %}
+      {% capture project_token %}|{{ project.project }}|{% endcapture %}
+      {% unless rendered_projects contains project_token %}
+        {% assign project_dir = project.path | remove: "README.md" %}
+        {% assign pinned_path = "/" | append: project_dir | append: "pinned" %}
+        {% assign is_pinned = false %}
+        {% for static_file in site.static_files %}
+          {% if static_file.path == pinned_path %}
+            {% assign is_pinned = true %}
+          {% endif %}
+        {% endfor %}
+        {% if is_pinned %}
+          <a class="project-card" href="{{ project.url | relative_url }}">
+            <p class="eyebrow">Pinned - {{ item.date | date: "%b %-d, %Y" }}</p>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.summary | default: project.excerpt | strip_html | truncate: 150 }}</p>
+            <span>Latest: {{ item.title }}</span>
+          </a>
+          {% assign rendered_projects = rendered_projects | append: project.project | append: "|" %}
+        {% endif %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+
+  {% for project in research_project_pages %}
+    {% capture project_token %}|{{ project.project }}|{% endcapture %}
+    {% unless rendered_projects contains project_token %}
+      {% assign project_dir = project.path | remove: "README.md" %}
+      {% assign pinned_path = "/" | append: project_dir | append: "pinned" %}
+      {% assign is_pinned = false %}
+      {% for static_file in site.static_files %}
+        {% if static_file.path == pinned_path %}
+          {% assign is_pinned = true %}
+        {% endif %}
+      {% endfor %}
+      {% if is_pinned %}
+        <a class="project-card" href="{{ project.url | relative_url }}">
+          <p class="eyebrow">Pinned</p>
+          <h3>{{ project.title }}</h3>
+          <p>{{ project.summary | default: project.excerpt | strip_html | truncate: 150 }}</p>
+        </a>
+        {% assign rendered_projects = rendered_projects | append: project.project | append: "|" %}
+      {% endif %}
+    {% endunless %}
+  {% endfor %}
+
+  {% for item in research_items %}
+    {% assign project = research_project_pages | where: "project", item.project | first %}
+    {% if project %}
+      {% capture project_token %}|{{ project.project }}|{% endcapture %}
+      {% unless rendered_projects contains project_token %}
+        {% assign project_dir = project.path | remove: "README.md" %}
+        {% assign pinned_path = "/" | append: project_dir | append: "pinned" %}
+        {% assign is_pinned = false %}
+        {% for static_file in site.static_files %}
+          {% if static_file.path == pinned_path %}
+            {% assign is_pinned = true %}
+          {% endif %}
+        {% endfor %}
+        {% unless is_pinned %}
+          <a class="project-card" href="{{ project.url | relative_url }}">
+            <p class="eyebrow">{{ item.date | date: "%b %-d, %Y" }}</p>
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.summary | default: project.excerpt | strip_html | truncate: 150 }}</p>
+            <span>Latest: {{ item.title }}</span>
+          </a>
+          {% assign rendered_projects = rendered_projects | append: project.project | append: "|" %}
+        {% endunless %}
+      {% endunless %}
+    {% endif %}
+  {% endfor %}
+
+  {% for project in research_project_pages %}
+    {% capture project_token %}|{{ project.project }}|{% endcapture %}
+    {% unless rendered_projects contains project_token %}
+    {% assign project_dir = project.path | remove: "README.md" %}
+    {% assign pinned_path = "/" | append: project_dir | append: "pinned" %}
+    {% assign is_pinned = false %}
+    {% for static_file in site.static_files %}
+      {% if static_file.path == pinned_path %}
+        {% assign is_pinned = true %}
+      {% endif %}
+    {% endfor %}
+    {% unless is_pinned %}
+      <a class="project-card" href="{{ project.url | relative_url }}">
+        <p class="eyebrow">Project</p>
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.summary | default: project.excerpt | strip_html | truncate: 150 }}</p>
+      </a>
+      {% assign rendered_projects = rendered_projects | append: project.project | append: "|" %}
+    {% endunless %}
+    {% endunless %}
+  {% endfor %}
+
+  {% if research_project_pages.size == 0 %}
+    <article class="project-card">
+      <p class="eyebrow">No projects yet</p>
+      <h3>Research projects will appear here</h3>
+      <p>Create <code>research/&lt;project-name&gt;/README.md</code> with a <code>project</code> front matter key.</p>
+    </article>
+  {% endif %}
 </section>
 
 <section class="panel resources">
-  <h2>Explore my work</h2>
+  <h2>Explore</h2>
   <div class="resource-grid">
+    <a class="resource-card" href="{{ '/research/' | relative_url }}">
+      <p class="eyebrow">Research</p>
+      <h3>All research topics</h3>
+      <p>Browse project landing pages, concept notes, and active research directions.</p>
+    </a>
     <a class="resource-card" href="{{ '/about.html' | relative_url }}">
       <p class="eyebrow">Profile</p>
       <h3>About me</h3>
       <p>Background, roles, and collaboration interests.</p>
     </a>
-    <a class="resource-card" href="{{ '/research/' | relative_url }}">
-      <p class="eyebrow">Research</p>
-      <h3>Notes & drafts</h3>
-      <p>Landing pages for ongoing research threads.</p>
-    </a>
-    <a class="resource-card" href="{{ '/probability/' | relative_url }}">
-      <p class="eyebrow">Teaching</p>
-      <h3>Probability notes</h3>
-      <p>Course-style writeups and exercises.</p>
-    </a>
-    <a class="resource-card" href="{{ '/fiction/' | relative_url }}">
-      <p class="eyebrow">Worldbuilding</p>
-      <h3>Fiction sandbox</h3>
-      <p>Space voxel concepts and transport sketches.</p>
+    <a class="resource-card" href="{{ '/other-topics.html' | relative_url }}">
+      <p class="eyebrow">Other topics</p>
+      <h3>Teaching & fiction</h3>
+      <p>Course notes, probability references, and systems-design sandboxes.</p>
     </a>
   </div>
 </section>
@@ -87,175 +193,130 @@ title: Blog
     --accent-soft: #e4f4f1;
     --border: #d9e2ec;
     --panel: #ffffff;
-    --shadow: 0 16px 40px rgba(8, 24, 52, 0.08);
+    --shadow: 0 14px 34px rgba(8, 24, 52, 0.08);
   }
   body {
     color: var(--ink);
-    background: linear-gradient(135deg, #eef3f8 0%, #eaf4f1 35%, #f5f7fb 100%);
+    background: #f5f7fb;
   }
-  .blog-hero {
-    background: linear-gradient(120deg, #0f8d7b 0%, #16b79c 35%, #ffffff 100%);
-    color: #0b1c2f;
-    border-radius: 14px;
-    padding: 1.6rem 1.8rem;
-    border: 1px solid rgba(255,255,255,0.6);
-    box-shadow: var(--shadow);
+  .section-head {
+    margin: 0 0 0.9rem;
   }
-  .blog-hero h1 {
-    margin: 0.2rem 0 0.6rem;
-    font-size: 2rem;
+  .section-head.is-secondary {
+    margin-top: 1.5rem;
+  }
+  .section-head h1,
+  .section-head h2 {
+    margin: 0 0 0.25rem;
     line-height: 1.15;
   }
-  .blog-hero .lede {
-    font-size: 1.05rem;
-    color: #0b1c2f;
-    max-width: 720px;
+  .section-head p {
+    margin: 0;
+    color: var(--muted);
+    max-width: 760px;
   }
-  .hero-actions {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    margin: 0.9rem 0 0.4rem;
-  }
-  .hero-meta {
-    color: #0b1c2f;
-    font-weight: 600;
-  }
-  .btn {
-    display: inline-block;
-    padding: 0.55rem 0.95rem;
-    border-radius: 10px;
-    background: #0b1c2f;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 700;
-    border: 1px solid #0b1c2f;
-    box-shadow: 0 10px 25px rgba(11, 28, 47, 0.16);
-  }
-  .btn.ghost {
-    background: rgba(255,255,255,0.18);
-    color: #0b1c2f;
-    border-color: rgba(255,255,255,0.6);
-    box-shadow: none;
-  }
-  .btn:hover,
-  .btn:focus-visible {
-    box-shadow: 0 10px 25px rgba(11, 28, 47, 0.28);
-  }
-  .blog-grid {
-    margin-top: 1.4rem;
+  .research-feed {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1rem;
   }
-  .blog-card {
+  .research-card,
+  .project-card,
+  .resource-card {
     background: var(--panel);
     border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 1.1rem 1.2rem;
+    border-radius: 8px;
     box-shadow: var(--shadow);
   }
-  .blog-card {
+  .research-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+  .research-card__main {
+    display: block;
+    padding: 1.05rem 1.15rem 0.8rem;
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+  }
+  .research-card__main h2 {
+    margin: 0.25rem 0 0.4rem;
+    font-size: 1.3rem;
+  }
+  .research-card__main p:last-child,
+  .project-card p,
+  .resource-card p {
+    color: var(--muted);
+  }
+  .research-card__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    padding: 0 1.15rem 1rem;
+  }
+  .research-card__meta a,
+  .research-card__meta span {
+    border: 1px solid #c7e6df;
+    background: var(--accent-soft);
+    color: var(--accent);
+    border-radius: 999px;
+    padding: 0.22rem 0.55rem;
+    font-size: 0.86rem;
+    font-weight: 700;
+    text-decoration: none;
+  }
+  .project-grid,
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 0.9rem;
+  }
+  .project-card,
+  .resource-card {
+    display: block;
+    padding: 1rem 1.05rem;
     color: inherit;
     text-decoration: none;
     transition: transform 0.12s ease, box-shadow 0.12s ease;
   }
-  .blog-card:hover,
-  .blog-card:focus-visible {
-    transform: translateY(-3px);
-    box-shadow: 0 18px 36px rgba(8, 24, 52, 0.12);
-  }
-  .blog-card h2 {
-    margin: 0.25rem 0 0.4rem;
-    font-size: 1.35rem;
-  }
-  .tag-list {
-    list-style: none;
-    padding: 0;
-    margin: 0.6rem 0 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-  .tag-list li {
-    background: var(--accent-soft);
-    color: var(--accent);
-    border-radius: 999px;
-    padding: 0.25rem 0.65rem;
-    font-weight: 700;
-    font-size: 0.9rem;
-    border: 1px solid #c7e6df;
-  }
-  .roadmap-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    gap: 0.65rem;
-  }
-  .roadmap-list li {
-    display: flex;
-    align-items: center;
-    gap: 0.6rem;
-    color: var(--muted);
-  }
-  .pill {
-    background: var(--accent-soft);
-    color: var(--accent);
-    padding: 0.25rem 0.6rem;
-    border-radius: 999px;
-    font-weight: 700;
-    border: 1px solid #c7e6df;
-    min-width: 98px;
-    text-align: center;
-  }
-  .resources {
-    margin-top: 1.1rem;
-  }
-  .resource-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0.9rem;
-    margin-top: 0.6rem;
-  }
-  .resource-card {
-    display: block;
-    padding: 1rem 1.05rem;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    background: linear-gradient(135deg, #ffffff 0%, #f7fafc 100%);
-    box-shadow: var(--shadow);
-    color: inherit;
-    text-decoration: none;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-  }
+  .research-card:hover,
+  .research-card:focus-within,
+  .project-card:hover,
+  .project-card:focus-visible,
   .resource-card:hover,
   .resource-card:focus-visible {
-    transform: translateY(-3px);
+    transform: translateY(-2px);
     box-shadow: 0 16px 32px rgba(8, 24, 52, 0.12);
   }
+  .project-card h3,
   .resource-card h3 {
-    margin: 0.2rem 0 0.2rem;
+    margin: 0.25rem 0 0.25rem;
+  }
+  .project-card span {
+    display: block;
+    margin-top: 0.65rem;
+    color: var(--accent);
+    font-weight: 700;
+  }
+  .resources {
+    margin-top: 1.5rem;
+  }
+  .resources h2 {
+    margin-top: 0;
   }
   .eyebrow {
     text-transform: uppercase;
     letter-spacing: 0.08em;
     font-weight: 800;
-    font-size: 0.85rem;
+    font-size: 0.82rem;
     color: var(--muted);
     margin: 0;
   }
-  .panel h2 {
-    margin-top: 0;
-  }
   @media (max-width: 720px) {
-    .blog-hero {
-      padding: 1.25rem 1.15rem;
-    }
-    .blog-hero h1 {
-      font-size: 1.6rem;
-    }
-    .blog-grid {
+    .research-feed,
+    .project-grid,
+    .resource-grid {
       grid-template-columns: 1fr;
     }
   }

@@ -8,6 +8,16 @@ This section collects research notes, speculative concepts, and project sketches
 
 ## Current Threads
 
+### Epistemic Control AI Coding
+
+Notes on AI-assisted coding, research control, prompt practice, and responsible acceleration. This folder is the canonical example for active research project structure: a project `README.md`, optional `pinned` marker, and dated article files.
+
+- [Project landing page](epistimic-control-ai-coding/README.md)
+- [AI Use Compact for SMART Fellowship](epistimic-control-ai-coding/2026-05-18-ai-use-compact-SMART-fellowship.md)
+- [AI Assistance Levels](epistimic-control-ai-coding/2026-05-12-ai-assistance-levels.md)
+- [AI Prompts](epistimic-control-ai-coding/2026-05-12-ai-prompts.md)
+- [AI Usage Policy for Research](epistimic-control-ai-coding/2026-04-25-ai-use.md)
+
 ### Agricultural And Geospatial Modeling
 
 Notes on crop-risk modeling, temporal field behavior, remote sensing, and geospatial infrastructure.
@@ -43,6 +53,8 @@ Notes on learned priors, tactic selection, and formal proof traces.
 ## How To Read This Section
 
 - Use [`concepts/`](concepts/) for early-stage ideas and speculative frameworks.
-- Use project subfolders, such as [`ai-homework/`](ai-homework/) and [`prob-proof/`](prob-proof/), for more focused threads.
+- Use project subfolders, such as [`epistimic-control-ai-coding/`](epistimic-control-ai-coding/), [`ai-homework/`](ai-homework/), and [`prob-proof/`](prob-proof/), for more focused threads.
+- In active project folders, use `YYYY-MM-DD-title.md` filenames plus matching `date` front matter for article ordering.
+- Add an empty `pinned` file when a project should appear above unpinned projects.
 - Treat status labels and file context seriously: some notes are seeds, not claims.
 - Expect ideas to move from rough notes to clearer public writeups over time.

@@ -25,6 +25,7 @@ Current recurring themes include:
 
 Start with:
 
+- [`research/epistimic-control-ai-coding/README.md`](research/epistimic-control-ai-coding/README.md)
 - [`research/concepts/crop_lifecycle_temporal_modeling_notes.md`](research/concepts/crop_lifecycle_temporal_modeling_notes.md)
 - [`research/concepts/Intrinsic-dimension-of-math.md`](research/concepts/Intrinsic-dimension-of-math.md)
 - [`research/concepts/GaussianPCA.md`](research/concepts/GaussianPCA.md)
@@ -80,6 +81,7 @@ Useful expectations:
 
 - `intake/` is raw source material waiting to be triaged.
 - `README.md` files are maps or project entry points.
+- Active research project folders use `research/<project-name>/README.md`, optional `pinned`, and dated `YYYY-MM-DD-title.md` article files.
 - `PROJECT_STATE.md` files capture current status and next steps.
 - `CONTRIBUTION.md` records the intake-to-publication workflow.
 - `STRATEGY_SESSION.md` is a prompt for starting future long-term strategy sessions.
