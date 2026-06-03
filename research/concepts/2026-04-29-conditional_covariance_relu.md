@@ -1,3 +1,12 @@
+---
+title: Conditional Covariance in ReLU Networks via Activation Fields
+date: 2026-04-29
+project: concepts
+status: draft
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
+---
+
 # Conditional Covariance in ReLU Networks via Activation Fields
 
 ## Motivation

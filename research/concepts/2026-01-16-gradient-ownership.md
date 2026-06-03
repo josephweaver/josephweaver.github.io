@@ -1,4 +1,11 @@
-
+---
+title: Gradient Ownership
+date: 2026-01-16
+project: concepts
+status: draft
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
+---
 
 # Gradient Ownership
 

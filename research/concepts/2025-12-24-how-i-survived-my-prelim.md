@@ -1,3 +1,12 @@
+---
+title: How I Survived My Probability Prelim
+date: 2025-12-24
+project: concepts
+status: draft
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
+---
+
 # How I Survived My Probability Prelim  
 ## An Applied Toolkit (with Field Notes)
 

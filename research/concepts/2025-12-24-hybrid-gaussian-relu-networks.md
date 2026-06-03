@@ -1,9 +1,11 @@
 ---
 title: "Hybrid Gaussian–ReLU Neural Networks (Switch–Scale Architecture)"
+date: 2025-12-24
 permalink: /research/concepts/hybrid-gaussian-relu-networks/
 tags: [neural-networks, regression, mixture-of-experts, numerical-analysis, optimization]
-status: concept-followup
-parent: /research/concepts/gaussian-smoothing-neural-networks/
+status: draft
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
 ---
 
 ## Follow-up Concept: Hybrid Gaussian–ReLU Neural Networks

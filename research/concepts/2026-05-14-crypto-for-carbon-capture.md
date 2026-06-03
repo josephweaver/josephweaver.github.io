@@ -1,4 +1,14 @@
+---
+title: Ecological Currency and Productive-Activity-Backed Value
+date: 2026-05-14
+project: concepts
+status: draft
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
+---
+
 # Ecological Currency and Productive-Activity-Backed Value
+
 
 *An exploratory thought piece by Joseph Weaver*
 

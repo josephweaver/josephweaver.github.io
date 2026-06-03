@@ -2,7 +2,11 @@
 title: "Gaussian Smoothing Neural Networks (GSNN)"
 permalink: /research/concepts/gaussian-smoothing-neural-networks/
 tags: [neural-networks, regression, gaussian-processes, numerical-analysis, approximation-theory]
-status: concept
+date: 2025-12-24
+project: concepts
+status: draft
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
 ---
 
 ## Concept: Gaussian Smoothing Neural Networks (GSNN)

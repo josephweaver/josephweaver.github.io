@@ -1,3 +1,12 @@
+---
+title: Bayesian View of Activation Patterns in ReLU Networks
+date: 2026-04-29
+project: concepts
+status: draft
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
+---
+
 # Bayesian View of Activation Patterns in ReLU Networks
 
 ## Motivation

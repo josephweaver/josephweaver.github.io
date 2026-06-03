@@ -1,3 +1,12 @@
+---
+title: Adaptive Latent Topology Learning via Node Mitosis and Merge
+date: 2026-05-30
+project: concepts
+status: draft
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
+---
+
 # Adaptive Latent Topology Learning via Node Mitosis and Merge
 
 ## Origin of the Idea

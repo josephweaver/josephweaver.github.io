@@ -1,9 +1,16 @@
 ---
-
-title: "Scale-Aware Uncertain PCA (Toy Idea)"
+title: Scale-Aware Uncertain PCA
 date: 2026-04-17
-categories: [statistics, pca, research-notes]
----------------------------------------------
+categories:
+  - statistics
+  - pca
+  - research-notes
+project: concepts
+status: draft
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
+---
+
 
 ## Core Idea
 

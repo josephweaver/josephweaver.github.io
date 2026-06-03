@@ -1,3 +1,12 @@
+---
+title: Crop Lifecycle Temporal Modeling Notes
+date: 2026-05-14
+project: concepts
+status: draft
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
+---
+
 # Crop Lifecycle Temporal Modeling Notes
 
 ## Overview

@@ -284,7 +284,8 @@
       {% assign next_page = nil %}
       {% if current_index != nil %}
         {% if current_index > 0 %}
-          {% assign prev_page = siblings[current_index | minus: 1] %}
+          {% assign prev_index = current_index | minus: 1 %}
+          {% assign prev_page = siblings[prev_index] %}
         {% endif %}
         {% assign nxt_index = current_index | plus: 1 %}
         {% if nxt_index < siblings.size %}

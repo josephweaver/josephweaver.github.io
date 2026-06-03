@@ -1,6 +1,6 @@
 ---
 title: AI Prompt for Human-applied Ai-Codeing
-date: 2026-05-18
+date: 2026-05-12
 project: epistimic-control-ai-coding
 status: draft
 repos:

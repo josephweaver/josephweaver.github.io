@@ -1,3 +1,12 @@
+---
+title: Angular Opposition Interpolation (AOI)
+date: 2026-03-16
+project: concepts
+status: draft
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
+---
+
 # Angular Opposition Interpolation (AOI)
 *A geometric interpolation concept based on angular balance around a target point*
 

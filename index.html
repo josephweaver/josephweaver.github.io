@@ -3,9 +3,27 @@ layout: default
 title: Research Posts
 ---
 
-{% assign research_project_pages = site.pages | where_exp: "p", "p.path contains 'research/' and p.name == 'README.md' and p.project" %}
-{% assign research_pages = site.pages | where_exp: "p", "p.project and p.date" %}
-{% assign research_posts = site.posts | where_exp: "p", "p.project and p.date" %}
+{% assign research_project_pages = "" | split: "" %}
+{% assign research_pages = "" | split: "" %}
+{% assign research_posts = "" | split: "" %}
+
+{% for candidate in site.pages %}
+  {% if candidate.path contains "research/" %}
+    {% if candidate.name == "README.md" and candidate.project %}
+      {% assign research_project_pages = research_project_pages | push: candidate %}
+    {% endif %}
+  {% endif %}
+  {% if candidate.project and candidate.date %}
+    {% assign research_pages = research_pages | push: candidate %}
+  {% endif %}
+{% endfor %}
+
+{% for candidate in site.posts %}
+  {% if candidate.project and candidate.date %}
+    {% assign research_posts = research_posts | push: candidate %}
+  {% endif %}
+{% endfor %}
+
 {% assign research_items = research_pages | concat: research_posts | sort: "date" | reverse %}
 
 <section class="section-head" aria-labelledby="recent-research">

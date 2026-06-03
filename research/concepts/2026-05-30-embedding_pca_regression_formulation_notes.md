@@ -1,3 +1,13 @@
+---
+title: PCA-Based Embedding and Response Model Formulation
+date: 2026-05-30
+project: concepts
+status: draft
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
+---
+
+
 # PCA-Based Embedding and Response Model Formulation
 
 ## Overview

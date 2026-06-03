@@ -1,3 +1,12 @@
+---
+title: Quantum Skip-Gram Proof Solver (Lean/mathlib)
+date: 2026-01-13
+project: concepts
+status: draft
+repos:
+  - https://github.com/josephweaver/josephweaver.github.io
+---
+
 # Quantum Skip-Gram Proof Solver (Lean/mathlib)
 
 ## Goal
