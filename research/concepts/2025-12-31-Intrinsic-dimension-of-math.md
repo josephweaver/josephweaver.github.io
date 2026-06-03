@@ -2,7 +2,7 @@
 title: Intrinsic Geometry of Mathematics and Latent Structure under Embedding
 tags: [research-concept, intrinsic-dimension, embeddings, geometry-of-math, godel-adjacent]
 status: draft
-date: 2026-12-31
+date: 2025-12-31
 project: concepts
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
