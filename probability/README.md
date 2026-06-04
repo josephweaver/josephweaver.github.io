@@ -1,8 +1,8 @@
 ---
-title: Probability
+title: Class Notes
 ---
 
-# Probability
+# Class Notes
 
 This section is a probability study archive. It contains lecture notes, distribution summaries, convergence guides, prelim solutions, and proof-recognition notes.
 

@@ -3,17 +3,20 @@ layout: default
 title: Other Topics
 ---
 
+{% assign class_notes_page = site.pages | where: "path", "probability/README.md" | first %}
+{% assign fiction_page = site.pages | where: "path", "fiction/README.md" | first %}
+
 # Other Topics
 
-These sections are adjacent to the active research notes: teaching material, probability references, and systems-design experiments.
+These sections are adjacent to the active research notes: teaching material, class notes, and systems-design experiments.
 
 <div class="topic-grid">
-  <a class="topic-card" href="{{ '/probability/' | relative_url }}">
+  <a class="topic-card" href="{{ class_notes_page.url | default: '/probability/README.html' | relative_url }}">
     <p class="eyebrow">Teaching</p>
-    <h2>Probability Notes</h2>
+    <h2>Class Notes</h2>
     <p>Course-style writeups, distribution references, convergence notes, prelim preparation, and reusable proof patterns.</p>
   </a>
-  <a class="topic-card" href="{{ '/fiction/' | relative_url }}">
+  <a class="topic-card" href="{{ fiction_page.url | default: '/fiction/README.html' | relative_url }}">
     <p class="eyebrow">Fiction</p>
     <h2>Systems Sandboxes</h2>
     <p>Worldbuilding, game-system sketches, and speculative design notes used to explore mechanics and constraints.</p>
