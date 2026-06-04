@@ -37,9 +37,11 @@ title: Research Posts
       {% assign item_project = research_project_pages | where: "project", item.project | first %}
       <article class="research-card">
         <a class="research-card__main" href="{{ item.url | relative_url }}">
-          <p class="eyebrow">{{ item.date | date: "%b %-d, %Y" }}</p>
-          <h2>{{ item.title }}</h2>
-          <p>{{ item.excerpt | strip_html | truncate: 170 }}</p>
+          <div class="research-card__header">
+            <p class="eyebrow">{{ item.date | date: "%b %-d, %Y" }}</p>
+            <h2>{{ item.title }}</h2>
+          </div>
+          <p>{{ item.description | default: item.excerpt | strip_html | truncate: 260 }}</p>
         </a>
         <div class="research-card__meta">
           {% if item_project %}
@@ -234,9 +236,9 @@ title: Research Posts
     max-width: 760px;
   }
   .research-feed {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
   }
   .research-card,
   .project-card,
@@ -249,18 +251,26 @@ title: Research Posts
   .research-card {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
   }
   .research-card__main {
     display: block;
-    padding: 1.05rem 1.15rem 0.8rem;
+    padding: 0.9rem 1.05rem 0.65rem;
     color: inherit;
     text-decoration: none;
     flex: 1;
   }
+  .research-card__header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.3rem;
+  }
   .research-card__main h2 {
-    margin: 0.25rem 0 0.4rem;
-    font-size: 1.3rem;
+    margin: 0;
+    font-size: 1.22rem;
+    line-height: 1.25;
+    flex: 1;
   }
   .research-card__main p:last-child,
   .project-card p,
@@ -271,7 +281,7 @@ title: Research Posts
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
-    padding: 0 1.15rem 1rem;
+    padding: 0 1.05rem 0.9rem;
   }
   .research-card__meta a,
   .research-card__meta span {
@@ -332,10 +342,15 @@ title: Research Posts
     margin: 0;
   }
   @media (max-width: 720px) {
-    .research-feed,
     .project-grid,
     .resource-grid {
       grid-template-columns: 1fr;
+    }
+    .research-card__header {
+      display: block;
+    }
+    .research-card__main h2 {
+      margin-top: 0.2rem;
     }
   }
 </style>

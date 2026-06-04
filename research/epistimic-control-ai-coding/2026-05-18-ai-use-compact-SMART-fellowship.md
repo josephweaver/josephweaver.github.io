@@ -1,6 +1,7 @@
 ---
 title: AI Use Compact for SMART Fellowship
 date: 2026-05-18
+description: A compact agreement for responsible AI use in fellowship research, emphasizing disclosure, verification, and accountable human judgment.
 project: epistimic-control-ai-coding
 status: draft
 tags:

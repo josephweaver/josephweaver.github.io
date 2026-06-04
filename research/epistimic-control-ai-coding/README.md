@@ -53,6 +53,8 @@ The central hypothesis is that carefully constrained human-AI workflows may pres
 
 ## Included Notes
 
+- [Human-AI Coding Interaction Levels](2026-06-04-hci-levels.md): practical scale for choosing coding interaction modes by objective, file budget, and required epistemic control.
+- [Epistemic Control in AI-Assisted Programming](2026-06-03-epi-ctl-ai-coding.md): introductory article explaining epistemic control as a design goal for AI-assisted programming.
 - [AI Use Compact for SMART Fellowship](2026-05-18-ai-use-compact-SMART-fellowship.md): compact governing AI usage in research and engineering activities associated with graduate research and fellowship work.
 - [AI Assistance Levels](2026-05-12-ai-assistance-levels.md): working framework describing different AI-human handoff patterns and their epistemic tradeoffs.
 - [AI Prompts](2026-05-12-ai-prompts.md): prompt patterns for research software workflows.

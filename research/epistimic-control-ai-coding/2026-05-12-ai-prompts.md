@@ -1,6 +1,7 @@
 ---
 title: AI Prompt for Human-applied Ai-Codeing
 date: 2026-05-12
+description: Reusable prompts for starting AI-assisted research software sessions with explicit context, workflow goals, and review expectations.
 project: epistimic-control-ai-coding
 status: draft
 tags:

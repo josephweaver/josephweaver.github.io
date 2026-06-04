@@ -1,6 +1,7 @@
 ---
 title: AI Assistance Patterns for Research Software Work
 date: 2026-05-12
+description: A framework for classifying AI-human coding workflows by how much design, implementation, review, and verification remain under human control.
 project: epistimic-control-ai-coding
 status: draft
 tags:

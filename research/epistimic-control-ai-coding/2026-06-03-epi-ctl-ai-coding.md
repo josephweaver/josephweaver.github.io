@@ -1,6 +1,7 @@
 ---
 title: Epistemic Control in AI-Assisted Programming
 date: 2026-06-03
+description: An introduction to epistemic control as the level of human understanding needed to responsibly use AI-generated code.
 project: epistimic-control-ai-coding
 status: draft
 tags:
