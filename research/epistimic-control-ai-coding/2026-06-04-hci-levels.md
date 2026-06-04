@@ -421,6 +421,10 @@ Examples:
 
 Documentation files do not count toward file(N).
 
+## +cleanup
+
+AI may make bounded follow-up edits outside the primary target file only when required to restore consistency after an interface or signature change. Cleanup must be explainable as a direct consequence of the approved change.
+
 ---
 
 # Examples
