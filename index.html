@@ -44,18 +44,14 @@ title: Research Posts
           <p>{{ item.description | default: item.excerpt | strip_html | truncate: 260 }}</p>
         </a>
         <div class="research-card__meta">
-          {% if item_project %}
-            <a href="{{ item_project.url | relative_url }}">{{ item_project.title }}</a>
+          {% if item.tags %}
+            {% for tag in item.tags limit:5 %}
+              <span>{{ tag }}</span>
+            {% endfor %}
+          {% elsif item_project %}
+            <span>{{ item_project.title }}</span>
           {% elsif item.project %}
             <span>{{ item.project | replace: "-", " " }}</span>
-          {% endif %}
-          {% if item.status %}
-            <span>{{ item.status }}</span>
-          {% endif %}
-          {% if item.repos %}
-            {% for repo in item.repos limit:1 %}
-              <a href="{{ repo }}">repo</a>
-            {% endfor %}
           {% endif %}
         </div>
       </article>
