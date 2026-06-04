@@ -15,6 +15,12 @@ kramdown:
   input: GFM
   math_engine: mathjax
 
+exclude:
+  - private/
+  - vendor/
+  - .bundle/
+  - Gemfile.lock
+
 defaults:
   - scope:
       path: "probability"

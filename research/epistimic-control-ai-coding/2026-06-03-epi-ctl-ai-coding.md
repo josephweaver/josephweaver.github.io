@@ -12,6 +12,8 @@ repos:
 
 # Epistemic Control in AI-Assisted Programming
 
+![Human understanding and AI acceleration]({{ '/assets/images/Human-understanding-ai-acceleration.png' | relative_url }})
+
 Have you tried fully autonomous AI programming?
 
 You spend a weekend generating thousands of lines of code, only to realize afterward that you barely understand what was written. The project works, at least for now, but the architecture, assumptions, and implementation details are largely opaque.

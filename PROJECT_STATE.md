@@ -12,10 +12,11 @@
   - `fiction/24system/PROJECT_STATE.md` (latest design decisions and next steps)
 
 ## Build / theme
-- `_config.yml` uses `remote_theme: pages-themes/cayman@v0.2.0` with `jekyll-remote-theme` and `jekyll-seo-tag`; includes site metadata (`title`, `description`, `author`, `url`, `repository`, `timezone`). Markdown via kramdown + MathJax (math enabled by default for `probability/`).
-- `_layouts/default.html` defines the page chrome: sidebar navigation (Blog, About, Other Topics, Research) with collapsible Research subsections, resizable width (localStorage `sttSidebarWidth`), MathJax v3 config, sibling prev/next links (per folder), edit-on-GitHub links top/bottom of articles, and optional Giscus comments when `site.giscus` is configured. Loads `assets/css/custom.css` plus inline styles per page.
+- `_config.yml` uses `remote_theme: pages-themes/cayman@v0.2.0` with `jekyll-remote-theme` and `jekyll-seo-tag`; includes site metadata (`title`, `description`, `author`, `url`, `repository`, `timezone`). Markdown via kramdown + MathJax (math enabled by default for `probability/`). Local-only/private/build paths are excluded: `private/`, `vendor/`, `.bundle/`, and `Gemfile.lock`.
+- `_layouts/default.html` defines the page chrome: sidebar navigation (Recent Activities, Other Topics, Research, About) with collapsible Research subsections, resizable width (localStorage `sttSidebarWidth`), MathJax v3 config, sibling prev/next links (per folder), edit-on-GitHub links top/bottom of articles, and optional Giscus comments when `site.giscus` is configured. Research subdirectories without a landing file (`README.md`, `index.md`, or `index.html`) are ignored by the navigation.
 - `assets/css/custom.css` supplies typography/colors/layout shell; page-level styles live inline in `index.html` and `about.html`.
-- Assets: `assets/documents/` (resume + biosketch PDFs), `assets/images/1618685561588.jfif` (portrait), and other media folders.
+- Assets: `assets/documents/` (resume + biosketch PDFs), `assets/images/1618685561588.jfif` (portrait), `assets/images/Human-understanding-ai-acceleration.png` (lead image for the epistemic-control article), and other media folders.
+- Local Jekyll tooling is installed with Ruby + DevKit at `C:\Ruby33-x64`. Bundler dependencies are installed under `vendor/bundle/`; `tzinfo-data` is included in `Gemfile` for Windows timezone support. This machine needed `SSL_CERT_FILE=C:\Ruby33-x64\bin\etc\ssl\cert.pem` for RubyGems HTTPS verification.
 
 ## Content & navigation
 - Home `index.html`: starts directly with recent research notes drawn from `project` + `date` front matter, then lists current research projects from `research/<project-name>/README.md`. Pinned projects are detected through an empty `pinned` marker file. Links to About, Research, and Other Topics remain available lower on the page.
@@ -26,12 +27,18 @@
 - `STRATEGY_SESSION.md`: prompt for starting future long-term technical/research strategy sessions.
 - `TODO.md`: practical backlog for site/repository organization, navigation, metadata, content promotion, and build verification.
 - Probability: `probability/README.md` is now a real landing page for the probability study archive; subfolders include `STT881/`, `STT882/`, `STT996/`, `STT997/`, `MTH868/`, `distributions/`, `convergence/`, `high-dimensional/`, and `prelim/` (2018-2025 prelim question writeups). Math rendering handled by layout defaults.
-- Research: `research/README.md` now maps current threads and includes `research/epistimic-control-ai-coding/` as the canonical active project folder structure. Active research project folders use `README.md`, optional `pinned`, and dated `YYYY-MM-DD-title.md` article files with matching `date` front matter.
+- Research: `research/README.md` now maps current threads and includes `research/epistimic-control-ai-coding/` as the canonical active project folder structure. Active research project folders use `README.md`, optional `pinned`, and dated `YYYY-MM-DD-title.md` article files with matching `date`, `project`, `status`, and `tags` front matter.
+- Epistemic-control active article: `research/epistimic-control-ai-coding/2026-06-03-epi-ctl-ai-coding.md`, with lead image `assets/images/Human-understanding-ai-acceleration.png`.
 - Intake: `intake/ai-assisted-research/` contains raw outside material on AI-assisted research workflow (`AI.md`, `AI_ASSISTANCE_LEVELS.md`, `AI_PROMPTS.md`). Intake is staging material, not assumed site-ready.
 - Fiction: `fiction/README.md`; active subprojects include `fiction/24system/`, `fiction/space-voxel/`, `fiction/whisper/`, `fiction/president-rock/`, and `fiction/Oort-Factor/`.
 - Standalone root notes include `math.md`, `STT882.notes.md`, `experiments.md`, `vc.md`, plus `LICENSE` and `troubleshooting.txt`.
 
 ## Recent organization work
+- Installed local Ruby/Jekyll/Bundler tooling and verified `bundle exec jekyll build` after excluding local/private paths.
+- Added `.gitignore` entries for local Jekyll/Bundler outputs and `_config.yml` excludes for `private/`, `vendor/`, `.bundle/`, and `Gemfile.lock`.
+- Added `assets/images/Human-understanding-ai-acceleration.png` to the June 3 epistemic-control article.
+- Renamed sidebar `Blog` to `Recent Activities`, moved `About` to the bottom of the nav, and made Research nav ignore directories without landing pages.
+- Added or normalized `tags` front matter across research articles and project pages.
 - Added `research/epistimic-control-ai-coding/` as the canonical active research project example.
 - Retooled `index.html` to use the research hierarchy for recent article and current-project cards.
 - Added `other-topics.html` and simplified home/sidebar navigation so Probability and Fiction are routed through Other Topics.
@@ -48,8 +55,8 @@
 - See `TODO.md` for the fuller working backlog.
 - Decide whether to update `fiction/README.md` into the same understated map style used by Research and Probability.
 - Expose standalone root notes (`math.md`, `STT882.notes.md`, `experiments.md`, `vc.md`) via an index page or move them into clearer sections.
-- Add consistent front matter for status/thread names to research and concept notes.
+- Continue tightening front matter for status/thread names as research pages evolve.
 - Decide whether curated AI-assisted research pages should be promoted from `intake/ai-assisted-research/` into `research/ai-assisted-research/` and/or `docs/`.
 - Fill `research/concepts/ai-homework/discovery-ready.md` or remove if unnecessary.
-- Consider a tag or thread index once front matter is consistent.
-- Local Jekyll build was not verified in this session because `bundle` was not available in PATH.
+- Consider a tag or thread index now that research pages have tags.
+- Current local build verification: `bundle exec jekyll build` succeeded after this documentation refresh.

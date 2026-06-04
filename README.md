@@ -26,9 +26,10 @@ Current recurring themes include:
 Start with:
 
 - [`research/epistimic-control-ai-coding/README.md`](research/epistimic-control-ai-coding/README.md)
-- [`research/concepts/crop_lifecycle_temporal_modeling_notes.md`](research/concepts/crop_lifecycle_temporal_modeling_notes.md)
-- [`research/concepts/Intrinsic-dimension-of-math.md`](research/concepts/Intrinsic-dimension-of-math.md)
-- [`research/concepts/GaussianPCA.md`](research/concepts/GaussianPCA.md)
+- [`research/epistimic-control-ai-coding/2026-06-03-epi-ctl-ai-coding.md`](research/epistimic-control-ai-coding/2026-06-03-epi-ctl-ai-coding.md)
+- [`research/concepts/2026-05-14-crop_lifecycle_temporal_modeling_notes.md`](research/concepts/2026-05-14-crop_lifecycle_temporal_modeling_notes.md)
+- [`research/concepts/2025-12-31-Intrinsic-dimension-of-math.md`](research/concepts/2025-12-31-Intrinsic-dimension-of-math.md)
+- [`research/concepts/2026-04-17-GaussianPCA.md`](research/concepts/2026-04-17-GaussianPCA.md)
 - [`research/ai-homework/README.md`](research/ai-homework/README.md)
 - [`research/prob-proof/raw-idea.md`](research/prob-proof/raw-idea.md)
 
@@ -81,7 +82,7 @@ Useful expectations:
 
 - `intake/` is raw source material waiting to be triaged.
 - `README.md` files are maps or project entry points.
-- Active research project folders use `research/<project-name>/README.md`, optional `pinned`, and dated `YYYY-MM-DD-title.md` article files.
+- Active research project folders use `research/<project-name>/README.md`, optional `pinned`, and dated `YYYY-MM-DD-title.md` article files with matching `date`, `project`, `status`, and `tags` front matter.
 - `PROJECT_STATE.md` files capture current status and next steps.
 - `CONTRIBUTION.md` records the intake-to-publication workflow.
 - `STRATEGY_SESSION.md` is a prompt for starting future long-term strategy sessions.
@@ -104,6 +105,7 @@ Some pages are rough. That is deliberate. The goal is to make long-running thoug
 +-- probability/       # probability notes, prelim work, references
 +-- research/          # research concepts and active idea threads
 +-- fiction/           # systems/worldbuilding/game-design labs
++-- other-topics.html  # gateway to teaching/probability and fiction sections
 +-- CONTRIBUTION.md    # personal workflow for intake and publication
 +-- STRATEGY_SESSION.md # prompt for future strategy-collaboration sessions
 +-- TODO.md            # practical repository/site backlog
@@ -119,13 +121,23 @@ This is a GitHub Pages/Jekyll site using the Cayman remote theme with a custom d
 
 The layout provides:
 
-- sidebar navigation across major sections
+- sidebar navigation for Recent Activities, Other Topics, Research, and About
 - MathJax support for probability and research notes
 - previous/next links within folders
 - optional Giscus page discussions
 - edit-on-GitHub links when repository metadata is available
 
-Local build dependencies are defined in [`Gemfile`](Gemfile).
+Local build dependencies are defined in [`Gemfile`](Gemfile). On Windows, Ruby is installed at `C:\Ruby33-x64`, Bundler installs gems into `vendor/bundle/`, and `tzinfo-data` supports local timezone handling.
+
+Useful local build command:
+
+```powershell
+$env:Path='C:\Ruby33-x64\bin;' + $env:Path
+$env:SSL_CERT_FILE='C:\Ruby33-x64\bin\etc\ssl\cert.pem'
+bundle exec jekyll build
+```
+
+Local build artifacts and dependency folders are ignored by git: `.bundle/`, `vendor/bundle/`, `_site/`, `.sass-cache/`, `.jekyll-cache/`, and `.jekyll-metadata`.
 
 ## Intake Workflow
 
@@ -150,7 +162,7 @@ When promoting intake material, preserve the original if it contains useful cont
 The next improvements are organizational rather than cosmetic:
 
 - make research threads easier to browse
-- add consistent front matter for status, tags, and thread names
+- keep front matter consistent for status, tags, and thread names
 - improve discoverability of exploratory notes
 - turn the strongest concept notes into stable public essays or reproducible prototypes
 - keep `PROJECT_STATE.md` aligned with the current site structure
