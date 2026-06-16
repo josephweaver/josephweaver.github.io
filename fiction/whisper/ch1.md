@@ -4,26 +4,21 @@ Mr. Remeraz sat rigidly in the chair across from Jaden's desk, hands locked toge
 
 Jaden glanced at the reconciliation file hovering beside Remeraz's profile. The incident had been reviewed twice already. No witnesses. No corroboration. No procedural anomalies.
 
-It had been referred to him anyway.
-
-Not because the case was strong. Because Jaden was good at this kind of thing: listening patiently to a human certainty until the procedural shape of it appeared, or failed to.
+It had been referred to him anyway. Not because the case was strong. Because Jaden was good at this kind of thing: listening patiently to a human certainty until the procedural shape of it appeared, or failed to.
 
 Across the room, rain tapped softly against the office window.
 
 *Elevated stress markers. Frustration. No indicators of fabrication,* Whisper observed.
 
-Jaden ignored the comment for the moment.
+The words were not in the room. They appeared at the edge of Jaden's visual field through his licensed agent channel. He kept Whisper in text mode for interviews; subvocalization made the boundary between agent and thought too easy to lose.
 
-"Mr. Remeraz," he said carefully, "start from the beginning. Tell me exactly what you remember."
+Jaden ignored the comment for the moment. "Mr. Remeraz," he said carefully, "start from the beginning. Tell me exactly what you remember."
 
 Remeraz looked relieved, as though nobody had asked him that question in a very long time.
 
-
 One Year Earlier
 
-The meeting was held in the old transit depot on Jefferson, though nobody called it a meeting anymore.
-
-Officially it was a Community Listening Session.
+The meeting was held in the old transit depot on Jefferson, though nobody called it a meeting anymore. Officially it was a Community Listening Session.
 
 Rows of folding chairs faced a low stage where a smiling moderator stood beneath a floating city seal. Around the room, translucent complaint markers drifted lazily through the air like oversized soap bubbles. Every few minutes someone would reach out, tap one, and watch it burst into a brief shower of green light.
 
@@ -37,13 +32,7 @@ The crowd always seemed to enjoy that part.
 
 Mr. Remeraz sat near the back, hands folded in his lap. He had attended three sessions already. The topics changed. Transit delays. Housing permits. Utility pricing. The process never did.
 
-People complained.
-
-People nodded.
-
-People tapped complaint markers.
-
-Nothing happened.
+People complained. People nodded. People tapped complaint markers. Nothing happened.
 
 "The floor remains open," the moderator said. "Any additional concerns?"
 
@@ -59,11 +48,7 @@ Another complaint marker drifted upward.
 
 Polite applause.
 
-Remeraz felt the familiar frustration settling into his chest.
-
-That wasn't the problem.
-
-None of this was the problem.
+Remeraz felt the familiar frustration settling into his chest. That wasn't the problem. None of this was the problem.
 
 The words had been building in his head for nearly twenty minutes now. Every time someone sat down he thought about standing up.
 
@@ -77,13 +62,7 @@ A complaint marker burst into green sparks.
 
 Not yet.
 
-His heart was pounding now.
-
-He wasn't angry.
-
-He wasn't even sure he was right.
-
-He just knew that if nobody said it, the entire evening would end exactly the way it always ended.
+His heart was pounding now. He wasn't angry. He wasn't even sure he was right. He just knew that if nobody said it, the entire evening would end exactly the way it always ended.
 
 The moderator scanned the room.
 
@@ -91,9 +70,7 @@ The moderator scanned the room.
 
 Remeraz raised his hand.
 
-For a moment the moderator looked directly at him.
-
-Then a tiny red point appeared at the edge of his vision.
+For a moment the moderator looked directly at him. Then a tiny red point appeared at the edge of his vision.
 
 Small.
 
@@ -101,31 +78,13 @@ Perfectly round.
 
 Gone almost as soon as he noticed it.
 
-Remeraz blinked.
+Remeraz blinked. His attention shifted. Only for an instant.
 
-His attention shifted.
+By the time he looked back, someone else was already speaking. The room had moved on.
 
-Only for an instant.
+The thought that had seemed so clear only seconds before felt strangely distant. He searched for it. Found fragments. Nothing more.
 
-By the time he looked back, someone else was already speaking.
-
-The room had moved on.
-
-The thought that had seemed so clear only seconds before felt strangely distant.
-
-He searched for it.
-
-Found fragments.
-
-Nothing more.
-
-The moderator thanked the new speaker.
-
-The crowd nodded.
-
-Another complaint marker burst into green light.
-
-Remeraz lowered his hand.
+The moderator thanked the new speaker. The crowd nodded. Another complaint marker burst into green light. Remeraz lowered his hand.
 
 For the rest of the evening he sat quietly, trying to remember what he had been about to say.
 
@@ -139,9 +98,7 @@ Remeraz looked down.
 
 "See?"
 
-Jaden frowned.
-
-"See what?"
+Jaden frowned. "See what?"
 
 "You're doing it too."
 
@@ -151,31 +108,23 @@ Jaden frowned.
 
 Silence.
 
-Remeraz shifted in his chair.
-
-"The dot doesn't matter."
+Remeraz shifted in his chair. "The dot doesn't matter."
 
 "Then why are we discussing it?"
 
 "Because that's the last thing I remember before I stopped being certain I was going to speak."
 
-Jaden opened his mouth.
-
-Closed it again.
+Jaden opened his mouth. Closed it again.
 
 Outside, rain tapped softly against the office window.
 
 "For a year," Remeraz continued, "everybody hears 'red dot' and thinks that's the complaint."
 
-His voice wasn't angry.
-
-It was tired.
+His voice wasn't angry. It was tired.
 
 "The complaint is that something happened after it."
 
-Jaden flicked two fingers through the air.
-
-A translucent case file unfolded beside his desk.
+Jaden flicked two fingers through the air. A translucent case file unfolded beside his desk.
 
 "Mr. Remeraz, according to your employment records, you received three disciplinary actions in the six months following this incident."
 
@@ -191,67 +140,27 @@ Remeraz nodded.
 
 "I do."
 
-The answer came too quickly.
+The answer came too quickly. Not defensive. Resigned.
 
-Not defensive.
+Jaden had heard the tone before. The tone people used when they had spent a year losing the same argument.
 
-Resigned.
-
-Jaden had heard the tone before.
-
-The tone people used when they had spent a year losing the same argument.
-
-Remeraz looked down at his hands.
-
-"The more I thought about it, the angrier I got."
+Remeraz looked down at his hands. "The more I thought about it, the angrier I got."
 
 Silence.
 
 "I couldn't stop thinking about it."
 
-He laughed softly.
+He laughed softly. "Not exactly my finest year."
 
-"Not exactly my finest year."
+Jaden leaned back. "So you fixated on a visual artifact."
 
-Jaden leaned back.
+Remeraz didn't answer. Jaden took the silence as agreement.
 
-"So you fixated on a visual artifact."
-
-Remeraz didn't answer.
-
-Jaden took the silence as agreement.
-
-With another gesture, he summoned the Corpus reconstruction.
-
-The office lights dimmed automatically.
-
-A miniature transit depot materialized between them.
-
-Rows of chairs.
-
-The moderator.
-
-The audience.
-
-Complaint markers drifting through the air.
-
-The entire event reconstructed from aggregated observations.
+With another gesture, he summoned the Corpus reconstruction. The office lights dimmed automatically. A miniature transit depot materialized between them: rows of chairs, the moderator, the audience, complaint markers drifting through the air, the entire event reconstructed from aggregated observations.
 
 "There," Jaden said.
 
-The recording advanced.
-
-The moderator opened the floor.
-
-Hands rose.
-
-One after another.
-
-Orderly.
-
-Predictable.
-
-Accepted speakers highlighted in pale blue.
+The recording advanced. The moderator opened the floor. Hands rose, one after another, orderly, predictable, accepted speakers highlighted in pale blue.
 
 "The record doesn't even show you raising your hand."
 
@@ -263,17 +172,13 @@ Remeraz stared at the reconstruction.
 
 "I raised my hand."
 
-Jaden paused the scene.
-
-The holographic audience froze.
+Jaden paused the scene. The holographic audience froze.
 
 "You understand why this is difficult."
 
 "I know exactly why it's difficult."
 
-Remeraz's eyes never left the projection.
-
-"But I raised my hand."
+Remeraz's eyes never left the projection. "But I raised my hand."
 
 For a moment neither spoke.
 
@@ -295,29 +200,15 @@ Jaden glanced toward the floating documents in his peripheral vision.
 
 Jaden looked back at the hologram.
 
-*Eighty-two percent probability that non-accepted speech acts were omitted during reconstruction.*
+*High likelihood that non-accepted speech acts were omitted during reconstruction.*
 
-The room became very quiet.
-
-Remeraz noticed the change immediately.
+The room became very quiet. Remeraz noticed the change immediately.
 
 "What?"
 
-Jaden didn't answer.
+Jaden didn't answer. For the first time since the meeting began, he looked at the reconstruction instead of through it.
 
-For the first time since the meeting began, he looked at the reconstruction instead of through it.
-
-Jaden expanded the sensory logs.
-
-The reconstruction collapsed into raw telemetry.
-
-Timestamp streams.
-
-Biometric traces.
-
-Visual cortex events.
-
-Eye-tracking records.
+Jaden expanded the sensory logs. The reconstruction collapsed into raw telemetry: timestamp streams, biometric traces, visual cortex events, eye-tracking records.
 
 Nothing unusual.
 
@@ -333,9 +224,7 @@ Visual Cortex Interface.
 
 VC_WRITE.
 
-A small entry appeared.
-
-He opened it.
+A small entry appeared. He opened it.
 
 For a moment he thought he was reading it incorrectly.
 
@@ -349,33 +238,21 @@ Remeraz2034f993
 Bonevard0d84js
 Appalach39g92
 
-Jaden blinked.
-
-The entry remained.
+Jaden blinked. The entry remained.
 
 His eyes narrowed.
 
 That wasn't right.
 
-The destination field listed three recipients.
-
-Remeraz.
-
-And two others.
+The destination field listed three recipients. Remeraz. And two others.
 
 The event had not been generated locally.
 
 It had been transmitted.
 
-Remeraz noticed the change immediately.
+Remeraz noticed the change immediately. "What is it?"
 
-"What is it?"
-
-Jaden didn't answer.
-
-He opened the record again.
-
-Then a third time.
+Jaden didn't answer. He opened the record again. Then a third time.
 
 Still there.
 
@@ -384,13 +261,9 @@ VC: RED_DOT
 SOURCE:
 REDACTED
 
-A faint knot formed in his stomach.
+A faint knot formed in his stomach. That wasn't how visual artifacts worked.
 
-That wasn't how visual artifacts worked.
-
-Jaden expanded the reconstruction again.
-
-The miniature transit depot appeared above his desk.
+Jaden expanded the reconstruction again. The miniature transit depot appeared above his desk.
 
 "Highlight recipients."
 
@@ -404,19 +277,11 @@ Appalach39g92.
 
 Three strangers seated in different parts of the room.
 
-The timestamp marker hovered beside the redacted VC_WRITE event.
-
-Jaden dragged it into alignment.
+The timestamp marker hovered beside the redacted VC_WRITE event. Jaden dragged it into alignment.
 
 "Play."
 
-The reconstruction resumed.
-
-People shifted in their seats.
-
-The moderator spoke.
-
-Complaint markers drifted through the crowd.
+The reconstruction resumed. People shifted in their seats. The moderator spoke. Complaint markers drifted through the crowd.
 
 Then the timestamp arrived.
 
@@ -448,15 +313,9 @@ The credentialed part of his mind caught up before the rest of him did. Audience
 
 *You see it too,* Whisper said.
 
-Jaden slowed the reconstruction.
+Jaden slowed the reconstruction. This time he watched the crowd instead of the three highlighted figures.
 
-This time he watched the crowd instead of the three highlighted figures.
-
-A woman two rows behind Remeraz glanced upward.
-
-A man near the aisle turned his head.
-
-Someone across the room paused in mid-conversation.
+A woman two rows behind Remeraz glanced upward. A man near the aisle turned his head. Someone across the room paused in mid-conversation.
 
 Not toward the stage.
 
@@ -468,11 +327,7 @@ Toward Bonevard.
 
 Toward Appalach.
 
-The movement was subtle.
-
-Almost invisible.
-
-But once seen, impossible to miss.
+The movement was subtle. Almost invisible. But once seen, impossible to miss.
 
 Jaden replayed it again.
 
@@ -490,9 +345,7 @@ Jaden isolated the three highlighted figures and pulled in the people seated nea
 
 "Show adjacent reactions only."
 
-The rest of the depot dimmed.
-
-Three small clusters remained.
+The rest of the depot dimmed. Three small clusters remained.
 
 Beside Remeraz, the woman two rows back looked up and left. Beside Bonevard, a man near the aisle shifted his eyes before his head followed. Beside Appalach, someone in the next row stopped blinking for half a second and tracked empty air.
 
@@ -504,7 +357,7 @@ The space beside each supposed non-speaker.
 
 Jaden felt the case change shape.
 
-"Whisper," he said, "confirm probability that three separate speakers were interrupted at the exact same timestamp."
+"Whisper," he said, "classify the likelihood that three separate speakers were interrupted at the exact same timestamp."
 
 *Specify interruption mechanism.*
 
@@ -512,25 +365,31 @@ Jaden felt the case change shape.
 
 A pause.
 
-*Joint probability under current reconstruction: 0.004.*
+*Negligible under current reconstruction.*
 
 "And if each recipient had begun raising a hand?"
 
-The hologram flickered.
-
-Three translucent arms appeared in the scene, not rendered as fact but as latent structure: ghost motion inferred from shoulder tension, elbow angle, eye trajectory, and the tiny accommodations made by the people nearby.
+The hologram flickered. Three translucent arms appeared in the scene, not rendered as fact but as latent structure: ghost motion inferred from shoulder tension, elbow angle, eye trajectory, and the tiny accommodations made by the people nearby.
 
 Beside each figure, the ghost hand rose.
 
 The surrounding eyes followed it.
 
-*Probability increases to 0.71.*
+*Likelihood becomes material.*
 
-"Show uncertainty."
+"Show inferred gaze fields."
 
-The hands blurred, multiplied, and thinned into pale fans of possible motion.
+Soft blue cones extended from the surrounding faces, each one drawn from eye angle, head motion, and the half-second of attention that had survived the smoothing. None of them was precise. Each admitted uncertainty.
 
-Not proof.
+But they intersected.
+
+Above Remeraz, the cones overlapped into a small, finite volume of empty air.
+
+Roughly the size of a hand.
+
+The same shape appeared above Bonevard.
+
+Then above Appalach.
 
 But not nothing.
 
