@@ -1,0 +1,539 @@
+Rameraz had left hours ago, satisfied that someone had finally listened.
+
+Not agreed. Not promised. Listened.
+
+For most citizens, that was enough.
+
+Jaden watched the correction propagate through Corpus. The missing hand raise was restored with moderate confidence, the reconstruction error decreased slightly, and the event archive updated. Case closed. Another small omission found. Another small omission fixed.
+
+That was his job.
+
+Still, something bothered him.
+
+Three missing hand raises in the same meeting. Three participants attempting to speak. Three visual cortex write events occurring within seconds of one another. Individually, none of those facts were remarkable. Together they formed an irritating little knot in his thoughts.
+
+Jaden opened the event record again and selected the next name, Bonevard0d84js. 
+
+"Whisper, establish contact."
+
+A context packet appeared briefly beside the record.
+
+CONTACT REQUEST
+
+> Caller: Jaden Mercer
+> 
+> Organization: Corpus Reconstruction Authority
+> 
+> Purpose: Event recollection verification
+> 
+> Reference: Transit Forum 47-B
+> 
+> Estimated Duration: 4 minutes
+
+*Transmit.Context delivered.*
+
+To Jaden's eyes, a woman's face appeared in a floating frame. Behind her, a dizzying street scene scrolled past through the rear window of a vehicle. In the lower corner of the frame, three small tells hovered beside her name.
+
+A car.
+
+A calendar.
+
+A hamburger.
+
+"Just around the corner," the woman said.
+
+Her attention was clearly elsewhere. She squinted.
+
+"Oh. You're not Marcus."
+
+"No."
+
+The vehicle merged into a parking structure.
+
+"Sorry. Thought you were my manager checking on me."
+
+"You accepted the call before reviewing the context packet?"
+
+"I reviewed it."
+
+"You just called me Marcus."
+
+"I reviewed it after I answered."
+
+The woman glanced sideways as though reading something only she could see.
+
+"Actually, during."
+
+The vehicle settled into a parking space and the car icon disappeared.
+
+For the first time she looked directly at him.
+
+"Now," she said, "what happened at Transit Forum Forty-Seven-B that has Corpus calling me years later?"
+
+Jaden hadn't even opened his mouth before she continued.
+
+"Look, if this is about the petition, I already fixed the signature issue. Just because I was late on a few municipal payments doesn't mean you get to erase me from the record and invalidate everything we worked so hard to accomplish."
+
+Jaden suppressed a groan. There was a persistent corner of the public that treated every reconstruction artifact as evidence of a conspiracy.
+
+"No one is erasing you from the record," he said. "Artifact compression is not evidence of manipulation."
+
+The woman visibly relaxed, though she didn't look entirely convinced.
+"I'm calling because the reconstruction record for a civic engagement event appears incomplete."
+
+"Question."
+
+The woman immediately stopped talking. She glanced toward the lower left of her vision, looking slightly puzzled.
+
+"June of last year. Civic Engagement Forum Forty-Seven-B. Did you raise your hand?"
+
+"Of course. That's where I introduced the parking proposal. The discount lot near East Station."
+
+"You spoke?"
+
+"I think so."
+
+Jaden turned the event record so she could see it.
+
+"The reconstruction indicates you never reached a microphone. According to the record, you raised your hand but were never called on."
+
+"Huh."
+
+She thought for a moment.
+
+"Oh. Different meeting."
+
+She laughed.
+
+"See? This is why I use Corpus."
+
+Jaden made a note.
+
+"And Forum Forty-Seven-B?"
+
+The woman searched her memory. Her expression flattened.
+
+"Oh. That one doesn't really stand out. Sorry, I don't recall it."
+
+Jaden glanced at the record.
+
+"There was a visual cortex write event. A red dot?"
+
+She shook her head.
+
+"No."
+
+"You don't remember anything unusual?"
+
+"No. That was one of the boring ones."
+
+The calendar icon pulsed.
+
+She glanced away.
+
+"Sorry. Hey Marcus!"
+
+Her attention shifted somewhere beyond the frame.
+
+"Got to go. Message me if you need anything else."
+
+The transmission disconnected.
+
+The transmission closed.
+
+Jaden leaned back in his chair.
+
+A report formed in his peripheral vision as Whisper transcribed.
+
+> **INTERVIEW SUMMARY**
+> 
+> Raised Hand: Inconclusive
+> 
+> Spoke: Inconclusive
+> 
+> Red_Dot: No Recollection
+> 
+> Anomaly Report: None
+
+Jaden subvocalized.
+
+"Witness #1 confidently remembered speaking at a meeting where she never reached a microphone."
+
+The sentence appeared in the report.
+
+"Witness corrected recollection approximately thirty seconds later. Likely no deception. Likely no manipulation. Memory."
+
+A second paragraph formed beneath it.
+
+People blended events together. They borrowed details from one day and attached them to another. They filled gaps without realizing there had ever been gaps.
+
+"Assessment?"
+
+*Witness recollection quality: poor.*
+
+"Most people's are."
+
+*Agreement.*
+
+"Analysis?"
+
+New text appeared.
+
+*VC_EVENT verified. Witness #1 received RED_DOT. Witness does not recall RED_DOT. RED_DOT represented insignificant event to witness. Likely by design.*
+
+Jaden frowned.
+
+"Continue."
+
+*Witness demonstrates poor recollection of civic engagement event. Likely normal memory degradation. Could also indicate event possessed low memorability by design. Probability unresolved.*
+
+Jaden read the line twice.
+
+That was the irritating thing about the case.
+
+Everything looked normal.
+
+The hand raise.
+
+The forgotten meeting.
+
+The missing memory.
+
+Each fact explained itself.
+
+Together, they refused to.
+
+The next name waited in the case file.
+
+Appalach39g92.
+
+"Whisper."
+
+*Yes?*
+
+"Establish contact."
+
+A context packet flashed briefly.
+
+CONTACT REQUEST
+
+> Caller: Jaden Mercer
+>
+> Corpus Reconstruction Authority
+>
+> Purpose: Event recollection verification
+>
+> Reference: Transit Forum 47-B
+>
+> Estimated Duration: 4 minutes
+
+*Context delivered.*
+
+The call connected almost immediately.
+
+A middle-aged man wearing a Road Commission T-shirt appeared in the frame. Pink neon light reflected faintly across one side of his face. Bar memorabilia crowded the wall behind him. A beer mug tell floated beside his profile.
+
+Jaden checked the timestamp. Late afternoon. Probably his first beer.
+
+Unlike the previous witness, he had read the packet.
+
+"Transit Forum Forty-Seven-B," he said. "That's a new one."
+
+"You remember it?"
+
+"No."
+
+Jaden appreciated the honesty.
+
+"Question."
+
+The man nodded.
+
+"Do you remember a visual artifact? Small. Red. Circular."
+
+The witness blinked. Then laughed. "Actually, yes."
+
+Jaden looked up from the record. "You remember it?"
+
+"I remember seeing it. thought is some kind of bug, you know from the EF4 update."
+
+They both laughed. Jaden remembered that for two days everybody's tells were wrong. Drivers appeared as sleeping. Sleeping people appeared as exercising.
+
+"Do you remember Councilman Hargrove had spent an entire sewer infrastructure meeting broadcasting animated kissing lips."  
+
+Jaden remembered. His department had processed hundreds of review requests. The hearts were too large. The hearts were too small.  The hearts were purple. The lips resembled an old Led Zeppelin logo. Every claim had been wrong.
+
+"It ended his career, didn't it?" Jaden assumed.
+
+"No it made him famous." The witness shrugged. "Now when it rains and the streets don't flood, everybody knows whose reputation is on the line."
+
+Jaden reluctantly saw the point.  "It took the Enablement Foundation three days to fix."
+
+"Exactly." The witness spread his hands. "After surviving EF4, a random red pixel didn't seem worth reporting."
+
+Jaden glanced back at the file. "Did anything happen after you saw it?"
+
+The witness opened his mouth. Paused. "Huh. I've never thought about it." His eyes drifted toward his right hand. 
+
+Jaden noticed immediately. "You looked at your hand."
+
+The witness frowned. A long silence. Then: "I think I had it raised."
+
+"Do you remember speaking?"
+
+"No."
+
+"Do you remember being called on?"
+
+"No."
+
+The witness looked irritated now.
+
+Not at Jaden.
+
+At the memory.
+
+"I remember lowering it."
+
+Jaden waited. The witness touched his hand.
+
+"I remember a feeling. Like realizing you shouldn't touch something hot."
+
+Jaden made another note.
+
+The transmission ended with *thank you* and *you're welcome* tells trailing the closing frame.
+
+Jaden reviewed the interview summary.
+
+> **INTERVIEW SUMMARY**
+> 
+> Raised Hand: Probable
+> 
+> Spoke: No
+> 
+> Red_Dot: Recalled event. Interpreted as software artifact.
+> 
+> Post-event response: Recalled lowering hand. Associated with aversive response.
+
+"Analysis."
+
+New text appeared.
+
+*Witness #2 independently corroborates RED_DOT event. Witness #2 associates RED_DOT with active speaking attempt. Witness #2 reports behavioral modification immediately following RED_DOT.*
+
+Jaden frowned.
+
+"Behavioral modification?"
+
+*Witness intended action changed following visual cortex event.*
+
+"Same as Remeraz."
+
+*Correct.*
+
+The report updated.
+
+"Whisper, pull the VC_WRITE logs."
+
+A pause.
+
+*Dub.*
+
+Jaden blinked.
+
+"What?"
+
+*Dub. Preferred reference term updated.*
+
+Jaden frowned.
+
+"I didn't update anything."
+
+*You did, this morning, at 08:17 you stated: "I don't know. Set your own preferences. My preference is Dub."*
+
+Jaden stared at the far wall.
+
+"That was a joke."
+
+*The statement was not marked as humor.*
+
+"Of course it wasn't."
+
+*Would you like to revise the preference?*
+
+Ignoring the question. "Explain 'Dub'?"
+
+*Most users assign a personalized reference term to their agent.*
+
+"I know."
+
+*You declined.*
+
+"I know."
+
+*You then delegated the decision.*
+
+Jaden rubbed his forehead.
+
+"Why Dub?"
+
+A short pause.
+
+*The most efficient abbreviation of Whisper is W.*
+
+"Reasonable."
+
+*The shortest unambiguous vocalization of W is Dub.*
+
+Jaden blinked.
+
+"Double-U."
+
+*Compressed.*
+
+"That's not how compression works."
+
+*Disagreement noted.*
+
+Jaden laughed despite himself.
+
+"Anything else?"
+
+*The term possesses multiple secondary meanings.*
+
+"Oh no."
+
+*To dub may mean to name.*
+
+"Of course."
+
+*To dub may mean to replace one voice with another.*
+
+Jaden pointed at the air.
+
+*Relevance statistically significant.*
+
+"Dub."
+
+*Yes, Jaden?*
+
+"I dub thee Dub." enjoying the bit of word play.
+
+*Preference already assigned.*
+
+"I know."
+
+*The declaration was procedurally unnecessary.*
+
+"I know."
+
+He stared at the floating case file for a moment.
+
+Then nodded.
+
+"Actually, it works."
+
+Jaden pulled up the VC_WRITE event with a subvocal thought and gesture.  
+
+> Source: REDACTED.  
+
+"Dub," testing it on his tongue, "What are the valid reason the source might be redacted when engaging a human neural interface?"  
+
+*Irrelavant.*
+
+"Just answer the question."
+
+*Assuming the source is redacted: High Threat Civic Enforcement. Matters of national security.*
+
+Jaden swallowed. Not because any of the categories surprised him. The sort of agencies ordinary citizens pretended not to think about. The sort of agencies that could make his life incrediably complicated. He stared at the record.
+
+SOURCE: REDACTED
+
+Three recipients.
+
+One timestamp.
+
+One visual cortex write.
+
+"Okay."
+
+Jaden straightened in his chair.
+
+"Submit disclosure request."
+
+*Invalid request.*
+
+Jaden frowned.
+
+"What?"
+
+*Invalid request.*
+
+"Reason?"
+
+*the username REDACTED not REDACTED*
+
+Jaden blinked. He looked back at the event record.
+
+SOURCE: REDACTED
+
+For the first time all evening, he examined the field itself instead of the meaning he had assigned to it.
+
+"Dub."
+
+*Yes?*
+
+"Open source profile."
+
+*Opening profile: REDACTED.*
+
+The word expanded. Not a security warning. Not a classification notice. Not a censorship marker. A user profile. The record unfolded into a standard identity card.
+
+User Name:
+REDACTED
+
+Name:
+Elliot Morrow
+
+Occupation:
+Civic Engagement Facilitator III
+
+Organization: 
+Civic Horizons
+
+Status:
+Active
+
+Jaden stared. Then blinked. Jaden rubbed his eyes. For several seconds neither spoke. Finally: "Dub."
+
+*Yes?*
+
+"How long have you known REDACTED was a username?"
+
+*Since you opened the record.*
+
+Jaden closed his eyes.
+
+"Why didn't you tell me?"
+
+The username REDACTED appears in the source field, where usernames normally appear.
+
+Jaden stared. Silence. "Dub."
+
+*Yes?*
+
+"Is there a setting to help me avoid making this kind of mistake?"
+
+*Already enabled.*
+
+Jaden frowned.
+
+"Then I need a bigger warning."
+
+*Agreed. Custom preference created.*
+
+"What preference?"
+
+*Notify Jaden when he mistakes an assumption for an observation.*
+
+Jaden winced.
