@@ -47,13 +47,13 @@
 - Added `CONTRIBUTION.md` to document the intake/adaptation workflow.
 - Added `STRATEGY_SESSION.md` for future strategy-collaboration sessions.
 - Replaced placeholder landing pages for `research/README.md`, `research/concepts/README.md`, and `probability/README.md` with understated browsing maps.
+- Replaced placeholder `fiction/README.md` with a browsing map and added Fiction to the collapsible sidebar navigation, reusing the Research navigation pattern for project folders and direct child pages.
 - Added `_config.yml` site metadata and `jekyll-seo-tag`.
 - Normalized obvious tag inconsistencies in public posts and one prelim page to lowercase/kebab-case.
 - Checked for literal mojibake/control-character issues with `rg`; no real matches found. Earlier apostrophe rendering issues appear to have been a shell display decoding issue, not file corruption.
 
 ## Known issues / follow-ups
 - See `TODO.md` for the fuller working backlog.
-- Decide whether to update `fiction/README.md` into the same understated map style used by Research and Probability.
 - Expose standalone root notes (`math.md`, `STT882.notes.md`, `experiments.md`, `vc.md`) via an index page or move them into clearer sections.
 - Continue tightening front matter for status/thread names as research pages evolve.
 - Decide whether curated AI-assisted research pages should be promoted from `intake/ai-assisted-research/` into `research/ai-assisted-research/` and/or `docs/`.
