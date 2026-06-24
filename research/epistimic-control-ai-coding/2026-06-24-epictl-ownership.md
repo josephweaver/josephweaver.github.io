@@ -2,141 +2,113 @@
 
 title: Epistemic Control, Ownership, and the Wrong Question
 date: 2026-06-24
-description: Why remembering code may not be the same as owning software, and a proposal to separate strategic understanding, operational control, and implementation recall in AI-assisted development.
+description: A hypothesis that software ownership depends more on strategic understanding and operational control than implementation recall, and a proposal for measuring retention in AI-assisted development.
 project: epistimic-control-ai-coding
 status: draft
 tags:
   - ai-assisted-coding
   - epistemic-control
-  - human-ai-collaboration
   - software-engineering
-  - developer-productivity
+  - human-ai-collaboration
   - software-maintainability
-  - ai-research
-  - human-computer-interaction
+  - developer-productivity
 repos:
   - https://github.com/josephweaver/josephweaver.github.io
 ---
 
-
 # Epistemic Control, Ownership, and the Wrong Question
 
-*June 2026*
-
-For the past several weeks I have been running what I call **Epistemic Control Audits** on my own AI-assisted software development sessions.
+For the last several weeks I have been running what I call *Epistemic Control Audits* on my own AI-assisted software development sessions.
 
 The original goal was simple:
 
 > Am I still in control of my software when AI writes most of the code?
 
-At first, I assumed the answer would be measured by how much code I could remember after a session.
+At first, I assumed the answer would be measured by how much implementation I could reconstruct from memory.
 
-That assumption turned out to be wrong.
+I now believe that assumption may be wrong.
 
-## The Problem
+---
 
-Like many developers, I have worked on codebases for years.
+# The Observation
 
-When returning to a subsystem after six months, I rarely remember:
+Over the course of my career I have repeatedly returned to codebases months or years after writing them.
 
-* exact function names
+When I come back, I rarely remember:
+
+* exact method names
 * configuration fields
 * implementation details
-* line numbers
+* file layouts
 
 What I do remember is:
 
 * the architecture
-* the major abstractions
-* how data flows
+* major abstractions
+* data flow
 * where to start looking when something breaks
 
-This observation led to an uncomfortable question.
+And despite forgetting implementation details, I am usually able to modify, debug, and extend the system.
 
-If I cannot remember the implementation six months later, does that mean I have lost ownership?
+This raises an uncomfortable question:
 
-My experience says no.
+> If I cannot remember the implementation, have I actually lost ownership?
 
-In practice, ownership often looks like:
+My experience suggests the answer is no.
 
-> Knowing where to operate.
+---
 
-Not remembering every line of code.
+# Three Forms of Understanding
 
-## The Initial Audit Framework
+The audits eventually led me to separate three distinct forms of understanding.
 
-The original Epistemic Control Audit measured:
+## Strategic Understanding
 
-* Architecture Comprehension
-* Data Flow Tracing
-* Failure Prediction
-* Invariant Recognition
-* Reconstruction Ability
+Strategic Understanding concerns:
 
-The idea was to determine whether AI-assisted development was exceeding my ability to integrate understanding.
+* architecture
+* invariants
+* design rationale
+* data flow
+* expected failure modes
 
-The audits were useful.
+This is the mental model of the system.
 
-However, over time a mismatch appeared.
+---
 
-Sometimes I would score poorly on reconstruction tasks:
+## Operational Control
 
-> Recreate the configuration.
->
-> Describe exact implementation details.
->
-> Reconstruct component responsibilities from memory.
+Operational Control concerns:
 
-Yet I still felt perfectly capable of:
+* defect localization
+* debugging
+* navigation
+* modification planning
+* identifying relevant code
 
-* debugging the system
-* adding features
-* navigating the codebase
-* reasoning about architecture
+This is the ability to operate within the system.
 
-The audit and my lived experience were disagreeing.
+---
 
-## The Missing Distinction
+## Implementation Recall
 
-The breakthrough came from separating three different forms of understanding.
+Implementation Recall concerns:
 
-### Strategic Understanding
-
-Strategic Understanding answers questions such as:
-
-* Why does this subsystem exist?
-* How does data flow through the system?
-* What invariants must remain true?
-* What failures should I expect?
-
-This is architectural knowledge.
-
-### Operational Control
-
-Operational Control answers questions such as:
-
-* Where should I look when something breaks?
-* Which files are likely involved?
-* How would I add a new feature?
-* What tests should I write?
-
-This is practical ownership.
-
-### Implementation Recall
-
-Implementation Recall answers questions such as:
-
-* What was the exact configuration?
-* What was the method name?
-* Which file contained the implementation?
+* exact code
+* configuration details
+* file names
+* APIs
+* implementation specifics
 
 This is memory.
 
-Historically, software engineering often treated all three as the same thing.
+Historically, software engineering often treats these as a single thing.
 
 I am increasingly convinced they are not.
 
-## A Hypothesis
+---
+
+# A Hypothesis
 
 My current hypothesis is:
 
@@ -154,33 +126,58 @@ while
 Implementation Recall
 ```
 
-is useful, but optional.
+is useful but optional.
 
-Implementation Recall may decay rapidly.
+In other words:
 
-Ownership may not.
+> Ownership may persist even after implementation details are forgotten.
 
-If this hypothesis is correct, then many current discussions around AI-assisted programming may be measuring the wrong thing.
+---
 
-The question is not:
+# A More Interesting Prediction
 
-> Can the human recite the implementation?
+My original assumption was that all understanding should decay together.
 
-The question is:
+The audits suggest something else may be happening.
 
-> Can the human still navigate, debug, and evolve the system months later?
+Hypothetical retention curves:
 
-## The Retention Problem
+| Review | Strategic Understanding | Operational Control | Implementation Recall |
+| ------ | ----------------------: | ------------------: | --------------------: |
+| T      |                    100% |                 75% |                   60% |
+| T+3    |                     95% |                 82% |                   40% |
+| T+14   |                     90% |                 84% |                   25% |
+| T+180  |                     80% |                 78% |                   10% |
 
-This creates another challenge.
+Two aspects of this prediction are important.
 
-Most evaluations occur immediately after development.
+First, Implementation Recall begins incomplete.
 
-Immediate reviews primarily measure comprehension.
+Even immediately after development, developers often cannot reconstruct every implementation detail.
+
+Second, Operational Control may actually improve before it declines.
+
+As details fade, the system compresses into a more durable mental model.
+
+Developers stop remembering code and start remembering structure.
+
+If this prediction is correct, then forgetting implementation details is not necessarily evidence of lost ownership.
+
+It may be a normal part of knowledge consolidation.
+
+---
+
+# The Retention Problem
+
+Most evaluations of AI-assisted development happen immediately after coding.
+
+That measures comprehension.
 
 Ownership is a long-term property.
 
-To address this, the audit protocol is evolving toward longitudinal reviews:
+To address this, the audit protocol is evolving into a longitudinal study.
+
+Each development session can be reviewed at:
 
 | Review | Purpose                 |
 | ------ | ----------------------- |
@@ -189,54 +186,63 @@ To address this, the audit protocol is evolving toward longitudinal reviews:
 | T+14   | Medium-term retention   |
 | T+180  | Long-term ownership     |
 
-The goal is to observe what actually persists.
+The goal is not to measure how much is remembered.
 
-Does architecture survive?
+The goal is to measure what survives.
 
-Does navigation survive?
+---
 
-Does implementation recall disappear?
+# A Falsifiable Prediction
 
-I do not know yet.
+The model makes a concrete prediction.
 
-That is exactly what the experiment is intended to measure.
+Strategic Understanding should decay slowly.
 
-## Why This Matters
+Operational Control should remain stable or improve during early consolidation.
 
-AI-assisted development is accelerating dramatically.
+Implementation Recall should decay rapidly.
 
-Most discussions focus on:
+If longitudinal audits do not show this pattern, then the model is wrong.
+
+That is exactly what future data should test.
+
+---
+
+# Why This Matters
+
+Most discussions of AI-assisted software development focus on:
 
 * productivity
-* lines of code
-* feature velocity
+* velocity
+* code generation
+* feature throughput
 
-Those metrics matter.
+These are important.
 
-But they ignore an important question:
+But they ignore a critical question:
 
 > What happens six months later?
 
-The software industry has decades of experience with systems that were easy to create and difficult to maintain.
+Software engineering has always been constrained less by implementation and more by maintenance.
 
-If AI changes the economics of implementation, then understanding and ownership may become the limiting factors.
+If AI dramatically reduces implementation cost, then ownership and maintainability may become the limiting factors.
 
 The challenge is not writing software.
 
-The challenge is ensuring someone still understands enough to safely change it later.
+The challenge is ensuring someone still understands enough to safely evolve it later.
 
-## Current Status
+---
 
-At the moment, this remains a working hypothesis.
+# Conclusion
 
-The audit protocol is still evolving.
+The question I started with was:
 
-The scoring system is still evolving.
+> Can the developer remember the code?
 
-The definitions are still evolving.
+The question I am interested in now is:
 
-However, one thing already seems clear.
+> Can the developer still navigate, debug, and improve the system months later?
 
-Understanding software is not the same thing as remembering software.
+Those are not the same question.
 
-And if we want to measure human ownership in the age of AI-assisted development, we may need entirely different instruments than the ones we have used in the past.
+And if AI changes the economics of software development, they may not even have the same answer.
