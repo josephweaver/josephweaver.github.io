@@ -18,6 +18,9 @@ repos:
 
 # Epistemic Control, Ownership, and the Wrong Question
 
+
+![Epistemic Control and Ownership]({{ '/assets/images/ec-hypothetical-memory-curve.2.png' | relative_url }})
+
 For the last several weeks I have been running what I call *Epistemic Control Audits* on my own AI-assisted software development sessions.
 
 The original goal was simple:
@@ -245,4 +248,4 @@ The question I am interested in now is:
 
 Those are not the same question.
 
-And if AI changes the economics of software development, they may not even have the same answer.
+
