@@ -11,6 +11,11 @@
 
   <link rel="stylesheet" href="{{ "/assets/css/custom.css" | relative_url }}" />
 
+  {% if site.analytics and site.analytics.goatcounter and site.analytics.goatcounter.domain %}
+    <script data-goatcounter="https://{{ site.analytics.goatcounter.domain }}/count"
+            async src="https://gc.zgo.at/count.js"></script>
+  {% endif %}
+
   <!-- MathJax v3 config -->
   <script>
     window.MathJax = {

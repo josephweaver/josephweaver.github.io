@@ -10,6 +10,14 @@ plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
 
+# Optional analytics for the static GitHub Pages site.
+# GitHub Pages cannot maintain a server-side hit counter by itself, so this
+# layout hook sends page views to an external counter when configured.
+#
+# analytics:
+#   goatcounter:
+#     domain: josephweaver.goatcounter.com
+
 markdown: kramdown
 kramdown:
   input: GFM
