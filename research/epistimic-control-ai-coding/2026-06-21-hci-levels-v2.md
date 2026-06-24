@@ -1,6 +1,6 @@
 ---
 title: Human-AI Coding Interaction Levels
-date: 2026-06-04
+date: 2026-06-21
 description: A practical scale for choosing coding interaction modes by objective, file budget, and required level of epistemic control.
 project: epistimic-control-ai-coding
 status: draft

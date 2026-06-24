@@ -20,13 +20,19 @@ repos:
 
 ![Epistemic Control and Ownership]({{ '/assets/images/ec-hypothetical-memory-curve.2.png' | relative_url }})
 
-For the last several weeks I have been running what I call *Epistemic Control Audits* on my own AI-assisted software development sessions. The original question behind those audits was simple: am I still in control of my software when AI writes most of the code? At first, I assumed the answer would be measured by how much implementation I could reconstruct from memory. I now think that assumption may be wrong.
+For the last several weeks I have been running what I call *Epistemic Control Audits* on my own AI-assisted software development sessions. The original question behind those audits was simple: 
+> am I still in control of my software when AI writes most of the code? 
+
+At first, I assumed the answer would be measured by how much implementation I could reconstruct from memory. I now think that assumption may be wrong.
 
 ## The Observation
 
 Over the course of my career I have repeatedly returned to codebases months or years after writing them. When I come back, I rarely remember exact method names, configuration fields, implementation details, or file layouts. What I do remember is the architecture, the major abstractions, the data flow, and where to start looking when something breaks. Despite forgetting many implementation details, I am usually still able to modify, debug, and extend the system.
 
-That raises an uncomfortable question: if I cannot remember the implementation, have I actually lost ownership? My experience suggests the answer is no.
+That raises an uncomfortable question: 
+> if I cannot remember the implementation, have I actually lost ownership? 
+
+My experience suggests the answer is no.
 
 ## Three Forms of Understanding
 
