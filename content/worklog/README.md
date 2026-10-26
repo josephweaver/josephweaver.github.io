@@ -17,9 +17,12 @@ Unfinished experiments, negative results, and playful explorations belong here. 
 
 ## Reports
 
-There are no dated reports yet. As I add them, I maintain a linked index here, newest first, with each report's date, descriptive title, and status. For multiple reports on one day, I use the recorded times or sequence suffixes to order them when relevant.
+I maintain this linked index newest first, with each report's date, descriptive title, and status. For multiple reports on one day, I use the recorded times or sequence suffixes to order them when relevant.
 
-The worked example below illustrates the format; it is not a separate report.
+- **2026-10-26** — [PRISM, ERA5, and NOAA MRMS exploration](2026-10-26-prism-era5-mrms-exploration.md) (`exploring`): PRISM–ERA5 precipitation comparison across 364 complete matched days, zero-ERA5 exceptions, and a boundary check.
+- **2026-10-26** — [Sentinel-1 exploration](2026-10-26-sentinel-1-exploration.md) (`exploring`): interactive viewer and initial radar-signature comparisons within fields and across land-cover types.
+
+The worked example below is a shorter illustration of the format; I keep the dated session record in the linked report.
 
 ## Files and organization
 
@@ -41,7 +44,7 @@ I group several entries in one report when they share useful context. I give eac
 
 I copy [TEMPLATE.md](TEMPLATE.md) to a dated filename, replace the title in both the front matter and heading, and uncomment and fill in `date`. I remove unused sections and instructional placeholders. For a small entry, a question, observations, and a next action or restart note may be enough.
 
-I follow the site's YAML front-matter convention. The content layout is inherited from `_config.yml`; I do not need to repeat it. The template's date is commented out so the template does not appear as a dated report in the site's recent-activity listing.
+I follow the site's YAML front-matter convention. The content layout is inherited from `_config.yml`; I do not need to repeat it. The template's date is commented out; I fill it in when I copy the template into a report.
 
 | Field | What I record |
 | --- | --- |
@@ -120,4 +123,4 @@ This is an exploratory visual observation from this session. The shared temporal
 
 I will start by locating the viewer code and recording its version, the selected points, acquisition dates, and preprocessing needed to reproduce this inspection.
 
-Viewer code: `TODO: add verified repository and commit URLs`.
+Viewer code: [sentinal-1-viewer](https://github.com/josephweaver/sentinal-1-viewer). Related repository: [sentinal-1](https://github.com/josephweaver/sentinal-1).

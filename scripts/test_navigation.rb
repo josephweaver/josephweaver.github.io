@@ -26,6 +26,19 @@ Dir.mktmpdir("notebook-navigation-") do |source|
   File.write(File.join(directory, "hidden.md"), "---\ntitle: Hidden\nnav_exclude: true\n---\n\n# Hidden\n")
   FileUtils.mkdir_p(File.join(source, "content/new-section/unindexed"))
   File.write(File.join(source, "content/new-section/unindexed/inside.md"), "# Inside a folder without a README\n")
+  File.write(File.join(source, "content/new-section/field notes.pdf"), "%PDF-test-fixture\n")
+  File.write(File.join(source, "content/new-section/pinned"), "")
+  9.times do |index|
+    File.write(File.join(directory, "undated-#{index}.md"), "# Undated entry #{index}\n")
+  end
+  File.write(File.join(directory, "older.md"), "---\ntitle: Older entry\ndate: 2025-01-02\n---\n\n# Older entry\n")
+  FileUtils.mkdir_p(File.join(source, "content/fiction/nested"))
+  File.write(File.join(source, "content/fiction/README.md"), "# Fiction\n")
+  File.write(File.join(source, "content/fiction/nested/story.md"), "---\ntitle: Fiction story\ndate: 2026-10-27\n---\n\n# Fiction story\n")
+  File.write(File.join(source, "content/fiction/nested/story.pdf"), "%PDF-fiction-fixture\n")
+  FileUtils.mkdir_p(File.join(source, "content/fiction-notes"))
+  File.write(File.join(source, "content/fiction-notes/essay.md"), "# An adjacent section\n")
+  File.write(File.join(source, "outside.md"), "---\ntitle: Outside content\ndate: 2026-10-28\n---\n\n# Outside content\n")
 
   config = Jekyll.configuration(
     "source" => source,
@@ -61,7 +74,20 @@ Dir.mktmpdir("notebook-navigation-") do |source|
   assert(landing.css(".folder-index a").any? { |link| link["href"] == prefix + "plain.html" }, "README landing pages do not list direct children")
   home = Nokogiri::HTML(File.read(File.join(output, "index.html")))
   assert(home.css(".resource-card").any? { |card| card["href"] == "/preview/content/new-section/" }, "Home section cards are hardcoded")
-  assert(home.css(".research-card a").any? { |link| link["href"] == prefix + "dated.html" }, "The recent feed requires project-specific metadata")
-  assert(home.css(".research-card a").none? { |link| link["href"].include?("TEMPLATE") }, "An undated template entered the recent feed")
-  puts "PASS: automatic sections, four-level navigation, README indexes, plain Markdown, relative links, breadcrumbs, dates, and /preview baseurl"
+  activities = home.css(".research-feed .research-card__main").map { |link| link["href"] }
+  assert(activities.include?(prefix + "dated.html"), "The recent feed requires project-specific metadata")
+  assert(activities.include?(prefix + "plain.html"), "An undated Markdown file is missing from activities")
+  assert(activities.include?(prefix + "TEMPLATE.html"), "Templates are excluded from the all-file feed")
+  assert(activities.include?("/preview/content/new-section/"), "README landing pages are missing from activities")
+  assert(activities.include?("/preview/content/new-section/field%20notes.pdf"), "A downloadable file is missing from activities")
+  assert(activities.include?(prefix + "undated-8.html"), "Activities are still limited to eight files")
+  assert(activities.count(prefix + "plain.html") == 1 && !activities.include?(prefix + "plain.md"), "A rendered page and its raw source both appear")
+  assert(activities.none? { |href| href.start_with?("/preview/content/fiction/") }, "Fiction leaked into activities")
+  assert(activities.include?("/preview/content/fiction-notes/essay.html"), "A similarly named section was incorrectly excluded")
+  assert(activities.none? { |href| href.end_with?("/pinned", "/outside.html", "/hidden.html") }, "Internal markers, hidden pages, or files outside content leaked into activities")
+  assert(activities.first(2) == [prefix + "dated.html", prefix + "older.html"], "Dated activities are not newest first")
+  plain_card = home.css(".research-card").find { |card| card.at_css("a")["href"] == prefix + "plain.html" }
+  assert(plain_card.css(".eyebrow").empty?, "An undated page was given an invented date")
+  assert(plain_card.at_css(".activity-path").text == "content/new-section/second/third/fourth/plain.md", "An activity displays the wrong source path")
+  puts "PASS: folder navigation and all-file activities, including undated files, README pages, templates, downloads, deduplication, date order, fiction exclusion, and /preview baseurl"
 end

@@ -49,7 +49,7 @@ tags: [relevant-topic]
 ---
 ```
 
-The home page lists dated content from all five sections. I add a `date` when I want an entry included there; dated filenames alone are ordinary page names. Posts now live in `content/posts/` and use the same page conventions as the other sections.
+Recent Activities lists published files throughout `content/`, excluding `content/fiction/`. It includes README landing pages, undated Markdown, templates, and downloadable files. Dated entries appear newest first, followed by undated files alphabetically by filename. I can add a `date` for ordering, but a file does not need one to appear. Rendered pages take precedence over duplicate raw Markdown copies; internal `pinned` markers and pages marked `nav_exclude: true` are omitted. Posts live in `content/posts/` and use the same page conventions as the other sections.
 
 For research projects, I use `content/research/<project>/README.md` with `project`, optional `summary`, and relevant tags. An empty `pinned` file puts a project first in the home-page project list. Dated research articles can share the project's metadata.
 

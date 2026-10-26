@@ -24,8 +24,8 @@ Shared images, documents, and CSS remain in root `assets/`. Root `index.html` an
 - `_layouts/default.html` caches the shared navigation tree, then marks the current page and opens its ancestor folders for each render. README landing pages also list their immediate children.
 - `_includes/breadcrumbs.html` links the current page to its parent README pages.
 - Relative Markdown links resolve to rendered URLs. Content-specific permalink overrides were removed so URLs follow source directories and filenames; no legacy redirects were added.
-- Home lists dated pages from every content section, discovers section cards from their README files, and retains project cards and `pinned` markers. Former posts have explicit dates matching their filenames.
-- Templates stay accessible through direct links and are omitted from navigation and the recent feed. Other pages can use `nav_exclude: true` when appropriate.
+- Recent Activities lists published files under `content/` except `content/fiction/`, including README pages, templates, undated Markdown, and downloads. Dated files appear newest first, then undated files alphabetically by filename; there is no eight-item cap. Rendered pages replace duplicate raw Markdown entries, and internal `pinned` markers are omitted. Section cards still come from README files, and project cards retain their pinned ordering. Former posts have explicit dates matching their filenames.
+- Templates stay out of sidebar navigation and appear as undated files in Recent Activities. Pages can use `nav_exclude: true` to stay out of navigation and activities.
 - MathJax, resizable navigation, edit-on-GitHub links, and optional Giscus discussions remain in the shared layout. `other-topics.html` still links to Notes and Fiction.
 
 ## Build and verification

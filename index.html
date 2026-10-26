@@ -5,12 +5,17 @@ title: Recent Activities
 
 {% assign content_prefix = site.content_root | append: "/" %}
 {% assign prefix_size = content_prefix | size %}
-{% assign recent_items = "" | split: "" %}
+{% assign dated_items = "" | split: "" %}
+{% assign undated_items = "" | split: "" %}
+{% assign page_paths = "|" %}
 {% assign section_pages = "" | split: "" %}
 {% assign project_pages = "" | split: "" %}
 {% for candidate in site.pages %}
   {% assign prefix = candidate.path | slice: 0, prefix_size %}
-  {% if prefix != content_prefix or candidate.nav_exclude or candidate.name == "TEMPLATE.md" %}{% continue %}{% endif %}
+  {% if prefix != content_prefix %}{% continue %}{% endif %}
+  {% assign path_token = candidate.path | prepend: "|" | append: "|" %}
+  {% assign page_paths = page_paths | append: path_token %}
+  {% if candidate.nav_exclude %}{% continue %}{% endif %}
   {% assign parts = candidate.path | remove_first: content_prefix | split: "/" %}
   {% if candidate.name == "README.md" %}
     {% if parts.size == 2 %}
@@ -18,27 +23,51 @@ title: Recent Activities
     {% elsif parts.size > 2 and candidate.project %}
       {% assign project_pages = project_pages | push: candidate %}
     {% endif %}
-  {% elsif candidate.date %}
-    {% assign recent_items = recent_items | push: candidate %}
+  {% endif %}
+  {% if parts.first == "fiction" %}{% continue %}{% endif %}
+  {% if candidate.date %}
+    {% assign dated_items = dated_items | push: candidate %}
+  {% else %}
+    {% assign undated_items = undated_items | push: candidate %}
   {% endif %}
 {% endfor %}
-{% assign recent_items = recent_items | sort: "date" | reverse %}
+{% for candidate in site.static_files %}
+  {% assign source_path = candidate.path %}
+  {% assign first_character = source_path | slice: 0, 1 %}
+  {% if first_character == "/" %}{% assign source_path = source_path | remove_first: "/" %}{% endif %}
+  {% assign prefix = source_path | slice: 0, prefix_size %}
+  {% if prefix != content_prefix or candidate.nav_exclude or candidate.name == "pinned" %}{% continue %}{% endif %}
+  {% assign parts = source_path | remove_first: content_prefix | split: "/" %}
+  {% if parts.first == "fiction" %}{% continue %}{% endif %}
+  {% assign path_token = source_path | prepend: "|" | append: "|" %}
+  {% if page_paths contains path_token %}{% continue %}{% endif %}
+  {% if candidate.date %}
+    {% assign dated_items = dated_items | push: candidate %}
+  {% else %}
+    {% assign undated_items = undated_items | push: candidate %}
+  {% endif %}
+{% endfor %}
+{% assign dated_items = dated_items | sort: "date" | reverse %}
+{% assign undated_items = undated_items | sort_natural: "name" %}
+{% assign recent_items = dated_items | concat: undated_items %}
 {% assign section_pages = section_pages | sort_natural: "title" %}
 {% assign project_pages = project_pages | sort_natural: "title" %}
 
 <section class="section-head" aria-labelledby="recent-activities">
   <h1 id="recent-activities">Recent Activities</h1>
-  <p>Research, worklog entries, notes, fiction, and posts from across the notebook.</p>
+  <p>Research, worklog entries, notes, posts, and other files from across the notebook. Dated entries appear newest first, followed by undated files alphabetically.</p>
 </section>
 <section class="research-feed" aria-label="Recent notebook entries">
-  {% for item in recent_items limit:8 %}
+  {% for item in recent_items %}
     <article class="research-card">
-      <a class="research-card__main" href="{{ item.url | relative_url | escape }}">
+      <a class="research-card__main" href="{{ item.url | default: item.path | relative_url | escape }}">
         <div class="research-card__header">
-          <p class="eyebrow">{{ item.date | date: "%b %-d, %Y" }}</p>
+          {% if item.date %}<p class="eyebrow">{{ item.date | date: "%b %-d, %Y" }}</p>{% endif %}
           <h2>{{ item.title | default: item.name | escape }}</h2>
         </div>
-        <p>{{ item.description | default: item.summary | default: item.content | markdownify | strip_html | truncate: 260 }}</p>
+        {% assign excerpt = item.description | default: item.summary | default: item.content %}
+        {% if excerpt %}<p>{{ excerpt | markdownify | strip_html | truncate: 260 }}</p>{% endif %}
+        <p class="activity-path">{{ item.path | escape }}</p>
       </a>
       <div class="research-card__meta">
         {% for tag in item.tags limit:5 %}<span>{{ tag | escape }}</span>{% endfor %}
@@ -46,7 +75,7 @@ title: Recent Activities
       </div>
     </article>
   {% else %}
-    <p>No dated entries yet.</p>
+    <p>No content files yet.</p>
   {% endfor %}
 </section>
 
@@ -77,7 +106,7 @@ title: Recent Activities
       {% assign pinned = site.static_files | where: "path", pinned_path | first %}
       {% if pass == "pinned" and pinned == nil %}{% continue %}{% endif %}
       {% if pass == "other" and pinned %}{% continue %}{% endif %}
-      {% assign latest = recent_items | where: "project", project.project | first %}
+      {% assign latest = dated_items | where: "project", project.project | first %}
       <a class="project-card" href="{{ project.url | relative_url | escape }}">
         {% if pinned %}<p class="eyebrow">Pinned</p>{% endif %}
         <h3>{{ project.title | escape }}</h3>
@@ -160,6 +189,10 @@ title: Recent Activities
   .project-card p,
   .resource-card p {
     color: var(--muted);
+  }
+  .activity-path {
+    font-size: 0.8rem;
+    overflow-wrap: anywhere;
   }
   .research-card__meta {
     display: flex;
