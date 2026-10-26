@@ -1,62 +1,54 @@
 # Project state
 
 ## Purpose
-- Public research notebook + teaching archive + systems lab rendered with Jekyll/GitHub Pages.
-- Public site lives at https://josephweaver.github.io/.
-- Markdown-heavy content is organized into public sections (`research/`, `probability/`, `fiction/`, `_posts/`) plus `intake/` for raw outside material that may later be adapted.
 
-## Sub-Project Reference
-- Active tabletop design work lives in `fiction/24system/`.
-- Start with:
-  - `fiction/24system/README.md` (system overview + file index)
-  - `fiction/24system/PROJECT_STATE.md` (latest design decisions and next steps)
+I maintain a public notebook for scientific explorations, collected notes, literary and game-design work, daily activity, and observations. The public site is [josephweaver.github.io](https://josephweaver.github.io/).
 
-## Build / theme
-- `_config.yml` uses `remote_theme: pages-themes/cayman@v0.2.0` with `jekyll-remote-theme` and `jekyll-seo-tag`; includes site metadata (`title`, `description`, `author`, `url`, `repository`, `timezone`). Markdown via kramdown + MathJax (math enabled by default for `probability/`). Local-only/private/build paths are excluded: `private/`, `vendor/`, `.bundle/`, and `Gemfile.lock`.
-- `_layouts/default.html` defines the page chrome: sidebar navigation (Recent Activities, Other Topics, Research, About) with collapsible Research subsections, resizable width (localStorage `sttSidebarWidth`), MathJax v3 config, sibling prev/next links (per folder), edit-on-GitHub links top/bottom of articles, and optional Giscus comments when `site.giscus` is configured. Research subdirectories without a landing file (`README.md`, `index.md`, or `index.html`) are ignored by the navigation.
-- `assets/css/custom.css` supplies typography/colors/layout shell; page-level styles live inline in `index.html` and `about.html`.
-- Assets: `assets/documents/` (resume + biosketch PDFs), `assets/images/1618685561588.jfif` (portrait), `assets/images/Human-understanding-ai-acceleration.png` (lead image for the epistemic-control article), and other media folders.
-- Local Jekyll tooling is installed with Ruby + DevKit at `C:\Ruby33-x64`. Bundler dependencies are installed under `vendor/bundle/`; `tzinfo-data` is included in `Gemfile` for Windows timezone support. This machine needed `SSL_CERT_FILE=C:\Ruby33-x64\bin\etc\ssl\cert.pem` for RubyGems HTTPS verification.
+## Content structure
 
-## Content & navigation
-- Home `index.html`: starts directly with recent research notes drawn from `project` + `date` front matter, then lists current research projects from `research/<project-name>/README.md`. Pinned projects are detected through an empty `pinned` marker file. Links to About, Research, and Other Topics remain available lower on the page.
-- `other-topics.html`: gateway page for Teaching/Probability and Fiction sections, replacing direct home/sidebar emphasis on those sections.
-- About `about.html`: former homepage; hero layout with portrait, contact, LinkedIn, and links to resume/biosketch PDFs.
-- Root `README.md`: public map for the repository, including research, probability, blog/working notes, systems/design notes, intake workflow, and build notes.
-- `CONTRIBUTION.md`: personal workflow for capture -> intake -> triage -> adapt -> publish -> cross-link.
-- `STRATEGY_SESSION.md`: prompt for starting future long-term technical/research strategy sessions.
-- `TODO.md`: practical backlog for site/repository organization, navigation, metadata, content promotion, and build verification.
-- Probability: `probability/README.md` is now a real landing page for the probability study archive; subfolders include `STT881/`, `STT882/`, `STT996/`, `STT997/`, `MTH868/`, `distributions/`, `convergence/`, `high-dimensional/`, and `prelim/` (2018-2025 prelim question writeups). Math rendering handled by layout defaults.
-- Research: `research/README.md` now maps current threads and includes `research/epistimic-control-ai-coding/` as the canonical active project folder structure. Active research project folders use `README.md`, optional `pinned`, and dated `YYYY-MM-DD-title.md` article files with matching `date`, `project`, `status`, and `tags` front matter.
-- Epistemic-control active article: `research/epistimic-control-ai-coding/2026-06-03-epi-ctl-ai-coding.md`, with lead image `assets/images/Human-understanding-ai-acceleration.png`.
-- Intake: `intake/ai-assisted-research/` contains raw outside material on AI-assisted research workflow (`AI.md`, `AI_ASSISTANCE_LEVELS.md`, `AI_PROMPTS.md`). Intake is staging material, not assumed site-ready.
-- Fiction: `fiction/README.md`; active subprojects include `fiction/24system/`, `fiction/space-voxel/`, `fiction/whisper/`, `fiction/president-rock/`, and `fiction/Oort-Factor/`.
-- Standalone root notes include `math.md`, `STT882.notes.md`, `experiments.md`, `vc.md`, plus `LICENSE` and `troubleshooting.txt`.
+The five main sections are peers under `content/`, described by [content/README.md](content/README.md):
 
-## Recent organization work
-- Installed local Ruby/Jekyll/Bundler tooling and verified `bundle exec jekyll build` after excluding local/private paths.
-- Added `.gitignore` entries for local Jekyll/Bundler outputs and `_config.yml` excludes for `private/`, `vendor/`, `.bundle/`, and `Gemfile.lock`.
-- Added `assets/images/Human-understanding-ai-acceleration.png` to the June 3 epistemic-control article.
-- Renamed sidebar `Blog` to `Recent Activities`, moved `About` to the bottom of the nav, and made Research nav ignore directories without landing pages.
-- Added or normalized `tags` front matter across research articles and project pages.
-- Added `research/epistimic-control-ai-coding/` as the canonical active research project example.
-- Retooled `index.html` to use the research hierarchy for recent article and current-project cards.
-- Added `other-topics.html` and simplified home/sidebar navigation so Probability and Fiction are routed through Other Topics.
-- Removed the home-page hero panel so the landing page starts with posts.
-- Replaced placeholder root `README.md` with a public repository map.
-- Added `CONTRIBUTION.md` to document the intake/adaptation workflow.
-- Added `STRATEGY_SESSION.md` for future strategy-collaboration sessions.
-- Replaced placeholder landing pages for `research/README.md`, `research/concepts/README.md`, and `probability/README.md` with understated browsing maps.
-- Replaced placeholder `fiction/README.md` with a browsing map and added Fiction to the collapsible sidebar navigation, reusing the Research navigation pattern for project folders and direct child pages.
-- Added `_config.yml` site metadata and `jekyll-seo-tag`.
-- Normalized obvious tag inconsistencies in public posts and one prelim page to lowercase/kebab-case.
-- Checked for literal mojibake/control-character issues with `rg`; no real matches found. Earlier apostrophe rendering issues appear to have been a shell display decoding issue, not file corruption.
+- `content/research/`: scientific explorations that may lead to publishable material.
+- `content/notes/`: notes from sources, classes, books, and papers on statistics, mathematics, agriculture, and other interests. This was formerly `probability/`.
+- `content/fiction/`: literary work, role-playing games, and computer-game designs.
+- `content/worklog/`: daily work, output locations, experiments, observations, and restart notes. This was formerly nested inside Research.
+- `content/posts/`: observations and thoughts. These are regular Markdown pages, formerly Jekyll `_posts`.
 
-## Known issues / follow-ups
-- See `TODO.md` for the fuller working backlog.
-- Expose standalone root notes (`math.md`, `STT882.notes.md`, `experiments.md`, `vc.md`) via an index page or move them into clearer sections.
-- Continue tightening front matter for status/thread names as research pages evolve.
-- Decide whether curated AI-assisted research pages should be promoted from `intake/ai-assisted-research/` into `research/ai-assisted-research/` and/or `docs/`.
-- Fill `research/concepts/ai-homework/discovery-ready.md` or remove if unnecessary.
-- Consider a tag or thread index now that research pages have tags.
-- Current local build verification: `bundle exec jekyll build` succeeded after this documentation refresh.
+Shared images, documents, and CSS remain in root `assets/`. Root `index.html` and `about.html` provide the home and profile pages. Reusable process notes stay in `docs/`; outside source material awaiting adaptation stays in `intake/`.
+
+## Rendering and navigation
+
+- `_config.yml` sets `content_root: content` and gives content pages the shared default layout. Notes also inherit the math flag.
+- README files become their directory landing pages, with or without YAML front matter. Markdown without front matter also renders; its first heading supplies a title unless metadata supplies one.
+- `_includes/directory-items.html` discovers direct pages and subfolders recursively. Folder labels come from README titles. Folders without a README remain expandable.
+- `_layouts/default.html` caches the shared navigation tree, then marks the current page and opens its ancestor folders for each render. README landing pages also list their immediate children.
+- `_includes/breadcrumbs.html` links the current page to its parent README pages.
+- Relative Markdown links resolve to rendered URLs. Content-specific permalink overrides were removed so URLs follow source directories and filenames; no legacy redirects were added.
+- Home lists dated pages from every content section, discovers section cards from their README files, and retains project cards and `pinned` markers. Former posts have explicit dates matching their filenames.
+- Templates stay accessible through direct links and are omitted from navigation and the recent feed. Other pages can use `nav_exclude: true` when appropriate.
+- MathJax, resizable navigation, edit-on-GitHub links, and optional Giscus discussions remain in the shared layout. `other-topics.html` still links to Notes and Fiction.
+
+## Build and verification
+
+The site uses Jekyll 3.10 through `github-pages`, the Cayman theme, and GitHub Pages-supported plugins declared in `_config.yml`. `Gemfile.lock` supports Windows and Linux. Ruby and build dependencies are available in Ubuntu-24.04 under WSL for local verification.
+
+```sh
+bundle install
+bundle exec jekyll build
+bundle exec ruby scripts/test_navigation.rb
+python3 scripts/check_site.py _site
+```
+
+The navigation regression check builds an isolated fixture with a new section four levels deep, a folder without a README, plain Markdown, relative links, hidden pages, dated entries, and a `/preview` base URL. The rendered-site checker inspects local links, assets, and heading anchors across the home page, About, and content pages.
+
+Local dependencies, private files, verification scripts, and generated output are excluded from publication. The pre-existing `content/notes/STT997/HW5.html` export is excluded because `HW5.md` produces that output URL.
+
+## Working references
+
+- [Contribution workflow](CONTRIBUTION.md)
+- [Worklog conventions](content/worklog/README.md) and [template](content/worklog/TEMPLATE.md)
+- [24-System landing page](content/fiction/24system/README.md) and [project state](content/fiction/24system/PROJECT_STATE.md)
+- [Epistemic Control in AI-Assisted Programming](content/research/epistimic-control-ai-coding/README.md)
+- [Follow-up backlog](TODO.md)
+
+Standalone root notes such as `math.md`, `STT882.notes.md`, `experiments.md`, and `vc.md` remain outside the five main sections. Their eventual organization is separate follow-up work.

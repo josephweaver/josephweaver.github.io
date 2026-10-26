@@ -42,7 +42,7 @@ Useful triage questions:
 
 - What is the reusable idea?
 - What is project-specific and should not be published as-is?
-- Does this belong in `research/`, `docs/`, `_posts/`, or an existing project folder?
+- Does this belong in `content/research/`, `docs/`, `content/posts/`, or an existing project folder?
 - What context would a reader need if they had never seen the original project?
 - Does the document preserve enough provenance to explain where the idea came from?
 
@@ -53,10 +53,10 @@ When promoting intake material, create a public-facing version in the right site
 Common destinations:
 
 ```text
-research/<thread>/README.md
-research/<thread>/<note>.md
+content/research/<thread>/README.md
+content/research/<thread>/<note>.md
 docs/<process-or-template>.md
-_posts/YYYY-MM-DD-topic.md
+content/posts/YYYY-MM-DD-topic.md
 ```
 
 Before publishing, remove or rewrite:
@@ -98,7 +98,7 @@ AI may help with triage, restructuring, summaries, and adaptation, but the publi
 For AI-assisted research material, preserve the main distinction:
 
 - raw workflow guides belong in `intake/`
-- reusable public frameworks belong in `research/`
+- reusable public frameworks belong in `content/research/`
 - prompt templates and process checklists may belong in `docs/`
 
 The goal is not to hide AI use. The goal is to make the handoff, assumptions, review steps, and human judgment clear.

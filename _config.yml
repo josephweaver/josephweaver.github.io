@@ -9,6 +9,25 @@ remote_theme: pages-themes/cayman@v0.2.0   # or: slate, minimal, hacker, leap-da
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
+  - jekyll-optional-front-matter
+  - jekyll-readme-index
+  - jekyll-relative-links
+  - jekyll-titles-from-headings
+  - jekyll-include-cache
+
+# Navigation follows this directory, at any depth.
+content_root: content
+
+readme_index:
+  with_frontmatter: true
+  remove_originals: true
+
+relative_links:
+  enabled: true
+
+titles_from_headings:
+  enabled: true
+  strip_title: false
 
 # Optional analytics for the static GitHub Pages site.
 # GitHub Pages cannot maintain a server-side hit counter by itself, so this
@@ -28,21 +47,21 @@ exclude:
   - vendor/
   - .bundle/
   - Gemfile.lock
+  - Gemfile
+  - scripts/
+  - node_modules/
+  # The Markdown source renders to this same filename.
+  - content/notes/STT997/HW5.html
 
 defaults:
   - scope:
-      path: "probability"
+      path: "content"
     values:
       layout: default
+  - scope:
+      path: "content/notes"
+    values:
       math: true
-  - scope:
-      path: "research"
-    values:
-      layout: default
-  - scope:
-      path: "fiction"
-    values:
-      layout: default
 
 giscus:
   repo: josephweaver/josephweaver.github.io

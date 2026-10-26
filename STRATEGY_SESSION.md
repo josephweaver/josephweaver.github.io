@@ -30,10 +30,10 @@ Read or sample:
 6. the main landing pages:
    - `index.html`
    - `about.html`
-   - `research/README.md`
-   - `research/concepts/README.md`
-   - `probability/README.md`
-   - `fiction/README.md`
+   - `content/research/README.md`
+   - `content/research/concepts/README.md`
+   - `content/notes/README.md`
+   - `content/fiction/README.md`
 7. current intake material, especially topic folders under `intake/`
 8. recent commit history and `git status`
 
@@ -71,11 +71,11 @@ external work -> intake/ -> triage -> adapt -> publish -> cross-link
 Use this distinction:
 
 - `intake/`: raw source material and imported outside work
-- `research/`: public research notes and active idea threads
+- `content/research/`: public research notes and active idea threads
 - `docs/`: reusable prompts, process notes, and templates
-- `_posts/`: dated public reflections or distilled updates
-- `probability/`: probability study archive and teaching/reference notes
-- `fiction/`: systems, worldbuilding, and game-design laboratories
+- `content/posts/`: dated public reflections or distilled updates
+- `content/notes/`: probability study archive and teaching/reference notes
+- `content/fiction/`: systems, worldbuilding, and game-design laboratories
 
 ## Collaboration Style
 

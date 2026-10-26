@@ -10,7 +10,6 @@ At the very top, include:
 
 ---
 title: "{YYYY}-Q{question_number}: {short description}"
-permalink: /probability/prelim/{YYYY}q{question_number}/
 tags: [probability-prelim, {topic1}, {topic2}]
 ---
 

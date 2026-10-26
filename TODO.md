@@ -4,16 +4,16 @@ This file tracks practical site/repository improvements. It is not a promise of 
 
 ## Immediate / Small
 
-- [ ] Update `fiction/README.md` into the same understated map style used by `research/README.md` and `probability/README.md`.
+- [ ] Update `content/fiction/README.md` into the same understated map style used by `content/research/README.md` and `content/notes/README.md`.
 - [ ] Decide whether `index.html` should keep the static roadmap cards or replace them with links to existing work.
 - [ ] Add a short note to `README.md` or `about.html` explaining that some sections are working notes rather than finished essays.
-- [ ] Review `research/ai-homework/discovery-ready.md`; either fill it, rename it, or remove it.
+- [ ] Review `content/research/ai-homework/discovery-ready.md`; either fill it, rename it, or remove it.
 - [ ] Decide whether root notes (`math.md`, `STT882.notes.md`, `experiments.md`, `vc.md`) should stay at root or move into clearer sections.
 
 ## Structure / Navigation
 
 - [ ] Create an index for standalone notes if they remain at the repository root.
-- [ ] Add a `research/ai-assisted-research/` public thread if the intake material is promoted.
+- [ ] Add a `content/research/ai-assisted-research/` public thread if the intake material is promoted.
 - [ ] Decide whether selected AI-assisted research prompt templates belong in `docs/`.
 - [ ] Add a simple thread index once enough pages have `thread` front matter.
 - [ ] Add a tag index once tags are stable enough to be useful.
@@ -31,8 +31,8 @@ This file tracks practical site/repository improvements. It is not a promise of 
 - [ ] Adapt `intake/ai-assisted-research/AI_ASSISTANCE_LEVELS.md` into a public research note on AI-assisted research software and epistemic control.
 - [ ] Adapt `intake/ai-assisted-research/AI_PROMPTS.md` into a reusable prompt/process document if it remains broadly useful.
 - [ ] Turn `intake/ai-assisted-research/AI.md` into a case study rather than publishing it raw.
-- [ ] Expand `research/concepts/crop_lifecycle_temporal_modeling_notes.md` into a more stable public research note.
-- [ ] Decide whether `research/concepts/Intrinsic-dimension-of-math.md` should become an essay, research note, or prototype plan.
+- [ ] Expand `content/research/concepts/crop_lifecycle_temporal_modeling_notes.md` into a more stable public research note.
+- [ ] Decide whether `content/research/concepts/Intrinsic-dimension-of-math.md` should become an essay, research note, or prototype plan.
 - [ ] Consider a compact public Probability Prelim Survival Guide page that links the checklist, prompt, and solved problems.
 
 ## Build / Verification

@@ -1,0 +1,61 @@
+{%- comment -%}
+List a source directory's direct pages and folders. Recursion follows the same
+rule at every depth; README.md supplies each folder's title and destination.
+Folders without a README remain expandable so their children are discoverable.
+Keep this fragment independent of the current page so the sidebar can cache it.
+{%- endcomment -%}
+{%- assign directory = include.directory -%}
+{%- assign prefix_size = directory | size -%}
+{%- assign folders = "" | split: "" -%}
+{%- assign documents = "" | split: "" -%}
+{%- for document in site.pages -%}
+  {%- assign prefix = document.path | slice: 0, prefix_size -%}
+  {%- if prefix != directory or document.nav_exclude or document.name == "TEMPLATE.md" -%}{%- continue -%}{%- endif -%}
+  {%- assign relative_path = document.path | remove_first: directory -%}
+  {%- assign segments = relative_path | split: "/" -%}
+  {%- if segments.size > 1 -%}
+    {%- assign folders = folders | push: segments.first -%}
+  {%- else -%}
+    {%- assign filename = document.name | downcase -%}
+    {%- unless filename == "readme.md" or filename == "index.md" or filename == "index.html" -%}
+      {%- assign documents = documents | push: document -%}
+    {%- endunless -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign folders = folders | uniq | sort_natural -%}
+{%- assign documents = documents | sort_natural: "path" -%}
+{%- for document in documents -%}
+  {%- assign label = document.name | replace: ".html", "" | replace: ".md", "" | replace: "_", " " | replace: "-", " " -%}
+  <li class="directory-page"><a href="{{ document.url | relative_url | escape }}">{{ document.title | default: label | escape }}</a></li>
+{%- endfor -%}
+{%- for folder in folders -%}
+  {%- assign child_directory = include.directory | append: folder | append: "/" -%}
+  {%- assign landing_path = child_directory | append: "README.md" -%}
+  {%- assign landing = site.pages | where: "path", landing_path | first -%}
+  {%- unless landing -%}
+    {%- assign landing_path = child_directory | append: "index.md" -%}
+    {%- assign landing = site.pages | where: "path", landing_path | first -%}
+  {%- endunless -%}
+  {%- unless landing -%}
+    {%- assign landing_path = child_directory | append: "index.html" -%}
+    {%- assign landing = site.pages | where: "path", landing_path | first -%}
+  {%- endunless -%}
+  {%- assign label = folder | replace: "-", " " | replace: "_", " " -%}
+  {%- assign label = landing.title | default: label -%}
+  <li class="directory-folder">
+    {%- if include.recursive -%}
+      <details data-directory="{{ child_directory | escape }}">
+        <summary>
+    {%- endif -%}
+    {%- if landing -%}
+      <a href="{{ landing.url | relative_url | escape }}">{{ label | escape }}</a>
+    {%- else -%}
+      <span>{{ label | escape }}</span>
+    {%- endif -%}
+    {%- if include.recursive -%}
+        </summary>
+        <ul>{% include directory-items.html directory=child_directory recursive=true %}</ul>
+      </details>
+    {%- endif -%}
+  </li>
+{%- endfor -%}

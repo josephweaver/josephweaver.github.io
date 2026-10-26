@@ -1,170 +1,85 @@
 # Joseph Weaver Public Notebook
 
-This repository is the source for my GitHub Pages site:
+This repository is the source for my [GitHub Pages site](https://josephweaver.github.io/). I use it for research, collected notes, creative work, a daily worklog, and observations.
 
-<https://josephweaver.github.io/>
+The [notebook landing page](content/README.md) describes the five main sections:
 
-It is a public research notebook, teaching archive, and systems lab. The site collects working notes on probability, Bayesian and geospatial modeling, AI-assisted research workflows, infrastructure design, and experimental systems. Some pages are polished essays. Many are active notes, sketches, or project state files meant to preserve continuity over time.
+- [Research](content/research/README.md): scientific explorations that may lead to publishable material.
+- [Notes](content/notes/README.md): notes from sources, classes, books, and papers on statistics, mathematics, agriculture, and other interests.
+- [Fiction](content/fiction/README.md): literary work, role-playing games, and computer-game designs.
+- [Worklog](content/worklog/README.md): what I did each day, where the work went, and how to resume it.
+- [Posts](content/posts/README.md): my observations and thoughts.
 
-The organizing theme is practical work under uncertainty: statistical reasoning, reproducible infrastructure, representation learning, and human-centered AI systems.
-
-## Main Areas
-
-### Research
-
-[`research/`](research/) contains concept notes and early research threads.
-
-Current recurring themes include:
-
-- Bayesian crop-risk modeling and agricultural temporal systems
-- Sentinel, PRISM, SSURGO, and geospatial data infrastructure
-- intrinsic dimension, latent structure, and representation learning
-- AI-human workflow design for education and research
-- proof tooling, tactic priors, and formalization workflows
-- provenance, ownership, and traceability in learned systems
-
-Start with:
-
-- [`research/epistimic-control-ai-coding/README.md`](research/epistimic-control-ai-coding/README.md)
-- [`research/epistimic-control-ai-coding/2026-06-03-epi-ctl-ai-coding.md`](research/epistimic-control-ai-coding/2026-06-03-epi-ctl-ai-coding.md)
-- [`research/concepts/2026-05-14-crop_lifecycle_temporal_modeling_notes.md`](research/concepts/2026-05-14-crop_lifecycle_temporal_modeling_notes.md)
-- [`research/concepts/2025-12-31-Intrinsic-dimension-of-math.md`](research/concepts/2025-12-31-Intrinsic-dimension-of-math.md)
-- [`research/concepts/2026-04-17-GaussianPCA.md`](research/concepts/2026-04-17-GaussianPCA.md)
-- [`research/ai-homework/README.md`](research/ai-homework/README.md)
-- [`research/prob-proof/raw-idea.md`](research/prob-proof/raw-idea.md)
-
-### Probability
-
-[`probability/`](probability/) is a probability and statistics study archive. It includes course notes, distribution references, convergence notes, prelim solutions, and exam-strategy material.
-
-This section is partly a teaching resource and partly a record of how I organize mathematical recognition under pressure.
-
-Start with:
-
-- [`probability/prelim/pre-prelim-checklist.md`](probability/prelim/pre-prelim-checklist.md)
-- [`probability/prelim/README.md`](probability/prelim/README.md)
-- [`probability/distributions/summary.md`](probability/distributions/summary.md)
-- [`probability/convergence/README.md`](probability/convergence/README.md)
-- [`docs/survivalguide.prompt.md`](docs/survivalguide.prompt.md)
-
-### Blog And Working Notes
-
-[`_posts/`](_posts/) contains dated public posts. These are usually short reflections, project updates, or attempts to distill lessons from active work.
-
-The posts are not meant to be a content funnel. They are checkpoints: what I was thinking about, what changed, and which ideas deserve more work.
-
-### Systems And Experimental Design
-
-Several notes use games, simulations, or fiction as systems-design laboratories. These are not separate from the technical work; they often explore the same questions through mechanics, constraints, and world models.
-
-Start with:
-
-- [`fiction/space-voxel/ai-graph-modeling.md`](fiction/space-voxel/ai-graph-modeling.md)
-- [`fiction/space-voxel/README.md`](fiction/space-voxel/README.md)
-- [`fiction/24system/README.md`](fiction/24system/README.md)
-- [`fiction/whisper/README.md`](fiction/whisper/README.md)
-
-### Intake
-
-[`intake/`](intake/) is a staging area for material developed outside this site that may later become public research notes, essays, docs, or project pages.
-
-Intake documents are not assumed to be polished or site-ready. They may contain project-specific assumptions, local workflow details, duplicated ideas, or rough language. Their purpose is to preserve useful external work until it can be adapted into the site's public structure.
-
-Current intake threads include:
-
-- [`intake/ai-assisted-research/`](intake/ai-assisted-research/) for AI-assisted research workflow notes, prompt patterns, and responsible research software practices.
-
-## How To Read This Repository
-
-The site is intentionally markdown-first and git-native.
-
-Useful expectations:
-
-- `intake/` is raw source material waiting to be triaged.
-- `README.md` files are maps or project entry points.
-- Active research project folders use `research/<project-name>/README.md`, optional `pinned`, and dated `YYYY-MM-DD-title.md` article files with matching `date`, `project`, `status`, and `tags` front matter.
-- `PROJECT_STATE.md` files capture current status and next steps.
-- `CONTRIBUTION.md` records the intake-to-publication workflow.
-- `STRATEGY_SESSION.md` is a prompt for starting future long-term strategy sessions.
-- `TODO.md` tracks practical repository and site-improvement backlog items.
-- Research concept notes may be speculative unless marked otherwise.
-- Probability notes often prioritize retrieval, exam readiness, and reusable proof patterns.
-- Fiction and game-system notes often encode serious systems thinking in a different medium.
-
-Some pages are rough. That is deliberate. The goal is to make long-running thought inspectable, not to make every intermediate artifact look finished.
-
-## Repository Structure
+## Repository structure
 
 ```text
 .
-+-- _posts/            # dated public posts
-+-- _layouts/          # Jekyll layout and navigation
-+-- assets/            # documents, images, CSS
++-- content/
+|   +-- README.md       # notebook landing page
+|   +-- research/      # scientific explorations and projects
+|   +-- notes/         # collected notes and study material
+|   +-- fiction/       # literary work and game designs
+|   +-- worklog/       # daily work and restart notes
+|   `-- posts/         # dated observations and thoughts
++-- assets/            # shared images, documents, and CSS
++-- _includes/         # recursive navigation and breadcrumbs
++-- _layouts/          # Jekyll page layout
 +-- docs/              # reusable prompts and process notes
-+-- intake/            # raw external material staged for later adaptation
-+-- probability/       # probability notes, prelim work, references
-+-- research/          # research concepts and active idea threads
-+-- fiction/           # systems/worldbuilding/game-design labs
-+-- other-topics.html  # gateway to teaching/probability and fiction sections
-+-- CONTRIBUTION.md    # personal workflow for intake and publication
-+-- STRATEGY_SESSION.md # prompt for future strategy-collaboration sessions
-+-- TODO.md            # practical repository/site backlog
-+-- index.html         # site landing page
-+-- about.html         # public profile
-+-- _config.yml        # GitHub Pages/Jekyll config
-`-- PROJECT_STATE.md   # current repo/site state
++-- intake/            # outside material awaiting adaptation
++-- scripts/           # site verification tools
++-- index.html         # recent activities and section/project links
++-- about.html         # profile
++-- _config.yml        # Jekyll settings
++-- CONTRIBUTION.md    # intake and publication workflow
+`-- PROJECT_STATE.md   # current structure and implementation notes
 ```
 
-## Site And Build Notes
+## Adding and organizing content
 
-This is a GitHub Pages/Jekyll site using the Cayman remote theme with a custom default layout.
+I add Markdown files beneath `content/` and use folders to group them. A folder's `README.md` is its landing page, rendered at that folder's URL. Its title supplies the folder label. The sidebar follows the directory tree at any depth, and landing pages list their immediate children automatically. A new folder with a README appears without editing the layout or a navigation list. Folders without a README remain expandable in the sidebar.
 
-The layout provides:
+Markdown without front matter also renders. The first heading supplies a title when I have not set one explicitly. YAML front matter remains useful for metadata:
 
-- sidebar navigation for Recent Activities, Other Topics, Research, and About
-- MathJax support for probability and research notes
-- previous/next links within folders
-- optional Giscus page discussions
-- edit-on-GitHub links when repository metadata is available
+```yaml
+---
+title: A descriptive title
+date: 2026-10-26
+status: exploring
+tags: [relevant-topic]
+---
+```
 
-Local build dependencies are defined in [`Gemfile`](Gemfile). On Windows, Ruby is installed at `C:\Ruby33-x64`, Bundler installs gems into `vendor/bundle/`, and `tzinfo-data` supports local timezone handling.
+The home page lists dated content from all five sections. I add a `date` when I want an entry included there; dated filenames alone are ordinary page names. Posts now live in `content/posts/` and use the same page conventions as the other sections.
 
-Useful local build command:
+For research projects, I use `content/research/<project>/README.md` with `project`, optional `summary`, and relevant tags. An empty `pinned` file puts a project first in the home-page project list. Dated research articles can share the project's metadata.
 
-```powershell
-$env:Path='C:\Ruby33-x64\bin;' + $env:Path
-$env:SSL_CERT_FILE='C:\Ruby33-x64\bin\etc\ssl\cert.pem'
+For daily work, I start with the [worklog template](content/worklog/TEMPLATE.md) and follow the [worklog conventions](content/worklog/README.md). An entry can be unfinished, negative, or exploratory.
+
+I prefer relative Markdown links to files within this repository. Jekyll converts links to Markdown files, including README landing pages, to the rendered URLs. Shared assets stay at the root in `assets/`; when linking relatively from a nested page, I account for the full source path.
+
+## Site and build
+
+The site uses GitHub Pages/Jekyll and the Cayman theme. The shared layout provides folder navigation, breadcrumbs, sibling links, MathJax, edit-on-GitHub links, and optional Giscus discussions. URLs follow the content folders and filenames.
+
+The configuration enables GitHub Pages-supported plugins for README landing pages, Markdown without front matter, relative links, and titles from headings. [Gemfile](Gemfile) supplies the build dependencies.
+
+With Ruby and Bundler available:
+
+```sh
+bundle install
 bundle exec jekyll build
+bundle exec ruby scripts/test_navigation.rb
+python3 scripts/check_site.py _site
 ```
 
-Local build artifacts and dependency folders are ignored by git: `.bundle/`, `vendor/bundle/`, `_site/`, `.sass-cache/`, `.jekyll-cache/`, and `.jekyll-metadata`.
+For a local preview:
 
-## Intake Workflow
-
-The default path for outside material is:
-
-```text
-external work -> intake/ -> triage -> adapted public page -> cross-links
+```sh
+bundle exec jekyll serve
 ```
 
-Use `intake/` when an idea is worth preserving but not yet ready to become part of the public site structure. During triage, decide whether the material should become:
+On Windows, I can run these commands in WSL. Local dependencies and build output are ignored by Git and excluded from the site.
 
-- a research note under `research/`
-- a durable process document under `docs/`
-- a dated post under `_posts/`
-- a project page under an existing section
-- an archived reference that stays in `intake/`
+## Working documents
 
-When promoting intake material, preserve the original if it contains useful context, but adapt the public version so it can stand alone without private paths, project-specific assumptions, or hidden conversation history.
-
-## Current Direction
-
-The next improvements are organizational rather than cosmetic:
-
-- make research threads easier to browse
-- keep front matter consistent for status, tags, and thread names
-- improve discoverability of exploratory notes
-- turn the strongest concept notes into stable public essays or reproducible prototypes
-- keep `PROJECT_STATE.md` aligned with the current site structure
-
-This repository is meant to remain an evolving notebook: part research archive, part infrastructure lab, part teaching aid, and part record of how ideas become systems.
+[CONTRIBUTION.md](CONTRIBUTION.md) describes how I capture, adapt, and cross-link outside material. Raw material stays in `intake/` until it is useful as a public note or reference. [PROJECT_STATE.md](PROJECT_STATE.md) records the current site structure; [TODO.md](TODO.md) tracks follow-up work, and [STRATEGY_SESSION.md](STRATEGY_SESSION.md) provides a prompt for longer planning sessions.

@@ -41,244 +41,48 @@
 </head>
 
 <body>
-  {% assign active_section = nil %}
-  {% if page.path contains "probability/" %}
-    {% assign active_section = "probability" %}
-  {% elsif page.path contains "research/" %}
-    {% assign active_section = "research" %}
-  {% elsif page.path contains "fiction/" %}
-    {% assign active_section = "fiction" %}
-  {% endif %}
-  {% assign active_subsection = nil %}
-  {% if active_section %}
-    {% assign subsection_segments = page.path | remove_first: active_section | remove_first: "/" | split: "/" %}
-    {% assign active_subsection = subsection_segments | first %}
-  {% endif %}
-  {% assign nav_sections = "research:Research,fiction:Fiction" | split: "," %}
-
+  {% assign content_prefix = site.content_root | append: "/" %}
+  {% assign notebook_path = content_prefix | append: "README.md" %}
+  {% assign notebook = site.pages | where: "path", notebook_path | first %}
   <div class="layout">
     <aside class="sidebar" id="lectureSidebar">
       <div class="sidebar__header">
         <span>Navigation</span>
         <a class="sidebar__reset" href="#" id="sidebarReset" title="Reset width">Reset</a>
       </div>
-      <ul class="nav-list">
-        <li>
-          <a class="{% if page.url == "/" or page.url == "/index.html" %}active{% endif %}"
-             href="{{ "/" | relative_url }}">Recent Activities</a>
-        </li>
-        {% for entry in nav_sections %}
-          {% assign parts = entry | split: ":" %}
-          {% assign section_key = parts[0] | strip %}
-          {% assign section_label = parts[1] | strip %}
-          {% assign section_prefix = section_key | append: "/" %}
-          {% assign section_id = "nav-" | append: section_key %}
-          {% assign is_section_active = false %}
-          {% if active_section == section_key %}
-            {% assign is_section_active = true %}
-          {% endif %}
-
-          {% assign section_readme = section_prefix | append: 'README.md' %}
-          {% assign section_index_md = section_prefix | append: 'index.md' %}
-          {% assign section_index_html = section_prefix | append: 'index.html' %}
-          {% assign section_landing = site.pages | where_exp: "p", "p.path == section_readme" | first %}
-          {% if section_landing == nil %}
-            {% assign section_landing = site.pages | where_exp: "p", "p.path == section_index_md" | first %}
-          {% endif %}
-          {% if section_landing == nil %}
-            {% assign section_landing = site.pages | where_exp: "p", "p.path == section_index_html" | first %}
-          {% endif %}
-          {% assign section_url = section_landing.url | default: section_prefix %}
-
-          {% assign section_pages = site.pages | where_exp: "p", "p.path contains section_prefix" %}
-          {% assign root_dir = "/" | append: section_prefix %}
-
-          {% assign root_pages = "" | split: "" %}
-          {% assign subsection_pages = "" | split: "" %}
-          {% for candidate in section_pages %}
-            {% assign rel_parts = candidate.path | remove_first: section_prefix | split: "/" %}
-            {% assign rel_size = rel_parts | size %}
-            {% if rel_size == 1 %}
-              {% assign root_pages = root_pages | push: candidate %}
-            {% else %}
-              {% assign subsection_pages = subsection_pages | push: candidate %}
-            {% endif %}
+      <nav aria-label="Site navigation">
+        <ul class="nav-list">
+          <li><a href="{{ '/' | relative_url }}"{% if page.url == '/' %} class="active" aria-current="page"{% endif %}>Recent Activities</a></li>
+          {% if notebook %}<li><a href="{{ notebook.url | relative_url }}"{% if notebook.url == page.url %} class="active" aria-current="page"{% endif %}>{{ notebook.title | default: 'Notebook' | escape }}</a></li>{% endif %}
+          {% capture directory_navigation %}{% include_cached directory-items.html directory=content_prefix recursive=true %}{% endcapture %}
+          {% assign current_url = page.url | relative_url | escape %}
+          {% capture current_link %}href="{{ current_url }}"{% endcapture %}
+          {% capture active_link %}href="{{ current_url }}" class="active" aria-current="page"{% endcapture %}
+          {% assign directory_navigation = directory_navigation | replace: current_link, active_link %}
+          {% assign ancestor_directory = "" %}
+          {% assign ancestor_segments = page.path | split: "/" %}
+          {% for segment in ancestor_segments %}
+            {% if forloop.last %}{% break %}{% endif %}
+            {% assign ancestor_directory = ancestor_directory | append: segment | append: "/" %}
+            {% capture closed_folder %}<details data-directory="{{ ancestor_directory | escape }}">{% endcapture %}
+            {% capture open_folder %}<details data-directory="{{ ancestor_directory | escape }}" open>{% endcapture %}
+            {% assign directory_navigation = directory_navigation | replace: closed_folder, open_folder %}
           {% endfor %}
-          {% assign root_pages = root_pages | sort_natural: "path" %}
-          {% assign subsections = subsection_pages
-            | group_by_exp: "p", "p.path | remove_first: section_prefix | split: '/' | first"
-            | sort: "name" %}
-
-          <li class="nav__section{% if is_section_active %} is-open{% endif %}">
-            <div class="nav__section-row">
-              <a class="nav__section-link{% if is_section_active %} active{% endif %}"
-                 href="{{ section_url | relative_url }}">{{ section_label }}</a>
-              <button class="nav__toggle" type="button"
-                      aria-expanded="{% if is_section_active %}true{% else %}false{% endif %}"
-                      aria-controls="{{ section_id }}"
-                      data-toggle-target="{{ section_id }}">
-                <span class="nav__toggle-icon">&gt;</span>
-              </button>
-            </div>
-            <ul id="{{ section_id }}"
-                class="nav__sublist{% unless is_section_active %} is-collapsed{% endunless %}">
-              {% comment %}Root-level pages under this section{% endcomment %}
-              {% for subpage in root_pages %}
-                {% assign filename = subpage.name %}
-                {% if filename == "README.md" or filename == "index.md" or filename == "index.html" %}{% continue %}{% endif %}
-                {% assign label = subpage.title | default: subpage.data.title | default: filename %}
-                {% assign label = label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " | replace: "-", " " %}
-                <li>
-                  <a class="{% if subpage.url == page.url %}active{% endif %}"
-                     href="{{ subpage.url | default: subpage.path | relative_url }}">
-                    {{ label }}
-                  </a>
-                </li>
-              {% endfor %}
-
-              {% comment %}First-level subdirectories{% endcomment %}
-              {% for subsection in subsections %}
-                {% assign subgroup = subsection.name %}
-                {% if subgroup == "" %}{% continue %}{% endif %}
-                {% if subgroup contains "." %}{% continue %}{% endif %}
-                {% if subgroup == "README.md" or subgroup == "index.md" or subgroup == "index.html" %}{% continue %}{% endif %}
-
-                {% assign sub_prefix = section_prefix | append: subgroup | append: "/" %}
-                {% assign sub_dir = "/" | append: sub_prefix %}
-                {% assign sub_id = section_id | append: "-" | append: subgroup | slugify %}
-                {% assign is_sub_active = false %}
-                {% if is_section_active and page.path contains sub_prefix %}
-                  {% assign is_sub_active = true %}
-                {% endif %}
-                {% assign sub_label = subgroup | replace: "-", " " | replace: "_", " " %}
-
-                {% assign sub_readme = sub_prefix | append: 'README.md' %}
-                {% assign sub_index_md = sub_prefix | append: 'index.md' %}
-                {% assign sub_index_html = sub_prefix | append: 'index.html' %}
-                {% assign sub_landing = site.pages | where_exp: "p", "p.path == sub_readme" | first %}
-                {% if sub_landing == nil %}
-                  {% assign sub_landing = site.pages | where_exp: "p", "p.path == sub_index_md" | first %}
-                {% endif %}
-                {% if sub_landing == nil %}
-                  {% assign sub_landing = site.pages | where_exp: "p", "p.path == sub_index_html" | first %}
-                {% endif %}
-                {% if sub_landing == nil %}{% continue %}{% endif %}
-                {% assign sub_url = sub_landing.url | default: sub_prefix %}
-
-                {% assign sub_pages = section_pages | where_exp: "p", "p.dir == sub_dir" | sort_natural: "path" %}
-                {% assign sub_subsections = "" | split: "" %}
-                {% if section_key == "research" %}
-                  {% assign sub_candidates = section_pages | where_exp: "p", "p.path contains sub_prefix" %}
-                  {% assign sub_subsections = sub_candidates | where_exp: "p", "p.dir != sub_dir" | group_by_exp: "p", "p.path | remove_first: sub_prefix | split: '/' | first" | sort: "name" %}
-                {% endif %}
-
-                <li class="nav__subsection{% if is_sub_active %} is-open{% endif %}">
-                  <div class="nav__subsection-row">
-                    <a class="nav__subsection-link{% if is_sub_active %} active{% endif %}"
-                       href="{{ sub_url | relative_url }}">{{ sub_label }}</a>
-                    <button class="nav__toggle nav__toggle--small" type="button"
-                            aria-expanded="{% if is_sub_active %}true{% else %}false{% endif %}"
-                            aria-controls="{{ sub_id }}"
-                            data-toggle-target="{{ sub_id }}">
-                      <span class="nav__toggle-icon">&gt;</span>
-                    </button>
-                  </div>
-                  <ul id="{{ sub_id }}"
-                      class="nav__page-list{% unless is_sub_active %} is-collapsed{% endunless %}">
-                    {% comment %}Pages directly under this subdirectory{% endcomment %}
-                    {% for subpage in sub_pages %}
-                      {% assign filename = subpage.name %}
-                      {% if filename == "README.md" or filename == "index.md" or filename == "index.html" %}{% continue %}{% endif %}
-
-                      {% assign label = subpage.title | default: subpage.data.title | default: filename %}
-                      {% assign label = label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " | replace: "-", " " %}
-                      <li>
-                        <a class="{% if subpage.url == page.url %}active{% endif %}"
-                           href="{{ subpage.url | default: subpage.path | relative_url }}">
-                          {{ label }}
-                        </a>
-                      </li>
-                    {% endfor %}
-
-                    {% comment %}Second-level subdirectories{% endcomment %}
-                    {% for subsub in sub_subsections %}
-                      {% assign subsubgroup = subsub.name %}
-                      {% if subsubgroup == "" %}{% continue %}{% endif %}
-                      {% if subsubgroup contains "." %}{% continue %}{% endif %}
-
-                      {% assign subsub_prefix = sub_prefix | append: subsubgroup | append: "/" %}
-                      {% assign subsub_dir = "/" | append: subsub_prefix %}
-                      {% assign subsub_id = sub_id | append: "-" | append: subsubgroup | slugify %}
-                      {% assign is_subsub_active = false %}
-                      {% if is_sub_active and page.path contains subsub_prefix %}
-                        {% assign is_subsub_active = true %}
-                      {% endif %}
-                      {% assign subsub_label = subsubgroup | replace: "-", " " | replace: "_", " " %}
-
-                      {% assign subsub_readme = subsub_prefix | append: 'README.md' %}
-                      {% assign subsub_index_md = subsub_prefix | append: 'index.md' %}
-                      {% assign subsub_index_html = subsub_prefix | append: 'index.html' %}
-                      {% assign subsub_landing = site.pages | where_exp: "p", "p.path == subsub_readme" | first %}
-                      {% if subsub_landing == nil %}
-                        {% assign subsub_landing = site.pages | where_exp: "p", "p.path == subsub_index_md" | first %}
-                      {% endif %}
-                      {% if subsub_landing == nil %}
-                        {% assign subsub_landing = site.pages | where_exp: "p", "p.path == subsub_index_html" | first %}
-                      {% endif %}
-                      {% if subsub_landing == nil %}{% continue %}{% endif %}
-                      {% assign subsub_url = subsub_landing.url | default: subsub_prefix %}
-
-                      {% assign subsub_pages = section_pages | where_exp: "p", "p.dir == subsub_dir" | sort_natural: "path" %}
-                      <li class="nav__subsection{% if is_subsub_active %} is-open{% endif %}">
-                        <div class="nav__subsection-row">
-                          <a class="nav__subsection-link{% if is_subsub_active %} active{% endif %}"
-                             href="{{ subsub_url | relative_url }}">{{ subsub_label }}</a>
-                        </div>
-                        <ul id="{{ subsub_id }}"
-                            class="nav__page-list{% unless is_subsub_active %} is-collapsed{% endunless %}">
-                          {% for subsubpage in subsub_pages %}
-                            {% assign filename = subsubpage.name %}
-                            {% if filename == "README.md" or filename == "index.md" or filename == "index.html" %}{% continue %}{% endif %}
-
-                            {% assign label = subsubpage.title | default: subsubpage.data.title | default: filename %}
-                            {% assign label = label | replace: ".html", "" | replace: ".md", "" | replace: "_", " " | replace: "-", " " %}
-                            <li>
-                              <a class="{% if subsubpage.url == page.url %}active{% endif %}"
-                                 href="{{ subsubpage.url | default: subsubpage.path | relative_url }}">
-                                {{ label }}
-                              </a>
-                            </li>
-                          {% endfor %}
-                        </ul>
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </li>
-              {% endfor %}
-            </ul>
-          </li>
-        {% endfor %}
-        <li>
-          <a class="{% if page.url == "/other-topics.html" %}active{% endif %}"
-             href="{{ "/other-topics.html" | relative_url }}">Other Topics</a>
-        </li>
-        <li>
-          <a class="{% if page.url == "/about.html" %}active{% endif %}"
-             href="{{ "/about.html" | relative_url }}">About</a>
-        </li>
-      </ul>
+          {{ directory_navigation }}
+          <li><a href="{{ '/about.html' | relative_url }}"{% if page.url == '/about.html' %} class="active" aria-current="page"{% endif %}>About</a></li>
+        </ul>
+      </nav>
     </aside>
     <div class="sidebar-resizer" id="sidebarResizer" role="separator" aria-orientation="vertical" aria-label="Resize navigation"></div>
 
     <main class="page-content" aria-label="Content">
       {% assign current_dir = page.dir | default: "/" %}
       {% assign page_siblings = site.pages | where_exp: "p", "p.dir == current_dir" %}
-      {% assign post_siblings = site.posts | where_exp: "p", "p.dir == current_dir" %}
-      {% assign sibling_candidates = page_siblings | concat: post_siblings %}
+      {% assign sibling_candidates = page_siblings %}
       {% assign sibling_pool = "" | split: "" %}
       {% for entry in sibling_candidates %}
         {% assign fname = entry.name | downcase %}
-        {% if fname == "index.md" or fname == "index.html" or fname == "readme.md" %}{% continue %}{% endif %}
+        {% if fname == "index.md" or fname == "index.html" or fname == "readme.md" or fname == "template.md" or entry.nav_exclude %}{% continue %}{% endif %}
         {% assign sibling_pool = sibling_pool | push: entry %}
       {% endfor %}
       {% assign siblings = sibling_pool | sort_natural: "path" %}
@@ -318,6 +122,7 @@
       {% endif %}
 
       <div class="wrapper">
+        {% include breadcrumbs.html %}
         {% if edit_url %}
           <div class="edit-link is-top">
             <a href="{{ edit_url }}">Edit this page on GitHub</a>
@@ -342,6 +147,21 @@
         {% endif %}
 
         {{ content }}
+
+        {% assign filename = page.name | downcase %}
+        {% assign prefix_size = content_prefix | size %}
+        {% assign current_prefix = page.path | slice: 0, prefix_size %}
+        {% if filename == "readme.md" and current_prefix == content_prefix %}
+          {% assign source_directory = page.path | remove: page.name %}
+          {% capture folder_items %}{% include directory-items.html directory=source_directory recursive=false %}{% endcapture %}
+          {% assign folder_items = folder_items | strip %}
+          {% if folder_items != "" %}
+            <section class="folder-index" aria-labelledby="folder-contents">
+              <h2 id="folder-contents">In this folder</h2>
+              <ul>{{ folder_items }}</ul>
+            </section>
+          {% endif %}
+        {% endif %}
 
         {% if edit_url %}
           <div class="edit-link is-bottom">
@@ -459,107 +279,51 @@
       background: #159957;
       color: #fff;
     }
-    .nav__section {
-      border: 1px solid #dfe2e5;
-      border-radius: 8px;
-      background: #ffffff;
-    }
-    .nav__section-row,
-    .nav__subsection-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 0.5rem;
-      padding: 0.35rem 0.45rem;
-    }
-    .nav__section-row {
-      font-weight: 700;
-      text-transform: uppercase;
-      font-size: 0.95rem;
-      letter-spacing: 0.04em;
-    }
-    .nav__section-link,
-    .nav__subsection-link {
-      text-decoration: none;
-      color: inherit;
-      flex: 1;
-      border-radius: 6px;
-      padding: 0.25rem 0.3rem;
-    }
-    .nav__section-link.active,
-    .nav__subsection-link.active {
-      background: #e6f3ec;
-      color: #0c6d3f;
-    }
-    .nav__sublist,
-    .nav__page-list {
+    .nav-list ul {
       list-style: none;
-      padding: 0 0.45rem 0.45rem;
-      margin: 0;
-    }
-    .nav__sublist {
-      border-top: 1px solid #e7ebf0;
-    }
-    .nav__subsection {
-      border: 1px solid #e7ebf0;
-      border-radius: 6px;
-      margin-top: 0.35rem;
-      background: #f9fafc;
-    }
-    .nav__page-list {
       padding-left: 0.85rem;
-      border-left: 2px solid #e0e5ec;
+      margin: 0.25rem 0;
+      border-left: 1px solid #dfe2e5;
     }
-    .nav__page-list a {
-      text-decoration: none;
+    .directory-folder summary {
+      cursor: pointer;
+      padding: 0.3rem 0;
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+    .directory-folder summary a {
+      display: inline;
+    }
+    .nav-list a {
       color: inherit;
-      padding: 0.25rem 0.3rem;
-      display: block;
       border-radius: 5px;
-      font-size: 0.95rem;
+      padding: 0.2rem 0.3rem;
+      overflow-wrap: anywhere;
     }
-    .nav__page-list a:hover,
-    .nav__page-list a:focus-visible {
-      background: #e6f3ec;
-      color: #0c6d3f;
+    .nav-list .directory-page a {
+      display: block;
+      font-size: 0.92rem;
     }
-    .nav__page-list a.active {
+    .nav-list a.active {
       background: #159957;
       color: #fff;
     }
-    .nav__toggle {
-      border: 1px solid #dfe2e5;
-      background: #fff;
-      color: #5c6f82;
-      width: 28px;
-      height: 28px;
-      border-radius: 6px;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: border-color 0.2s ease, background 0.2s ease;
-    }
-    .nav__toggle:hover,
-    .nav__toggle:focus-visible {
+    .nav-list a:hover,
+    .nav-list a:focus-visible {
       background: #e6f3ec;
-      border-color: #159957;
+      color: #0c6d3f;
     }
-    .nav__toggle--small {
-      width: 26px;
-      height: 26px;
-      font-size: 0.8rem;
+    .breadcrumbs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      font-size: 0.85rem;
+      margin-bottom: 1rem;
     }
-    .nav__toggle-icon {
-      display: inline-block;
-      transition: transform 0.2s ease;
-    }
-    .nav__section.is-open > .nav__section-row .nav__toggle-icon,
-    .nav__subsection.is-open > .nav__subsection-row .nav__toggle-icon {
-      transform: rotate(90deg);
-    }
-    .is-collapsed {
-      display: none;
+    .folder-index {
+      border-top: 1px solid #dfe2e5;
+      margin-top: 1.5rem;
+      padding-top: 0.5rem;
     }
     .sidebar-resizer {
       width: 6px;
@@ -691,25 +455,7 @@
       }
     })();
 
-    (function() {
-      var toggles = document.querySelectorAll('[data-toggle-target]');
-      toggles.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-          var targetId = btn.getAttribute('data-toggle-target');
-          var target = document.getElementById(targetId);
-          if (!target) return;
 
-          var isCollapsed = target.classList.toggle('is-collapsed');
-          var expanded = !isCollapsed;
-          btn.setAttribute('aria-expanded', expanded);
-
-          var parentSection = btn.closest('.nav__section, .nav__subsection');
-          if (parentSection) {
-            parentSection.classList.toggle('is-open', expanded);
-          }
-        });
-      });
-    })();
   </script>
 </body>
 </html>

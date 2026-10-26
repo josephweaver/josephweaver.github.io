@@ -1,205 +1,93 @@
 ---
 layout: default
-title: Research Posts
+title: Recent Activities
 ---
 
-{% assign research_project_pages = "" | split: "" %}
-{% assign research_pages = "" | split: "" %}
-{% assign research_posts = "" | split: "" %}
-
+{% assign content_prefix = site.content_root | append: "/" %}
+{% assign prefix_size = content_prefix | size %}
+{% assign recent_items = "" | split: "" %}
+{% assign section_pages = "" | split: "" %}
+{% assign project_pages = "" | split: "" %}
 {% for candidate in site.pages %}
-  {% if candidate.path contains "research/" %}
-    {% if candidate.name == "README.md" and candidate.project %}
-      {% assign research_project_pages = research_project_pages | push: candidate %}
+  {% assign prefix = candidate.path | slice: 0, prefix_size %}
+  {% if prefix != content_prefix or candidate.nav_exclude or candidate.name == "TEMPLATE.md" %}{% continue %}{% endif %}
+  {% assign parts = candidate.path | remove_first: content_prefix | split: "/" %}
+  {% if candidate.name == "README.md" %}
+    {% if parts.size == 2 %}
+      {% assign section_pages = section_pages | push: candidate %}
+    {% elsif parts.size > 2 and candidate.project %}
+      {% assign project_pages = project_pages | push: candidate %}
     {% endif %}
-  {% endif %}
-  {% if candidate.project and candidate.date %}
-    {% assign research_pages = research_pages | push: candidate %}
-  {% endif %}
-{% endfor %}
-
-{% for candidate in site.posts %}
-  {% if candidate.project and candidate.date %}
-    {% assign research_posts = research_posts | push: candidate %}
+  {% elsif candidate.date %}
+    {% assign recent_items = recent_items | push: candidate %}
   {% endif %}
 {% endfor %}
+{% assign recent_items = recent_items | sort: "date" | reverse %}
+{% assign section_pages = section_pages | sort_natural: "title" %}
+{% assign project_pages = project_pages | sort_natural: "title" %}
 
-{% assign research_items = research_pages | concat: research_posts | sort: "date" | reverse %}
-
-<section class="section-head" aria-labelledby="recent-research">
-  <h1 id="recent-research">Recent Research</h1>
-  <p>Dated project notes, working articles, and updates from active research folders.</p>
+<section class="section-head" aria-labelledby="recent-activities">
+  <h1 id="recent-activities">Recent Activities</h1>
+  <p>Research, worklog entries, notes, fiction, and posts from across the notebook.</p>
 </section>
-
-<section class="research-feed" aria-label="Recent research notes">
-  {% if research_items and research_items.size > 0 %}
-    {% for item in research_items limit:8 %}
-      {% assign item_project = research_project_pages | where: "project", item.project | first %}
-      <article class="research-card">
-        <a class="research-card__main" href="{{ item.url | relative_url }}">
-          <div class="research-card__header">
-            <p class="eyebrow">{{ item.date | date: "%b %-d, %Y" }}</p>
-            <h2>{{ item.title }}</h2>
-          </div>
-          <p>{{ item.description | default: item.excerpt | strip_html | truncate: 260 }}</p>
-        </a>
-        <div class="research-card__meta">
-          {% if item.tags %}
-            {% for tag in item.tags limit:5 %}
-              <span>{{ tag }}</span>
-            {% endfor %}
-          {% elsif item_project %}
-            <span>{{ item_project.title }}</span>
-          {% elsif item.project %}
-            <span>{{ item.project | replace: "-", " " }}</span>
-          {% endif %}
-        </div>
-      </article>
-    {% endfor %}
-  {% else %}
+<section class="research-feed" aria-label="Recent notebook entries">
+  {% for item in recent_items limit:8 %}
     <article class="research-card">
-      <div class="research-card__main">
-        <p class="eyebrow">No research notes yet</p>
-        <h2>Dated project notes will appear here</h2>
-        <p>Add front matter with <code>project</code> and <code>date</code> to files under <code>research/&lt;project-name&gt;/</code>.</p>
+      <a class="research-card__main" href="{{ item.url | relative_url | escape }}">
+        <div class="research-card__header">
+          <p class="eyebrow">{{ item.date | date: "%b %-d, %Y" }}</p>
+          <h2>{{ item.title | default: item.name | escape }}</h2>
+        </div>
+        <p>{{ item.description | default: item.summary | default: item.content | markdownify | strip_html | truncate: 260 }}</p>
+      </a>
+      <div class="research-card__meta">
+        {% for tag in item.tags limit:5 %}<span>{{ tag | escape }}</span>{% endfor %}
+        {% if item.status %}<span>{{ item.status | escape }}</span>{% endif %}
       </div>
     </article>
-  {% endif %}
+  {% else %}
+    <p>No dated entries yet.</p>
+  {% endfor %}
 </section>
 
+<section class="section-head is-secondary" aria-labelledby="browse-notebook">
+  <h2 id="browse-notebook">Browse the Notebook</h2>
+  <p>Each section opens to its landing page.</p>
+</section>
+<div class="resource-grid">
+  {% for section in section_pages %}
+    <a class="resource-card" href="{{ section.url | relative_url | escape }}">
+      <h3>{{ section.title | escape }}</h3>
+      <p>{{ section.description | default: section.summary | default: section.content | markdownify | strip_html | truncate: 160 }}</p>
+    </a>
+  {% endfor %}
+</div>
+
+{% if project_pages.size > 0 %}
 <section class="section-head is-secondary" aria-labelledby="current-projects">
   <h2 id="current-projects">Current Projects</h2>
-  <p>Pinned projects appear first. Each project links to its research direction and recent notes.</p>
+  <p>Research directions and ongoing projects. Pinned projects appear first.</p>
 </section>
-
-<section class="project-grid" aria-label="Current research projects">
-  {% assign rendered_projects = "|" %}
-
-  {% for item in research_items %}
-    {% assign project = research_project_pages | where: "project", item.project | first %}
-    {% if project %}
-      {% capture project_token %}|{{ project.project }}|{% endcapture %}
-      {% unless rendered_projects contains project_token %}
-        {% assign project_dir = project.path | remove: "README.md" %}
-        {% assign pinned_path = "/" | append: project_dir | append: "pinned" %}
-        {% assign is_pinned = false %}
-        {% for static_file in site.static_files %}
-          {% if static_file.path == pinned_path %}
-            {% assign is_pinned = true %}
-          {% endif %}
-        {% endfor %}
-        {% if is_pinned %}
-          <a class="project-card" href="{{ project.url | relative_url }}">
-            <p class="eyebrow">Pinned - {{ item.date | date: "%b %-d, %Y" }}</p>
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.summary | default: project.excerpt | strip_html | truncate: 150 }}</p>
-            <span>Latest: {{ item.title }}</span>
-          </a>
-          {% assign rendered_projects = rendered_projects | append: project.project | append: "|" %}
-        {% endif %}
-      {% endunless %}
-    {% endif %}
-  {% endfor %}
-
-  {% for project in research_project_pages %}
-    {% capture project_token %}|{{ project.project }}|{% endcapture %}
-    {% unless rendered_projects contains project_token %}
-      {% assign project_dir = project.path | remove: "README.md" %}
-      {% assign pinned_path = "/" | append: project_dir | append: "pinned" %}
-      {% assign is_pinned = false %}
-      {% for static_file in site.static_files %}
-        {% if static_file.path == pinned_path %}
-          {% assign is_pinned = true %}
-        {% endif %}
-      {% endfor %}
-      {% if is_pinned %}
-        <a class="project-card" href="{{ project.url | relative_url }}">
-          <p class="eyebrow">Pinned</p>
-          <h3>{{ project.title }}</h3>
-          <p>{{ project.summary | default: project.excerpt | strip_html | truncate: 150 }}</p>
-        </a>
-        {% assign rendered_projects = rendered_projects | append: project.project | append: "|" %}
-      {% endif %}
-    {% endunless %}
-  {% endfor %}
-
-  {% for item in research_items %}
-    {% assign project = research_project_pages | where: "project", item.project | first %}
-    {% if project %}
-      {% capture project_token %}|{{ project.project }}|{% endcapture %}
-      {% unless rendered_projects contains project_token %}
-        {% assign project_dir = project.path | remove: "README.md" %}
-        {% assign pinned_path = "/" | append: project_dir | append: "pinned" %}
-        {% assign is_pinned = false %}
-        {% for static_file in site.static_files %}
-          {% if static_file.path == pinned_path %}
-            {% assign is_pinned = true %}
-          {% endif %}
-        {% endfor %}
-        {% unless is_pinned %}
-          <a class="project-card" href="{{ project.url | relative_url }}">
-            <p class="eyebrow">{{ item.date | date: "%b %-d, %Y" }}</p>
-            <h3>{{ project.title }}</h3>
-            <p>{{ project.summary | default: project.excerpt | strip_html | truncate: 150 }}</p>
-            <span>Latest: {{ item.title }}</span>
-          </a>
-          {% assign rendered_projects = rendered_projects | append: project.project | append: "|" %}
-        {% endunless %}
-      {% endunless %}
-    {% endif %}
-  {% endfor %}
-
-  {% for project in research_project_pages %}
-    {% capture project_token %}|{{ project.project }}|{% endcapture %}
-    {% unless rendered_projects contains project_token %}
-    {% assign project_dir = project.path | remove: "README.md" %}
-    {% assign pinned_path = "/" | append: project_dir | append: "pinned" %}
-    {% assign is_pinned = false %}
-    {% for static_file in site.static_files %}
-      {% if static_file.path == pinned_path %}
-        {% assign is_pinned = true %}
-      {% endif %}
-    {% endfor %}
-    {% unless is_pinned %}
-      <a class="project-card" href="{{ project.url | relative_url }}">
-        <p class="eyebrow">Project</p>
-        <h3>{{ project.title }}</h3>
-        <p>{{ project.summary | default: project.excerpt | strip_html | truncate: 150 }}</p>
+<div class="project-grid">
+  {% assign passes = "pinned,other" | split: "," %}
+  {% for pass in passes %}
+    {% for project in project_pages %}
+      {% assign source_directory = project.path | remove: project.name %}
+      {% assign pinned_path = "/" | append: source_directory | append: "pinned" %}
+      {% assign pinned = site.static_files | where: "path", pinned_path | first %}
+      {% if pass == "pinned" and pinned == nil %}{% continue %}{% endif %}
+      {% if pass == "other" and pinned %}{% continue %}{% endif %}
+      {% assign latest = recent_items | where: "project", project.project | first %}
+      <a class="project-card" href="{{ project.url | relative_url | escape }}">
+        {% if pinned %}<p class="eyebrow">Pinned</p>{% endif %}
+        <h3>{{ project.title | escape }}</h3>
+        <p>{{ project.summary | default: project.description | default: project.content | markdownify | strip_html | truncate: 150 }}</p>
+        {% if latest %}<span>Latest: {{ latest.title | escape }}</span>{% endif %}
       </a>
-      {% assign rendered_projects = rendered_projects | append: project.project | append: "|" %}
-    {% endunless %}
-    {% endunless %}
+    {% endfor %}
   {% endfor %}
-
-  {% if research_project_pages.size == 0 %}
-    <article class="project-card">
-      <p class="eyebrow">No projects yet</p>
-      <h3>Research projects will appear here</h3>
-      <p>Create <code>research/&lt;project-name&gt;/README.md</code> with a <code>project</code> front matter key.</p>
-    </article>
-  {% endif %}
-</section>
-
-<section class="panel resources">
-  <h2>Explore</h2>
-  <div class="resource-grid">
-    <a class="resource-card" href="{{ '/research/' | relative_url }}">
-      <p class="eyebrow">Research</p>
-      <h3>All research topics</h3>
-      <p>Browse project landing pages, concept notes, and active research directions.</p>
-    </a>
-    <a class="resource-card" href="{{ '/about.html' | relative_url }}">
-      <p class="eyebrow">Profile</p>
-      <h3>About me</h3>
-      <p>Background, roles, and collaboration interests.</p>
-    </a>
-    <a class="resource-card" href="{{ '/other-topics.html' | relative_url }}">
-      <p class="eyebrow">Other topics</p>
-      <h3>Teaching & fiction</h3>
-      <p>Course notes, probability references, and systems-design sandboxes.</p>
-    </a>
-  </div>
-</section>
+</div>
+{% endif %}
 
 <style>
   :root {

@@ -1,0 +1,20 @@
+{%- assign content_prefix = site.content_root | append: "/" -%}
+{%- assign prefix_size = content_prefix | size -%}
+{%- assign current_prefix = page.path | slice: 0, prefix_size -%}
+{%- if current_prefix == content_prefix -%}
+  <nav class="breadcrumbs" aria-label="Breadcrumb">
+    <a href="{{ '/' | relative_url }}">Home</a>
+    {%- assign segments = page.path | split: "/" -%}
+    {%- assign directory = "" -%}
+    {%- for segment in segments -%}
+      {%- if forloop.last -%}{%- break -%}{%- endif -%}
+      {%- assign directory = directory | append: segment | append: "/" -%}
+      {%- assign landing_path = directory | append: "README.md" -%}
+      {%- assign landing = site.pages | where: "path", landing_path | first -%}
+      {%- if landing and landing.url != page.url -%}
+        <span aria-hidden="true">/</span><a href="{{ landing.url | relative_url | escape }}">{{ landing.title | default: segment | escape }}</a>
+      {%- endif -%}
+    {%- endfor -%}
+    <span aria-hidden="true">/</span><span aria-current="page">{{ page.title | default: page.name | escape }}</span>
+  </nav>
+{%- endif -%}

@@ -1,6 +1,6 @@
 private/
-fiction/24system/test-plan/01-test-results.xlsx
-fiction/24system/test-plan/~$01-test-results.xlsx
+content/fiction/24system/test-plan/01-test-results.xlsx
+content/fiction/24system/test-plan/~$01-test-results.xlsx
 .bundle/
 vendor/bundle/
 _site/
