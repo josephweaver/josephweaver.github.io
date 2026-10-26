@@ -32,6 +32,8 @@ Notes on crop-risk modeling, temporal field behavior, remote sensing, and geospa
 
 Notes that connect geometry, uncertainty, embeddings, and high-dimensional learning.
 
+- [NN-Mitosis](nn-mitosis/README.md): covariance and backpropagation-based Fisher diagnostics for adaptive node splitting and merging, with VC dimension informing hidden-layer size.
+- [NN-Geometric-Initialization](nn-geometric-initialization/README.md): geometric initialization of node weights and biases using PCA, clustering, and lines or hyperplanes.
 - [Intrinsic Geometry of Mathematics](concepts/Intrinsic-dimension-of-math.md): a speculative note on mathematical corpora, intrinsic dimension, and latent geometry.
 - [Scale-Aware Uncertain PCA](concepts/GaussianPCA.md): a toy idea for treating numerical precision as uncertainty inside linear algebra.
 - [Gaussian Smoothing Neural Networks](concepts/gaussian-smoothing-neural-networks.md): a neural architecture concept based on Gaussian aggregation and smoothing.

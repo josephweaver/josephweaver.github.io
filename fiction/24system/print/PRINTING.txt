@@ -1,0 +1,46 @@
+24-System: August 2026 Playtest
+
+PRINT THE FOLDED BOOKLET
+
+Open 2026-08-playtest-booklet.pdf. Its pages are already arranged for folding.
+
+  Paper: US Letter (8.5 x 11 inches)
+  Orientation: Landscape
+  Size: Actual size / 100%
+  Duplex: Print on both sides, flip on SHORT edge
+  Pages per sheet: 1
+  Copies: Collated
+
+Use normal printing. Leave any additional Booklet or Multiple-pages-per-sheet
+mode off: the PDF already contains two booklet pages per landscape sheet side.
+
+Print the first two PDF pages as a one-sheet duplex trial. Page 1 should be
+upright on the right of the outside face, and page 2 upright on the left of
+the reverse. Then print the complete file, nest the sheets in order, fold
+down the middle, and staple through the fold if desired.
+
+The finished booklet measures 5.5 x 8.5 inches. Each booklet page uses two
+text columns, with tables spanning the full width of that booklet page.
+Blank pages are added at the end when needed to reach a multiple of four.
+The exact page count and sheet arrangement are in the print-info.json file.
+
+OTHER FILES
+
+2026-08-playtest.docx is the editable Word document at the finished page size.
+2026-08-playtest-reader.pdf has individual booklet pages in reading order.
+You can print the reader PDF using Adobe Acrobat's Booklet mode instead.
+After editing the Word file, export a new reader PDF and use Booklet mode;
+the existing booklet PDF will not automatically reflect those edits.
+
+REBUILD FROM MARKDOWN
+
+The source is ../2026-08-playtest.md. From the repository root, run:
+
+  python -m pip install python-docx markdown-it-py pypdf pywin32
+  python fiction/24system/tools/build_playtest_booklet.py
+
+Rebuilding requires desktop Microsoft Word on Windows for PDF export.
+
+Printing references:
+https://support.microsoft.com/en-us/word/create-a-booklet-or-book-in-word
+https://helpx.adobe.com/acrobat/desktop/print-documents/booklets-posters-banners/print-booklets.html

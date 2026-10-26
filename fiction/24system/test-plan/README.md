@@ -59,14 +59,14 @@ A rule needs revision when:
 | Leverage / Pressure | `core.md` | Unit / Interaction | High |
 | Push Your Luck | `core.md`, `playtest-packet.md` | Unit | High |
 | RHLF Anchors | `RLHF.md`, `combat.md`, `movement.md` | Interaction | High |
-| Initiative / Delay | `initiative.md` | Unit / Combat | Medium |
+| Initiative / Delay | `fear-and-initiative.md` | Unit / Combat | Medium |
 | Movement | `movement.md`, `skills.md` | Scene | High |
 | Guard / Advance | `combat.md`, `weapons.md` | Scene | High |
 | Attacks / Hit Locations | `combat.md`, `wounds.md` | Scene | High |
 | Defense | `defense.md`, `combat.md` | Scene | High |
 | Armor | `armor.md`, `wounds.md`, `Alhazred/armor.md` | Interaction | High |
 | Wounds / Stamina | `wounds.md`, `core.md` | Scene / Session | High |
-| Fear | `fear-and-madness.md`, `status-effects.md` | Scene / Session | High |
+| Fear | `fear-and-initiative.md`, `status-effects.md` | Scene / Session | High |
 | Narrative Perception | `perception.md`, `skills.md` | Scene | High |
 | Stealth | `skills.md`, `perception.md`, `light-levels.md` | Scene | High |
 | Status Effects | `status-effects.md` | Unit / Interaction | High |

@@ -168,11 +168,13 @@ Poison and disease are intentionally excluded here and handled separately.
 - Open trauma judged by the Guide as ongoing blood loss.
 
 **Effect**
-- At end of your turn, take escalating pressure or 1 progress toward additional harm (Guide chooses model for scene).
+- **Bleeding X:** At the end of your turn, lose **X stamina**, including while unconscious. See [wounds.md](wounds.md#unconsciousness-and-bleeding) for unconsciousness and death thresholds.
 - Strenuous actions while bleeding may add `+2 DC`.
 
 **How it ends**
-- Bleeding is staunched (first aid, compression, cauterization, or equivalent effect).
+- Make a **Science check at DC 7 + 2 × the Bleeding value** to stop it: Bleed 1 is **DC 9**, Bleed 2 is **DC 11**, Bleed 3 is **DC 13**, and so on.
+- Success removes the Bleeding condition entirely; on failure, bleeding continues normally.
+- Use the Treat Wound action (`L(R)H`) in [skills.md](skills.md#science). Stopping bleeding does not heal wounds or restore lost stamina.
 
 ---
 

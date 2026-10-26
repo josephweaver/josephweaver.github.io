@@ -122,7 +122,7 @@ Fire exposure increases Fear unless the creature is trained, protected, mindless
 - Being burned, ignited, or splashed with burning fuel increases Fear by `2`.
 - A creature that is On Fire suffers the burn effect at the start of its turn.
 
-Fire fear follows the normal Fear track in `fear-and-madness.md`.
+Fire fear follows the normal Fear track in [Fear and Initiative](fear-and-initiative.md).
 
 ### On Fire
 

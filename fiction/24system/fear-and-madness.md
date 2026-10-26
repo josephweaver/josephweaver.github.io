@@ -1,5 +1,7 @@
 ## Fear Track (24-System)
 
+> **Deprecated:** Replaced by [Fear and Initiative](fear-and-initiative.md). The rules below are retained for historical reference and are no longer current.
+
 Fear represents acute stress, dread, and cognitive overload.  
 It is **situational and temporary**, but repeated extreme fear leaves lasting scars.
 

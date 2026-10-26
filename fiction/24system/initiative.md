@@ -1,5 +1,7 @@
 # Initiative
 
+> **Deprecated:** Replaced by [Fear and Initiative](fear-and-initiative.md). The rules below are retained for historical reference and are no longer current.
+
 Initiative determines play order when combat begins.
 
 Initiative is rolled once at the start of an encounter. The order remains fixed unless a rule, status effect, or declared combat consequence explicitly changes it.

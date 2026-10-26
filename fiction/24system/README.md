@@ -59,6 +59,8 @@ If an anchor is injured, related actions degrade. If disabled, those actions can
 - Advance (`F`)
 - Move (`F`)
 - Covering Fire (`L+H`, ammo, attention disruption)
+- Interrupts and Follow-ups: ready a specific trigger and response before combat or on your turn, committing `H` and the response's anchors; precombat declarations can trigger during setup
+- Abort: cancel before the trigger; after a readied attack triggers, roll `2d12` and, on a hit, choose normal damage or no damage with a Minor Complication
 
 ### Reactive Defenses
 
@@ -84,7 +86,7 @@ If an anchor is injured, related actions degrade. If disabled, those actions can
 ### Weapons and Identity
 
 Weapon identity is driven by partial-critical behavior and qualities:
-- Primary properties: Precision, Chopping, Crushing
+- Primary properties: Precision, Chopping, Penetrating, Knockback
 - Qualities: Reach, Parry, Brace, Improvised
 - One-handed baseline: 1 wound
 - Two-handed baseline: 2 wounds
@@ -93,19 +95,26 @@ Weapon identity is driven by partial-critical behavior and qualities:
 ### Wounds, Armor, and Trauma
 
 - Region tracks: each arm, head, shared legs, core
-- Wound progression: OK -> Injured -> Disabled -> Missing (region-specific behavior)
+- Limb wound progression: OK -> Injured -> Severe injury -> Disabled -> Crippled
+- Head and Core tracks end in Unconsciousness rather than automatic death
 - Armor is a single worn unit that converts wounds to stamina loss (Light/Medium/Heavy)
-- Core wound thresholds drive failing, dying, death states
+- Final wound steps cause Bleeding 3; unattended bleeding can still kill an unconscious character
 
-## Stress Model ([`fear-and-madness.md`](fear-and-madness.md))
+## Fear and Initiative ([`fear-and-initiative.md`](fear-and-initiative.md))
 
 Fear track runs 0-6:
-- Lower levels increase caution/hypervigilance
-- Mid levels introduce hesitation entering hostile danger
-- High levels reduce available anchor commitment
-- Top level causes breakdown/withdrawal
+- At the beginning of combat, roll `2d12` with Leverage equal to current Fear: optional single-die rerolls that replace the previous result, even if worse
+- Resolve enemy initiative critical moves, then player moves with required Athletics checks; set new Fear levels, then use the recorded scores to order turns highest to lowest
+- Players win ties against monsters; tied players decide their order among themselves
+- Initiative criticals grant monsters Melee/Fear +2 or Grappling/Fear +4; players gain one move/Fear -2 or double move/Fear -4
+- Acting before any attack is attempted against you reduces Fear by 1 on your first turn, once per combat
+- Later Fear changes update restrictions while the current initiative order continues
+- Fear 2–5 increases Pressure and restricts movement toward the source of Fear
+- Only the strongest Fear source determines movement direction; ties use the most recent source
+- Fear 4–5 requires retreat; Fear 6 causes a mental break, immediately resetting Fear to 0 and adding a permanent Bane tied to its source
+- Recover 1 Fear with a full `RLHF` action only in the round after gaining Fear, at most once per scene; a full rest resets Fear to 0
 
-Madness is emergent from accumulated survival scars (Banes), not a separate meter.
+Madness and Banes are cumulative: each mental break adds a permanent Bane, including repeats. Each triggered Fear-increasing Bane adds +1 Fear; two applicable Banes add +2, and so on.
 
 ## Status Effects ([`status-effects.md`](status-effects.md))
 
@@ -200,8 +209,9 @@ Current spell writeups:
 - [`combat.md`](combat.md): warding, range states, core combat actions
 - [`core.md`](core.md): outcomes, push-your-luck, leverage/pressure
 - [`defense.md`](defense.md): active defense options, cover/concealment
-- [`fear-and-madness.md`](fear-and-madness.md): fear track and emergent madness model
-- [`initiative.md`](initiative.md): encounter order, initiative modifiers, and tempo effects
+- [`fear-and-initiative.md`](fear-and-initiative.md): Fear track, encounter order, action restrictions, recovery, and lasting scars
+- [`fear-and-madness.md`](fear-and-madness.md): deprecated historical Fear rules
+- [`initiative.md`](initiative.md): deprecated historical initiative rules
 - [`light-levels.md`](light-levels.md): visibility categories from dim light through pitch darkness
 - [`movement.md`](movement.md): MR, encumbrance, terrain, sprinting
 - `monsters/echo-born-other.md`: monster ecology, behavior, stat block

@@ -77,10 +77,6 @@ Traits define how your character approaches danger, survival, and problem-solvin
 
 Choose **2 traits** from any categories below.
 
-Rules language note:
-- When a trait says "gain one advantage step," use `core.md` Advantage Step Rule.
-- Traits that mention reaction exceptions explicitly override the default reaction commitment rule.
-
 ### Martial and Survivor Traits
 
 - **Strong Back** - Carry 1 extra Large item without penalty.
@@ -94,14 +90,14 @@ Rules language note:
 - **Guarded Swing** - Once per round, if you used `L` for an attack on your turn, you may still Parry with `L`.
 - **Acrobatic Finesse** - If you used `Sprint` or `Leap` this turn, you may still Dodge as a reaction..
 
-
-
 ### Social and Leadership Traits
 
+- **Commander** - Use your `H` action and make a Social check at DC `13 + the target's current Fear`. On a success, reduce the target character's Fear by 1 level; on a Partial Critical success, reduce it by 2 levels instead.
+- **Psychologist** - Once per session, make a Science check at DC `18` to address one specific Bane affecting another character. Track successes across sessions for that character and Bane. After you accumulate 3 successes, that character can ignore that Bane at will.
 - **Silver Tongue** - Once per scene, reroll a failed Social check.
 - **Inspiring Presence** - Allies within earshot gain one advantage step vs fear or fatigue checks.
 - **Streetwise** - Gain minor hints or rumors when asking NPCs.
-- **Menacing** - On a successful Intimidate, target hesitates for one round before acting aggressively.
+- **Menacing** - On a successful Intimidate, target hesitates (losses H action) for one round before acting aggressively.
 
 ### Survivalist and Explorer Traits
 
@@ -130,6 +126,9 @@ Rules language note:
 
 ### Dark and Gritty Survival Traits
 
+- **Foolhardy** - You rarely appreciate danger until it is already happening. Reduce incoming Fear by 1.
+- **Cowardly** - Your imagination races ahead of you. Increase Fear gained by 1.
+- **Brave** - Use your `H` action to treat your Fear as 2 levels lower for determining movement restrictions for the remainder of your turn.
 - **Scarred Survivor** - After a Major Complication, gain one advantage step on your next action.
 - **Double Down** - Once per scene, when a pushed reroll fails, you may push again immediately. Take the first push's Major Complication, then choose a second complication track and reroll at the same pushed DC (`-2`, minimum 6). If this second reroll fails, the second track becomes a Major Complication.
 - **Desperate Strength** - When at negative stamina, your first successful attack in a scene gains +1 wound.

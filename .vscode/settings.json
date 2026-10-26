@@ -11,5 +11,11 @@
       "icon": "terminal-linux"
     }
   },
-  "terminal.integrated.defaultProfile.windows": "Ubuntu-24.04"
+  "terminal.integrated.defaultProfile.windows": "Ubuntu-24.04",
+  "workbench.editorAssociations": {
+    "*.parquet": "duckdb.dataFileViewer",
+    "*.csv": "duckdb.dataFileViewer",
+    "*.tsv": "duckdb.dataFileViewer",
+    "*.xlsx": "duckdb.dataFileViewer"
+  }
 }

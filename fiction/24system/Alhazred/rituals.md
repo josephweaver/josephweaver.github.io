@@ -1,5 +1,33 @@
 # Rituals of Alhazred
 
+## Reanimation
+
+An intricate ritual to revive the dead on a successful Magic check. The body must be a **usable vessel** for the returning character; ruined remains may require repair before the ritual can succeed.
+
+- **Magic DC:** 17
+- **Stamina cost:** 10
+- **Backlash on failure:** Create a monster from the body instead of reviving the character.
+
+On revival, the character automatically gains a **permanent madness (Bane) associated with their cause of death**. Record its trigger and mechanical effect using the [madness and Bane rules](../fear-and-initiative.md#mental-breaks-and-permanent-banes).
+
+**Something always comes back with them.** A malevolent spirit co-occupies the resurrected character's body. This is an unavoidable consequence of revival and must be dealt with through the story. The Guide develops the spirit's identity, desires, and manifestations, and how the characters might confront it.
+
+**TODO — Reanimation:** Ritual duration and materials, usable-vessel requirements, and the character's wound and stamina state upon revival.
+
+## Knit-Flesh
+
+Through extraordinary concentration, the caster causes flesh to stitch itself back together. The spell works on **living or dead tissue**.
+
+Choose how many wounds **W** to heal from **one body location** before casting. On a successful Magic check, reduce that location's wound track by **W levels**. If a limb has been severed in the fiction, Knit-Flesh can reattach it, leaving that location at **Disabled**. The limb must be available to attach, but it may come from **somebody else**.
+
+- **Magic DC:** 12 + 2 × W
+- **Stamina cost:** 3 × W
+- **Backlash on failure:** Copy the W wounds you attempted to heal onto the matching body location on yourself.
+
+The process is unholy and excruciatingly painful: a living recipient gains **1 Fear** each time the spell repairs their flesh. Dead tissue can be repaired without reviving its owner; revival requires Reanimation.
+
+**TODO — Knit-Flesh:** Duration and concentration requirements.
+
 ## Latch-Star
 
 The Latch-Star resembles protective star-in-circle signs found across folk magic, Pagan and Wiccan pentacle traditions, and the Lovecraft-adjacent occult imagination of the 1920s United States, but its post-Calamity use in Alhazred is practical survivor craft.

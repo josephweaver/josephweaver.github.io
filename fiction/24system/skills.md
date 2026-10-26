@@ -494,8 +494,8 @@ Breaking `Aware` requires misdirection, not simple concealment:
   `RLHF: L(R)H`  
   `Check: Science`  
   `Duration: Short (Extended for severe trauma)`
-  `DC: 10` basic first aid, `12` stabilize severe bleed, `14+` field surgery conditions.  
-  `On Success:` Stabilize target and remove one immediate complication from the wound state.
+  `DC: 7 + 2 × Bleeding value` to stop bleeding: Bleed 1 is **DC 9**, Bleed 2 is **DC 11**, Bleed 3 is **DC 13**, and so on. Other basic first aid is `DC 10`; field surgery conditions are `DC 14+`.
+  `On Success:` When stopping bleeding, remove the Bleeding condition entirely; this does not heal wounds or restore lost stamina. Otherwise, stabilize the target and remove one immediate complication from the wound state.
   `Partial Critical (choose one):` remove one additional immediate complication; or restore functional use of a recently impaired anchor for this scene; or treatment holds longer under pressure.
 
 - **Engineer Bypass**  
